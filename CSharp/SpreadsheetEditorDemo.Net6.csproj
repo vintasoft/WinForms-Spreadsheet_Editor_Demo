@@ -1,0 +1,741 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>  
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>    
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <Version>12.2.6.1</Version>
+    <AssemblyName>SpreadsheetEditorDemo</AssemblyName>
+    <RootNamespace>SpreadsheetEditorDemo</RootNamespace>
+    <StartupObject />
+    <ApplicationIcon>App.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>NETCORE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>NETCORE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Vintasoft.Imaging" Version="12.2.6.1" />
+    <PackageReference Include="Vintasoft.Imaging.Gdi" Version="12.2.6.1" />
+    <PackageReference Include="Vintasoft.Imaging.Office.OpenXml" Version="4.2.6.1" />
+    <PackageReference Include="Vintasoft.Imaging.Office.OpenXml.UI" Version="4.2.6.1" />
+    <PackageReference Include="Vintasoft.Imaging.Pdf" Version="9.2.6.1" />
+    <PackageReference Include="Vintasoft.Imaging.UI" Version="12.2.6.1" />
+    <PackageReference Include="Vintasoft.Shared" Version="4.0.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="CustomControls\ColorPanelControl\ColorPanelControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ColorPanelControl\ColorPanelControl.designer.cs">
+      <DependentUpon>ColorPanelControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\ColorPickerControl\ColorPickerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ColorPickerControl\ColorPickerControl.designer.cs">
+      <DependentUpon>ColorPickerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\ColorSampleControl\ColorSampleControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ColorSampleControl\ColorSampleControl.designer.cs">
+      <DependentUpon>ColorSampleControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\PaddingFEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\PaddingFEditorControl.designer.cs">
+      <DependentUpon>PaddingFEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\ValueEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ValueEditorControl.designer.cs">
+      <DependentUpon>ValueEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DemosCommonCode.Imaging\ActionProgressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DemosCommonCode.Imaging\ActionProgressForm.Designer.cs">
+    </Compile>
+    <Compile Include="DemosCommonCode.Imaging\Codecs\CodecsFileFilters.cs">
+    </Compile>
+    <Compile Include="DemosCommonCode.Imaging\ColorPickerDialogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DemosCommonCode.Imaging\ColorPickerDialogForm.designer.cs">
+      <DependentUpon>ColorPickerDialogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DemosCommonCode.Imaging\DocumentLayoutSettings\DocumentLayoutSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DemosCommonCode.Imaging\DocumentLayoutSettings\DocumentLayoutSettingsEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DemosCommonCode.Imaging\DocumentLayoutSettings\DocumentLayoutSettingsEditorControl.designer.cs">
+      <DependentUpon>DocumentLayoutSettingsEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DemosCommonCode.Imaging\DocumentLayoutSettings\ImageCollectionLayoutSettingsManager.cs">
+    </Compile>
+    <Compile Include="DemosCommonCode.Imaging\DocumentLayoutSettings\ImageCollectionXlsxLayoutSettingsManager.cs">
+    </Compile>
+    <Compile Include="DemosCommonCode.Imaging\DocumentLayoutSettings\PageLayoutSettingsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DemosCommonCode.Imaging\DocumentLayoutSettings\PageLayoutSettingsControl.designer.cs">
+      <DependentUpon>PageLayoutSettingsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DemosCommonCode.Imaging\DocumentLayoutSettings\XlsxLayoutSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DemosCommonCode.Imaging\DocumentLayoutSettings\XlsxLayoutSettingsDialog.designer.cs">
+      <DependentUpon>XlsxLayoutSettingsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DemosCommonCode.Imaging\DocumentLayoutSettings\XlsxPageLayoutSettingsTypeEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DemosCommonCode.Imaging\DocumentLayoutSettings\XlsxPageLayoutSettingsTypeEditorControl.designer.cs">
+      <DependentUpon>XlsxPageLayoutSettingsTypeEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DemosCommonCode.Imaging\DocumentPasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DemosCommonCode.Imaging\DocumentPasswordForm.designer.cs">
+      <DependentUpon>DocumentPasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DemosCommonCode.Imaging\Fonts\CustomFontProgramsController.cs">
+    </Compile>
+    <Compile Include="DemosCommonCode.Imaging\ImageViewerPrintManager.cs">
+    </Compile>
+    <Compile Include="DemosCommonCode.Imaging\ImageViewerToolStrip\ImageViewerToolStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DemosCommonCode.Imaging\ImageViewerToolStrip\ImageViewerToolStrip.designer.cs">
+      <DependentUpon>ImageViewerToolStrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DemosCommonCode.Imaging\ImageViewerToolStrip\PageIndexChangedEventArgs.cs">
+    </Compile>
+    <Compile Include="DemosCommonCode.Imaging\Resources\DemosResourcesManager.cs">
+    </Compile>
+    <Compile Include="DemosCommonCode.Imaging\SelectImageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DemosCommonCode.Imaging\SelectImageForm.designer.cs">
+      <DependentUpon>SelectImageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DemosCommonCode.Imaging\VisualTools\DocumentNavigationTool\UriActionExecutor.cs">
+    </Compile>
+    <Compile Include="DemosCommonCode\AboutBoxBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DemosCommonCode\AboutBoxBaseForm.designer.cs">
+      <DependentUpon>AboutBoxBaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DemosCommonCode\DemosTools.cs">
+    </Compile>
+    <Compile Include="DemosCommonCode\WebUploaderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DemosCommonCode\WebUploaderForm.designer.cs">
+      <DependentUpon>WebUploaderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContextMenus\SpreadsheetCellContextMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ContextMenus\SpreadsheetCellContextMenu.Designer.cs">
+      <DependentUpon>SpreadsheetCellContextMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContextMenus\SpreadsheetCommentContextMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ContextMenus\SpreadsheetCommentContextMenu.Designer.cs">
+      <DependentUpon>SpreadsheetCommentContextMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContextMenus\SpreadsheetDrawingContextMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ContextMenus\SpreadsheetDrawingContextMenu.Designer.cs">
+      <DependentUpon>SpreadsheetDrawingContextMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContextMenus\SpreadsheetVisualEditorContextMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ContextMenus\SpreadsheetVisualEditorContextMenu.Designer.cs">
+      <DependentUpon>SpreadsheetVisualEditorContextMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\CellReferencesAppearanceEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\CellReferencesAppearanceEditorControl.Designer.cs">
+      <DependentUpon>CellReferencesAppearanceEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\FontPropertiesEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\FontPropertiesEditorControl.Designer.cs">
+      <DependentUpon>FontPropertiesEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\SheetDrawingLocationEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\SheetDrawingLocationEditorControl.Designer.cs">
+      <DependentUpon>SheetDrawingLocationEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\AboutBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\AboutBoxForm.Designer.cs">
+      <DependentUpon>AboutBoxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\CellBorderStyleItem.cs" />
+    <Compile Include="Dialogs\CellPasteSpecialForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\CellPasteSpecialForm.Designer.cs">
+      <DependentUpon>CellPasteSpecialForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\CellsStyleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\CellsStyleForm.Designer.cs">
+      <DependentUpon>CellsStyleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Comments\EditCommentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Comments\EditCommentForm.Designer.cs">
+      <DependentUpon>EditCommentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DefinedNames\DefinedNameManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DefinedNames\DefinedNameManagerForm.Designer.cs">
+      <DependentUpon>DefinedNameManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DefinedNames\EditDefinedNameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DefinedNames\EditDefinedNameForm.Designer.cs">
+      <DependentUpon>EditDefinedNameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DefinedNames\SelectDefinedNameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DefinedNames\SelectDefinedNameForm.Designer.cs">
+      <DependentUpon>SelectDefinedNameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Drawings\DrawingPropertiesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Drawings\DrawingPropertiesForm.Designer.cs">
+      <DependentUpon>DrawingPropertiesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Hyperlinks\EditHyperlinkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Hyperlinks\EditHyperlinkForm.Designer.cs">
+      <DependentUpon>EditHyperlinkForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NumberValueEditorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NumberValueEditorForm.Designer.cs">
+      <DependentUpon>NumberValueEditorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\DocumentInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\DocumentInfoForm.Designer.cs">
+      <DependentUpon>DocumentInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FindReplaceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FindReplaceForm.Designer.cs">
+      <DependentUpon>FindReplaceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Print\PrintManager.cs" />
+    <Compile Include="Dialogs\Print\PrintPreviewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Print\PrintPreviewForm.Designer.cs">
+      <DependentUpon>PrintPreviewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\SelectFunctionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\SelectFunctionForm.Designer.cs">
+      <DependentUpon>SelectFunctionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\OptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\OptionsForm.Designer.cs">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Worksheets\MoveWorksheetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Worksheets\MoveWorksheetForm.Designer.cs">
+      <DependentUpon>MoveWorksheetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Worksheets\RenameWorksheetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Worksheets\RenameWorksheetForm.Designer.cs">
+      <DependentUpon>RenameWorksheetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Worksheets\WorksheetFormatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Worksheets\WorksheetFormatForm.Designer.cs">
+      <DependentUpon>WorksheetFormatForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\CellsEditorPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\CellsEditorPanel.Designer.cs">
+      <DependentUpon>CellsEditorPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\CommentsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\CommentsPanel.Designer.cs">
+      <DependentUpon>CommentsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\UndoPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\UndoPanel.Designer.cs">
+      <DependentUpon>UndoPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\HelpPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\HelpPanel.Designer.cs">
+      <DependentUpon>HelpPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\DefinedNamesPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\DefinedNamesPanel.Designer.cs">
+      <DependentUpon>DefinedNamesPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\FindReplacePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\FindReplacePanel.Designer.cs">
+      <DependentUpon>FindReplacePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\FunctionsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\FunctionsPanel.Designer.cs">
+      <DependentUpon>FunctionsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\CopyPastePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\CopyPastePanel.Designer.cs">
+      <DependentUpon>CopyPastePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\FilePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\FilePanel.Designer.cs">
+      <DependentUpon>FilePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\NumberFormatPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\NumberFormatPanel.Designer.cs">
+      <DependentUpon>NumberFormatPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\TextAlignmentPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\TextAlignmentPanel.Designer.cs">
+      <DependentUpon>TextAlignmentPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\NavigationPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\NavigationPanel.Designer.cs">
+      <DependentUpon>NavigationPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\FormulaPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\FormulaPanel.Designer.cs">
+      <DependentUpon>FormulaPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\FontPropertiesPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\FontPropertiesPanel.Designer.cs">
+      <DependentUpon>FontPropertiesPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\SpreadsheetVisualEditorPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\SpreadsheetVisualEditorPanel.Designer.cs">
+      <DependentUpon>SpreadsheetVisualEditorPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Renderers\PanelToolStripRenderer.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Resources\BoldText.png" />
+    <Content Include="Resources\Borders_Bottom.png" />
+    <Content Include="Resources\Borders_BottomDouble.png" />
+    <Content Include="Resources\Borders_BottomThick.png" />
+    <Content Include="Resources\Borders_Horizontal.png" />
+    <Content Include="Resources\Borders_InsideBig.png" />
+    <Content Include="Resources\Borders_Left.png" />
+    <Content Include="Resources\Borders_No.png" />
+    <Content Include="Resources\Borders_NoBig.png" />
+    <Content Include="Resources\Borders_Outside.png" />
+    <Content Include="Resources\Borders_OutsideBig.png" />
+    <Content Include="Resources\Borders_Right.png" />
+    <Content Include="Resources\Borders_ThickOutside.png" />
+    <Content Include="Resources\Borders_ThinAll.png" />
+    <None Include="Resources\ClearAll.png" />
+    <None Include="Resources\ClearAllBig.png" />
+    <None Include="Resources\ClearContents.png" />
+    <None Include="Resources\ClearHyperlinks.png" />
+    <None Include="Resources\ClearStyles.png" />
+    <Content Include="Resources\Borders_Top.png" />
+    <Content Include="Resources\Borders_TopBottom.png" />
+    <Content Include="Resources\Borders_TopBottomDouble.png" />
+    <Content Include="Resources\Borders_TopBottomThick.png" />
+    <Content Include="Resources\Borders_Vertical.png" />
+    <Content Include="Resources\Close.png" />
+    <None Include="Resources\Copy.png" />
+    <None Include="Resources\Cut.png" />
+    <None Include="Resources\ColumnsAutoWidth.png" />
+    <None Include="Resources\ColumnsWidth.png" />
+    <None Include="Resources\Comment_Delete.png" />
+    <None Include="Resources\Comment_Edit.png" />
+    <None Include="Resources\Comment_HideAll.png" />
+    <None Include="Resources\Comment_New.png" />
+    <None Include="Resources\Comment_Next.png" />
+    <None Include="Resources\Comment_Prev.png" />
+    <None Include="Resources\Comment_ShowAll.png" />
+    <None Include="Resources\Comment_ShowHide.png" />
+    <Content Include="Resources\DecreaseTextSize.png" />
+    <None Include="Resources\DeleteCells.png" />
+    <None Include="Resources\DeleteColumns.png" />
+    <None Include="Resources\DeleteRows.png" />
+    <None Include="Resources\DeleteRowsBig.png" />
+    <None Include="Resources\DefinedNamesAdd.png" />
+    <None Include="Resources\DefinedNamesManager.png" />
+    <None Include="Resources\DefinedNamesUseInFormula.png" />
+    <Content Include="Resources\DocumentInfo.png" />
+    <Content Include="Resources\Export.png" />
+    <Content Include="Resources\FillColor.png" />
+    <None Include="Resources\FillDownBig.png" />
+    <None Include="Resources\FillLeft.png" />
+    <None Include="Resources\FillRight.png" />
+    <None Include="Resources\FillUp.png" />
+    <None Include="Resources\FillDown.png" />
+    <None Include="Resources\FocusedCellValuePanel_Function.png" />
+    <None Include="Resources\FindContent.png" />
+    <Content Include="Resources\FontColor.png" />
+    <None Include="Resources\Hyperlink.png" />
+    <None Include="Resources\Help.png" />
+    <Content Include="Resources\Image.png" />
+    <Content Include="Resources\IncreaseTextSize.png" />
+    <None Include="Resources\InsertCells.png" />
+    <None Include="Resources\InsertColumns.png" />
+    <None Include="Resources\InsertRows.png" />
+    <None Include="Resources\InsertRowsBig.png" />
+    <None Include="Resources\InsertFunction.png" />
+    <Content Include="Resources\ItalicText.png" />
+    <None Include="Resources\Merge.png" />
+    <None Include="Resources\MergeAcross.png" />
+    <None Include="Resources\MergeAndCenter.png" />
+    <None Include="Resources\MergeAndCenterBig.png" />
+    <Content Include="Resources\NavigateFirst.png" />
+    <Content Include="Resources\NavigateLast.png" />
+    <Content Include="Resources\NavigateNext.png" />
+    <Content Include="Resources\NavigatePrev.png" />
+    <Content Include="Resources\NewBlankWorksheet.png" />
+    <None Include="Resources\NumberFormat_DecDecimal.png" />
+    <None Include="Resources\NumberFormat_IncDecimal.png" />
+    <None Include="Resources\NumberFormat_Percent.png" />
+    <None Include="Resources\NumberFormatProperties.png" />
+    <None Include="Resources\NumberFormat_Accounting.png" />
+    <Content Include="Resources\Open.png" />
+    <None Include="Resources\Paste.png" />
+    <Content Include="Resources\PanMode.png" />
+    <Content Include="Resources\Print.png" />
+    <None Include="Resources\RowColumnFormat.png" />
+    <None Include="Resources\RowsAutoHeight.png" />
+    <None Include="Resources\RowsHeight.png" />
+    <None Include="Resources\ReplaceContent.png" />
+    <Content Include="Resources\Redo.png" />
+    <Content Include="Resources\Save.png" />
+    <Content Include="Resources\SaveAs.png" />
+    <Content Include="Resources\Settings.png" />
+    <None Include="Resources\ShowFormulas.png" />
+    <Content Include="Resources\StrikeoutText.png" />
+    <Content Include="Resources\StylePainter.png" />
+    <None Include="Resources\TextHorizontalAlign_Center.png" />
+    <None Include="Resources\TextHorizontalAlign_Left.png" />
+    <None Include="Resources\TextHorizontalAlign_Right.png" />
+    <None Include="Resources\TextIndent_Dec.png" />
+    <None Include="Resources\TextIndent_Inc.png" />
+    <None Include="Resources\TextAlignProperties.png" />
+    <Content Include="Resources\TextProperties.png" />
+    <None Include="Resources\TextVerticalAlign_Bottom.png" />
+    <None Include="Resources\TextVerticalAlign_Midle.png" />
+    <None Include="Resources\TextVerticalAlign_Top.png" />
+    <None Include="Resources\TextWrap.png" />
+    <Content Include="Resources\UnderlinedText.png" />
+    <None Include="Resources\Worksheet.png" />
+    <None Include="Resources\Worksheet_Add.png" />
+    <None Include="Resources\Worksheet_Copy.png" />
+    <None Include="Resources\Worksheet_Delete.png" />
+    <None Include="Resources\Worksheet_FormatProperties.png" />
+    <None Include="Resources\Worksheet_ViewOptions.png" />
+    <None Include="Resources\Worksheet_Rename.png" />
+    <None Include="Resources\Unmerge.png" />
+    <Content Include="Resources\Undo.png" />
+    <Content Include="Resources\Worksheet_Move.png" />
+    <Content Include="Resources\ZoomIn.png" />
+    <Content Include="Resources\ZoomOut.png" />
+    <None Include="Resources\FocusedCellValuePanel_Cancel.png" />
+    <None Include="Resources\FocusedCellValuePanel_Ok.png" />
+    <EmbeddedResource Include="CustomControls\ColorPanelControl\ColorPanelControl.resx">
+      <DependentUpon>ColorPanelControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\ColorPickerControl\ColorPickerControl.resx">
+      <DependentUpon>ColorPickerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\ColorSampleControl\ColorSampleControl.resx">
+      <DependentUpon>ColorSampleControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\PaddingFEditorControl.resx">
+      <DependentUpon>PaddingFEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\ValueEditorControl.resx">
+      <DependentUpon>ValueEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemosCommonCode.Imaging\ActionProgressForm.resx">
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemosCommonCode.Imaging\ColorPickerDialogForm.resx">
+      <DependentUpon>ColorPickerDialogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemosCommonCode.Imaging\DocumentLayoutSettings\DocumentLayoutSettingsEditorControl.resx">
+      <DependentUpon>DocumentLayoutSettingsEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemosCommonCode.Imaging\DocumentLayoutSettings\PageLayoutSettingsControl.resx">
+      <DependentUpon>PageLayoutSettingsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemosCommonCode.Imaging\DocumentLayoutSettings\XlsxLayoutSettingsDialog.resx">
+      <DependentUpon>XlsxLayoutSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemosCommonCode.Imaging\DocumentLayoutSettings\XlsxPageLayoutSettingsTypeEditorControl.resx">
+      <DependentUpon>XlsxPageLayoutSettingsTypeEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemosCommonCode.Imaging\DocumentPasswordForm.resx">
+      <DependentUpon>DocumentPasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\CellReferencesAppearanceEditorControl.resx">
+      <DependentUpon>CellReferencesAppearanceEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\FontPropertiesEditorControl.resx">
+      <DependentUpon>FontPropertiesEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\SheetDrawingLocationEditorControl.resx">
+      <DependentUpon>SheetDrawingLocationEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AboutBoxForm.resx">
+      <DependentUpon>AboutBoxForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CellPasteSpecialForm.resx">
+      <DependentUpon>CellPasteSpecialForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CellsStyleForm.resx">
+      <DependentUpon>CellsStyleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Comments\EditCommentForm.resx">
+      <DependentUpon>EditCommentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DefinedNames\DefinedNameManagerForm.resx">
+      <DependentUpon>DefinedNameManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DefinedNames\EditDefinedNameForm.resx">
+      <DependentUpon>EditDefinedNameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DefinedNames\SelectDefinedNameForm.resx">
+      <DependentUpon>SelectDefinedNameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Drawings\DrawingPropertiesForm.resx">
+      <DependentUpon>DrawingPropertiesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Hyperlinks\EditHyperlinkForm.resx">
+      <DependentUpon>EditHyperlinkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NumberValueEditorForm.resx">
+      <DependentUpon>NumberValueEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\DocumentInfoForm.resx">
+      <DependentUpon>DocumentInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FindReplaceForm.resx">
+      <DependentUpon>FindReplaceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Print\PrintPreviewForm.resx">
+      <DependentUpon>PrintPreviewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SelectFunctionForm.resx">
+      <DependentUpon>SelectFunctionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\OptionsForm.resx">
+      <DependentUpon>OptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Worksheets\MoveWorksheetForm.resx">
+      <DependentUpon>MoveWorksheetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Worksheets\RenameWorksheetForm.resx">
+      <DependentUpon>RenameWorksheetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Worksheets\WorksheetFormatForm.resx">
+      <DependentUpon>WorksheetFormatForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CellsEditorPanel.resx">
+      <DependentUpon>CellsEditorPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CommentsPanel.resx">
+      <DependentUpon>CommentsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\UndoPanel.resx">
+      <DependentUpon>UndoPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\HelpPanel.resx">
+      <DependentUpon>HelpPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\DefinedNamesPanel.resx">
+      <DependentUpon>DefinedNamesPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\FindReplacePanel.resx">
+      <DependentUpon>FindReplacePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\FunctionsPanel.resx">
+      <DependentUpon>FunctionsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\CopyPastePanel.resx">
+      <DependentUpon>CopyPastePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\FilePanel.resx">
+      <DependentUpon>FilePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\NumberFormatPanel.resx">
+      <DependentUpon>NumberFormatPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\TextAlignmentPanel.resx">
+      <DependentUpon>TextAlignmentPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\NavigationPanel.resx">
+      <DependentUpon>NavigationPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\FormulaPanel.resx">
+      <DependentUpon>FormulaPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\FontPropertiesPanel.resx">
+      <DependentUpon>FontPropertiesPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\SpreadsheetVisualEditorPanel.resx">
+      <DependentUpon>SpreadsheetVisualEditorPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="DemosCommonCode.Imaging\ImageViewerToolStrip\ImageViewerToolStrip.resx">
+      <DependentUpon>ImageViewerToolStrip.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemosCommonCode.Imaging\ImageViewerToolStrip\Resources\camera.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemosCommonCode.Imaging\ImageViewerToolStrip\Resources\navigate_beginning.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemosCommonCode.Imaging\ImageViewerToolStrip\Resources\navigate_end.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemosCommonCode.Imaging\ImageViewerToolStrip\Resources\navigate_left.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemosCommonCode.Imaging\ImageViewerToolStrip\Resources\navigate_right.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemosCommonCode.Imaging\ImageViewerToolStrip\Resources\open.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemosCommonCode.Imaging\ImageViewerToolStrip\Resources\printer.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemosCommonCode.Imaging\ImageViewerToolStrip\Resources\save.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemosCommonCode.Imaging\ImageViewerToolStrip\Resources\scanner.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemosCommonCode.Imaging\ImageViewerToolStrip\Resources\zoom_in.png">
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemosCommonCode.Imaging\ImageViewerToolStrip\Resources\zoom_out.png">
+    </EmbeddedResource>
+    <Content Include="App.ico" />
+    <EmbeddedResource Include="DemosCommonCode.Imaging\SelectImageForm.resx">
+      <DependentUpon>SelectImageForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemosCommonCode\AboutBoxBaseForm.resx">
+      <DependentUpon>AboutBoxBaseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemosCommonCode\WebUploaderForm.resx">
+      <DependentUpon>WebUploaderForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
