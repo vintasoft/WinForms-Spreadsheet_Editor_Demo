@@ -1,6 +1,6 @@
 # VintaSoft WinForms Spreadsheet Editor Demo
 
-The project uses <a href="https://www.vintasoft.com/vsimaging-dotnet-index.html">VintaSoft Imaging .NET SDK</a> and demonstrates how to view and edit a spreadsheet (XLSX) document in WinForms:
+The project uses <a href="https://www.vintasoft.com/vsimaging-dotnet-index.html">VintaSoft Imaging .NET SDK</a> and demonstrates how to view and edit XLSX document in WinForms:
 * Create a new or open an existing XLSX document in spreadsheet editor control
 * Work with spreadsheet document
   * Set culture of spreadsheet document
