@@ -42,7 +42,6 @@
     <PackageReference Include="Vintasoft.Imaging.UI" Version="12.2.6.1" />
     <PackageReference Include="Vintasoft.Shared" Version="4.0.0.3" />
   </ItemGroup>
-
   <ItemGroup>
     <Compile Include="CustomControls\ColorPanelControl\ColorPanelControl.cs">
       <SubType>UserControl</SubType>
