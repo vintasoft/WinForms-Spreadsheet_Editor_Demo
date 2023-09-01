@@ -28,7 +28,7 @@ namespace DemosCommonCode.Imaging
             {
                 if (uriAction.Uri != null)
                 {
-                    if (MessageBox.Show(string.Format("Open URL '{0}' ?", uriAction.Uri), "Open URL", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    if (MessageBox.Show(string.Format(SpreadsheetEditorDemo.Localization.Strings.DEMOSCOMMONCODE_IMAGING_OPEN_URL_ARG0, uriAction.Uri), SpreadsheetEditorDemo.Localization.Strings.DEMOSCOMMONCODE_IMAGING_OPEN_URL, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                     {
                         try
                         {

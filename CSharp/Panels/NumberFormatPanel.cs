@@ -40,19 +40,19 @@ namespace SpreadsheetEditorDemo
             InitializeComponent();
 
             // create formats for panel comboBox
-            _panelFormats.Add("General", new GeneralFormat());
-            _panelFormats.Add("Number", new NumberingFormat(2, false));
-            _panelFormats.Add("Date", DateFormat.Create("mm-dd-yy"));
-            _panelFormats.Add("Time", TimeFormat.Create("h:mm"));
-            _panelFormats.Add("Currency", new CurrencyFormat(2, "[$$-en-US]", true));
-            _panelFormats.Add("Percentage", new PercentageFormat(2));
-            _panelFormats.Add("Scientific", new ScientificFormat(2));
+            _panelFormats.Add(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_GENERAL, new GeneralFormat());
+            _panelFormats.Add(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_NUMBER, new NumberingFormat(2, false));
+            _panelFormats.Add(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_DATE, DateFormat.Create("mm-dd-yy"));
+            _panelFormats.Add(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_TIME, TimeFormat.Create("h:mm"));
+            _panelFormats.Add(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_CURRENCY, new CurrencyFormat(2, "[$$-en-US]", true));
+            _panelFormats.Add(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_PERCENTAGE, new PercentageFormat(2));
+            _panelFormats.Add(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_SCIENTIFIC, new ScientificFormat(2));
             _panelFormats.Add("Text", new TextFormat());
 
             foreach (string formatName in _panelFormats.Keys)
                 numberFormatComboBox.Items.Add(formatName);
 
-            numberFormatComboBox.Items.Add("Custom");
+            numberFormatComboBox.Items.Add(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_CUSTOM);
         }
 
         #endregion
@@ -125,23 +125,23 @@ namespace SpreadsheetEditorDemo
 
                     // update comboBox value
                     if (format is GeneralFormat)
-                        numberFormatComboBox.Text = "General";
+                        numberFormatComboBox.Text = SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_GENERAL_ALT1;
                     else if (format is NumberingFormat)
-                        numberFormatComboBox.Text = "Number";
+                        numberFormatComboBox.Text = SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_NUMBER_ALT1;
                     else if (format is DateFormat)
-                        numberFormatComboBox.Text = "Date";
+                        numberFormatComboBox.Text = SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_DATE_ALT1;
                     else if (format is TimeFormat)
-                        numberFormatComboBox.Text = "Time";
+                        numberFormatComboBox.Text = SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_TIME_ALT1;
                     else if (format is CurrencyFormat)
-                        numberFormatComboBox.Text = "Currency";
+                        numberFormatComboBox.Text = SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_CURRENCY_ALT1;
                     else if (format is PercentageFormat)
-                        numberFormatComboBox.Text = "Percentage";
+                        numberFormatComboBox.Text = SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_PERCENTAGE_ALT1;
                     else if (format is ScientificFormat)
-                        numberFormatComboBox.Text = "Scientific";
+                        numberFormatComboBox.Text = SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_SCIENTIFIC_ALT1;
                     else if (format is TextFormat)
                         numberFormatComboBox.Text = "Text";
                     else
-                        numberFormatComboBox.Text = "Custom";
+                        numberFormatComboBox.Text = SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_CUSTOM_ALT1;
                 }
             }
             finally
@@ -250,7 +250,7 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void decreaseDecimalButton_Click(object sender, EventArgs e)
         {
-            EditDecimalPlacesNumber(-1);
+            VisualEditor.NumberFormatDecimalPlaces--;
             UpdateUI();
         }
 
@@ -259,70 +259,11 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void increaseDecimalButton_Click(object sender, EventArgs e)
         {
-            EditDecimalPlacesNumber(1);
+            VisualEditor.NumberFormatDecimalPlaces++;
             UpdateUI();
         }
 
-        /// <summary>
-        /// Edits the number of decimal places of numbering format.
-        /// </summary>
-        /// <param name="changeAmount">The amount of decimal places to add (<i>changeAmount</i> is greater than 0)
-        /// or remove (<i>changeAmount</i> is less than 0).</param>
-        private void EditDecimalPlacesNumber(int changeAmount)
-        {
-            // get a string that represents the number format of focused cell
-            string formatString = VisualEditor.NumberFormat;
-            // convert string to the number format
-            NumberFormat format = VisualEditor.Document.ParseNumberFormat(formatString);
-
-            if (format is NumberingFormatBase)
-            {
-                NumberingFormatBase numberFormat = (NumberingFormatBase)format;
-                // change decimal places and set new format
-                numberFormat.DecimalPlaces += changeAmount;
-                VisualEditor.NumberFormat = numberFormat.ToString(VisualEditor.Document.Defaults.FormattingProperties);
-            }
-            else if (format is GeneralFormat)
-            {
-                // if number format can be created from cell value
-                NumberingFormat parsedFormat = null;
-                if (TryGetNumberFormat(VisualEditor.FocusedSpreadsheetCell.Value, out parsedFormat))
-                {
-                    // change decimal places and set new format
-                    parsedFormat.DecimalPlaces += changeAmount;
-                    VisualEditor.NumberFormat = parsedFormat.ToString(VisualEditor.Document.Defaults.FormattingProperties);
-                }
-            }
-        }
-
-        /// <summary>
-        /// Creates the numbering format from cell value.
-        /// </summary>
-        /// <param name="cellText">Cell value.</param>
-        /// <param name="format">Created numbering format.</param>
-        /// <returns><b>True</b> if cellText is parsed successfully; otherwise, <b>false</b>.</returns>
-        private bool TryGetNumberFormat(string cellText, out NumberingFormat format)
-        {
-            // if cell value successfully parsed into a number
-            double number;
-            if (double.TryParse(cellText, System.Globalization.NumberStyles.Float, Culture, out number))
-            {
-                // find separator index
-                int separatorIndex = cellText.IndexOf(Culture.NumberFormat.NumberDecimalSeparator);
-                int decimalPlaces = 0;
-
-                // get the number of decimal places
-                if (separatorIndex > 0)
-                    decimalPlaces = cellText.Length - separatorIndex - 1;
-
-                // create the numbering format
-                format = new NumberingFormat(decimalPlaces, false);
-                return true;
-            }
-
-            format = null;
-            return false;
-        }
+        
 
         #endregion
 

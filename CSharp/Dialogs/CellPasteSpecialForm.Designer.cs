@@ -29,6 +29,7 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CellPasteSpecialForm));
             this.copyStylesCheckBox = new System.Windows.Forms.CheckBox();
             this.copyValuesCheckBox = new System.Windows.Forms.CheckBox();
             this.copyFormulasCheckBox = new System.Windows.Forms.CheckBox();
@@ -47,7 +48,7 @@ namespace SpreadsheetEditorDemo
             this.copyStylesCheckBox.Name = "copyStylesCheckBox";
             this.copyStylesCheckBox.Size = new System.Drawing.Size(81, 17);
             this.copyStylesCheckBox.TabIndex = 1;
-            this.copyStylesCheckBox.Text = "Copy Styles";
+            resources.ApplyResources(this.copyStylesCheckBox, "copyStylesCheckBox");
             this.copyStylesCheckBox.UseVisualStyleBackColor = true;
             this.copyStylesCheckBox.CheckedChanged += new System.EventHandler(this.copyActionCheckBox_CheckedChanged);
             // 
@@ -60,7 +61,7 @@ namespace SpreadsheetEditorDemo
             this.copyValuesCheckBox.Name = "copyValuesCheckBox";
             this.copyValuesCheckBox.Size = new System.Drawing.Size(85, 17);
             this.copyValuesCheckBox.TabIndex = 2;
-            this.copyValuesCheckBox.Text = "Copy Values";
+            resources.ApplyResources(this.copyValuesCheckBox, "copyValuesCheckBox");
             this.copyValuesCheckBox.UseVisualStyleBackColor = true;
             this.copyValuesCheckBox.CheckedChanged += new System.EventHandler(this.copyActionCheckBox_CheckedChanged);
             // 
@@ -73,7 +74,7 @@ namespace SpreadsheetEditorDemo
             this.copyFormulasCheckBox.Name = "copyFormulasCheckBox";
             this.copyFormulasCheckBox.Size = new System.Drawing.Size(95, 17);
             this.copyFormulasCheckBox.TabIndex = 3;
-            this.copyFormulasCheckBox.Text = "Copy Formulas";
+            resources.ApplyResources(this.copyFormulasCheckBox, "copyFormulasCheckBox");
             this.copyFormulasCheckBox.UseVisualStyleBackColor = true;
             this.copyFormulasCheckBox.CheckedChanged += new System.EventHandler(this.copyActionCheckBox_CheckedChanged);
             // 
@@ -86,7 +87,7 @@ namespace SpreadsheetEditorDemo
             this.copyCommentsCheckBox.Name = "copyCommentsCheckBox";
             this.copyCommentsCheckBox.Size = new System.Drawing.Size(102, 17);
             this.copyCommentsCheckBox.TabIndex = 4;
-            this.copyCommentsCheckBox.Text = "Copy Comments";
+            resources.ApplyResources(this.copyCommentsCheckBox, "copyCommentsCheckBox");
             this.copyCommentsCheckBox.UseVisualStyleBackColor = true;
             this.copyCommentsCheckBox.CheckedChanged += new System.EventHandler(this.copyActionCheckBox_CheckedChanged);
             // 
@@ -99,7 +100,7 @@ namespace SpreadsheetEditorDemo
             this.copyHyperlinksCheckBox.Name = "copyHyperlinksCheckBox";
             this.copyHyperlinksCheckBox.Size = new System.Drawing.Size(102, 17);
             this.copyHyperlinksCheckBox.TabIndex = 5;
-            this.copyHyperlinksCheckBox.Text = "Copy Hyperlinks";
+            resources.ApplyResources(this.copyHyperlinksCheckBox, "copyHyperlinksCheckBox");
             this.copyHyperlinksCheckBox.UseVisualStyleBackColor = true;
             this.copyHyperlinksCheckBox.CheckedChanged += new System.EventHandler(this.copyActionCheckBox_CheckedChanged);
             // 
@@ -110,7 +111,7 @@ namespace SpreadsheetEditorDemo
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(94, 23);
             this.buttonCancel.TabIndex = 7;
-            this.buttonCancel.Text = "Cancel";
+            resources.ApplyResources(this.buttonCancel, "buttonCancel");
             this.buttonCancel.UseVisualStyleBackColor = true;
             // 
             // okButton
@@ -141,7 +142,7 @@ namespace SpreadsheetEditorDemo
             this.MinimizeBox = false;
             this.Name = "CellPasteSpecialForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Paste Cells (Special Mode)";
+            resources.ApplyResources(this, "$this");
             this.ResumeLayout(false);
             this.PerformLayout();
 

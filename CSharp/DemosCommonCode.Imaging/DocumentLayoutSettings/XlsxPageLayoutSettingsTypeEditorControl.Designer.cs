@@ -28,6 +28,7 @@ namespace DemosCommonCode.Imaging
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(XlsxPageLayoutSettingsTypeEditorControl));
             this.useWorksheetWidthAsPageWidthCheckBox = new System.Windows.Forms.CheckBox();
             this.useWorksheetHeightAsPageHeightCheckBox = new System.Windows.Forms.CheckBox();
             this.usePrintAreaCheckBox = new System.Windows.Forms.CheckBox();
@@ -42,7 +43,7 @@ namespace DemosCommonCode.Imaging
             this.useWorksheetWidthAsPageWidthCheckBox.Name = "useWorksheetWidthAsPageWidthCheckBox";
             this.useWorksheetWidthAsPageWidthCheckBox.Size = new System.Drawing.Size(211, 19);
             this.useWorksheetWidthAsPageWidthCheckBox.TabIndex = 0;
-            this.useWorksheetWidthAsPageWidthCheckBox.Text = "Use worksheet width as page width";
+            resources.ApplyResources(this.useWorksheetWidthAsPageWidthCheckBox, "useWorksheetWidthAsPageWidthCheckBox");
             this.useWorksheetWidthAsPageWidthCheckBox.UseVisualStyleBackColor = true;
             this.useWorksheetWidthAsPageWidthCheckBox.CheckedChanged += new System.EventHandler(this.useWorksheetWidthAsPageWidthCheckBox_CheckedChanged);
             // 
@@ -53,7 +54,7 @@ namespace DemosCommonCode.Imaging
             this.useWorksheetHeightAsPageHeightCheckBox.Name = "useWorksheetHeightAsPageHeightCheckBox";
             this.useWorksheetHeightAsPageHeightCheckBox.Size = new System.Drawing.Size(219, 19);
             this.useWorksheetHeightAsPageHeightCheckBox.TabIndex = 1;
-            this.useWorksheetHeightAsPageHeightCheckBox.Text = "Use worksheet height as page height";
+            resources.ApplyResources(this.useWorksheetHeightAsPageHeightCheckBox, "useWorksheetHeightAsPageHeightCheckBox");
             this.useWorksheetHeightAsPageHeightCheckBox.UseVisualStyleBackColor = true;
             this.useWorksheetHeightAsPageHeightCheckBox.CheckedChanged += new System.EventHandler(this.useWorksheetHeightAsPageHeightCheckBox_CheckedChanged);
             // 
@@ -64,7 +65,7 @@ namespace DemosCommonCode.Imaging
             this.usePrintAreaCheckBox.Name = "usePrintAreaCheckBox";
             this.usePrintAreaCheckBox.Size = new System.Drawing.Size(98, 19);
             this.usePrintAreaCheckBox.TabIndex = 2;
-            this.usePrintAreaCheckBox.Text = "Use print area";
+            resources.ApplyResources(this.usePrintAreaCheckBox, "usePrintAreaCheckBox");
             this.usePrintAreaCheckBox.UseVisualStyleBackColor = true;
             // 
             // usePageMarginCheckBox
@@ -74,7 +75,7 @@ namespace DemosCommonCode.Imaging
             this.usePageMarginCheckBox.Name = "usePageMarginCheckBox";
             this.usePageMarginCheckBox.Size = new System.Drawing.Size(115, 19);
             this.usePageMarginCheckBox.TabIndex = 3;
-            this.usePageMarginCheckBox.Text = "Use page margin";
+            resources.ApplyResources(this.usePageMarginCheckBox, "usePageMarginCheckBox");
             this.usePageMarginCheckBox.UseVisualStyleBackColor = true;
             // 
             // usePageScaleCheckBox
@@ -84,7 +85,7 @@ namespace DemosCommonCode.Imaging
             this.usePageScaleCheckBox.Name = "usePageScaleCheckBox";
             this.usePageScaleCheckBox.Size = new System.Drawing.Size(103, 19);
             this.usePageScaleCheckBox.TabIndex = 4;
-            this.usePageScaleCheckBox.Text = "Use page scale";
+            resources.ApplyResources(this.usePageScaleCheckBox, "usePageScaleCheckBox");
             this.usePageScaleCheckBox.UseVisualStyleBackColor = true;
             // 
             // XlsxPageLayoutSettingsTypeEditorControl

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DemosCommonCode;
+using System;
 using System.Windows.Forms;
 
 using Vintasoft.Imaging;
@@ -32,6 +33,8 @@ namespace SpreadsheetEditorDemo
         public FindReplacePanel()
         {
             InitializeComponent();
+
+            DemosTools.AutoFitToolstripButtons(this.toolStrip1);
         }
 
 

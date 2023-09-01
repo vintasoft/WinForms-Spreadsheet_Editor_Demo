@@ -29,6 +29,7 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DefinedNameManagerForm));
             this.newButton = new System.Windows.Forms.Button();
             this.editButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
@@ -46,7 +47,7 @@ namespace SpreadsheetEditorDemo
             this.newButton.Name = "newButton";
             this.newButton.Size = new System.Drawing.Size(75, 23);
             this.newButton.TabIndex = 0;
-            this.newButton.Text = "New...";
+            resources.ApplyResources(this.newButton, "newButton");
             this.newButton.UseVisualStyleBackColor = true;
             this.newButton.Click += new System.EventHandler(this.newButton_Click);
             // 
@@ -57,7 +58,7 @@ namespace SpreadsheetEditorDemo
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(75, 23);
             this.editButton.TabIndex = 1;
-            this.editButton.Text = "Edit...";
+            resources.ApplyResources(this.editButton, "editButton");
             this.editButton.UseVisualStyleBackColor = true;
             this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
@@ -68,7 +69,7 @@ namespace SpreadsheetEditorDemo
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(75, 23);
             this.deleteButton.TabIndex = 2;
-            this.deleteButton.Text = "Delete";
+            resources.ApplyResources(this.deleteButton, "deleteButton");
             this.deleteButton.UseVisualStyleBackColor = true;
             this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
@@ -95,22 +96,22 @@ namespace SpreadsheetEditorDemo
             // 
             // nameColumnHeader
             // 
-            this.nameColumnHeader.Text = "Name";
+            resources.ApplyResources(this.nameColumnHeader, "nameColumnHeader");
             this.nameColumnHeader.Width = 200;
             // 
             // valueColumnHeader
             // 
-            this.valueColumnHeader.Text = "Value";
+            resources.ApplyResources(this.valueColumnHeader, "valueColumnHeader");
             this.valueColumnHeader.Width = 220;
             // 
             // scopeColumnHeader
             // 
-            this.scopeColumnHeader.Text = "Scope";
+            resources.ApplyResources(this.scopeColumnHeader, "scopeColumnHeader");
             this.scopeColumnHeader.Width = 120;
             // 
             // commentColumnHeader
             // 
-            this.commentColumnHeader.Text = "Comment";
+            resources.ApplyResources(this.commentColumnHeader, "commentColumnHeader");
             this.commentColumnHeader.Width = 200;
             // 
             // closeButton
@@ -121,7 +122,7 @@ namespace SpreadsheetEditorDemo
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(94, 23);
             this.closeButton.TabIndex = 7;
-            this.closeButton.Text = "Close";
+            resources.ApplyResources(this.closeButton, "closeButton");
             this.closeButton.UseVisualStyleBackColor = true;
             // 
             // DefinedNameManagerForm
@@ -140,7 +141,7 @@ namespace SpreadsheetEditorDemo
             this.Name = "DefinedNameManagerForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Defined Name Manager";
+            resources.ApplyResources(this, "$this");
             this.ResumeLayout(false);
 
         }

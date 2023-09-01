@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using DemosCommonCode;
+using System.Windows.Forms;
 using Vintasoft.Imaging;
 using Vintasoft.Imaging.Office.Spreadsheet;
 using Vintasoft.Imaging.Office.Spreadsheet.UI;
@@ -19,6 +20,8 @@ namespace SpreadsheetEditorDemo
         public UndoPanel()
         {
             InitializeComponent();
+
+            DemosTools.AutoFitToolstripButtons(this.toolStrip1);
         }
 
         #endregion

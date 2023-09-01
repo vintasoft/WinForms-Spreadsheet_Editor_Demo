@@ -37,7 +37,7 @@ namespace SpreadsheetEditorDemo
             if (!copyStylesCheckBox.Checked && !copyValuesCheckBox.Checked && !copyFormulasCheckBox.Checked &&
                 !copyCommentsCheckBox.Checked && !copyHyperlinksCheckBox.Checked)
             {
-                MessageBox.Show("All checkboxes cannot be disabled.", "Error");
+                MessageBox.Show(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_ALL_CHECKBOXES_CANNOT_BE_DISABLED, SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_ERROR);
 
                 CheckBox checkBox = (CheckBox)sender;
                 checkBox.Checked = true;

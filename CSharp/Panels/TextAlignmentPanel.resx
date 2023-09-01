@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -122,5 +122,71 @@
   </metadata>
   <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <data name="textWrapButton.ToolTipText" xml:space="preserve">
+    <value>Wrap long text to multiple lines</value>
+  </data>
+  <data name="textWrapButton.Text" xml:space="preserve">
+    <value>Wrap Text</value>
+  </data>
+  <data name="horizontalAlignmentRightButton.ToolTipText" xml:space="preserve">
+    <value>Align text to the right</value>
+  </data>
+  <data name="horizontalAlignmentRightButton.Text" xml:space="preserve">
+    <value>Align Right</value>
+  </data>
+  <data name="horizontalAlignmentCenterButton.ToolTipText" xml:space="preserve">
+    <value>Align text to the center</value>
+  </data>
+  <data name="horizontalAlignmentCenterButton.Text" xml:space="preserve">
+    <value>Align Center</value>
+  </data>
+  <data name="horizontalAlignmentLeftButton.Text" xml:space="preserve">
+    <value>Align text to the left</value>
+  </data>
+  <data name="verticalAlignmentBottomButton.ToolTipText" xml:space="preserve">
+    <value>Align text to the bottom</value>
+  </data>
+  <data name="verticalAlignmentBottomButton.Text" xml:space="preserve">
+    <value>Bottom Align</value>
+  </data>
+  <data name="verticalAlignMiddleButton.ToolTipText" xml:space="preserve">
+    <value>Align text to the middle</value>
+  </data>
+  <data name="verticalAlignMiddleButton.Text" xml:space="preserve">
+    <value>Middle Align</value>
+  </data>
+  <data name="verticalAlignTopButton.ToolTipText" xml:space="preserve">
+    <value>Align text to the top</value>
+  </data>
+  <data name="verticalAlignTopButton.Text" xml:space="preserve">
+    <value>Top Align</value>
+  </data>
+  <data name="alignmentPropertiesButton.Text" xml:space="preserve">
+    <value>Text Alignment Properties...</value>
+  </data>
+  <data name="increaseIndentButton.Text" xml:space="preserve">
+    <value>Increase Indent</value>
+  </data>
+  <data name="decreaseIndentButton.Text" xml:space="preserve">
+    <value>Decrease Indent</value>
+  </data>
+  <data name="unmergeButton.Text" xml:space="preserve">
+    <value>Unmerge Cells</value>
+  </data>
+  <data name="mergeAcrossButton.Text" xml:space="preserve">
+    <value>Merge Across</value>
+  </data>
+  <data name="mergeAndCenterButton.Text" xml:space="preserve">
+    <value>Merge And Center</value>
+  </data>
+  <data name="mergeButton.ToolTipText" xml:space="preserve">
+    <value>Merge Cells</value>
+  </data>
+  <data name="mergeButton.Text" xml:space="preserve">
+    <value>Merge</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib">
+    <value>True</value>
   </metadata>
 </root>

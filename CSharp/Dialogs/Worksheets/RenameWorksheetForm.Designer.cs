@@ -29,6 +29,7 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RenameWorksheetForm));
             this.worksheetNameLabel = new System.Windows.Forms.Label();
             this.worksheetNameTextBox = new System.Windows.Forms.TextBox();
             this.okButton = new System.Windows.Forms.Button();
@@ -42,7 +43,7 @@ namespace SpreadsheetEditorDemo
             this.worksheetNameLabel.Name = "worksheetNameLabel";
             this.worksheetNameLabel.Size = new System.Drawing.Size(93, 13);
             this.worksheetNameLabel.TabIndex = 0;
-            this.worksheetNameLabel.Text = "Worksheet Name:";
+            resources.ApplyResources(this.worksheetNameLabel, "worksheetNameLabel");
             // 
             // worksheetNameTextBox
             // 
@@ -70,7 +71,7 @@ namespace SpreadsheetEditorDemo
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(94, 23);
             this.buttonCancel.TabIndex = 3;
-            this.buttonCancel.Text = "Cancel";
+            resources.ApplyResources(this.buttonCancel, "buttonCancel");
             this.buttonCancel.UseVisualStyleBackColor = true;
             // 
             // RenameWorksheetForm
@@ -88,7 +89,7 @@ namespace SpreadsheetEditorDemo
             this.MinimizeBox = false;
             this.Name = "RenameWorksheetForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Rename Worksheet";
+            resources.ApplyResources(this, "$this");
             this.ResumeLayout(false);
             this.PerformLayout();
 

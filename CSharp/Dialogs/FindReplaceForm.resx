@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,4 +117,91 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Find and Replace</value>
+  </data>
+  <data name="columnHeader5.Text" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="columnHeader4.Text" xml:space="preserve">
+    <value>Formula</value>
+  </data>
+  <data name="columnHeader3.Text" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="columnHeader2.Text" xml:space="preserve">
+    <value>Cell</value>
+  </data>
+  <data name="columnHeader1.Text" xml:space="preserve">
+    <value>Sheet</value>
+  </data>
+  <data name="statusLabel.Text" xml:space="preserve">
+    <value>statusLabel</value>
+  </data>
+  <data name="addToSelectionButton.Text" xml:space="preserve">
+    <value>Select All</value>
+  </data>
+  <data name="replaceButton.Text" xml:space="preserve">
+    <value>Replace</value>
+  </data>
+  <data name="replaceAllButton.Text" xml:space="preserve">
+    <value>Replace All</value>
+  </data>
+  <data name="findAllButton.Text" xml:space="preserve">
+    <value>Find All</value>
+  </data>
+  <data name="findNextButton.Text" xml:space="preserve">
+    <value>Find Next</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Look in:</value>
+  </data>
+  <data name="lookInComboBox.Items2" xml:space="preserve">
+    <value>Comments</value>
+  </data>
+  <data name="lookInComboBox.Items1" xml:space="preserve">
+    <value>Values</value>
+  </data>
+  <data name="lookInComboBox.Items" xml:space="preserve">
+    <value>Formulas</value>
+  </data>
+  <data name="matchContentsCheckBox.Text" xml:space="preserve">
+    <value>Match entire content</value>
+  </data>
+  <data name="matchCaseCheckBox.Text" xml:space="preserve">
+    <value>Match case</value>
+  </data>
+  <data name="searchComboBox.Items1" xml:space="preserve">
+    <value>By Columns</value>
+  </data>
+  <data name="searchComboBox.Items" xml:space="preserve">
+    <value>By Rows</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Search:</value>
+  </data>
+  <data name="findWithinComboBox.Items1" xml:space="preserve">
+    <value>Workbook</value>
+  </data>
+  <data name="findWithinComboBox.Items" xml:space="preserve">
+    <value>Sheet</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Within:</value>
+  </data>
+  <data name="replaceCheckBox.Text" xml:space="preserve">
+    <value>Replace</value>
+  </data>
+  <data name="replaceLabel.Text" xml:space="preserve">
+    <value>Replace with:</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Find what:</value>
+  </data>
+  <data name="closeButton.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </metadata>
 </root>

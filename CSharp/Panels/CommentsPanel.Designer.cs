@@ -29,6 +29,7 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CommentsPanel));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.newButton = new System.Windows.Forms.ToolStripButton();
             this.editButton = new System.Windows.Forms.ToolStripButton();
@@ -72,10 +73,10 @@ namespace SpreadsheetEditorDemo
             this.newButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newButton.Name = "newButton";
             this.newButton.Size = new System.Drawing.Size(50, 50);
-            this.newButton.Text = "New";
+            resources.ApplyResources(this.newButton, "newButton");
             this.newButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.newButton.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.newButton.ToolTipText = "Add Comment";
+            
             this.newButton.Click += new System.EventHandler(this.newButton_Click);
             // 
             // editButton
@@ -87,10 +88,10 @@ namespace SpreadsheetEditorDemo
             this.editButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(50, 50);
-            this.editButton.Text = "Edit";
+            resources.ApplyResources(this.editButton, "editButton");
             this.editButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.editButton.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.editButton.ToolTipText = "Edit Comment";
+            
             this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // deleteButton
@@ -102,10 +103,10 @@ namespace SpreadsheetEditorDemo
             this.deleteButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(50, 50);
-            this.deleteButton.Text = "Delete";
+            resources.ApplyResources(this.deleteButton, "deleteButton");
             this.deleteButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.deleteButton.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.deleteButton.ToolTipText = "Delete Comment";
+            
             this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // prevButton
@@ -117,10 +118,10 @@ namespace SpreadsheetEditorDemo
             this.prevButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.prevButton.Name = "prevButton";
             this.prevButton.Size = new System.Drawing.Size(50, 50);
-            this.prevButton.Text = "Previous";
+            resources.ApplyResources(this.prevButton, "prevButton");
             this.prevButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.prevButton.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.prevButton.ToolTipText = "Previous Comment";
+            
             this.prevButton.Click += new System.EventHandler(this.prevButton_Click);
             // 
             // nextButton
@@ -132,10 +133,10 @@ namespace SpreadsheetEditorDemo
             this.nextButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.nextButton.Name = "nextButton";
             this.nextButton.Size = new System.Drawing.Size(50, 50);
-            this.nextButton.Text = "Next";
+            resources.ApplyResources(this.nextButton, "nextButton");
             this.nextButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.nextButton.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.nextButton.ToolTipText = "Next Comment";
+            
             this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
             // 
             // showHideButton
@@ -147,10 +148,10 @@ namespace SpreadsheetEditorDemo
             this.showHideButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.showHideButton.Name = "showHideButton";
             this.showHideButton.Size = new System.Drawing.Size(70, 50);
-            this.showHideButton.Text = "Show/Hide";
+            resources.ApplyResources(this.showHideButton, "showHideButton");
             this.showHideButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.showHideButton.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.showHideButton.ToolTipText = "Show/Hide Focused Comment";
+            
             this.showHideButton.Click += new System.EventHandler(this.showHideButton_Click);
             // 
             // showAllButton
@@ -162,10 +163,10 @@ namespace SpreadsheetEditorDemo
             this.showAllButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.showAllButton.Name = "showAllButton";
             this.showAllButton.Size = new System.Drawing.Size(70, 50);
-            this.showAllButton.Text = "Show All";
+            resources.ApplyResources(this.showAllButton, "showAllButton");
             this.showAllButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.showAllButton.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.showAllButton.ToolTipText = "Show All Comments or Selected Comments";
+            
             this.showAllButton.Click += new System.EventHandler(this.showAllButton_Click);
             // 
             // hideAllButton
@@ -177,10 +178,10 @@ namespace SpreadsheetEditorDemo
             this.hideAllButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.hideAllButton.Name = "hideAllButton";
             this.hideAllButton.Size = new System.Drawing.Size(70, 50);
-            this.hideAllButton.Text = "Hide All";
+            resources.ApplyResources(this.hideAllButton, "hideAllButton");
             this.hideAllButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.hideAllButton.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.hideAllButton.ToolTipText = "Hide All Comments or Selected Comments";
+            
             this.hideAllButton.Click += new System.EventHandler(this.hideAllButton_Click);
             // 
             // CommentsPanel

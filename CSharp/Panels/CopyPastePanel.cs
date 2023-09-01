@@ -24,6 +24,8 @@ namespace SpreadsheetEditorDemo
         public CopyPastePanel()
         {
             InitializeComponent();
+
+            DemosTools.AutoFitToolstripButtons(this.toolStrip1);
         }
 
         #endregion

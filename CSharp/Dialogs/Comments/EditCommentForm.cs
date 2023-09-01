@@ -105,7 +105,7 @@ namespace SpreadsheetEditorDemo
             _commentLocation = new SheetDrawingLocation(anchorCell, topLeftOffset, null, bottomRightOffset);
 
             _addNewComment = true;
-            this.Text = "Add Comment";
+            this.Text = SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_ADD_COMMENT;
 
             UpdateUI();
         }

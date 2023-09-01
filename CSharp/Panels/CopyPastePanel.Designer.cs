@@ -29,6 +29,7 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CopyPastePanel));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.copyButton = new System.Windows.Forms.ToolStripSplitButton();
             this.cutMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,7 +45,6 @@ namespace SpreadsheetEditorDemo
             // 
             // toolStrip1
             // 
-            this.toolStrip1.AutoSize = false;
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStrip1.GripMargin = new System.Windows.Forms.Padding(0);
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
@@ -54,7 +54,7 @@ namespace SpreadsheetEditorDemo
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0);
-            this.toolStrip1.Size = new System.Drawing.Size(187, 53);
+            this.toolStrip1.Size = new System.Drawing.Size(122, 53);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -69,10 +69,10 @@ namespace SpreadsheetEditorDemo
             this.copyButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.copyButton.Name = "copyButton";
             this.copyButton.Size = new System.Drawing.Size(60, 50);
-            this.copyButton.Text = "Copy";
+            resources.ApplyResources(this.copyButton, "copyButton");
             this.copyButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.copyButton.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.copyButton.ToolTipText = "Copy (Ctrl+C)";
+            
             this.copyButton.ButtonClick += new System.EventHandler(this.copyButton_ButtonClick);
             // 
             // cutMenuItem
@@ -80,9 +80,9 @@ namespace SpreadsheetEditorDemo
             this.cutMenuItem.Image = global::SpreadsheetEditorDemo.Properties.Resources.Cut;
             this.cutMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.cutMenuItem.Name = "cutMenuItem";
-            this.cutMenuItem.Size = new System.Drawing.Size(95, 24);
-            this.cutMenuItem.Text = "Cut";
-            this.cutMenuItem.ToolTipText = "Cut (Ctrl+X)";
+            this.cutMenuItem.Size = new System.Drawing.Size(182, 24);
+            resources.ApplyResources(this.cutMenuItem, "cutMenuItem");
+            
             this.cutMenuItem.Click += new System.EventHandler(this.cutMenuItem_Click);
             // 
             // pasteButton
@@ -101,10 +101,10 @@ namespace SpreadsheetEditorDemo
             this.pasteButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.pasteButton.Name = "pasteButton";
             this.pasteButton.Size = new System.Drawing.Size(60, 50);
-            this.pasteButton.Text = "Paste";
+            resources.ApplyResources(this.pasteButton, "pasteButton");
             this.pasteButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.pasteButton.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.pasteButton.ToolTipText = "Paste (Ctrl+V) (keep Ctrl to paste to focused cells)";
+            
             this.pasteButton.ButtonClick += new System.EventHandler(this.pasteButton_ButtonClick);
             this.pasteButton.DropDownOpened += new System.EventHandler(this.pasteButton_DropDownOpened);
             // 
@@ -112,28 +112,28 @@ namespace SpreadsheetEditorDemo
             // 
             this.pasteContentsToolStripMenuItem.Name = "pasteContentsToolStripMenuItem";
             this.pasteContentsToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.pasteContentsToolStripMenuItem.Text = "Paste Contents";
+            resources.ApplyResources(this.pasteContentsToolStripMenuItem, "pasteContentsToolStripMenuItem");
             this.pasteContentsToolStripMenuItem.Click += new System.EventHandler(this.pasteContentsToolStripMenuItem_Click);
             // 
             // pasteValuesAndStyleToolStripMenuItem
             // 
             this.pasteValuesAndStyleToolStripMenuItem.Name = "pasteValuesAndStyleToolStripMenuItem";
             this.pasteValuesAndStyleToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.pasteValuesAndStyleToolStripMenuItem.Text = "Paste Values and Styles";
+            resources.ApplyResources(this.pasteValuesAndStyleToolStripMenuItem, "pasteValuesAndStyleToolStripMenuItem");
             this.pasteValuesAndStyleToolStripMenuItem.Click += new System.EventHandler(this.pasteValuesAndStyleToolStripMenuItem_Click);
             // 
             // pasteValuesToolStripMenuItem
             // 
             this.pasteValuesToolStripMenuItem.Name = "pasteValuesToolStripMenuItem";
             this.pasteValuesToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.pasteValuesToolStripMenuItem.Text = "Paste Values";
+            resources.ApplyResources(this.pasteValuesToolStripMenuItem, "pasteValuesToolStripMenuItem");
             this.pasteValuesToolStripMenuItem.Click += new System.EventHandler(this.pasteValuesToolStripMenuItem_Click);
             // 
             // pasteFormulasToolStripMenuItem
             // 
             this.pasteFormulasToolStripMenuItem.Name = "pasteFormulasToolStripMenuItem";
             this.pasteFormulasToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.pasteFormulasToolStripMenuItem.Text = "Paste Formulas";
+            resources.ApplyResources(this.pasteFormulasToolStripMenuItem, "pasteFormulasToolStripMenuItem");
             this.pasteFormulasToolStripMenuItem.Click += new System.EventHandler(this.pasteFormulasToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
@@ -145,18 +145,21 @@ namespace SpreadsheetEditorDemo
             // 
             this.pasteSpecialToolStripMenuItem.Name = "pasteSpecialToolStripMenuItem";
             this.pasteSpecialToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.pasteSpecialToolStripMenuItem.Text = "Paste Special...";
+            resources.ApplyResources(this.pasteSpecialToolStripMenuItem, "pasteSpecialToolStripMenuItem");
             this.pasteSpecialToolStripMenuItem.Click += new System.EventHandler(this.pasteSpecialToolStripMenuItem_Click);
             // 
             // CopyPastePanel
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Controls.Add(this.toolStrip1);
             this.Name = "CopyPastePanel";
-            this.Size = new System.Drawing.Size(187, 53);
+            this.Size = new System.Drawing.Size(122, 53);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

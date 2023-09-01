@@ -483,6 +483,26 @@ namespace SpreadsheetEditorDemo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap DeleteCellsAndShiftLeft {
+            get {
+                object obj = ResourceManager.GetObject("DeleteCellsAndShiftLeft", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DeleteCellsAndShiftUp {
+            get {
+                object obj = ResourceManager.GetObject("DeleteCellsAndShiftUp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DeleteColumns {
             get {
                 object obj = ResourceManager.GetObject("DeleteColumns", resourceCulture);
@@ -686,6 +706,26 @@ namespace SpreadsheetEditorDemo.Properties {
         internal static System.Drawing.Bitmap InsertCells {
             get {
                 object obj = ResourceManager.GetObject("InsertCells", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap InsertCellsAndShiftDown {
+            get {
+                object obj = ResourceManager.GetObject("InsertCellsAndShiftDown", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap InsertCellsAndShiftRight {
+            get {
+                object obj = ResourceManager.GetObject("InsertCellsAndShiftRight", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

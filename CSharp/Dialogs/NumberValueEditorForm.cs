@@ -133,7 +133,7 @@ namespace SpreadsheetEditorDemo
                 else
                 {
                     // create error message
-                    string message = string.Format("{0} must be between {1} and {2}.", _propertyName, _minValue, _maxValue);
+                    string message = string.Format(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_ARG0_MUST_BE_BETWEEN_ARG1_AND_ARG2, _propertyName, _minValue, _maxValue);
                     DemosTools.ShowWarningMessage("Spreadsheet Editor Demo", message);
                     return;
                 }
@@ -141,7 +141,7 @@ namespace SpreadsheetEditorDemo
             else
             {
                 // create error message
-                string message = string.Format("{0} requires an integer or decimal number.", _propertyName);
+                string message = string.Format(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_ARG0_REQUIRES_AN_INTEGER_OR_DECIMAL_NUMBER, _propertyName);
                 DemosTools.ShowWarningMessage("Spreadsheet Editor Demo", message);
                 return;
             }

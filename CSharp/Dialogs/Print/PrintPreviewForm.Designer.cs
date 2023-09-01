@@ -29,6 +29,7 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrintPreviewForm));
             this.printPreviewControl1 = new System.Windows.Forms.PrintPreviewControl();
             this.printButton = new System.Windows.Forms.Button();
             this.pageSettingsButton = new System.Windows.Forms.Button();
@@ -60,7 +61,7 @@ namespace SpreadsheetEditorDemo
             this.printButton.Name = "printButton";
             this.printButton.Size = new System.Drawing.Size(182, 65);
             this.printButton.TabIndex = 1;
-            this.printButton.Text = "Print";
+            resources.ApplyResources(this.printButton, "printButton");
             this.printButton.UseVisualStyleBackColor = true;
             this.printButton.Click += new System.EventHandler(this.printButton_Click);
             // 
@@ -70,7 +71,7 @@ namespace SpreadsheetEditorDemo
             this.pageSettingsButton.Name = "pageSettingsButton";
             this.pageSettingsButton.Size = new System.Drawing.Size(182, 32);
             this.pageSettingsButton.TabIndex = 2;
-            this.pageSettingsButton.Text = "Page settings...";
+            resources.ApplyResources(this.pageSettingsButton, "pageSettingsButton");
             this.pageSettingsButton.UseVisualStyleBackColor = true;
             this.pageSettingsButton.Click += new System.EventHandler(this.pageSettingsButton_Click);
             // 
@@ -82,7 +83,7 @@ namespace SpreadsheetEditorDemo
             this.previewZoomLabel.Name = "previewZoomLabel";
             this.previewZoomLabel.Size = new System.Drawing.Size(37, 13);
             this.previewZoomLabel.TabIndex = 4;
-            this.previewZoomLabel.Text = "Zoom:";
+            resources.ApplyResources(this.previewZoomLabel, "previewZoomLabel");
             // 
             // previewZoomComboBox
             // 
@@ -113,7 +114,7 @@ namespace SpreadsheetEditorDemo
             this.previewPageLabel.Name = "previewPageLabel";
             this.previewPageLabel.Size = new System.Drawing.Size(35, 13);
             this.previewPageLabel.TabIndex = 6;
-            this.previewPageLabel.Text = "Page:";
+            resources.ApplyResources(this.previewPageLabel, "previewPageLabel");
             // 
             // previewPageIndexNumericUpDown
             // 
@@ -140,7 +141,7 @@ namespace SpreadsheetEditorDemo
             this.printPreviewGroupBox.Size = new System.Drawing.Size(707, 686);
             this.printPreviewGroupBox.TabIndex = 8;
             this.printPreviewGroupBox.TabStop = false;
-            this.printPreviewGroupBox.Text = "Preview";
+            resources.ApplyResources(this.printPreviewGroupBox, "printPreviewGroupBox");
             // 
             // previewPageCountLabel
             // 
@@ -150,7 +151,7 @@ namespace SpreadsheetEditorDemo
             this.previewPageCountLabel.Name = "previewPageCountLabel";
             this.previewPageCountLabel.Size = new System.Drawing.Size(68, 13);
             this.previewPageCountLabel.TabIndex = 8;
-            this.previewPageCountLabel.Text = "from 1 pages";
+            resources.ApplyResources(this.previewPageCountLabel, "previewPageCountLabel");
             // 
             // PrintPreviewForm
             // 
@@ -161,7 +162,7 @@ namespace SpreadsheetEditorDemo
             this.Controls.Add(this.printButton);
             this.Name = "PrintPreviewForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Print XLSX document";
+            resources.ApplyResources(this, "$this");
             ((System.ComponentModel.ISupportInitialize)(this.previewPageIndexNumericUpDown)).EndInit();
             this.printPreviewGroupBox.ResumeLayout(false);
             this.printPreviewGroupBox.PerformLayout();

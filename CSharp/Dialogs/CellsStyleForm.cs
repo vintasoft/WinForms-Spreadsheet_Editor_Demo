@@ -105,10 +105,10 @@ namespace SpreadsheetEditorDemo
             foreach (string fontName in GetAvailableFontNames())
                 fontNamesListBox.Items.Add(fontName);
 
-            fontStylesListBox.Items.Add("Regular");
-            fontStylesListBox.Items.Add("Italic");
-            fontStylesListBox.Items.Add("Bold");
-            fontStylesListBox.Items.Add("Bold Italic");
+            fontStylesListBox.Items.Add(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_REGULAR);
+            fontStylesListBox.Items.Add(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_ITALIC);
+            fontStylesListBox.Items.Add(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_BOLD);
+            fontStylesListBox.Items.Add(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_BOLD_ITALIC);
 
             // Borders
             foreach (CellBorderStyle borderStyle in Enum.GetValues(typeof(CellBorderStyle)))
@@ -226,7 +226,7 @@ namespace SpreadsheetEditorDemo
                 formatCategoriesTabControl.SelectedTab = numberTabPage;
                 numberDecimalPlacesNumericUpDown.Value = numberingFormat.DecimalPlaces;
                 useThousandsSeparatorCheckBox.Checked = numberingFormat.UseThousandsSeparator;
-                useRedColorForNegativeCheckBox.Checked = numberingFormat.NegativeValueColor == "Red";
+                useRedColorForNegativeCheckBox.Checked = numberingFormat.NegativeValueColor == SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_RED;
                 hideMinusSignCheckBox.Checked = numberingFormat.HideMinusSign;
             }
             else if (format is DateFormat)
@@ -303,7 +303,7 @@ namespace SpreadsheetEditorDemo
                 string negativeColor = null;
 
                 if (useRedColorForNegativeCheckBox.Checked)
-                    negativeColor = "Red";
+                    negativeColor = SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_RED_ALT1;
 
                 // create numbering format
                 format = new NumberingFormat(
@@ -411,7 +411,7 @@ namespace SpreadsheetEditorDemo
                 return;
 
             if (useRedColorForNegativeCheckBox.Checked)
-                ((NumberingFormat)_currentFormat).NegativeValueColor = "Red";
+                ((NumberingFormat)_currentFormat).NegativeValueColor = SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_RED_ALT2;
             else
                 ((NumberingFormat)_currentFormat).NegativeValueColor = null;
 
@@ -823,23 +823,23 @@ namespace SpreadsheetEditorDemo
             {
                 if (isBold.Value && isItalic.Value)
                 {
-                    fontStyleTextBox.Text = "Bold Italic";
-                    fontStylesListBox.SelectedItem = "Bold Italic";
+                    fontStyleTextBox.Text = SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_BOLD_ITALIC_ALT1;
+                    fontStylesListBox.SelectedItem = SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_BOLD_ITALIC_ALT2;
                 }
                 else if (isBold.Value)
                 {
-                    fontStyleTextBox.Text = "Bold";
-                    fontStylesListBox.SelectedItem = "Bold";
+                    fontStyleTextBox.Text = SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_BOLD_ALT1;
+                    fontStylesListBox.SelectedItem = SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_BOLD_ALT2;
                 }
                 else if (isItalic.Value)
                 {
-                    fontStyleTextBox.Text = "Italic";
-                    fontStylesListBox.SelectedItem = "Italic";
+                    fontStyleTextBox.Text = SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_ITALIC_ALT1;
+                    fontStylesListBox.SelectedItem = SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_ITALIC_ALT2;
                 }
                 else
                 {
-                    fontStyleTextBox.Text = "Regular";
-                    fontStylesListBox.SelectedItem = "Regular";
+                    fontStyleTextBox.Text = SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_REGULAR_ALT1;
+                    fontStylesListBox.SelectedItem = SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_REGULAR_ALT2;
                 }
             }
 
@@ -1062,13 +1062,13 @@ namespace SpreadsheetEditorDemo
             fontNamesListBox.SelectedItem = normalStyle.FontProperties.Name;
 
             if (normalStyle.FontProperties.IsBold && normalStyle.FontProperties.IsItalic)
-                fontStylesListBox.SelectedItem = "Bold Italic";
+                fontStylesListBox.SelectedItem = SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_BOLD_ITALIC_ALT3;
             else if (normalStyle.FontProperties.IsBold)
-                fontStylesListBox.SelectedItem = "Bold";
+                fontStylesListBox.SelectedItem = SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_BOLD_ALT3;
             else if (normalStyle.FontProperties.IsItalic)
-                fontStylesListBox.SelectedItem = "Italic";
+                fontStylesListBox.SelectedItem = SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_ITALIC_ALT3;
             else
-                fontStylesListBox.SelectedItem = "Regular";
+                fontStylesListBox.SelectedItem = SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_REGULAR_ALT3;
 
             fontSizeTextBox.Text = normalStyle.FontProperties.Size.ToString(Culture);
             SetFontSizeValue();
@@ -1125,15 +1125,15 @@ namespace SpreadsheetEditorDemo
 
             if (fontStylesListBox.Items.Contains(fontStyleTextBox.Text))
             {
-                bool isBold = fontStyleTextBox.Text == "Bold" || fontStyleTextBox.Text == "Bold Italic";
-                bool isItalic = fontStyleTextBox.Text == "Italic" || fontStyleTextBox.Text == "Bold Italic";
+                bool isBold = fontStyleTextBox.Text == SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_BOLD_ALT4 || fontStyleTextBox.Text == SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_BOLD_ITALIC_ALT4;
+                bool isItalic = fontStyleTextBox.Text == SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_ITALIC_ALT4 || fontStyleTextBox.Text == SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_BOLD_ITALIC_ALT5;
 
                 _changedProperties[CellStyleProperty.FontIsBold] = isBold;
                 _changedProperties[CellStyleProperty.FontIsItalic] = isItalic;
             }
             else
             {
-                MessageBox.Show(string.Format("Font style with name '{0}' does not exist.", fontStyleTextBox.Text));
+                MessageBox.Show(string.Format(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_FONT_STYLE_WITH_NAME_ARG0_DOES_NOT_EXIST, fontStyleTextBox.Text));
             }
         }
 
@@ -1151,7 +1151,7 @@ namespace SpreadsheetEditorDemo
                 if (double.TryParse(fontSizeTextBox.Text, NumberStyles.Any, Culture, out fontSize))
                     _changedProperties[CellStyleProperty.FontSize] = Math.Round(fontSize, 2);
                 else
-                    MessageBox.Show("Font size must be an integer or decimal number.");
+                    MessageBox.Show(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_FONT_SIZE_MUST_BE_AN_INTEGER_OR_DECIMAL_NUMBER);
             }
         }
 
@@ -1275,6 +1275,7 @@ namespace SpreadsheetEditorDemo
                 visualEditor.RowsHeight = previewCellsArea.Height;
                 verticalBorderButton.Enabled = false;
                 horizontalBorderButton.Enabled = false;
+                insideBorderPresetButton.Enabled = false;
             }
 
             VintasoftSize a1Size = visualEditor.FocusedWorksheet.GetCellSize(new CellReference(0, 0));
@@ -1446,6 +1447,9 @@ namespace SpreadsheetEditorDemo
         private CellBorder GetSelectedBorder()
         {
             CellBorderStyle style = ((CellBorderStyleItem)lineStylesListBox.SelectedItem).CellBorderStyle;
+
+            if (style == CellBorderStyle.None)
+                return CellBorder.Invisible;
 
             return new CellBorder(style, VintasoftColor.FromArgb(lineColorPanelControl.Color.ToArgb()));
         }

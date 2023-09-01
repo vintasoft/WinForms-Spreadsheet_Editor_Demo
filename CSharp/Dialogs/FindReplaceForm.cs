@@ -206,7 +206,7 @@ namespace SpreadsheetEditorDemo
                 ShowResults(textReplacer.FindAll());
                 UpdateStatus();
                 if (textReplacer.FoundCellCount == 0)
-                    ShowMessage(string.Format("Text '{0}' is not found.", textReplacer.Text));
+                    ShowMessage(string.Format(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_TEXT_ARG0_IS_NOT_FOUND, textReplacer.Text));
             }
         }
 
@@ -219,7 +219,7 @@ namespace SpreadsheetEditorDemo
             if (textReplacer != null)
             {
                 bool result;
-                VisualEditor.StartEditing("Replace");
+                VisualEditor.StartEditing(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_REPLACE);
                 try
                 {
                     result = textReplacer.Replace(replaceWithComboBox.Text);
@@ -231,7 +231,7 @@ namespace SpreadsheetEditorDemo
                 if (result)
                     FindNext();
                 else
-                    ShowMessage("Cannot find a match.");
+                    ShowMessage(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_CANNOT_FIND_A_MATCH);
             }
         }
 
@@ -247,7 +247,7 @@ namespace SpreadsheetEditorDemo
                     Height = MinimumSize.Height + 150;
 
                 SpreadsheetCellReference[] result;
-                VisualEditor.StartEditing("Replace all");
+                VisualEditor.StartEditing(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_REPLACE_ALL);
                 try
                 {
                     result = textReplacer.ReplaceAll(replaceWithComboBox.Text);
@@ -261,9 +261,9 @@ namespace SpreadsheetEditorDemo
 
                 UpdateStatus();
                 if (textReplacer.FoundCellCount == 0)
-                    ShowMessage("Could not find anything to replace.", "Replace", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    ShowMessage(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_COULD_NOT_FIND_ANYTHING_TO_REPLACE, SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_REPLACE_ALT1, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else
-                    ShowMessage(string.Format("Made '{0}' replacements.", textReplacer.FoundCellCount), "Replace", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ShowMessage(string.Format(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_MADE_ARG0_REPLACEMENTS, textReplacer.FoundCellCount), SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_REPLACE_ALT2, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -350,7 +350,7 @@ namespace SpreadsheetEditorDemo
                 {
                     if (textReplacer.FoundCellCount == 0)
                     {
-                        ShowMessage(string.Format("Text '{0}' is not found.", textReplacer.Text));
+                        ShowMessage(string.Format(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_TEXT_ARG0_IS_NOT_FOUND_ALT1, textReplacer.Text));
                     }
                     else
                     {
@@ -375,7 +375,7 @@ namespace SpreadsheetEditorDemo
             if (_textFindReplace == null || _textFindReplace.FoundCellCount == 0)
                 statusLabel.Text = "";
             else
-                statusLabel.Text = string.Format("{0} cells found.", _textFindReplace.FoundCellCount);
+                statusLabel.Text = string.Format(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_ARG0_CELLS_FOUND, _textFindReplace.FoundCellCount);
         }
 
         /// <summary>

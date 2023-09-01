@@ -29,6 +29,7 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TextAlignmentPanel));
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.mergeButton = new System.Windows.Forms.ToolStripButton();
             this.mergeAndCenterButton = new System.Windows.Forms.ToolStripButton();
@@ -85,8 +86,8 @@ namespace SpreadsheetEditorDemo
             this.mergeButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.mergeButton.Name = "mergeButton";
             this.mergeButton.Size = new System.Drawing.Size(23, 22);
-            this.mergeButton.Text = "Merge";
-            this.mergeButton.ToolTipText = "Merge Cells";
+            resources.ApplyResources(this.mergeButton, "mergeButton");
+            
             this.mergeButton.Click += new System.EventHandler(this.mergeButton_Click);
             // 
             // mergeAndCenterButton
@@ -97,7 +98,7 @@ namespace SpreadsheetEditorDemo
             this.mergeAndCenterButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.mergeAndCenterButton.Name = "mergeAndCenterButton";
             this.mergeAndCenterButton.Size = new System.Drawing.Size(23, 22);
-            this.mergeAndCenterButton.Text = "Merge And Center";
+            resources.ApplyResources(this.mergeAndCenterButton, "mergeAndCenterButton");
             this.mergeAndCenterButton.Click += new System.EventHandler(this.mergeAndCenterButton_Click);
             // 
             // mergeAcrossButton
@@ -108,7 +109,7 @@ namespace SpreadsheetEditorDemo
             this.mergeAcrossButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.mergeAcrossButton.Name = "mergeAcrossButton";
             this.mergeAcrossButton.Size = new System.Drawing.Size(23, 22);
-            this.mergeAcrossButton.Text = "Merge Across";
+            resources.ApplyResources(this.mergeAcrossButton, "mergeAcrossButton");
             this.mergeAcrossButton.Click += new System.EventHandler(this.mergeAcrossButton_Click);
             // 
             // unmergeButton
@@ -119,7 +120,7 @@ namespace SpreadsheetEditorDemo
             this.unmergeButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.unmergeButton.Name = "unmergeButton";
             this.unmergeButton.Size = new System.Drawing.Size(23, 22);
-            this.unmergeButton.Text = "Unmerge Cells";
+            resources.ApplyResources(this.unmergeButton, "unmergeButton");
             this.unmergeButton.Click += new System.EventHandler(this.unmergeButton_Click);
             // 
             // toolStripSeparator3
@@ -135,7 +136,7 @@ namespace SpreadsheetEditorDemo
             this.decreaseIndentButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.decreaseIndentButton.Name = "decreaseIndentButton";
             this.decreaseIndentButton.Size = new System.Drawing.Size(23, 22);
-            this.decreaseIndentButton.Text = "Decrease Indent";
+            resources.ApplyResources(this.decreaseIndentButton, "decreaseIndentButton");
             this.decreaseIndentButton.Click += new System.EventHandler(this.decreaseIndentButton_Click);
             // 
             // increaseIndentButton
@@ -146,7 +147,7 @@ namespace SpreadsheetEditorDemo
             this.increaseIndentButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.increaseIndentButton.Name = "increaseIndentButton";
             this.increaseIndentButton.Size = new System.Drawing.Size(23, 22);
-            this.increaseIndentButton.Text = "Increase Indent";
+            resources.ApplyResources(this.increaseIndentButton, "increaseIndentButton");
             this.increaseIndentButton.Click += new System.EventHandler(this.increaseIndentButton_Click);
             // 
             // toolStripSeparator4
@@ -162,7 +163,7 @@ namespace SpreadsheetEditorDemo
             this.alignmentPropertiesButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.alignmentPropertiesButton.Name = "alignmentPropertiesButton";
             this.alignmentPropertiesButton.Size = new System.Drawing.Size(23, 22);
-            this.alignmentPropertiesButton.Text = "Text Alignment Properties...";
+            resources.ApplyResources(this.alignmentPropertiesButton, "alignmentPropertiesButton");
             this.alignmentPropertiesButton.Click += new System.EventHandler(this.alignmentPropertiesButton_Click);
             // 
             // toolStrip1
@@ -196,8 +197,8 @@ namespace SpreadsheetEditorDemo
             this.verticalAlignTopButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.verticalAlignTopButton.Name = "verticalAlignTopButton";
             this.verticalAlignTopButton.Size = new System.Drawing.Size(23, 22);
-            this.verticalAlignTopButton.Text = "Top Align";
-            this.verticalAlignTopButton.ToolTipText = "Align text to the top";
+            resources.ApplyResources(this.verticalAlignTopButton, "verticalAlignTopButton");
+            
             this.verticalAlignTopButton.Click += new System.EventHandler(this.verticalAlignTopButton_Click);
             // 
             // verticalAlignMiddleButton
@@ -208,8 +209,8 @@ namespace SpreadsheetEditorDemo
             this.verticalAlignMiddleButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.verticalAlignMiddleButton.Name = "verticalAlignMiddleButton";
             this.verticalAlignMiddleButton.Size = new System.Drawing.Size(23, 22);
-            this.verticalAlignMiddleButton.Text = "Middle Align";
-            this.verticalAlignMiddleButton.ToolTipText = "Align text to the middle";
+            resources.ApplyResources(this.verticalAlignMiddleButton, "verticalAlignMiddleButton");
+            
             this.verticalAlignMiddleButton.Click += new System.EventHandler(this.verticalAlignMiddleButton_Click);
             // 
             // verticalAlignmentBottomButton
@@ -220,8 +221,8 @@ namespace SpreadsheetEditorDemo
             this.verticalAlignmentBottomButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.verticalAlignmentBottomButton.Name = "verticalAlignmentBottomButton";
             this.verticalAlignmentBottomButton.Size = new System.Drawing.Size(23, 22);
-            this.verticalAlignmentBottomButton.Text = "Bottom Align";
-            this.verticalAlignmentBottomButton.ToolTipText = "Align text to the bottom";
+            resources.ApplyResources(this.verticalAlignmentBottomButton, "verticalAlignmentBottomButton");
+            
             this.verticalAlignmentBottomButton.Click += new System.EventHandler(this.verticalAlignmentBottomButton_Click);
             // 
             // toolStripSeparator1
@@ -237,7 +238,7 @@ namespace SpreadsheetEditorDemo
             this.horizontalAlignmentLeftButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.horizontalAlignmentLeftButton.Name = "horizontalAlignmentLeftButton";
             this.horizontalAlignmentLeftButton.Size = new System.Drawing.Size(23, 22);
-            this.horizontalAlignmentLeftButton.Text = "Align text to the left";
+            resources.ApplyResources(this.horizontalAlignmentLeftButton, "horizontalAlignmentLeftButton");
             this.horizontalAlignmentLeftButton.Click += new System.EventHandler(this.horizontalAlignmentLeftButton_Click);
             // 
             // horizontalAlignmentCenterButton
@@ -248,8 +249,8 @@ namespace SpreadsheetEditorDemo
             this.horizontalAlignmentCenterButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.horizontalAlignmentCenterButton.Name = "horizontalAlignmentCenterButton";
             this.horizontalAlignmentCenterButton.Size = new System.Drawing.Size(23, 22);
-            this.horizontalAlignmentCenterButton.Text = "Align Center";
-            this.horizontalAlignmentCenterButton.ToolTipText = "Align text to the center";
+            resources.ApplyResources(this.horizontalAlignmentCenterButton, "horizontalAlignmentCenterButton");
+            
             this.horizontalAlignmentCenterButton.Click += new System.EventHandler(this.horizontalAlignmentCenterButton_Click);
             // 
             // horizontalAlignmentRightButton
@@ -260,8 +261,8 @@ namespace SpreadsheetEditorDemo
             this.horizontalAlignmentRightButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.horizontalAlignmentRightButton.Name = "horizontalAlignmentRightButton";
             this.horizontalAlignmentRightButton.Size = new System.Drawing.Size(23, 22);
-            this.horizontalAlignmentRightButton.Text = "Align Right";
-            this.horizontalAlignmentRightButton.ToolTipText = "Align text to the right";
+            resources.ApplyResources(this.horizontalAlignmentRightButton, "horizontalAlignmentRightButton");
+            
             this.horizontalAlignmentRightButton.Click += new System.EventHandler(this.horizontalAlignmentRightButton_Click);
             // 
             // toolStripSeparator2
@@ -277,8 +278,8 @@ namespace SpreadsheetEditorDemo
             this.textWrapButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.textWrapButton.Name = "textWrapButton";
             this.textWrapButton.Size = new System.Drawing.Size(23, 22);
-            this.textWrapButton.Text = "Wrap Text";
-            this.textWrapButton.ToolTipText = "Wrap long text to multiple lines";
+            resources.ApplyResources(this.textWrapButton, "textWrapButton");
+            
             this.textWrapButton.Click += new System.EventHandler(this.textWrapButton_Click);
             // 
             // TextAlignmentPanel

@@ -29,6 +29,7 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NavigationPanel));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.worksheetComboBox = new System.Windows.Forms.ToolStripComboBox();
             this.zoomComboBox = new System.Windows.Forms.ToolStripComboBox();
@@ -119,7 +120,7 @@ namespace SpreadsheetEditorDemo
             this.firstWorksheetButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.firstWorksheetButton.Name = "firstWorksheetButton";
             this.firstWorksheetButton.Size = new System.Drawing.Size(23, 22);
-            this.firstWorksheetButton.Text = "First Worksheet";
+            resources.ApplyResources(this.firstWorksheetButton, "firstWorksheetButton");
             this.firstWorksheetButton.Click += new System.EventHandler(this.firstWorksheetButton_Click);
             // 
             // prevWorksheetButton
@@ -130,7 +131,7 @@ namespace SpreadsheetEditorDemo
             this.prevWorksheetButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.prevWorksheetButton.Name = "prevWorksheetButton";
             this.prevWorksheetButton.Size = new System.Drawing.Size(23, 22);
-            this.prevWorksheetButton.Text = "Previous Worksheet";
+            resources.ApplyResources(this.prevWorksheetButton, "prevWorksheetButton");
             this.prevWorksheetButton.Click += new System.EventHandler(this.prevWorksheetButton_Click);
             // 
             // nextWorksheetButton
@@ -141,7 +142,7 @@ namespace SpreadsheetEditorDemo
             this.nextWorksheetButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.nextWorksheetButton.Name = "nextWorksheetButton";
             this.nextWorksheetButton.Size = new System.Drawing.Size(23, 22);
-            this.nextWorksheetButton.Text = "Next Worksheet";
+            resources.ApplyResources(this.nextWorksheetButton, "nextWorksheetButton");
             this.nextWorksheetButton.Click += new System.EventHandler(this.nextWorksheetButton_Click);
             // 
             // lastWorksheetButton
@@ -152,7 +153,7 @@ namespace SpreadsheetEditorDemo
             this.lastWorksheetButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.lastWorksheetButton.Name = "lastWorksheetButton";
             this.lastWorksheetButton.Size = new System.Drawing.Size(23, 22);
-            this.lastWorksheetButton.Text = "Last Worksheet";
+            resources.ApplyResources(this.lastWorksheetButton, "lastWorksheetButton");
             this.lastWorksheetButton.Click += new System.EventHandler(this.lastWorksheetButton_Click);
             // 
             // addWorksheetButton
@@ -163,7 +164,7 @@ namespace SpreadsheetEditorDemo
             this.addWorksheetButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.addWorksheetButton.Name = "addWorksheetButton";
             this.addWorksheetButton.Size = new System.Drawing.Size(23, 22);
-            this.addWorksheetButton.Text = "Add Woksheet";
+            resources.ApplyResources(this.addWorksheetButton, "addWorksheetButton");
             this.addWorksheetButton.Click += new System.EventHandler(this.addWorksheetButton_Click);
             // 
             // worksheetsActionsButton
@@ -182,7 +183,7 @@ namespace SpreadsheetEditorDemo
             this.worksheetsActionsButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.worksheetsActionsButton.Name = "worksheetsActionsButton";
             this.worksheetsActionsButton.Size = new System.Drawing.Size(34, 22);
-            this.worksheetsActionsButton.Text = "Worksheet Actions";
+            resources.ApplyResources(this.worksheetsActionsButton, "worksheetsActionsButton");
             this.worksheetsActionsButton.ButtonClick += new System.EventHandler(this.worksheetsButton_ButtonClick);
             // 
             // copyToolStripMenuItem
@@ -191,7 +192,7 @@ namespace SpreadsheetEditorDemo
             this.copyToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
             this.copyToolStripMenuItem.Size = new System.Drawing.Size(128, 24);
-            this.copyToolStripMenuItem.Text = "Copy";
+            resources.ApplyResources(this.copyToolStripMenuItem, "copyToolStripMenuItem");
             this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             // 
             // removeToolStripMenuItem
@@ -200,7 +201,7 @@ namespace SpreadsheetEditorDemo
             this.removeToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.removeToolStripMenuItem.Name = "removeToolStripMenuItem";
             this.removeToolStripMenuItem.Size = new System.Drawing.Size(128, 24);
-            this.removeToolStripMenuItem.Text = "Remove";
+            resources.ApplyResources(this.removeToolStripMenuItem, "removeToolStripMenuItem");
             this.removeToolStripMenuItem.Click += new System.EventHandler(this.removeToolStripMenuItem_Click);
             // 
             // moveMenuItem
@@ -209,7 +210,7 @@ namespace SpreadsheetEditorDemo
             this.moveMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.moveMenuItem.Name = "moveMenuItem";
             this.moveMenuItem.Size = new System.Drawing.Size(128, 24);
-            this.moveMenuItem.Text = "Move...";
+            resources.ApplyResources(this.moveMenuItem, "moveMenuItem");
             this.moveMenuItem.Click += new System.EventHandler(this.moveMenuItem_Click);
             // 
             // renameToolStripMenuItem
@@ -218,7 +219,7 @@ namespace SpreadsheetEditorDemo
             this.renameToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.renameToolStripMenuItem.Name = "renameToolStripMenuItem";
             this.renameToolStripMenuItem.Size = new System.Drawing.Size(128, 24);
-            this.renameToolStripMenuItem.Text = "Rename...";
+            resources.ApplyResources(this.renameToolStripMenuItem, "renameToolStripMenuItem");
             this.renameToolStripMenuItem.Click += new System.EventHandler(this.renameToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
@@ -237,34 +238,34 @@ namespace SpreadsheetEditorDemo
             this.viewToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
             this.viewToolStripMenuItem.Size = new System.Drawing.Size(128, 24);
-            this.viewToolStripMenuItem.Text = "View";
+            resources.ApplyResources(this.viewToolStripMenuItem, "viewToolStripMenuItem");
             // 
             // showHeadingsToolStripMenuItem
             // 
             this.showHeadingsToolStripMenuItem.Name = "showHeadingsToolStripMenuItem";
             this.showHeadingsToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.showHeadingsToolStripMenuItem.Text = "Show Headings";
+            resources.ApplyResources(this.showHeadingsToolStripMenuItem, "showHeadingsToolStripMenuItem");
             this.showHeadingsToolStripMenuItem.Click += new System.EventHandler(this.showHeadingsToolStripMenuItem_Click);
             // 
             // showFormulasToolStripMenuItem
             // 
             this.showFormulasToolStripMenuItem.Name = "showFormulasToolStripMenuItem";
             this.showFormulasToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.showFormulasToolStripMenuItem.Text = "Show Formulas";
+            resources.ApplyResources(this.showFormulasToolStripMenuItem, "showFormulasToolStripMenuItem");
             this.showFormulasToolStripMenuItem.Click += new System.EventHandler(this.showFormulasToolStripMenuItem_Click);
             // 
             // showGridToolStripMenuItem
             // 
             this.showGridToolStripMenuItem.Name = "showGridToolStripMenuItem";
             this.showGridToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.showGridToolStripMenuItem.Text = "Show Grid";
+            resources.ApplyResources(this.showGridToolStripMenuItem, "showGridToolStripMenuItem");
             this.showGridToolStripMenuItem.Click += new System.EventHandler(this.showGridToolStripMenuItem_Click);
             // 
             // gridColorToolStripMenuItem
             // 
             this.gridColorToolStripMenuItem.Name = "gridColorToolStripMenuItem";
             this.gridColorToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
-            this.gridColorToolStripMenuItem.Text = "Grid Color...";
+            resources.ApplyResources(this.gridColorToolStripMenuItem, "gridColorToolStripMenuItem");
             this.gridColorToolStripMenuItem.Click += new System.EventHandler(this.gridColorToolStripMenuItem_Click);
             // 
             // formatToolStripMenuItem
@@ -273,7 +274,7 @@ namespace SpreadsheetEditorDemo
             this.formatToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.formatToolStripMenuItem.Name = "formatToolStripMenuItem";
             this.formatToolStripMenuItem.Size = new System.Drawing.Size(128, 24);
-            this.formatToolStripMenuItem.Text = "Format...";
+            resources.ApplyResources(this.formatToolStripMenuItem, "formatToolStripMenuItem");
             this.formatToolStripMenuItem.Click += new System.EventHandler(this.formatToolStripMenuItem_Click);
             // 
             // zoomInButton
@@ -285,7 +286,7 @@ namespace SpreadsheetEditorDemo
             this.zoomInButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.zoomInButton.Name = "zoomInButton";
             this.zoomInButton.Size = new System.Drawing.Size(23, 22);
-            this.zoomInButton.Text = "toolStripButton5";
+            resources.ApplyResources(this.zoomInButton, "zoomInButton");
             this.zoomInButton.Click += new System.EventHandler(this.zoomInButton_Click);
             // 
             // zoomOutButton
@@ -298,7 +299,7 @@ namespace SpreadsheetEditorDemo
             this.zoomOutButton.Name = "zoomOutButton";
             this.zoomOutButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.zoomOutButton.Size = new System.Drawing.Size(23, 22);
-            this.zoomOutButton.Text = "toolStripButton6";
+            resources.ApplyResources(this.zoomOutButton, "zoomOutButton");
             this.zoomOutButton.Click += new System.EventHandler(this.zoomOutButton_Click);
             // 
             // panModeToolStripButton
@@ -310,7 +311,7 @@ namespace SpreadsheetEditorDemo
             this.panModeToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.panModeToolStripButton.Name = "panModeToolStripButton";
             this.panModeToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.panModeToolStripButton.Text = "Pan";
+            resources.ApplyResources(this.panModeToolStripButton, "panModeToolStripButton");
             this.panModeToolStripButton.Click += new System.EventHandler(this.panModeToolStripButton_Click);
             // 
             // NavigationPanel

@@ -29,6 +29,7 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormulaPanel));
             this.cellValueTextBox = new System.Windows.Forms.TextBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.cellsReferenceComboBox = new System.Windows.Forms.ToolStripComboBox();
@@ -68,7 +69,7 @@ namespace SpreadsheetEditorDemo
             this.cellsReferenceComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
             this.cellsReferenceComboBox.Name = "cellsReferenceComboBox";
             this.cellsReferenceComboBox.Size = new System.Drawing.Size(121, 25);
-            this.cellsReferenceComboBox.ToolTipText = "Focused Cell Name";
+            resources.ApplyResources(this.cellsReferenceComboBox, "cellsReferenceComboBox");
             this.cellsReferenceComboBox.SelectedIndexChanged += new System.EventHandler(this.cellsReferenceComboBox_SelectedIndexChanged);
             this.cellsReferenceComboBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cellsReferenceComboBox_KeyDown);
             // 
@@ -82,7 +83,7 @@ namespace SpreadsheetEditorDemo
             this.buttonCancel.Margin = new System.Windows.Forms.Padding(4, 1, 0, 2);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(30, 22);
-            this.buttonCancel.Text = "Cancel";
+            resources.ApplyResources(this.buttonCancel, "buttonCancel");
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // buttonOk
@@ -94,7 +95,7 @@ namespace SpreadsheetEditorDemo
             this.buttonOk.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(30, 22);
-            this.buttonOk.Text = "Enter";
+            resources.ApplyResources(this.buttonOk, "buttonOk");
             this.buttonOk.Click += new System.EventHandler(this.buttonOk_Click);
             // 
             // insertFunctionToolStripButton
@@ -106,7 +107,7 @@ namespace SpreadsheetEditorDemo
             this.insertFunctionToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.insertFunctionToolStripButton.Name = "insertFunctionToolStripButton";
             this.insertFunctionToolStripButton.Size = new System.Drawing.Size(30, 22);
-            this.insertFunctionToolStripButton.Text = "Insert Function";
+            resources.ApplyResources(this.insertFunctionToolStripButton, "insertFunctionToolStripButton");
             this.insertFunctionToolStripButton.Click += new System.EventHandler(this.insertFunctionButton_Click);
             // 
             // FormulaPanel

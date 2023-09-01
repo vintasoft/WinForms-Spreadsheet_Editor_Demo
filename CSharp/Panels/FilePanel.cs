@@ -75,6 +75,8 @@ namespace SpreadsheetEditorDemo
             }
 
             DemosTools.SetTestXlsxFolder(openWorksheetFileDialog);
+
+            DemosTools.AutoFitToolstripButtons(this.toolStrip1);
         }
 
         #endregion
@@ -148,7 +150,7 @@ namespace SpreadsheetEditorDemo
                         // if file is XLS file
                         if (XlsxDecoder.IsXlsDocument(filename))
                         {
-                            if (MessageBox.Show("The loaded file is XLS file. To open XLS file application needs to convert XLS file to the XLSX file. Do you want to create XLSX file from XLS file?", "Convert XLS to XLSX", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                            if (MessageBox.Show(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_THE_LOADED_FILE_IS_XLS_FILE_TO_OPEN_XLS_FILE_APPLICATION_NEEDS_TO_CONVERT_XLS_FILE_TO_THE_XLSX_FILE_DO_YOU_WANT_TO_CREATE_XLSX_FILE_FROM_XLS_FILE, SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_CONVERT_XLS_TO_XLSX, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
                                 return true;
 
                             // create path to an XLSX file
@@ -407,7 +409,7 @@ namespace SpreadsheetEditorDemo
                         _converter.Images.Add(tempStream);
 
                         // create dialog that displays progress for document conversion process
-                        using (ActionProgressForm dlg = new ActionProgressForm(ExportDocument, 1, "Export document"))
+                        using (ActionProgressForm dlg = new ActionProgressForm(ExportDocument, 1, SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_EXPORT_DOCUMENT))
                         {
                             // specify that dialog should be closed when conversion is finished
                             dlg.CloseAfterComplete = true;
@@ -538,7 +540,7 @@ namespace SpreadsheetEditorDemo
 
             if (VisualEditor.IsDocumentSourceChanged)
             {
-                DialogResult result = MessageBox.Show("Current workbook is changed. Do you want to save changes?", "New Workbook", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button3);
+                DialogResult result = MessageBox.Show(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_CURRENT_WORKBOOK_IS_CHANGED_DO_YOU_WANT_TO_SAVE_CHANGES, SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_NEW_WORKBOOK, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button3);
                 if (result == DialogResult.Cancel)
                     return false;
                 if (result == DialogResult.Yes)

@@ -29,6 +29,7 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelectFunctionForm));
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonOk = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,7 +48,7 @@ namespace SpreadsheetEditorDemo
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 85;
-            this.buttonCancel.Text = "Cancel";
+            resources.ApplyResources(this.buttonCancel, "buttonCancel");
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
@@ -69,7 +70,7 @@ namespace SpreadsheetEditorDemo
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 13);
             this.label1.TabIndex = 86;
-            this.label1.Text = "Category:";
+            resources.ApplyResources(this.label1, "label1");
             // 
             // functionsListBox
             // 
@@ -101,7 +102,7 @@ namespace SpreadsheetEditorDemo
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 13);
             this.label2.TabIndex = 87;
-            this.label2.Text = "Select a function:";
+            resources.ApplyResources(this.label2, "label2");
             // 
             // searchTextBox
             // 
@@ -118,7 +119,7 @@ namespace SpreadsheetEditorDemo
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(109, 13);
             this.label3.TabIndex = 91;
-            this.label3.Text = "Search for a function:";
+            resources.ApplyResources(this.label3, "label3");
             // 
             // SelectFunctionForm
             // 
@@ -140,7 +141,7 @@ namespace SpreadsheetEditorDemo
             this.MinimumSize = new System.Drawing.Size(320, 240);
             this.Name = "SelectFunctionForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Insert Function";
+            resources.ApplyResources(this, "$this");
             this.ResumeLayout(false);
             this.PerformLayout();
 

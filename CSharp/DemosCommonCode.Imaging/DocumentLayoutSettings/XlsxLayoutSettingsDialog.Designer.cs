@@ -28,6 +28,7 @@ namespace DemosCommonCode.Imaging
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(XlsxLayoutSettingsDialog));
             this.okButton = new System.Windows.Forms.Button();
             this.cancelBtn = new System.Windows.Forms.Button();
             this.settingsGroupBox = new System.Windows.Forms.GroupBox();
@@ -59,7 +60,7 @@ namespace DemosCommonCode.Imaging
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(75, 23);
             this.cancelBtn.TabIndex = 4;
-            this.cancelBtn.Text = "Cancel";
+            resources.ApplyResources(this.cancelBtn, "cancelBtn");
             this.cancelBtn.UseVisualStyleBackColor = true;
             this.cancelBtn.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
@@ -86,7 +87,7 @@ namespace DemosCommonCode.Imaging
             this.showHiddenGraphicsCheckBox.Name = "showHiddenGraphicsCheckBox";
             this.showHiddenGraphicsCheckBox.Size = new System.Drawing.Size(131, 17);
             this.showHiddenGraphicsCheckBox.TabIndex = 9;
-            this.showHiddenGraphicsCheckBox.Text = "Show hidden graphics";
+            resources.ApplyResources(this.showHiddenGraphicsCheckBox, "showHiddenGraphicsCheckBox");
             this.showHiddenGraphicsCheckBox.UseVisualStyleBackColor = true;
             // 
             // showHiddenSheetsCheckBox
@@ -96,7 +97,7 @@ namespace DemosCommonCode.Imaging
             this.showHiddenSheetsCheckBox.Name = "showHiddenSheetsCheckBox";
             this.showHiddenSheetsCheckBox.Size = new System.Drawing.Size(145, 17);
             this.showHiddenSheetsCheckBox.TabIndex = 8;
-            this.showHiddenSheetsCheckBox.Text = "Show hidden worksheets";
+            resources.ApplyResources(this.showHiddenSheetsCheckBox, "showHiddenSheetsCheckBox");
             this.showHiddenSheetsCheckBox.UseVisualStyleBackColor = true;
             // 
             // xlsxPageLayoutSettingsTypeControl1
@@ -127,7 +128,7 @@ namespace DemosCommonCode.Imaging
             this.defaultSettingsCheckBox.Name = "defaultSettingsCheckBox";
             this.defaultSettingsCheckBox.Size = new System.Drawing.Size(150, 17);
             this.defaultSettingsCheckBox.TabIndex = 6;
-            this.defaultSettingsCheckBox.Text = "Use default layout settings";
+            resources.ApplyResources(this.defaultSettingsCheckBox, "defaultSettingsCheckBox");
             this.defaultSettingsCheckBox.UseVisualStyleBackColor = true;
             this.defaultSettingsCheckBox.CheckedChanged += new System.EventHandler(this.defaultSettingsCheckBox_CheckedChanged);
             // 
@@ -138,7 +139,7 @@ namespace DemosCommonCode.Imaging
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(183, 17);
             this.checkBox1.TabIndex = 1;
-            this.checkBox1.Text = "Use page size as Worksheet size";
+            resources.ApplyResources(this.checkBox1, "checkBox1");
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // XlsxLayoutSettingsDialog
@@ -156,7 +157,7 @@ namespace DemosCommonCode.Imaging
             this.MinimizeBox = false;
             this.Name = "XlsxLayoutSettingsDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "XLSX Layout Settings";
+            resources.ApplyResources(this, "$this");
             this.settingsGroupBox.ResumeLayout(false);
             this.settingsGroupBox.PerformLayout();
             this.ResumeLayout(false);

@@ -115,14 +115,14 @@ namespace SpreadsheetEditorDemo
             double rowHeight;
             if (!double.TryParse(rowHeightTextBox.Text, NumberStyles.Float, Culture, out rowHeight))
             {
-                DemosTools.ShowWarningMessage("Spreadsheet Editor Demo", "Row height must be an integer or decimal number.");
+                DemosTools.ShowWarningMessage("Spreadsheet Editor Demo", SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_ROW_HEIGHT_MUST_BE_AN_INTEGER_OR_DECIMAL_NUMBER);
                 return;
             }
 
             double columnWidth;
             if (!double.TryParse(columnWidthTextBox.Text, NumberStyles.Float, Culture, out columnWidth))
             {
-                DemosTools.ShowWarningMessage("Spreadsheet Editor Demo", "Column width must be an integer or decimal number.");
+                DemosTools.ShowWarningMessage("Spreadsheet Editor Demo", SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_COLUMN_WIDTH_MUST_BE_AN_INTEGER_OR_DECIMAL_NUMBER);
                 return;
             }
 

@@ -1,4 +1,4 @@
-﻿
+
 namespace SpreadsheetEditorDemo
 {
     partial class SpreadsheetDrawingContextMenu
@@ -29,6 +29,7 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SpreadsheetDrawingContextMenu));
             components = new System.ComponentModel.Container();
             this.drawingSetImageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
@@ -57,7 +58,7 @@ namespace SpreadsheetEditorDemo
             // 
             this.drawingSetImageToolStripMenuItem.Name = "drawingSetImageToolStripMenuItem";
             this.drawingSetImageToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
-            this.drawingSetImageToolStripMenuItem.Text = "Set Image...";
+            resources.ApplyResources(this.drawingSetImageToolStripMenuItem, "drawingSetImageToolStripMenuItem");
             this.drawingSetImageToolStripMenuItem.Click += new System.EventHandler(this.drawingSetImageToolStripMenuItem_Click);
             // 
             // toolStripSeparator5
@@ -69,14 +70,14 @@ namespace SpreadsheetEditorDemo
             // 
             this.drawingLinkToolStripMenuItem.Name = "drawingLinkToolStripMenuItem";
             this.drawingLinkToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
-            this.drawingLinkToolStripMenuItem.Text = "Set Link...";
+            resources.ApplyResources(this.drawingLinkToolStripMenuItem, "drawingLinkToolStripMenuItem");
             this.drawingLinkToolStripMenuItem.Click += new System.EventHandler(this.drawingLinkToolStripMenuItem_Click);
             // 
             // drawingRemoveLinkToolStripMenuItem
             // 
             this.drawingRemoveLinkToolStripMenuItem.Name = "drawingRemoveLinkToolStripMenuItem";
             this.drawingRemoveLinkToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
-            this.drawingRemoveLinkToolStripMenuItem.Text = "Remove Link";
+            resources.ApplyResources(this.drawingRemoveLinkToolStripMenuItem, "drawingRemoveLinkToolStripMenuItem");
             this.drawingRemoveLinkToolStripMenuItem.Click += new System.EventHandler(this.drawingRemoveLinkToolStripMenuItem_Click);
             // 
             // toolStripSeparator4
@@ -88,14 +89,14 @@ namespace SpreadsheetEditorDemo
             // 
             this.deleteDrawingToolStripMenuItem.Name = "deleteDrawingToolStripMenuItem";
             this.deleteDrawingToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
-            this.deleteDrawingToolStripMenuItem.Text = "Delete";
+            resources.ApplyResources(this.deleteDrawingToolStripMenuItem, "deleteDrawingToolStripMenuItem");
             this.deleteDrawingToolStripMenuItem.Click += new System.EventHandler(this.deleteDrawingToolStripMenuItem_Click);
             // 
             // drawingPropertiesToolStripMenuItem
             // 
             this.drawingPropertiesToolStripMenuItem.Name = "drawingPropertiesToolStripMenuItem";
             this.drawingPropertiesToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
-            this.drawingPropertiesToolStripMenuItem.Text = "Properties...";
+            resources.ApplyResources(this.drawingPropertiesToolStripMenuItem, "drawingPropertiesToolStripMenuItem");
             this.drawingPropertiesToolStripMenuItem.Click += new System.EventHandler(this.drawingPropertiesToolStripMenuItem_Click);
         }
 

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -119,5 +119,56 @@
   </resheader>
   <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <data name="hideAllButton.ToolTipText" xml:space="preserve">
+    <value>Hide All Comments or Selected Comments</value>
+  </data>
+  <data name="hideAllButton.Text" xml:space="preserve">
+    <value>Hide All</value>
+  </data>
+  <data name="showAllButton.ToolTipText" xml:space="preserve">
+    <value>Show All Comments or Selected Comments</value>
+  </data>
+  <data name="showAllButton.Text" xml:space="preserve">
+    <value>Show All</value>
+  </data>
+  <data name="showHideButton.ToolTipText" xml:space="preserve">
+    <value>Show/Hide Focused Comment</value>
+  </data>
+  <data name="showHideButton.Text" xml:space="preserve">
+    <value>Show/Hide</value>
+  </data>
+  <data name="nextButton.ToolTipText" xml:space="preserve">
+    <value>Next Comment</value>
+  </data>
+  <data name="nextButton.Text" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="prevButton.ToolTipText" xml:space="preserve">
+    <value>Previous Comment</value>
+  </data>
+  <data name="prevButton.Text" xml:space="preserve">
+    <value>Previous</value>
+  </data>
+  <data name="deleteButton.ToolTipText" xml:space="preserve">
+    <value>Delete Comment</value>
+  </data>
+  <data name="deleteButton.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="editButton.ToolTipText" xml:space="preserve">
+    <value>Edit Comment</value>
+  </data>
+  <data name="editButton.Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="newButton.ToolTipText" xml:space="preserve">
+    <value>Add Comment</value>
+  </data>
+  <data name="newButton.Text" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib">
+    <value>True</value>
   </metadata>
 </root>

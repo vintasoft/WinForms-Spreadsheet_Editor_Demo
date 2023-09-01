@@ -48,7 +48,7 @@ namespace DemosCommonCode.Imaging
                     return;
 
                 if (value == null)
-                    throw new ArgumentNullException("", "Value can not be null.");
+                    throw new ArgumentNullException("", SpreadsheetEditorDemo.Localization.Strings.DEMOSCOMMONCODE_IMAGING_VALUE_CAN_NOT_BE_NULL);
 
                 allPagesLayoutSettingsControl.PageLayoutSettings = value.PageLayoutSettings;
                 evenPagesLayoutSettingsControl.PageLayoutSettings = value.EvenPageLayoutSettings;

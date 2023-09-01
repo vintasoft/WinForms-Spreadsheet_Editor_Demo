@@ -57,7 +57,7 @@ namespace SpreadsheetEditorDemo
             // initialize the page selector
             previewPageIndexNumericUpDown.Minimum = 1;
             previewPageIndexNumericUpDown.Maximum = _printManager.PrintingImages.Count;
-            previewPageCountLabel.Text = string.Format("from {0} pages", _printManager.PrintingImages.Count);
+            previewPageCountLabel.Text = string.Format(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_FROM_ARG0_PAGES, _printManager.PrintingImages.Count);
 
             // set 100% zoom in preview
             previewZoomComboBox.SelectedIndex = 3;

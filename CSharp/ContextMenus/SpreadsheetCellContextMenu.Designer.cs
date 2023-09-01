@@ -1,4 +1,4 @@
-﻿
+
 namespace SpreadsheetEditorDemo
 {
     partial class SpreadsheetCellContextMenu
@@ -29,6 +29,7 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SpreadsheetCellContextMenu));
             components = new System.ComponentModel.Container();
             this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -104,21 +105,21 @@ namespace SpreadsheetEditorDemo
             // 
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
             this.copyToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.copyToolStripMenuItem.Text = "Copy";
+            resources.ApplyResources(this.copyToolStripMenuItem, "copyToolStripMenuItem");
             this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             // 
             // cutToolStripMenuItem
             // 
             this.cutToolStripMenuItem.Name = "cutToolStripMenuItem";
             this.cutToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.cutToolStripMenuItem.Text = "Cut";
+            resources.ApplyResources(this.cutToolStripMenuItem, "cutToolStripMenuItem");
             this.cutToolStripMenuItem.Click += new System.EventHandler(this.cutToolStripMenuItem_Click);
             // 
             // pasteToolStripMenuItem
             // 
             this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
             this.pasteToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.pasteToolStripMenuItem.Text = "Paste";
+            resources.ApplyResources(this.pasteToolStripMenuItem, "pasteToolStripMenuItem");
             this.pasteToolStripMenuItem.Click += new System.EventHandler(this.pasteToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
@@ -130,28 +131,28 @@ namespace SpreadsheetEditorDemo
             // 
             this.insertColumnsToolStripMenuItem.Name = "insertColumnsToolStripMenuItem";
             this.insertColumnsToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.insertColumnsToolStripMenuItem.Text = "Insert Columns";
+            resources.ApplyResources(this.insertColumnsToolStripMenuItem, "insertColumnsToolStripMenuItem");
             this.insertColumnsToolStripMenuItem.Click += new System.EventHandler(this.insertColumnsToolStripMenuItem_Click);
             // 
             // insertRowsToolStripMenuItem
             // 
             this.insertRowsToolStripMenuItem.Name = "insertRowsToolStripMenuItem";
             this.insertRowsToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.insertRowsToolStripMenuItem.Text = "Insert Rows";
+            resources.ApplyResources(this.insertRowsToolStripMenuItem, "insertRowsToolStripMenuItem");
             this.insertRowsToolStripMenuItem.Click += new System.EventHandler(this.insertRowsToolStripMenuItem_Click);
             // 
             // deleteColumnsToolStripMenuItem
             // 
             this.deleteColumnsToolStripMenuItem.Name = "deleteColumnsToolStripMenuItem";
             this.deleteColumnsToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.deleteColumnsToolStripMenuItem.Text = "Delete Columns";
+            resources.ApplyResources(this.deleteColumnsToolStripMenuItem, "deleteColumnsToolStripMenuItem");
             this.deleteColumnsToolStripMenuItem.Click += new System.EventHandler(this.deleteColumnsToolStripMenuItem_Click);
             // 
             // deleteRowsToolStripMenuItem
             // 
             this.deleteRowsToolStripMenuItem.Name = "deleteRowsToolStripMenuItem";
             this.deleteRowsToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.deleteRowsToolStripMenuItem.Text = "Delete Rows";
+            resources.ApplyResources(this.deleteRowsToolStripMenuItem, "deleteRowsToolStripMenuItem");
             this.deleteRowsToolStripMenuItem.Click += new System.EventHandler(this.deleteRowsToolStripMenuItem_Click);
             // 
             // insertCellsToolStripMenuItem
@@ -163,34 +164,34 @@ namespace SpreadsheetEditorDemo
             this.insertEntireColumnToolStripMenuItem});
             this.insertCellsToolStripMenuItem.Name = "insertCellsToolStripMenuItem";
             this.insertCellsToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.insertCellsToolStripMenuItem.Text = "Insert";
+            resources.ApplyResources(this.insertCellsToolStripMenuItem, "insertCellsToolStripMenuItem");
             // 
             // shiftCellsRightToolStripMenuItem
             // 
             this.shiftCellsRightToolStripMenuItem.Name = "shiftCellsRightToolStripMenuItem";
             this.shiftCellsRightToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.shiftCellsRightToolStripMenuItem.Text = "Cells and shift right";
+            resources.ApplyResources(this.shiftCellsRightToolStripMenuItem, "shiftCellsRightToolStripMenuItem");
             this.shiftCellsRightToolStripMenuItem.Click += new System.EventHandler(this.shiftCellsRightToolStripMenuItem_Click);
             // 
             // shiftCellsDownToolStripMenuItem
             // 
             this.shiftCellsDownToolStripMenuItem.Name = "shiftCellsDownToolStripMenuItem";
             this.shiftCellsDownToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.shiftCellsDownToolStripMenuItem.Text = "Cells and shift down";
+            resources.ApplyResources(this.shiftCellsDownToolStripMenuItem, "shiftCellsDownToolStripMenuItem");
             this.shiftCellsDownToolStripMenuItem.Click += new System.EventHandler(this.shiftCellsDownToolStripMenuItem_Click);
             // 
             // insertEntireRowToolStripMenuItem
             // 
             this.insertEntireRowToolStripMenuItem.Name = "insertEntireRowToolStripMenuItem";
             this.insertEntireRowToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.insertEntireRowToolStripMenuItem.Text = "Entire row";
+            resources.ApplyResources(this.insertEntireRowToolStripMenuItem, "insertEntireRowToolStripMenuItem");
             this.insertEntireRowToolStripMenuItem.Click += new System.EventHandler(this.insertEntireRowToolStripMenuItem_Click);
             // 
             // insertEntireColumnToolStripMenuItem
             // 
             this.insertEntireColumnToolStripMenuItem.Name = "insertEntireColumnToolStripMenuItem";
             this.insertEntireColumnToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.insertEntireColumnToolStripMenuItem.Text = "Entire column";
+            resources.ApplyResources(this.insertEntireColumnToolStripMenuItem, "insertEntireColumnToolStripMenuItem");
             this.insertEntireColumnToolStripMenuItem.Click += new System.EventHandler(this.insertEntireColumnToolStripMenuItem_Click);
             // 
             // deleteCellsToolStripMenuItem
@@ -202,41 +203,41 @@ namespace SpreadsheetEditorDemo
             this.deleteColumnToolStripMenuItem});
             this.deleteCellsToolStripMenuItem.Name = "deleteCellsToolStripMenuItem";
             this.deleteCellsToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.deleteCellsToolStripMenuItem.Text = "Delete";
+            resources.ApplyResources(this.deleteCellsToolStripMenuItem, "deleteCellsToolStripMenuItem");
             // 
             // shiftCellsLeftToolStripMenuItem
             // 
             this.shiftCellsLeftToolStripMenuItem.Name = "shiftCellsLeftToolStripMenuItem";
             this.shiftCellsLeftToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
-            this.shiftCellsLeftToolStripMenuItem.Text = "Cells and shift left";
+            resources.ApplyResources(this.shiftCellsLeftToolStripMenuItem, "shiftCellsLeftToolStripMenuItem");
             this.shiftCellsLeftToolStripMenuItem.Click += new System.EventHandler(this.shiftCellsLeftToolStripMenuItem_Click);
             // 
             // shiftCellsUpToolStripMenuItem
             // 
             this.shiftCellsUpToolStripMenuItem.Name = "shiftCellsUpToolStripMenuItem";
             this.shiftCellsUpToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
-            this.shiftCellsUpToolStripMenuItem.Text = "Cells and shift up";
+            resources.ApplyResources(this.shiftCellsUpToolStripMenuItem, "shiftCellsUpToolStripMenuItem");
             this.shiftCellsUpToolStripMenuItem.Click += new System.EventHandler(this.shiftCellsUpToolStripMenuItem_Click);
             // 
             // deleteRowToolStripMenuItem
             // 
             this.deleteRowToolStripMenuItem.Name = "deleteRowToolStripMenuItem";
             this.deleteRowToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
-            this.deleteRowToolStripMenuItem.Text = "Entire row";
+            resources.ApplyResources(this.deleteRowToolStripMenuItem, "deleteRowToolStripMenuItem");
             this.deleteRowToolStripMenuItem.Click += new System.EventHandler(this.deleteEntireRowToolStripMenuItem_Click);
             // 
             // deleteColumnToolStripMenuItem
             // 
             this.deleteColumnToolStripMenuItem.Name = "deleteColumnToolStripMenuItem";
             this.deleteColumnToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
-            this.deleteColumnToolStripMenuItem.Text = "Entire column";
+            resources.ApplyResources(this.deleteColumnToolStripMenuItem, "deleteColumnToolStripMenuItem");
             this.deleteColumnToolStripMenuItem.Click += new System.EventHandler(this.deleteEntireColumnToolStripMenuItem_Click);
             // 
             // clearContentsToolStripMenuItem
             // 
             this.clearContentsToolStripMenuItem.Name = "clearContentsToolStripMenuItem";
             this.clearContentsToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.clearContentsToolStripMenuItem.Text = "Clear Contents";
+            resources.ApplyResources(this.clearContentsToolStripMenuItem, "clearContentsToolStripMenuItem");
             this.clearContentsToolStripMenuItem.Click += new System.EventHandler(this.clearContentsToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
@@ -248,28 +249,28 @@ namespace SpreadsheetEditorDemo
             // 
             this.insertCommentToolStripMenuItem.Name = "insertCommentToolStripMenuItem";
             this.insertCommentToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.insertCommentToolStripMenuItem.Text = "Insert Comment...";
+            resources.ApplyResources(this.insertCommentToolStripMenuItem, "insertCommentToolStripMenuItem");
             this.insertCommentToolStripMenuItem.Click += new System.EventHandler(this.insertCommentToolStripMenuItem_Click);
             // 
             // editCellCommentToolStripMenuItem
             // 
             this.editCellCommentToolStripMenuItem.Name = "editCellCommentToolStripMenuItem";
             this.editCellCommentToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.editCellCommentToolStripMenuItem.Text = "Edit Comment...";
+            resources.ApplyResources(this.editCellCommentToolStripMenuItem, "editCellCommentToolStripMenuItem");
             this.editCellCommentToolStripMenuItem.Click += new System.EventHandler(this.editCellCommentToolStripMenuItem_Click);
             // 
             // deleteCellCommentToolStripMenuItem
             // 
             this.deleteCellCommentToolStripMenuItem.Name = "deleteCellCommentToolStripMenuItem";
             this.deleteCellCommentToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.deleteCellCommentToolStripMenuItem.Text = "Delete Comment";
+            resources.ApplyResources(this.deleteCellCommentToolStripMenuItem, "deleteCellCommentToolStripMenuItem");
             this.deleteCellCommentToolStripMenuItem.Click += new System.EventHandler(this.deleteCellCommentToolStripMenuItem_Click);
             // 
             // showHideCommentToolStripMenuItem
             // 
             this.showHideCommentToolStripMenuItem.Name = "showHideCommentToolStripMenuItem";
             this.showHideCommentToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.showHideCommentToolStripMenuItem.Text = "Show/Hide Comment";
+            resources.ApplyResources(this.showHideCommentToolStripMenuItem, "showHideCommentToolStripMenuItem");
             this.showHideCommentToolStripMenuItem.Click += new System.EventHandler(this.showHideCommentToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
@@ -281,70 +282,70 @@ namespace SpreadsheetEditorDemo
             // 
             this.defineNameToolStripMenuItem.Name = "defineNameToolStripMenuItem";
             this.defineNameToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.defineNameToolStripMenuItem.Text = "Define Name...";
+            resources.ApplyResources(this.defineNameToolStripMenuItem, "defineNameToolStripMenuItem");
             this.defineNameToolStripMenuItem.Click += new System.EventHandler(this.defineNameToolStripMenuItem_Click);
             // 
             // linkToolStripMenuItem
             // 
             this.linkToolStripMenuItem.Name = "linkToolStripMenuItem";
             this.linkToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.linkToolStripMenuItem.Text = "Link...";
+            resources.ApplyResources(this.linkToolStripMenuItem, "linkToolStripMenuItem");
             this.linkToolStripMenuItem.Click += new System.EventHandler(this.linkToolStripMenuItem_Click);
             // 
             // removeLinkToolStripMenuItem
             // 
             this.removeLinkToolStripMenuItem.Name = "removeLinkToolStripMenuItem";
             this.removeLinkToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.removeLinkToolStripMenuItem.Text = "Remove Link";
+            resources.ApplyResources(this.removeLinkToolStripMenuItem, "removeLinkToolStripMenuItem");
             this.removeLinkToolStripMenuItem.Click += new System.EventHandler(this.removeLinkToolStripMenuItem_Click);
             // 
             // columnWidthToolStripMenuItem
             // 
             this.columnWidthToolStripMenuItem.Name = "columnWidthToolStripMenuItem";
             this.columnWidthToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.columnWidthToolStripMenuItem.Text = "Column Width...";
+            resources.ApplyResources(this.columnWidthToolStripMenuItem, "columnWidthToolStripMenuItem");
             this.columnWidthToolStripMenuItem.Click += new System.EventHandler(this.columnWidthToolStripMenuItem_Click);
             // 
             // rowHeightToolStripMenuItem
             // 
             this.rowHeightToolStripMenuItem.Name = "rowHeightToolStripMenuItem";
             this.rowHeightToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.rowHeightToolStripMenuItem.Text = "Row Height...";
+            resources.ApplyResources(this.rowHeightToolStripMenuItem, "rowHeightToolStripMenuItem");
             this.rowHeightToolStripMenuItem.Click += new System.EventHandler(this.rowHeightToolStripMenuItem_Click);
             // 
             // hideColumnsToolStripMenuItem
             // 
             this.hideColumnsToolStripMenuItem.Name = "hideColumnsToolStripMenuItem";
             this.hideColumnsToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.hideColumnsToolStripMenuItem.Text = "Hide Columns";
+            resources.ApplyResources(this.hideColumnsToolStripMenuItem, "hideColumnsToolStripMenuItem");
             this.hideColumnsToolStripMenuItem.Click += new System.EventHandler(this.hideColumnsToolStripMenuItem_Click);
             // 
             // hideRowsToolStripMenuItem
             // 
             this.hideRowsToolStripMenuItem.Name = "hideRowsToolStripMenuItem";
             this.hideRowsToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.hideRowsToolStripMenuItem.Text = "Hide Rows";
+            resources.ApplyResources(this.hideRowsToolStripMenuItem, "hideRowsToolStripMenuItem");
             this.hideRowsToolStripMenuItem.Click += new System.EventHandler(this.hideRowsToolStripMenuItem_Click);
             // 
             // unhideColumnsToolStripMenuItem
             // 
             this.unhideColumnsToolStripMenuItem.Name = "unhideColumnsToolStripMenuItem";
             this.unhideColumnsToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.unhideColumnsToolStripMenuItem.Text = "Unhide Columns";
+            resources.ApplyResources(this.unhideColumnsToolStripMenuItem, "unhideColumnsToolStripMenuItem");
             this.unhideColumnsToolStripMenuItem.Click += new System.EventHandler(this.unhideColumnsToolStripMenuItem_Click);
             // 
             // unhideRowsToolStripMenuItem
             // 
             this.unhideRowsToolStripMenuItem.Name = "unhideRowsToolStripMenuItem";
             this.unhideRowsToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.unhideRowsToolStripMenuItem.Text = "Unhide Rows";
+            resources.ApplyResources(this.unhideRowsToolStripMenuItem, "unhideRowsToolStripMenuItem");
             this.unhideRowsToolStripMenuItem.Click += new System.EventHandler(this.unhideRowsToolStripMenuItem_Click);
             // 
             // formatCellsToolStripMenuItem
             // 
             this.formatCellsToolStripMenuItem.Name = "formatCellsToolStripMenuItem";
             this.formatCellsToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.formatCellsToolStripMenuItem.Text = "Format Cells...";
+            resources.ApplyResources(this.formatCellsToolStripMenuItem, "formatCellsToolStripMenuItem");
             this.formatCellsToolStripMenuItem.Click += new System.EventHandler(this.formatCellsToolStripMenuItem_Click);
         }
 

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,4 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Defined Name Manager</value>
+  </data>
+  <data name="closeButton.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="commentColumnHeader.Text" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="scopeColumnHeader.Text" xml:space="preserve">
+    <value>Scope</value>
+  </data>
+  <data name="valueColumnHeader.Text" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="nameColumnHeader.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="deleteButton.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="editButton.Text" xml:space="preserve">
+    <value>Edit...</value>
+  </data>
+  <data name="newButton.Text" xml:space="preserve">
+    <value>New...</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </metadata>
 </root>

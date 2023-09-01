@@ -141,7 +141,7 @@ namespace SpreadsheetEditorDemo
 
             // if drawing name is empty
             if (string.IsNullOrEmpty(name))
-                throw new InvalidOperationException("The drawing name cannot be empty.");
+                throw new InvalidOperationException(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_THE_DRAWING_NAME_CANNOT_BE_EMPTY);
 
             foreach (SheetDrawing drawing in _visualEditor.FocusedWorksheet.Drawings)
             {
@@ -150,7 +150,7 @@ namespace SpreadsheetEditorDemo
 
                 // if drawing name exists already
                 if (string.Equals(drawing.Name, name, StringComparison.InvariantCultureIgnoreCase))
-                    throw new InvalidOperationException(string.Format("The drawing with '{0}' exists already.", name));
+                    throw new InvalidOperationException(string.Format(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_THE_DRAWING_WITH_ARG0_EXISTS_ALREADY, name));
             }
         }
 

@@ -68,7 +68,7 @@ namespace SpreadsheetEditorDemo
 
             refersToTextBox.Text = value;
 
-            this.Text = "Add Defined Name";
+            this.Text = SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_ADD_DEFINED_NAME;
         }
 
         /// <summary>
@@ -125,7 +125,7 @@ namespace SpreadsheetEditorDemo
             string name = nameTextBox.Text;
             if (string.IsNullOrEmpty(name))
             {
-                DemosTools.ShowErrorMessage("Name is not defined.");
+                DemosTools.ShowErrorMessage(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_NAME_IS_NOT_DEFINED);
                 nameTextBox.Focus();
                 return;
             }

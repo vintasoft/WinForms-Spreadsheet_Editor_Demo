@@ -29,6 +29,7 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FindReplacePanel));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.findButton = new System.Windows.Forms.ToolStripButton();
             this.replaceButton = new System.Windows.Forms.ToolStripButton();
@@ -37,7 +38,6 @@ namespace SpreadsheetEditorDemo
             // 
             // toolStrip1
             // 
-            this.toolStrip1.AutoSize = false;
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStrip1.GripMargin = new System.Windows.Forms.Padding(0);
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
@@ -47,7 +47,7 @@ namespace SpreadsheetEditorDemo
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0);
-            this.toolStrip1.Size = new System.Drawing.Size(236, 53);
+            this.toolStrip1.Size = new System.Drawing.Size(102, 53);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -60,10 +60,10 @@ namespace SpreadsheetEditorDemo
             this.findButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.findButton.Name = "findButton";
             this.findButton.Size = new System.Drawing.Size(50, 50);
-            this.findButton.Text = "Find";
+            resources.ApplyResources(this.findButton, "findButton");
             this.findButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.findButton.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.findButton.ToolTipText = "Find (Ctrl+F)";
+            
             this.findButton.Click += new System.EventHandler(this.findButton_Click);
             // 
             // replaceButton
@@ -75,21 +75,24 @@ namespace SpreadsheetEditorDemo
             this.replaceButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.replaceButton.Name = "replaceButton";
             this.replaceButton.Size = new System.Drawing.Size(50, 50);
-            this.replaceButton.Text = "Replace";
+            resources.ApplyResources(this.replaceButton, "replaceButton");
             this.replaceButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.replaceButton.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.replaceButton.ToolTipText = "Replace (Ctrl+H)";
+            
             this.replaceButton.Click += new System.EventHandler(this.replaceButton_Click);
             // 
             // FindReplacePanel
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Controls.Add(this.toolStrip1);
             this.Name = "FindReplacePanel";
-            this.Size = new System.Drawing.Size(236, 53);
+            this.Size = new System.Drawing.Size(102, 53);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

@@ -1,4 +1,4 @@
-
+﻿
 namespace SpreadsheetEditorDemo
 {
     partial class NumberFormatPanel
@@ -29,6 +29,7 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NumberFormatPanel));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.numberFormatComboBox = new System.Windows.Forms.ToolStripComboBox();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
@@ -71,7 +72,7 @@ namespace SpreadsheetEditorDemo
             this.numberFormatComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.numberFormatComboBox.Name = "numberFormatComboBox";
             this.numberFormatComboBox.Size = new System.Drawing.Size(137, 23);
-            this.numberFormatComboBox.ToolTipText = "Number Format";
+            resources.ApplyResources(this.numberFormatComboBox, "numberFormatComboBox");
             this.numberFormatComboBox.SelectedIndexChanged += new System.EventHandler(this.numberFormatComboBox_SelectedIndexChanged);
             // 
             // toolStrip2
@@ -112,7 +113,7 @@ namespace SpreadsheetEditorDemo
             this.currencyButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.currencyButton.Name = "currencyButton";
             this.currencyButton.Size = new System.Drawing.Size(34, 22);
-            this.currencyButton.Text = "Currency";
+            resources.ApplyResources(this.currencyButton, "currencyButton");
             this.currencyButton.ButtonClick += new System.EventHandler(this.englishUnitedStatesToolStripMenuItem_Click);
             // 
             // englishUnitedStatesToolStripMenuItem
@@ -133,7 +134,7 @@ namespace SpreadsheetEditorDemo
             // 
             this.euroToolStripMenuItem.Name = "euroToolStripMenuItem";
             this.euroToolStripMenuItem.Size = new System.Drawing.Size(279, 22);
-            this.euroToolStripMenuItem.Text = "€ Euro (€ 123)";
+            resources.ApplyResources(this.euroToolStripMenuItem, "euroToolStripMenuItem");
             this.euroToolStripMenuItem.Click += new System.EventHandler(this.euroToolStripMenuItem_Click);
             // 
             // chineseSimplifiedToolStripMenuItem
@@ -147,7 +148,7 @@ namespace SpreadsheetEditorDemo
             // 
             this.russianToolStripMenuItem.Name = "russianToolStripMenuItem";
             this.russianToolStripMenuItem.Size = new System.Drawing.Size(279, 22);
-            this.russianToolStripMenuItem.Text = "₽ Russian";
+            resources.ApplyResources(this.russianToolStripMenuItem, "russianToolStripMenuItem");
             this.russianToolStripMenuItem.Click += new System.EventHandler(this.russianToolStripMenuItem_Click);
             // 
             // englishIndiaToolStripMenuItem
@@ -170,7 +171,7 @@ namespace SpreadsheetEditorDemo
             this.increaseDecimalButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.increaseDecimalButton.Name = "increaseDecimalButton";
             this.increaseDecimalButton.Size = new System.Drawing.Size(23, 22);
-            this.increaseDecimalButton.Text = "Increase Decimal";
+            resources.ApplyResources(this.increaseDecimalButton, "increaseDecimalButton");
             this.increaseDecimalButton.Click += new System.EventHandler(this.increaseDecimalButton_Click);
             // 
             // decreaseDecimalButton
@@ -181,7 +182,7 @@ namespace SpreadsheetEditorDemo
             this.decreaseDecimalButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.decreaseDecimalButton.Name = "decreaseDecimalButton";
             this.decreaseDecimalButton.Size = new System.Drawing.Size(23, 22);
-            this.decreaseDecimalButton.Text = "Decrease Decimal";
+            resources.ApplyResources(this.decreaseDecimalButton, "decreaseDecimalButton");
             this.decreaseDecimalButton.Click += new System.EventHandler(this.decreaseDecimalButton_Click);
             // 
             // toolStripSeparator1
@@ -197,7 +198,7 @@ namespace SpreadsheetEditorDemo
             this.percentStyleButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.percentStyleButton.Name = "percentStyleButton";
             this.percentStyleButton.Size = new System.Drawing.Size(23, 22);
-            this.percentStyleButton.Text = "Percent Style";
+            resources.ApplyResources(this.percentStyleButton, "percentStyleButton");
             this.percentStyleButton.Click += new System.EventHandler(this.percentStyleButton_Click);
             // 
             // toolStripSeparator2
@@ -213,7 +214,7 @@ namespace SpreadsheetEditorDemo
             this.numberFormatPropertiesButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.numberFormatPropertiesButton.Name = "numberFormatPropertiesButton";
             this.numberFormatPropertiesButton.Size = new System.Drawing.Size(23, 22);
-            this.numberFormatPropertiesButton.Text = "Number Format Properties...";
+            resources.ApplyResources(this.numberFormatPropertiesButton, "numberFormatPropertiesButton");
             this.numberFormatPropertiesButton.Click += new System.EventHandler(this.numberFormatPropertiesButton_Click);
             // 
             // NumberFormatPanel

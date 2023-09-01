@@ -41,10 +41,10 @@ namespace SpreadsheetEditorDemo.CustomControls
             InitializeComponent();
 
             // init font styles listbox
-            fontStylesListBox.Items.Add("Regular");
-            fontStylesListBox.Items.Add("Italic");
-            fontStylesListBox.Items.Add("Bold");
-            fontStylesListBox.Items.Add("Bold Italic");
+            fontStylesListBox.Items.Add(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_CUSTOMCONTROLS_REGULAR);
+            fontStylesListBox.Items.Add(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_CUSTOMCONTROLS_ITALIC);
+            fontStylesListBox.Items.Add(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_CUSTOMCONTROLS_BOLD);
+            fontStylesListBox.Items.Add(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_CUSTOMCONTROLS_BOLD_ITALIC);
         }
 
         #endregion
@@ -131,23 +131,23 @@ namespace SpreadsheetEditorDemo.CustomControls
                 fontName = _initialFontProperties.Name;
 
             // get font style
-            bool isBold = fontStyleTextBox.Text == "Bold" || fontStyleTextBox.Text == "Bold Italic";
-            bool isItalic = fontStyleTextBox.Text == "Italic" || fontStyleTextBox.Text == "Bold Italic";
+            bool isBold = fontStyleTextBox.Text == SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_CUSTOMCONTROLS_BOLD_ALT1 || fontStyleTextBox.Text == SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_CUSTOMCONTROLS_BOLD_ITALIC_ALT1;
+            bool isItalic = fontStyleTextBox.Text == SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_CUSTOMCONTROLS_ITALIC_ALT1 || fontStyleTextBox.Text == SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_CUSTOMCONTROLS_BOLD_ITALIC_ALT2;
 
-            if (fontStyleTextBox.Text == "Regular")
+            if (fontStyleTextBox.Text == SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_CUSTOMCONTROLS_REGULAR_ALT1)
             {
                 isBold = false;
                 isItalic = false;
             }
-            else if (fontStyleTextBox.Text == "Bold")
+            else if (fontStyleTextBox.Text == SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_CUSTOMCONTROLS_BOLD_ALT2)
             {
                 isBold = true;
             }
-            else if (fontStyleTextBox.Text == "Italic")
+            else if (fontStyleTextBox.Text == SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_CUSTOMCONTROLS_ITALIC_ALT2)
             {
                 isItalic = true;
             }
-            else if (fontStyleTextBox.Text == "Bold Italic")
+            else if (fontStyleTextBox.Text == SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_CUSTOMCONTROLS_BOLD_ITALIC_ALT3)
             {
                 isBold = true;
                 isItalic = true;
@@ -159,7 +159,7 @@ namespace SpreadsheetEditorDemo.CustomControls
             }
             else
             {
-                throw new Exception(string.Format("Font style with name '{0}' does not exist.", fontStyleTextBox.Text));
+                throw new Exception(string.Format(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_CUSTOMCONTROLS_FONT_STYLE_WITH_NAME_ARG0_DOES_NOT_EXIST, fontStyleTextBox.Text));
             }
 
             // get font size
@@ -170,7 +170,7 @@ namespace SpreadsheetEditorDemo.CustomControls
                 if (double.TryParse(fontSizeTextBox.Text, NumberStyles.Float, _culture, out parsedFontSize))
                     fontSize = Math.Round(parsedFontSize, 2);
                 else
-                    throw new Exception("Font size must be an integer or decimal number.");
+                    throw new Exception(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_CUSTOMCONTROLS_FONT_SIZE_MUST_BE_AN_INTEGER_OR_DECIMAL_NUMBER);
             }
             else
             {
@@ -216,13 +216,13 @@ namespace SpreadsheetEditorDemo.CustomControls
 
             // init font style
             if (fontProperties.IsBold && fontProperties.IsItalic)
-                fontStylesListBox.SelectedItem = "Bold Italic";
+                fontStylesListBox.SelectedItem = SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_CUSTOMCONTROLS_BOLD_ITALIC_ALT4;
             else if (fontProperties.IsBold)
-                fontStylesListBox.SelectedItem = "Bold";
+                fontStylesListBox.SelectedItem = SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_CUSTOMCONTROLS_BOLD_ALT3;
             else if (fontProperties.IsItalic)
-                fontStylesListBox.SelectedItem = "Italic";
+                fontStylesListBox.SelectedItem = SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_CUSTOMCONTROLS_ITALIC_ALT3;
             else
-                fontStylesListBox.SelectedItem = "Regular";
+                fontStylesListBox.SelectedItem = SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_CUSTOMCONTROLS_REGULAR_ALT2;
 
             // init font size
             double fontSize = fontProperties.Size;

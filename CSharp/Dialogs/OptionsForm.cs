@@ -102,6 +102,12 @@ namespace SpreadsheetEditorDemo
             // miscellaneous
             hyperlinkColorPanelControl.Color = Color.FromArgb(_visualEditor.HyperlinkColor.ToArgb());
             gridColorAlphaNumericUpDown.Value = (int)Math.Round(255 - _visualEditor.GridColorAlpha * 255, 0);
+
+            // transform highlight
+            showInteractiveAreaHighlightCheckBox.Checked = _visualEditor.ShowInteractiveAreaHighlight;
+            headersTransformHighlightAppearanceEditor.CellsAppearance = _visualEditor.HeadersTransformHighlightAppearance;
+            sheetDrawingTransformHighlightAppearanceEditor.CellsAppearance = _visualEditor.SheetDrawingTransformHighlightAppearance;
+            cellsTransformHighlightAppearanceEditor.CellsAppearance = _visualEditor.CellsTransformHighlightAppearance;
         }
 
         /// <summary>
@@ -145,6 +151,12 @@ namespace SpreadsheetEditorDemo
             // miscellaneous
             _visualEditor.HyperlinkColor = VintasoftColor.FromArgb(hyperlinkColorPanelControl.Color.ToArgb());
             _visualEditor.GridColorAlpha = 1 - (double)gridColorAlphaNumericUpDown.Value / 255;
+
+            // transform highlight
+            _visualEditor.ShowInteractiveAreaHighlight = showInteractiveAreaHighlightCheckBox.Checked;
+            _visualEditor.HeadersTransformHighlightAppearance = headersTransformHighlightAppearanceEditor.CellsAppearance;
+            _visualEditor.SheetDrawingTransformHighlightAppearance = sheetDrawingTransformHighlightAppearanceEditor.CellsAppearance;
+            _visualEditor.CellsTransformHighlightAppearance = cellsTransformHighlightAppearanceEditor.CellsAppearance;
 
             DialogResult = DialogResult.OK;
         }

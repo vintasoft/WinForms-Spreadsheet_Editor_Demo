@@ -29,6 +29,7 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UndoPanel));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.undoButton = new System.Windows.Forms.ToolStripSplitButton();
             this.redoButton = new System.Windows.Forms.ToolStripSplitButton();
@@ -37,7 +38,6 @@ namespace SpreadsheetEditorDemo
             // 
             // toolStrip1
             // 
-            this.toolStrip1.AutoSize = false;
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStrip1.GripMargin = new System.Windows.Forms.Padding(0);
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
@@ -47,7 +47,7 @@ namespace SpreadsheetEditorDemo
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0);
-            this.toolStrip1.Size = new System.Drawing.Size(187, 53);
+            this.toolStrip1.Size = new System.Drawing.Size(122, 53);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -60,10 +60,10 @@ namespace SpreadsheetEditorDemo
             this.undoButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.undoButton.Name = "undoButton";
             this.undoButton.Size = new System.Drawing.Size(60, 50);
-            this.undoButton.Text = "Undo";
+            resources.ApplyResources(this.undoButton, "undoButton");
             this.undoButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.undoButton.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.undoButton.ToolTipText = "Undo";
+            
             this.undoButton.ButtonClick += new System.EventHandler(this.undoButton_ButtonClick);
             this.undoButton.DropDownOpening += new System.EventHandler(this.undoButton_DropDownOpening);
             // 
@@ -76,22 +76,25 @@ namespace SpreadsheetEditorDemo
             this.redoButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.redoButton.Name = "redoButton";
             this.redoButton.Size = new System.Drawing.Size(60, 50);
-            this.redoButton.Text = "Redo";
+            resources.ApplyResources(this.redoButton, "redoButton");
             this.redoButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.redoButton.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.redoButton.ToolTipText = "Redo";
+            
             this.redoButton.ButtonClick += new System.EventHandler(this.redoButton_ButtonClick);
             this.redoButton.DropDownOpening += new System.EventHandler(this.redoButton_DropDownOpening);
             // 
             // UndoPanel
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Controls.Add(this.toolStrip1);
             this.Name = "UndoPanel";
-            this.Size = new System.Drawing.Size(187, 53);
+            this.Size = new System.Drawing.Size(122, 53);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -137,5 +137,71 @@
   </metadata>
   <metadata name="printDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>796, 19</value>
+  </metadata>
+  <data name="optionsToolStripButton.ToolTipText" xml:space="preserve">
+    <value>Options...</value>
+  </data>
+  <data name="optionsToolStripButton.Text" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="closeToolStripButton.ToolTipText" xml:space="preserve">
+    <value>Close Workbook (Ctrl+X)</value>
+  </data>
+  <data name="closeToolStripButton.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="printPreviewToolStripMenuItem.Text" xml:space="preserve">
+    <value>Print Preview...</value>
+  </data>
+  <data name="pageSettingsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Page Settings...</value>
+  </data>
+  <data name="layoutSettingsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Layout Settings...</value>
+  </data>
+  <data name="printToolStripSplitButton.ToolTipText" xml:space="preserve">
+    <value>Print... (Ctrl+P)</value>
+  </data>
+  <data name="printToolStripSplitButton.Text" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="exportToolStripButton.ToolTipText" xml:space="preserve">
+    <value>Export Workbook</value>
+  </data>
+  <data name="exportToolStripButton.Text" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="saveAsToolStripButton.ToolTipText" xml:space="preserve">
+    <value>Save As... (Ctrl+Shift+S)</value>
+  </data>
+  <data name="saveAsToolStripButton.Text" xml:space="preserve">
+    <value>Save As</value>
+  </data>
+  <data name="saveToolStripButton.ToolTipText" xml:space="preserve">
+    <value>Save Changes (Ctrl+S)</value>
+  </data>
+  <data name="saveToolStripButton.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="infoToolStripButton.ToolTipText" xml:space="preserve">
+    <value>Info...</value>
+  </data>
+  <data name="infoToolStripButton.Text" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="openToolStripButton.ToolTipText" xml:space="preserve">
+    <value>Open Workbook... (Ctrl+O)</value>
+  </data>
+  <data name="openToolStripButton.Text" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="newToolStripButton.ToolTipText" xml:space="preserve">
+    <value>New blank Workbook (Ctrl+N)</value>
+  </data>
+  <data name="newToolStripButton.Text" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib">
+    <value>True</value>
   </metadata>
 </root>

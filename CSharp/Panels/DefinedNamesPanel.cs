@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DemosCommonCode;
+using System;
 
 using Vintasoft.Imaging;
 using Vintasoft.Imaging.Office.Spreadsheet.Document;
@@ -21,6 +22,8 @@ namespace SpreadsheetEditorDemo
         public DefinedNamesPanel()
         {
             InitializeComponent();
+
+            DemosTools.AutoFitToolstripButtons(this.toolStrip1);
         }
 
         #endregion

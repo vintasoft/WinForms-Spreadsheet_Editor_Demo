@@ -28,6 +28,7 @@ namespace DemosCommonCode.Imaging
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DocumentLayoutSettingsEditorControl));
             this.documentSettingsTabControl = new System.Windows.Forms.TabControl();
             this.allPagesLayoutSettingsTabPage = new System.Windows.Forms.TabPage();
             this.allPagesLayoutSettingsControl = new DemosCommonCode.Imaging.PageLayoutSettingsControl();
@@ -60,7 +61,7 @@ namespace DemosCommonCode.Imaging
             this.allPagesLayoutSettingsTabPage.Padding = new System.Windows.Forms.Padding(3);
             this.allPagesLayoutSettingsTabPage.Size = new System.Drawing.Size(344, 218);
             this.allPagesLayoutSettingsTabPage.TabIndex = 0;
-            this.allPagesLayoutSettingsTabPage.Text = "All pages";
+            resources.ApplyResources(this.allPagesLayoutSettingsTabPage, "allPagesLayoutSettingsTabPage");
             this.allPagesLayoutSettingsTabPage.UseVisualStyleBackColor = true;
             // 
             // allPagesLayoutSettingsControl
@@ -83,7 +84,7 @@ namespace DemosCommonCode.Imaging
             this.evenPagesLayoutSettingsTabPage.Padding = new System.Windows.Forms.Padding(3);
             this.evenPagesLayoutSettingsTabPage.Size = new System.Drawing.Size(344, 218);
             this.evenPagesLayoutSettingsTabPage.TabIndex = 1;
-            this.evenPagesLayoutSettingsTabPage.Text = "Even pages";
+            resources.ApplyResources(this.evenPagesLayoutSettingsTabPage, "evenPagesLayoutSettingsTabPage");
             this.evenPagesLayoutSettingsTabPage.UseVisualStyleBackColor = true;
             // 
             // evenPagesLayoutSettingsControl
@@ -103,7 +104,7 @@ namespace DemosCommonCode.Imaging
             this.oddPagesLayoutSettingsTabPage.Padding = new System.Windows.Forms.Padding(3);
             this.oddPagesLayoutSettingsTabPage.Size = new System.Drawing.Size(344, 218);
             this.oddPagesLayoutSettingsTabPage.TabIndex = 2;
-            this.oddPagesLayoutSettingsTabPage.Text = "Odd pages";
+            resources.ApplyResources(this.oddPagesLayoutSettingsTabPage, "oddPagesLayoutSettingsTabPage");
             this.oddPagesLayoutSettingsTabPage.UseVisualStyleBackColor = true;
             // 
             // oddPagesLayoutSettingsControl

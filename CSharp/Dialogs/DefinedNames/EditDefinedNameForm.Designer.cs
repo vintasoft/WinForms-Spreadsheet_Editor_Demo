@@ -29,6 +29,7 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditDefinedNameForm));
             this.nameLabel = new System.Windows.Forms.Label();
             this.scopeLabel = new System.Windows.Forms.Label();
             this.commentLabel = new System.Windows.Forms.Label();
@@ -44,47 +45,48 @@ namespace SpreadsheetEditorDemo
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
-            this.nameLabel.Location = new System.Drawing.Point(12, 16);
+            this.nameLabel.Location = new System.Drawing.Point(12, 9);
             this.nameLabel.Name = "nameLabel";
             this.nameLabel.Size = new System.Drawing.Size(38, 13);
             this.nameLabel.TabIndex = 0;
-            this.nameLabel.Text = "Name:";
+            resources.ApplyResources(this.nameLabel, "nameLabel");
             // 
             // scopeLabel
             // 
             this.scopeLabel.AutoSize = true;
-            this.scopeLabel.Location = new System.Drawing.Point(12, 42);
+            this.scopeLabel.Location = new System.Drawing.Point(12, 55);
             this.scopeLabel.Name = "scopeLabel";
             this.scopeLabel.Size = new System.Drawing.Size(41, 13);
             this.scopeLabel.TabIndex = 1;
-            this.scopeLabel.Text = "Scope:";
+            resources.ApplyResources(this.scopeLabel, "scopeLabel");
             // 
             // commentLabel
             // 
             this.commentLabel.AutoSize = true;
-            this.commentLabel.Location = new System.Drawing.Point(12, 68);
+            this.commentLabel.Location = new System.Drawing.Point(12, 102);
             this.commentLabel.Name = "commentLabel";
             this.commentLabel.Size = new System.Drawing.Size(54, 13);
             this.commentLabel.TabIndex = 2;
-            this.commentLabel.Text = "Comment:";
+            resources.ApplyResources(this.commentLabel, "commentLabel");
             // 
             // refersToLabel
             // 
             this.refersToLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.refersToLabel.AutoSize = true;
-            this.refersToLabel.Location = new System.Drawing.Point(12, 172);
+            this.refersToLabel.Location = new System.Drawing.Point(12, 246);
             this.refersToLabel.Name = "refersToLabel";
             this.refersToLabel.Size = new System.Drawing.Size(37, 13);
             this.refersToLabel.TabIndex = 3;
-            this.refersToLabel.Text = "Value:";
+            resources.ApplyResources(this.refersToLabel, "refersToLabel");
             // 
             // nameTextBox
             // 
             this.nameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.nameTextBox.Location = new System.Drawing.Point(82, 12);
+            this.nameTextBox.Location = new System.Drawing.Point(15, 25);
+            this.nameTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(355, 20);
+            this.nameTextBox.Size = new System.Drawing.Size(422, 20);
             this.nameTextBox.TabIndex = 4;
             // 
             // scopeComboBox
@@ -93,9 +95,10 @@ namespace SpreadsheetEditorDemo
             | System.Windows.Forms.AnchorStyles.Right)));
             this.scopeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.scopeComboBox.FormattingEnabled = true;
-            this.scopeComboBox.Location = new System.Drawing.Point(82, 38);
+            this.scopeComboBox.Location = new System.Drawing.Point(15, 71);
+            this.scopeComboBox.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.scopeComboBox.Name = "scopeComboBox";
-            this.scopeComboBox.Size = new System.Drawing.Size(355, 21);
+            this.scopeComboBox.Size = new System.Drawing.Size(422, 21);
             this.scopeComboBox.TabIndex = 5;
             // 
             // commentTextBox
@@ -103,36 +106,37 @@ namespace SpreadsheetEditorDemo
             this.commentTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.commentTextBox.Location = new System.Drawing.Point(82, 65);
+            this.commentTextBox.Location = new System.Drawing.Point(15, 118);
+            this.commentTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.commentTextBox.Multiline = true;
             this.commentTextBox.Name = "commentTextBox";
-            this.commentTextBox.Size = new System.Drawing.Size(355, 97);
+            this.commentTextBox.Size = new System.Drawing.Size(422, 118);
             this.commentTextBox.TabIndex = 6;
             // 
             // refersToTextBox
             // 
             this.refersToTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.refersToTextBox.Location = new System.Drawing.Point(82, 168);
+            this.refersToTextBox.Location = new System.Drawing.Point(15, 262);
             this.refersToTextBox.Name = "refersToTextBox";
-            this.refersToTextBox.Size = new System.Drawing.Size(356, 20);
+            this.refersToTextBox.Size = new System.Drawing.Size(422, 20);
             this.refersToTextBox.TabIndex = 7;
             // 
             // buttonCancel
             // 
             this.buttonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(343, 198);
+            this.buttonCancel.Location = new System.Drawing.Point(343, 288);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(94, 23);
             this.buttonCancel.TabIndex = 9;
-            this.buttonCancel.Text = "Cancel";
+            resources.ApplyResources(this.buttonCancel, "buttonCancel");
             this.buttonCancel.UseVisualStyleBackColor = true;
             // 
             // okButton
             // 
             this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.okButton.Location = new System.Drawing.Point(243, 198);
+            this.okButton.Location = new System.Drawing.Point(243, 288);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(94, 23);
             this.okButton.TabIndex = 8;
@@ -145,7 +149,7 @@ namespace SpreadsheetEditorDemo
             this.AcceptButton = this.okButton;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(449, 233);
+            this.ClientSize = new System.Drawing.Size(449, 323);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.refersToTextBox);
@@ -162,7 +166,7 @@ namespace SpreadsheetEditorDemo
             this.Name = "EditDefinedNameForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Edit Defined Name";
+            resources.ApplyResources(this, "$this");
             this.ResumeLayout(false);
             this.PerformLayout();
 

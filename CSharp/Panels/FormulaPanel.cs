@@ -188,7 +188,7 @@ namespace SpreadsheetEditorDemo
             Exception parsingException = null;
             if (!VisualEditor.TryFinishEditCellFormula(out parsingException))
             {
-                if (MessageBox.Show(parsingException.Message, "Formula Syntax Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.Cancel)
+                if (MessageBox.Show(parsingException.Message, SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_FORMULA_SYNTAX_ERROR, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.Cancel)
                     VisualEditor.CancelEditCellValue();
             }
         }
@@ -223,7 +223,7 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void VisualEditor_FormulaSyntaxError(object sender, ExceptionEventArgs e)
         {
-            MessageBox.Show(e.Exception.Message, "Formula Syntax Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            MessageBox.Show(e.Exception.Message, SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_FORMULA_SYNTAX_ERROR_ALT1, MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         #endregion

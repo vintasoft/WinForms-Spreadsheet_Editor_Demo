@@ -79,6 +79,7 @@ namespace SpreadsheetEditorDemo
             this.underlineCheckBox = new System.Windows.Forms.CheckBox();
             this.fontSizeLabel = new System.Windows.Forms.Label();
             this.fontStyleLabel = new System.Windows.Forms.Label();
+            this.fontColorPanelControl = new DemosCommonCode.CustomControls.ColorPanelControl();
             this.fontSizesListBox = new System.Windows.Forms.ListBox();
             this.fontSizeTextBox = new System.Windows.Forms.TextBox();
             this.fontStylesListBox = new System.Windows.Forms.ListBox();
@@ -87,30 +88,32 @@ namespace SpreadsheetEditorDemo
             this.fontNameTextBox = new System.Windows.Forms.TextBox();
             this.fontLabel = new System.Windows.Forms.Label();
             this.bordersTabPage = new System.Windows.Forms.TabPage();
-            this.lineStylesListBox = new System.Windows.Forms.ListBox();
-            this.insidePresetLabel = new System.Windows.Forms.Label();
-            this.outlinePresetLabel = new System.Windows.Forms.Label();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.topBorderButton = new System.Windows.Forms.Button();
+            this.horizontalBorderButton = new System.Windows.Forms.Button();
+            this.bottomBorderButton = new System.Windows.Forms.Button();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.leftBorderButton = new System.Windows.Forms.Button();
+            this.verticalBorderButton = new System.Windows.Forms.Button();
+            this.rightBorderButton = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.noneBorderPresetButton = new System.Windows.Forms.Button();
             this.nonePresetLabel = new System.Windows.Forms.Label();
+            this.insidePresetLabel = new System.Windows.Forms.Label();
+            this.outlineBorderPresetButton = new System.Windows.Forms.Button();
+            this.outlinePresetLabel = new System.Windows.Forms.Label();
+            this.insideBorderPresetButton = new System.Windows.Forms.Button();
+            this.lineStylesListBox = new System.Windows.Forms.ListBox();
             this.bordersLabel = new System.Windows.Forms.Label();
             this.presetsLabel = new System.Windows.Forms.Label();
-            this.rightBorderButton = new System.Windows.Forms.Button();
-            this.verticalBorderButton = new System.Windows.Forms.Button();
-            this.leftBorderButton = new System.Windows.Forms.Button();
-            this.bottomBorderButton = new System.Windows.Forms.Button();
-            this.horizontalBorderButton = new System.Windows.Forms.Button();
-            this.topBorderButton = new System.Windows.Forms.Button();
-            this.insideBorderPresetButton = new System.Windows.Forms.Button();
-            this.noneBorderPresetButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bordersPreviewControl = new Vintasoft.Imaging.Office.Spreadsheet.UI.SpreadsheetEditorControl();
-            this.outlineBorderPresetButton = new System.Windows.Forms.Button();
             this.lineColorLabel = new System.Windows.Forms.Label();
             this.lineStyleLabel = new System.Windows.Forms.Label();
+            this.lineColorPanelControl = new DemosCommonCode.CustomControls.ColorPanelControl();
             this.fillTabPage = new System.Windows.Forms.TabPage();
             this.noColorButton = new System.Windows.Forms.Button();
             this.backgroundColorLabel = new System.Windows.Forms.Label();
-            this.fontColorPanelControl = new DemosCommonCode.CustomControls.ColorPanelControl();
-            this.lineColorPanelControl = new DemosCommonCode.CustomControls.ColorPanelControl();
             this.backgroundColorPanelControl = new DemosCommonCode.CustomControls.ColorPanelControl();
             this.cellStyleTabControl.SuspendLayout();
             this.numberFormatTabPage.SuspendLayout();
@@ -133,6 +136,9 @@ namespace SpreadsheetEditorDemo
             ((System.ComponentModel.ISupportInitialize)(this.textIndentNumericUpDown)).BeginInit();
             this.fontTabPage.SuspendLayout();
             this.bordersTabPage.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.fillTabPage.SuspendLayout();
             this.SuspendLayout();
@@ -156,7 +162,7 @@ namespace SpreadsheetEditorDemo
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 1;
-            this.buttonCancel.Text = "Cancel";
+            resources.ApplyResources(this.buttonCancel, "buttonCancel");
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
@@ -184,7 +190,7 @@ namespace SpreadsheetEditorDemo
             this.numberFormatTabPage.Name = "numberFormatTabPage";
             this.numberFormatTabPage.Size = new System.Drawing.Size(505, 247);
             this.numberFormatTabPage.TabIndex = 4;
-            this.numberFormatTabPage.Text = "Number Format";
+            resources.ApplyResources(this.numberFormatTabPage, "numberFormatTabPage");
             this.numberFormatTabPage.UseVisualStyleBackColor = true;
             // 
             // formatCategoriesTabControl
@@ -215,7 +221,7 @@ namespace SpreadsheetEditorDemo
             this.generalTabPage.Padding = new System.Windows.Forms.Padding(3);
             this.generalTabPage.Size = new System.Drawing.Size(497, 221);
             this.generalTabPage.TabIndex = 0;
-            this.generalTabPage.Text = "General";
+            resources.ApplyResources(this.generalTabPage, "generalTabPage");
             // 
             // generalFormatLabel
             // 
@@ -224,7 +230,7 @@ namespace SpreadsheetEditorDemo
             this.generalFormatLabel.Name = "generalFormatLabel";
             this.generalFormatLabel.Size = new System.Drawing.Size(254, 13);
             this.generalFormatLabel.TabIndex = 0;
-            this.generalFormatLabel.Text = "General format cells have no specific number format.";
+            resources.ApplyResources(this.generalFormatLabel, "generalFormatLabel");
             // 
             // numberTabPage
             // 
@@ -237,19 +243,19 @@ namespace SpreadsheetEditorDemo
             this.numberTabPage.Padding = new System.Windows.Forms.Padding(3);
             this.numberTabPage.Size = new System.Drawing.Size(497, 221);
             this.numberTabPage.TabIndex = 1;
-            this.numberTabPage.Text = "Number";
+            resources.ApplyResources(this.numberTabPage, "numberTabPage");
             this.numberTabPage.UseVisualStyleBackColor = true;
             // 
             // negativeValuesGroupBox
             // 
             this.negativeValuesGroupBox.Controls.Add(this.hideMinusSignCheckBox);
             this.negativeValuesGroupBox.Controls.Add(this.useRedColorForNegativeCheckBox);
-            this.negativeValuesGroupBox.Location = new System.Drawing.Point(6, 65);
+            this.negativeValuesGroupBox.Location = new System.Drawing.Point(6, 78);
             this.negativeValuesGroupBox.Name = "negativeValuesGroupBox";
             this.negativeValuesGroupBox.Size = new System.Drawing.Size(485, 76);
             this.negativeValuesGroupBox.TabIndex = 4;
             this.negativeValuesGroupBox.TabStop = false;
-            this.negativeValuesGroupBox.Text = "Negative values:";
+            resources.ApplyResources(this.negativeValuesGroupBox, "negativeValuesGroupBox");
             // 
             // hideMinusSignCheckBox
             // 
@@ -258,7 +264,7 @@ namespace SpreadsheetEditorDemo
             this.hideMinusSignCheckBox.Name = "hideMinusSignCheckBox";
             this.hideMinusSignCheckBox.Size = new System.Drawing.Size(100, 17);
             this.hideMinusSignCheckBox.TabIndex = 4;
-            this.hideMinusSignCheckBox.Text = "Hide minus sign";
+            resources.ApplyResources(this.hideMinusSignCheckBox, "hideMinusSignCheckBox");
             this.hideMinusSignCheckBox.UseVisualStyleBackColor = true;
             this.hideMinusSignCheckBox.CheckedChanged += new System.EventHandler(this.hideMinusSignCheckBox_CheckedChanged);
             // 
@@ -269,24 +275,25 @@ namespace SpreadsheetEditorDemo
             this.useRedColorForNegativeCheckBox.Name = "useRedColorForNegativeCheckBox";
             this.useRedColorForNegativeCheckBox.Size = new System.Drawing.Size(139, 17);
             this.useRedColorForNegativeCheckBox.TabIndex = 3;
-            this.useRedColorForNegativeCheckBox.Text = "Change text color to red";
+            resources.ApplyResources(this.useRedColorForNegativeCheckBox, "useRedColorForNegativeCheckBox");
             this.useRedColorForNegativeCheckBox.UseVisualStyleBackColor = true;
             this.useRedColorForNegativeCheckBox.CheckedChanged += new System.EventHandler(this.useRedColorForNegativeCheckBox_CheckedChanged);
             // 
             // useThousandsSeparatorCheckBox
             // 
             this.useThousandsSeparatorCheckBox.AutoSize = true;
-            this.useThousandsSeparatorCheckBox.Location = new System.Drawing.Point(9, 33);
+            this.useThousandsSeparatorCheckBox.Location = new System.Drawing.Point(9, 48);
+            this.useThousandsSeparatorCheckBox.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.useThousandsSeparatorCheckBox.Name = "useThousandsSeparatorCheckBox";
             this.useThousandsSeparatorCheckBox.Size = new System.Drawing.Size(121, 17);
             this.useThousandsSeparatorCheckBox.TabIndex = 2;
-            this.useThousandsSeparatorCheckBox.Text = "Use 1000 Separator";
+            resources.ApplyResources(this.useThousandsSeparatorCheckBox, "useThousandsSeparatorCheckBox");
             this.useThousandsSeparatorCheckBox.UseVisualStyleBackColor = true;
             this.useThousandsSeparatorCheckBox.CheckedChanged += new System.EventHandler(this.useThousandsSeparatorCheckBox_CheckedChanged);
             // 
             // numberDecimalPlacesNumericUpDown
             // 
-            this.numberDecimalPlacesNumericUpDown.Location = new System.Drawing.Point(95, 7);
+            this.numberDecimalPlacesNumericUpDown.Location = new System.Drawing.Point(9, 22);
             this.numberDecimalPlacesNumericUpDown.Name = "numberDecimalPlacesNumericUpDown";
             this.numberDecimalPlacesNumericUpDown.Size = new System.Drawing.Size(58, 20);
             this.numberDecimalPlacesNumericUpDown.TabIndex = 1;
@@ -300,11 +307,12 @@ namespace SpreadsheetEditorDemo
             // numberDecimalPlacesLabel
             // 
             this.numberDecimalPlacesLabel.AutoSize = true;
-            this.numberDecimalPlacesLabel.Location = new System.Drawing.Point(6, 10);
+            this.numberDecimalPlacesLabel.Location = new System.Drawing.Point(6, 6);
+            this.numberDecimalPlacesLabel.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.numberDecimalPlacesLabel.Name = "numberDecimalPlacesLabel";
             this.numberDecimalPlacesLabel.Size = new System.Drawing.Size(82, 13);
             this.numberDecimalPlacesLabel.TabIndex = 0;
-            this.numberDecimalPlacesLabel.Text = "Decimal places:";
+            resources.ApplyResources(this.numberDecimalPlacesLabel, "numberDecimalPlacesLabel");
             // 
             // currencyTabPage
             // 
@@ -314,25 +322,26 @@ namespace SpreadsheetEditorDemo
             this.currencyTabPage.Controls.Add(this.currencyDecimalPlacesLabel);
             this.currencyTabPage.Location = new System.Drawing.Point(4, 22);
             this.currencyTabPage.Name = "currencyTabPage";
+            this.currencyTabPage.Padding = new System.Windows.Forms.Padding(3);
             this.currencyTabPage.Size = new System.Drawing.Size(497, 221);
             this.currencyTabPage.TabIndex = 2;
-            this.currencyTabPage.Text = "Currency";
+            resources.ApplyResources(this.currencyTabPage, "currencyTabPage");
             this.currencyTabPage.UseVisualStyleBackColor = true;
             // 
             // currencySymbolLabel
             // 
             this.currencySymbolLabel.AutoSize = true;
-            this.currencySymbolLabel.Location = new System.Drawing.Point(6, 37);
+            this.currencySymbolLabel.Location = new System.Drawing.Point(6, 52);
             this.currencySymbolLabel.Name = "currencySymbolLabel";
             this.currencySymbolLabel.Size = new System.Drawing.Size(44, 13);
             this.currencySymbolLabel.TabIndex = 8;
-            this.currencySymbolLabel.Text = "Symbol:";
+            resources.ApplyResources(this.currencySymbolLabel, "currencySymbolLabel");
             // 
             // currencySymbolComboBox
             // 
             this.currencySymbolComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.currencySymbolComboBox.FormattingEnabled = true;
-            this.currencySymbolComboBox.Location = new System.Drawing.Point(95, 33);
+            this.currencySymbolComboBox.Location = new System.Drawing.Point(9, 68);
             this.currencySymbolComboBox.Name = "currencySymbolComboBox";
             this.currencySymbolComboBox.Size = new System.Drawing.Size(220, 21);
             this.currencySymbolComboBox.TabIndex = 7;
@@ -340,7 +349,8 @@ namespace SpreadsheetEditorDemo
             // 
             // currencyDecimalPlacesNumericUpDown
             // 
-            this.currencyDecimalPlacesNumericUpDown.Location = new System.Drawing.Point(95, 7);
+            this.currencyDecimalPlacesNumericUpDown.Location = new System.Drawing.Point(9, 22);
+            this.currencyDecimalPlacesNumericUpDown.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.currencyDecimalPlacesNumericUpDown.Name = "currencyDecimalPlacesNumericUpDown";
             this.currencyDecimalPlacesNumericUpDown.Size = new System.Drawing.Size(58, 20);
             this.currencyDecimalPlacesNumericUpDown.TabIndex = 5;
@@ -354,11 +364,12 @@ namespace SpreadsheetEditorDemo
             // currencyDecimalPlacesLabel
             // 
             this.currencyDecimalPlacesLabel.AutoSize = true;
-            this.currencyDecimalPlacesLabel.Location = new System.Drawing.Point(6, 10);
+            this.currencyDecimalPlacesLabel.Location = new System.Drawing.Point(6, 6);
+            this.currencyDecimalPlacesLabel.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.currencyDecimalPlacesLabel.Name = "currencyDecimalPlacesLabel";
             this.currencyDecimalPlacesLabel.Size = new System.Drawing.Size(82, 13);
             this.currencyDecimalPlacesLabel.TabIndex = 4;
-            this.currencyDecimalPlacesLabel.Text = "Decimal places:";
+            resources.ApplyResources(this.currencyDecimalPlacesLabel, "currencyDecimalPlacesLabel");
             // 
             // dateTabPage
             // 
@@ -367,7 +378,7 @@ namespace SpreadsheetEditorDemo
             this.dateTabPage.Name = "dateTabPage";
             this.dateTabPage.Size = new System.Drawing.Size(497, 221);
             this.dateTabPage.TabIndex = 3;
-            this.dateTabPage.Text = "Date";
+            resources.ApplyResources(this.dateTabPage, "dateTabPage");
             this.dateTabPage.UseVisualStyleBackColor = true;
             // 
             // dateFormatsListBox
@@ -388,7 +399,7 @@ namespace SpreadsheetEditorDemo
             this.timeTabPage.Name = "timeTabPage";
             this.timeTabPage.Size = new System.Drawing.Size(497, 221);
             this.timeTabPage.TabIndex = 4;
-            this.timeTabPage.Text = "Time";
+            resources.ApplyResources(this.timeTabPage, "timeTabPage");
             this.timeTabPage.UseVisualStyleBackColor = true;
             // 
             // timeFormatsListBox
@@ -408,14 +419,15 @@ namespace SpreadsheetEditorDemo
             this.percentageTabPage.Controls.Add(this.percentageDecimalPlacesLabel);
             this.percentageTabPage.Location = new System.Drawing.Point(4, 22);
             this.percentageTabPage.Name = "percentageTabPage";
+            this.percentageTabPage.Padding = new System.Windows.Forms.Padding(3);
             this.percentageTabPage.Size = new System.Drawing.Size(497, 221);
             this.percentageTabPage.TabIndex = 5;
-            this.percentageTabPage.Text = "Percentage";
+            resources.ApplyResources(this.percentageTabPage, "percentageTabPage");
             this.percentageTabPage.UseVisualStyleBackColor = true;
             // 
             // percentageDecimalPlacesNumericUpDown
             // 
-            this.percentageDecimalPlacesNumericUpDown.Location = new System.Drawing.Point(95, 7);
+            this.percentageDecimalPlacesNumericUpDown.Location = new System.Drawing.Point(9, 22);
             this.percentageDecimalPlacesNumericUpDown.Name = "percentageDecimalPlacesNumericUpDown";
             this.percentageDecimalPlacesNumericUpDown.Size = new System.Drawing.Size(58, 20);
             this.percentageDecimalPlacesNumericUpDown.TabIndex = 3;
@@ -429,11 +441,12 @@ namespace SpreadsheetEditorDemo
             // percentageDecimalPlacesLabel
             // 
             this.percentageDecimalPlacesLabel.AutoSize = true;
-            this.percentageDecimalPlacesLabel.Location = new System.Drawing.Point(6, 10);
+            this.percentageDecimalPlacesLabel.Location = new System.Drawing.Point(6, 6);
+            this.percentageDecimalPlacesLabel.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.percentageDecimalPlacesLabel.Name = "percentageDecimalPlacesLabel";
             this.percentageDecimalPlacesLabel.Size = new System.Drawing.Size(82, 13);
             this.percentageDecimalPlacesLabel.TabIndex = 2;
-            this.percentageDecimalPlacesLabel.Text = "Decimal places:";
+            resources.ApplyResources(this.percentageDecimalPlacesLabel, "percentageDecimalPlacesLabel");
             // 
             // scientificTabPage
             // 
@@ -441,14 +454,15 @@ namespace SpreadsheetEditorDemo
             this.scientificTabPage.Controls.Add(this.scientificDecimalPlacesLabel);
             this.scientificTabPage.Location = new System.Drawing.Point(4, 22);
             this.scientificTabPage.Name = "scientificTabPage";
+            this.scientificTabPage.Padding = new System.Windows.Forms.Padding(3);
             this.scientificTabPage.Size = new System.Drawing.Size(497, 221);
             this.scientificTabPage.TabIndex = 6;
-            this.scientificTabPage.Text = "Scientific";
+            resources.ApplyResources(this.scientificTabPage, "scientificTabPage");
             this.scientificTabPage.UseVisualStyleBackColor = true;
             // 
             // scientificDecimalPlacesNumericUpDown
             // 
-            this.scientificDecimalPlacesNumericUpDown.Location = new System.Drawing.Point(95, 7);
+            this.scientificDecimalPlacesNumericUpDown.Location = new System.Drawing.Point(9, 22);
             this.scientificDecimalPlacesNumericUpDown.Name = "scientificDecimalPlacesNumericUpDown";
             this.scientificDecimalPlacesNumericUpDown.Size = new System.Drawing.Size(58, 20);
             this.scientificDecimalPlacesNumericUpDown.TabIndex = 5;
@@ -462,11 +476,12 @@ namespace SpreadsheetEditorDemo
             // scientificDecimalPlacesLabel
             // 
             this.scientificDecimalPlacesLabel.AutoSize = true;
-            this.scientificDecimalPlacesLabel.Location = new System.Drawing.Point(6, 10);
+            this.scientificDecimalPlacesLabel.Location = new System.Drawing.Point(6, 6);
+            this.scientificDecimalPlacesLabel.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.scientificDecimalPlacesLabel.Name = "scientificDecimalPlacesLabel";
             this.scientificDecimalPlacesLabel.Size = new System.Drawing.Size(82, 13);
             this.scientificDecimalPlacesLabel.TabIndex = 4;
-            this.scientificDecimalPlacesLabel.Text = "Decimal places:";
+            resources.ApplyResources(this.scientificDecimalPlacesLabel, "scientificDecimalPlacesLabel");
             // 
             // textTabPage
             // 
@@ -485,7 +500,7 @@ namespace SpreadsheetEditorDemo
             this.textFormatLabel.Name = "textFormatLabel";
             this.textFormatLabel.Size = new System.Drawing.Size(315, 13);
             this.textFormatLabel.TabIndex = 1;
-            this.textFormatLabel.Text = "Text format cells are treated as text even if a number is in the cell.";
+            resources.ApplyResources(this.textFormatLabel, "textFormatLabel");
             // 
             // customTabPage
             // 
@@ -495,7 +510,7 @@ namespace SpreadsheetEditorDemo
             this.customTabPage.Name = "customTabPage";
             this.customTabPage.Size = new System.Drawing.Size(497, 221);
             this.customTabPage.TabIndex = 8;
-            this.customTabPage.Text = "Custom";
+            resources.ApplyResources(this.customTabPage, "customTabPage");
             this.customTabPage.UseVisualStyleBackColor = true;
             // 
             // customFormatsListBox
@@ -534,7 +549,7 @@ namespace SpreadsheetEditorDemo
             this.alignmentTabPage.Padding = new System.Windows.Forms.Padding(3);
             this.alignmentTabPage.Size = new System.Drawing.Size(505, 247);
             this.alignmentTabPage.TabIndex = 1;
-            this.alignmentTabPage.Text = "Alignment";
+            resources.ApplyResources(this.alignmentTabPage, "alignmentTabPage");
             this.alignmentTabPage.UseVisualStyleBackColor = true;
             // 
             // wrapTextCheckBox
@@ -544,7 +559,7 @@ namespace SpreadsheetEditorDemo
             this.wrapTextCheckBox.Name = "wrapTextCheckBox";
             this.wrapTextCheckBox.Size = new System.Drawing.Size(72, 17);
             this.wrapTextCheckBox.TabIndex = 6;
-            this.wrapTextCheckBox.Text = "Wrap text";
+            resources.ApplyResources(this.wrapTextCheckBox, "wrapTextCheckBox");
             this.wrapTextCheckBox.UseVisualStyleBackColor = true;
             this.wrapTextCheckBox.CheckStateChanged += new System.EventHandler(this.wrapTextCheckBox_CheckStateChanged);
             // 
@@ -569,7 +584,7 @@ namespace SpreadsheetEditorDemo
             this.textIndentLabel.Name = "textIndentLabel";
             this.textIndentLabel.Size = new System.Drawing.Size(63, 13);
             this.textIndentLabel.TabIndex = 4;
-            this.textIndentLabel.Text = "Text indent:";
+            resources.ApplyResources(this.textIndentLabel, "textIndentLabel");
             // 
             // textVerticalAlignmentComboBox
             // 
@@ -588,7 +603,7 @@ namespace SpreadsheetEditorDemo
             this.textVerticalAlignmentLabel.Name = "textVerticalAlignmentLabel";
             this.textVerticalAlignmentLabel.Size = new System.Drawing.Size(116, 13);
             this.textVerticalAlignmentLabel.TabIndex = 2;
-            this.textVerticalAlignmentLabel.Text = "Text vertical alignment:";
+            resources.ApplyResources(this.textVerticalAlignmentLabel, "textVerticalAlignmentLabel");
             // 
             // textHorizontalAlignmentComboBox
             // 
@@ -607,7 +622,7 @@ namespace SpreadsheetEditorDemo
             this.textHorizontalAlignmentlabel.Name = "textHorizontalAlignmentlabel";
             this.textHorizontalAlignmentlabel.Size = new System.Drawing.Size(127, 13);
             this.textHorizontalAlignmentlabel.TabIndex = 0;
-            this.textHorizontalAlignmentlabel.Text = "Text horizontal alignment:";
+            resources.ApplyResources(this.textHorizontalAlignmentlabel, "textHorizontalAlignmentlabel");
             // 
             // fontTabPage
             // 
@@ -630,17 +645,18 @@ namespace SpreadsheetEditorDemo
             this.fontTabPage.Padding = new System.Windows.Forms.Padding(3);
             this.fontTabPage.Size = new System.Drawing.Size(505, 247);
             this.fontTabPage.TabIndex = 0;
-            this.fontTabPage.Text = "Font";
+            resources.ApplyResources(this.fontTabPage, "fontTabPage");
             this.fontTabPage.UseVisualStyleBackColor = true;
             // 
             // normalFontButton
             // 
             this.normalFontButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.normalFontButton.Location = new System.Drawing.Point(400, 197);
+            this.normalFontButton.AutoSize = true;
+            this.normalFontButton.Location = new System.Drawing.Point(300, 209);
             this.normalFontButton.Name = "normalFontButton";
             this.normalFontButton.Size = new System.Drawing.Size(93, 23);
             this.normalFontButton.TabIndex = 13;
-            this.normalFontButton.Text = "Normal Font";
+            resources.ApplyResources(this.normalFontButton, "normalFontButton");
             this.normalFontButton.UseVisualStyleBackColor = true;
             this.normalFontButton.Click += new System.EventHandler(this.normalFontButton_Click);
             // 
@@ -648,11 +664,11 @@ namespace SpreadsheetEditorDemo
             // 
             this.colorLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.colorLabel.AutoSize = true;
-            this.colorLabel.Location = new System.Drawing.Point(297, 181);
+            this.colorLabel.Location = new System.Drawing.Point(297, 164);
             this.colorLabel.Name = "colorLabel";
             this.colorLabel.Size = new System.Drawing.Size(34, 13);
             this.colorLabel.TabIndex = 12;
-            this.colorLabel.Text = "Color:";
+            resources.ApplyResources(this.colorLabel, "colorLabel");
             // 
             // strikethroughCheckBox
             // 
@@ -662,7 +678,7 @@ namespace SpreadsheetEditorDemo
             this.strikethroughCheckBox.Name = "strikethroughCheckBox";
             this.strikethroughCheckBox.Size = new System.Drawing.Size(89, 17);
             this.strikethroughCheckBox.TabIndex = 10;
-            this.strikethroughCheckBox.Text = "Strikethrough";
+            resources.ApplyResources(this.strikethroughCheckBox, "strikethroughCheckBox");
             this.strikethroughCheckBox.UseVisualStyleBackColor = true;
             this.strikethroughCheckBox.CheckStateChanged += new System.EventHandler(this.strikethroughCheckBox_CheckStateChanged);
             // 
@@ -686,7 +702,7 @@ namespace SpreadsheetEditorDemo
             this.fontSizeLabel.Name = "fontSizeLabel";
             this.fontSizeLabel.Size = new System.Drawing.Size(30, 13);
             this.fontSizeLabel.TabIndex = 8;
-            this.fontSizeLabel.Text = "Size:";
+            resources.ApplyResources(this.fontSizeLabel, "fontSizeLabel");
             // 
             // fontStyleLabel
             // 
@@ -696,7 +712,19 @@ namespace SpreadsheetEditorDemo
             this.fontStyleLabel.Name = "fontStyleLabel";
             this.fontStyleLabel.Size = new System.Drawing.Size(55, 13);
             this.fontStyleLabel.TabIndex = 7;
-            this.fontStyleLabel.Text = "Font style:";
+            resources.ApplyResources(this.fontStyleLabel, "fontStyleLabel");
+            // 
+            // fontColorPanelControl
+            // 
+            this.fontColorPanelControl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.fontColorPanelControl.CanEditAlphaChannel = false;
+            this.fontColorPanelControl.Color = System.Drawing.Color.Transparent;
+            this.fontColorPanelControl.DefaultColor = System.Drawing.Color.Empty;
+            this.fontColorPanelControl.Location = new System.Drawing.Point(300, 181);
+            this.fontColorPanelControl.Name = "fontColorPanelControl";
+            this.fontColorPanelControl.Size = new System.Drawing.Size(93, 22);
+            this.fontColorPanelControl.TabIndex = 11;
+            this.fontColorPanelControl.ColorChanged += new System.EventHandler(this.fontColorPanelControl_ColorChanged);
             // 
             // fontSizesListBox
             // 
@@ -787,26 +815,17 @@ namespace SpreadsheetEditorDemo
             this.fontLabel.Name = "fontLabel";
             this.fontLabel.Size = new System.Drawing.Size(31, 13);
             this.fontLabel.TabIndex = 0;
-            this.fontLabel.Text = "Font:";
+            resources.ApplyResources(this.fontLabel, "fontLabel");
             // 
             // bordersTabPage
             // 
+            this.bordersTabPage.Controls.Add(this.tableLayoutPanel3);
+            this.bordersTabPage.Controls.Add(this.tableLayoutPanel2);
+            this.bordersTabPage.Controls.Add(this.tableLayoutPanel1);
             this.bordersTabPage.Controls.Add(this.lineStylesListBox);
-            this.bordersTabPage.Controls.Add(this.insidePresetLabel);
-            this.bordersTabPage.Controls.Add(this.outlinePresetLabel);
-            this.bordersTabPage.Controls.Add(this.nonePresetLabel);
             this.bordersTabPage.Controls.Add(this.bordersLabel);
             this.bordersTabPage.Controls.Add(this.presetsLabel);
-            this.bordersTabPage.Controls.Add(this.rightBorderButton);
-            this.bordersTabPage.Controls.Add(this.verticalBorderButton);
-            this.bordersTabPage.Controls.Add(this.leftBorderButton);
-            this.bordersTabPage.Controls.Add(this.bottomBorderButton);
-            this.bordersTabPage.Controls.Add(this.horizontalBorderButton);
-            this.bordersTabPage.Controls.Add(this.topBorderButton);
-            this.bordersTabPage.Controls.Add(this.insideBorderPresetButton);
-            this.bordersTabPage.Controls.Add(this.noneBorderPresetButton);
             this.bordersTabPage.Controls.Add(this.panel1);
-            this.bordersTabPage.Controls.Add(this.outlineBorderPresetButton);
             this.bordersTabPage.Controls.Add(this.lineColorLabel);
             this.bordersTabPage.Controls.Add(this.lineStyleLabel);
             this.bordersTabPage.Controls.Add(this.lineColorPanelControl);
@@ -814,8 +833,194 @@ namespace SpreadsheetEditorDemo
             this.bordersTabPage.Name = "bordersTabPage";
             this.bordersTabPage.Size = new System.Drawing.Size(505, 247);
             this.bordersTabPage.TabIndex = 2;
-            this.bordersTabPage.Text = "Borders";
+            resources.ApplyResources(this.bordersTabPage, "bordersTabPage");
             this.bordersTabPage.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Controls.Add(this.topBorderButton, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.horizontalBorderButton, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.bottomBorderButton, 0, 2);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(311, 111);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 3;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.34F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(31, 101);
+            this.tableLayoutPanel3.TabIndex = 23;
+            // 
+            // topBorderButton
+            // 
+            this.topBorderButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.topBorderButton.Image = global::SpreadsheetEditorDemo.Properties.Resources.Borders_Top;
+            this.topBorderButton.Location = new System.Drawing.Point(3, 3);
+            this.topBorderButton.Name = "topBorderButton";
+            this.topBorderButton.Size = new System.Drawing.Size(25, 25);
+            this.topBorderButton.TabIndex = 9;
+            this.topBorderButton.UseVisualStyleBackColor = true;
+            this.topBorderButton.Click += new System.EventHandler(this.topBorderButton_Click);
+            // 
+            // horizontalBorderButton
+            // 
+            this.horizontalBorderButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.horizontalBorderButton.Image = global::SpreadsheetEditorDemo.Properties.Resources.Borders_Horizontal;
+            this.horizontalBorderButton.Location = new System.Drawing.Point(3, 37);
+            this.horizontalBorderButton.Name = "horizontalBorderButton";
+            this.horizontalBorderButton.Size = new System.Drawing.Size(25, 25);
+            this.horizontalBorderButton.TabIndex = 10;
+            this.horizontalBorderButton.UseVisualStyleBackColor = true;
+            this.horizontalBorderButton.Click += new System.EventHandler(this.horizontalBorderButton_Click);
+            // 
+            // bottomBorderButton
+            // 
+            this.bottomBorderButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.bottomBorderButton.Image = global::SpreadsheetEditorDemo.Properties.Resources.Borders_Bottom;
+            this.bottomBorderButton.Location = new System.Drawing.Point(3, 73);
+            this.bottomBorderButton.Name = "bottomBorderButton";
+            this.bottomBorderButton.Size = new System.Drawing.Size(25, 25);
+            this.bottomBorderButton.TabIndex = 11;
+            this.bottomBorderButton.UseVisualStyleBackColor = true;
+            this.bottomBorderButton.Click += new System.EventHandler(this.bottomBorderButton_Click);
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.34F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
+            this.tableLayoutPanel2.Controls.Add(this.leftBorderButton, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.verticalBorderButton, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.rightBorderButton, 2, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(345, 215);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(149, 32);
+            this.tableLayoutPanel2.TabIndex = 22;
+            // 
+            // leftBorderButton
+            // 
+            this.leftBorderButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.leftBorderButton.Image = global::SpreadsheetEditorDemo.Properties.Resources.Borders_Left;
+            this.leftBorderButton.Location = new System.Drawing.Point(3, 3);
+            this.leftBorderButton.Name = "leftBorderButton";
+            this.leftBorderButton.Size = new System.Drawing.Size(25, 25);
+            this.leftBorderButton.TabIndex = 12;
+            this.leftBorderButton.UseVisualStyleBackColor = true;
+            this.leftBorderButton.Click += new System.EventHandler(this.leftBorderButton_Click);
+            // 
+            // verticalBorderButton
+            // 
+            this.verticalBorderButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.verticalBorderButton.Image = global::SpreadsheetEditorDemo.Properties.Resources.Borders_Vertical;
+            this.verticalBorderButton.Location = new System.Drawing.Point(61, 3);
+            this.verticalBorderButton.Name = "verticalBorderButton";
+            this.verticalBorderButton.Size = new System.Drawing.Size(25, 25);
+            this.verticalBorderButton.TabIndex = 13;
+            this.verticalBorderButton.UseVisualStyleBackColor = true;
+            this.verticalBorderButton.Click += new System.EventHandler(this.verticalBorderButton_Click);
+            // 
+            // rightBorderButton
+            // 
+            this.rightBorderButton.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.rightBorderButton.Image = global::SpreadsheetEditorDemo.Properties.Resources.Borders_Right;
+            this.rightBorderButton.Location = new System.Drawing.Point(121, 3);
+            this.rightBorderButton.Name = "rightBorderButton";
+            this.rightBorderButton.Size = new System.Drawing.Size(25, 25);
+            this.rightBorderButton.TabIndex = 14;
+            this.rightBorderButton.UseVisualStyleBackColor = true;
+            this.rightBorderButton.Click += new System.EventHandler(this.rightBorderButton_Click);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.34F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
+            this.tableLayoutPanel1.Controls.Add(this.noneBorderPresetButton, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.nonePresetLabel, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.insidePresetLabel, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.outlineBorderPresetButton, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.outlinePresetLabel, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.insideBorderPresetButton, 2, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(313, 24);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(184, 61);
+            this.tableLayoutPanel1.TabIndex = 21;
+            // 
+            // noneBorderPresetButton
+            // 
+            this.noneBorderPresetButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.noneBorderPresetButton.Image = ((System.Drawing.Image)(resources.GetObject("noneBorderPresetButton.Image")));
+            this.noneBorderPresetButton.Location = new System.Drawing.Point(10, 3);
+            this.noneBorderPresetButton.Name = "noneBorderPresetButton";
+            this.noneBorderPresetButton.Size = new System.Drawing.Size(40, 40);
+            this.noneBorderPresetButton.TabIndex = 7;
+            this.noneBorderPresetButton.UseVisualStyleBackColor = true;
+            this.noneBorderPresetButton.Click += new System.EventHandler(this.noneBorderPresetButton_Click);
+            // 
+            // nonePresetLabel
+            // 
+            this.nonePresetLabel.AutoSize = true;
+            this.nonePresetLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nonePresetLabel.Location = new System.Drawing.Point(3, 46);
+            this.nonePresetLabel.Name = "nonePresetLabel";
+            this.nonePresetLabel.Size = new System.Drawing.Size(55, 15);
+            this.nonePresetLabel.TabIndex = 17;
+            this.nonePresetLabel.Text = "None";
+            this.nonePresetLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // insidePresetLabel
+            // 
+            this.insidePresetLabel.AutoSize = true;
+            this.insidePresetLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.insidePresetLabel.Location = new System.Drawing.Point(125, 46);
+            this.insidePresetLabel.Name = "insidePresetLabel";
+            this.insidePresetLabel.Size = new System.Drawing.Size(56, 15);
+            this.insidePresetLabel.TabIndex = 19;
+            resources.ApplyResources(this.insidePresetLabel, "insidePresetLabel");
+            this.insidePresetLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // outlineBorderPresetButton
+            // 
+            this.outlineBorderPresetButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.outlineBorderPresetButton.Image = global::SpreadsheetEditorDemo.Properties.Resources.Borders_OutsideBig;
+            this.outlineBorderPresetButton.Location = new System.Drawing.Point(71, 3);
+            this.outlineBorderPresetButton.Name = "outlineBorderPresetButton";
+            this.outlineBorderPresetButton.Size = new System.Drawing.Size(40, 40);
+            this.outlineBorderPresetButton.TabIndex = 5;
+            this.outlineBorderPresetButton.UseVisualStyleBackColor = true;
+            this.outlineBorderPresetButton.Click += new System.EventHandler(this.outlineBorderPresetButton_Click);
+            // 
+            // outlinePresetLabel
+            // 
+            this.outlinePresetLabel.AutoSize = true;
+            this.outlinePresetLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.outlinePresetLabel.Location = new System.Drawing.Point(64, 46);
+            this.outlinePresetLabel.Name = "outlinePresetLabel";
+            this.outlinePresetLabel.Size = new System.Drawing.Size(55, 15);
+            this.outlinePresetLabel.TabIndex = 18;
+            resources.ApplyResources(this.outlinePresetLabel, "outlinePresetLabel");
+            this.outlinePresetLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // insideBorderPresetButton
+            // 
+            this.insideBorderPresetButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.insideBorderPresetButton.Image = global::SpreadsheetEditorDemo.Properties.Resources.Borders_InsideBig;
+            this.insideBorderPresetButton.Location = new System.Drawing.Point(133, 3);
+            this.insideBorderPresetButton.Name = "insideBorderPresetButton";
+            this.insideBorderPresetButton.Size = new System.Drawing.Size(40, 40);
+            this.insideBorderPresetButton.TabIndex = 8;
+            this.insideBorderPresetButton.UseVisualStyleBackColor = true;
+            this.insideBorderPresetButton.Click += new System.EventHandler(this.insideBorderPresetButton_Click);
             // 
             // lineStylesListBox
             // 
@@ -826,41 +1031,14 @@ namespace SpreadsheetEditorDemo
             this.lineStylesListBox.Size = new System.Drawing.Size(219, 160);
             this.lineStylesListBox.TabIndex = 20;
             // 
-            // insidePresetLabel
-            // 
-            this.insidePresetLabel.AutoSize = true;
-            this.insidePresetLabel.Location = new System.Drawing.Point(455, 65);
-            this.insidePresetLabel.Name = "insidePresetLabel";
-            this.insidePresetLabel.Size = new System.Drawing.Size(35, 13);
-            this.insidePresetLabel.TabIndex = 19;
-            this.insidePresetLabel.Text = "Inside";
-            // 
-            // outlinePresetLabel
-            // 
-            this.outlinePresetLabel.AutoSize = true;
-            this.outlinePresetLabel.Location = new System.Drawing.Point(400, 65);
-            this.outlinePresetLabel.Name = "outlinePresetLabel";
-            this.outlinePresetLabel.Size = new System.Drawing.Size(40, 13);
-            this.outlinePresetLabel.TabIndex = 18;
-            this.outlinePresetLabel.Text = "Outline";
-            // 
-            // nonePresetLabel
-            // 
-            this.nonePresetLabel.AutoSize = true;
-            this.nonePresetLabel.Location = new System.Drawing.Point(350, 65);
-            this.nonePresetLabel.Name = "nonePresetLabel";
-            this.nonePresetLabel.Size = new System.Drawing.Size(33, 13);
-            this.nonePresetLabel.TabIndex = 17;
-            this.nonePresetLabel.Text = "None";
-            // 
             // bordersLabel
             // 
             this.bordersLabel.AutoSize = true;
-            this.bordersLabel.Location = new System.Drawing.Point(310, 88);
+            this.bordersLabel.Location = new System.Drawing.Point(310, 95);
             this.bordersLabel.Name = "bordersLabel";
             this.bordersLabel.Size = new System.Drawing.Size(46, 13);
             this.bordersLabel.TabIndex = 16;
-            this.bordersLabel.Text = "Borders:";
+            resources.ApplyResources(this.bordersLabel, "bordersLabel");
             // 
             // presetsLabel
             // 
@@ -869,87 +1047,7 @@ namespace SpreadsheetEditorDemo
             this.presetsLabel.Name = "presetsLabel";
             this.presetsLabel.Size = new System.Drawing.Size(45, 13);
             this.presetsLabel.TabIndex = 15;
-            this.presetsLabel.Text = "Presets:";
-            // 
-            // rightBorderButton
-            // 
-            this.rightBorderButton.Image = global::SpreadsheetEditorDemo.Properties.Resources.Borders_Right;
-            this.rightBorderButton.Location = new System.Drawing.Point(470, 216);
-            this.rightBorderButton.Name = "rightBorderButton";
-            this.rightBorderButton.Size = new System.Drawing.Size(24, 23);
-            this.rightBorderButton.TabIndex = 14;
-            this.rightBorderButton.UseVisualStyleBackColor = true;
-            this.rightBorderButton.Click += new System.EventHandler(this.rightBorderButton_Click);
-            // 
-            // verticalBorderButton
-            // 
-            this.verticalBorderButton.Image = global::SpreadsheetEditorDemo.Properties.Resources.Borders_Vertical;
-            this.verticalBorderButton.Location = new System.Drawing.Point(408, 216);
-            this.verticalBorderButton.Name = "verticalBorderButton";
-            this.verticalBorderButton.Size = new System.Drawing.Size(24, 23);
-            this.verticalBorderButton.TabIndex = 13;
-            this.verticalBorderButton.UseVisualStyleBackColor = true;
-            this.verticalBorderButton.Click += new System.EventHandler(this.verticalBorderButton_Click);
-            // 
-            // leftBorderButton
-            // 
-            this.leftBorderButton.Image = global::SpreadsheetEditorDemo.Properties.Resources.Borders_Left;
-            this.leftBorderButton.Location = new System.Drawing.Point(345, 216);
-            this.leftBorderButton.Name = "leftBorderButton";
-            this.leftBorderButton.Size = new System.Drawing.Size(24, 23);
-            this.leftBorderButton.TabIndex = 12;
-            this.leftBorderButton.UseVisualStyleBackColor = true;
-            this.leftBorderButton.Click += new System.EventHandler(this.leftBorderButton_Click);
-            // 
-            // bottomBorderButton
-            // 
-            this.bottomBorderButton.Image = global::SpreadsheetEditorDemo.Properties.Resources.Borders_Bottom;
-            this.bottomBorderButton.Location = new System.Drawing.Point(313, 189);
-            this.bottomBorderButton.Name = "bottomBorderButton";
-            this.bottomBorderButton.Size = new System.Drawing.Size(24, 23);
-            this.bottomBorderButton.TabIndex = 11;
-            this.bottomBorderButton.UseVisualStyleBackColor = true;
-            this.bottomBorderButton.Click += new System.EventHandler(this.bottomBorderButton_Click);
-            // 
-            // horizontalBorderButton
-            // 
-            this.horizontalBorderButton.Image = global::SpreadsheetEditorDemo.Properties.Resources.Borders_Horizontal;
-            this.horizontalBorderButton.Location = new System.Drawing.Point(313, 150);
-            this.horizontalBorderButton.Name = "horizontalBorderButton";
-            this.horizontalBorderButton.Size = new System.Drawing.Size(24, 23);
-            this.horizontalBorderButton.TabIndex = 10;
-            this.horizontalBorderButton.UseVisualStyleBackColor = true;
-            this.horizontalBorderButton.Click += new System.EventHandler(this.horizontalBorderButton_Click);
-            // 
-            // topBorderButton
-            // 
-            this.topBorderButton.Image = global::SpreadsheetEditorDemo.Properties.Resources.Borders_Top;
-            this.topBorderButton.Location = new System.Drawing.Point(313, 111);
-            this.topBorderButton.Name = "topBorderButton";
-            this.topBorderButton.Size = new System.Drawing.Size(24, 23);
-            this.topBorderButton.TabIndex = 9;
-            this.topBorderButton.UseVisualStyleBackColor = true;
-            this.topBorderButton.Click += new System.EventHandler(this.topBorderButton_Click);
-            // 
-            // insideBorderPresetButton
-            // 
-            this.insideBorderPresetButton.Image = global::SpreadsheetEditorDemo.Properties.Resources.Borders_InsideBig;
-            this.insideBorderPresetButton.Location = new System.Drawing.Point(451, 24);
-            this.insideBorderPresetButton.Name = "insideBorderPresetButton";
-            this.insideBorderPresetButton.Size = new System.Drawing.Size(42, 37);
-            this.insideBorderPresetButton.TabIndex = 8;
-            this.insideBorderPresetButton.UseVisualStyleBackColor = true;
-            this.insideBorderPresetButton.Click += new System.EventHandler(this.insideBorderPresetButton_Click);
-            // 
-            // noneBorderPresetButton
-            // 
-            this.noneBorderPresetButton.Image = ((System.Drawing.Image)(resources.GetObject("noneBorderPresetButton.Image")));
-            this.noneBorderPresetButton.Location = new System.Drawing.Point(345, 24);
-            this.noneBorderPresetButton.Name = "noneBorderPresetButton";
-            this.noneBorderPresetButton.Size = new System.Drawing.Size(42, 37);
-            this.noneBorderPresetButton.TabIndex = 7;
-            this.noneBorderPresetButton.UseVisualStyleBackColor = true;
-            this.noneBorderPresetButton.Click += new System.EventHandler(this.noneBorderPresetButton_Click);
+            resources.ApplyResources(this.presetsLabel, "presetsLabel");
             // 
             // panel1
             // 
@@ -982,16 +1080,6 @@ namespace SpreadsheetEditorDemo
             this.bordersPreviewControl.Size = new System.Drawing.Size(139, 91);
             this.bordersPreviewControl.TabIndex = 4;
             // 
-            // outlineBorderPresetButton
-            // 
-            this.outlineBorderPresetButton.Image = global::SpreadsheetEditorDemo.Properties.Resources.Borders_OutsideBig;
-            this.outlineBorderPresetButton.Location = new System.Drawing.Point(398, 24);
-            this.outlineBorderPresetButton.Name = "outlineBorderPresetButton";
-            this.outlineBorderPresetButton.Size = new System.Drawing.Size(42, 37);
-            this.outlineBorderPresetButton.TabIndex = 5;
-            this.outlineBorderPresetButton.UseVisualStyleBackColor = true;
-            this.outlineBorderPresetButton.Click += new System.EventHandler(this.outlineBorderPresetButton_Click);
-            // 
             // lineColorLabel
             // 
             this.lineColorLabel.AutoSize = true;
@@ -999,7 +1087,7 @@ namespace SpreadsheetEditorDemo
             this.lineColorLabel.Name = "lineColorLabel";
             this.lineColorLabel.Size = new System.Drawing.Size(56, 13);
             this.lineColorLabel.TabIndex = 2;
-            this.lineColorLabel.Text = "Line color:";
+            resources.ApplyResources(this.lineColorLabel, "lineColorLabel");
             // 
             // lineStyleLabel
             // 
@@ -1008,50 +1096,7 @@ namespace SpreadsheetEditorDemo
             this.lineStyleLabel.Name = "lineStyleLabel";
             this.lineStyleLabel.Size = new System.Drawing.Size(54, 13);
             this.lineStyleLabel.TabIndex = 1;
-            this.lineStyleLabel.Text = "Line style:";
-            // 
-            // fillTabPage
-            // 
-            this.fillTabPage.Controls.Add(this.noColorButton);
-            this.fillTabPage.Controls.Add(this.backgroundColorLabel);
-            this.fillTabPage.Controls.Add(this.backgroundColorPanelControl);
-            this.fillTabPage.Location = new System.Drawing.Point(4, 22);
-            this.fillTabPage.Name = "fillTabPage";
-            this.fillTabPage.Size = new System.Drawing.Size(505, 247);
-            this.fillTabPage.TabIndex = 3;
-            this.fillTabPage.Text = "Fill";
-            this.fillTabPage.UseVisualStyleBackColor = true;
-            // 
-            // noColorButton
-            // 
-            this.noColorButton.Location = new System.Drawing.Point(7, 55);
-            this.noColorButton.Name = "noColorButton";
-            this.noColorButton.Size = new System.Drawing.Size(188, 23);
-            this.noColorButton.TabIndex = 6;
-            this.noColorButton.Text = "No Fill";
-            this.noColorButton.UseVisualStyleBackColor = true;
-            this.noColorButton.Click += new System.EventHandler(this.noColorButton_Click);
-            // 
-            // backgroundColorLabel
-            // 
-            this.backgroundColorLabel.AutoSize = true;
-            this.backgroundColorLabel.Location = new System.Drawing.Point(5, 9);
-            this.backgroundColorLabel.Name = "backgroundColorLabel";
-            this.backgroundColorLabel.Size = new System.Drawing.Size(48, 13);
-            this.backgroundColorLabel.TabIndex = 4;
-            this.backgroundColorLabel.Text = "Fill color:";
-            // 
-            // fontColorPanelControl
-            // 
-            this.fontColorPanelControl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.fontColorPanelControl.CanEditAlphaChannel = false;
-            this.fontColorPanelControl.Color = System.Drawing.Color.Transparent;
-            this.fontColorPanelControl.DefaultColor = System.Drawing.Color.Empty;
-            this.fontColorPanelControl.Location = new System.Drawing.Point(300, 198);
-            this.fontColorPanelControl.Name = "fontColorPanelControl";
-            this.fontColorPanelControl.Size = new System.Drawing.Size(93, 22);
-            this.fontColorPanelControl.TabIndex = 11;
-            this.fontColorPanelControl.ColorChanged += new System.EventHandler(this.fontColorPanelControl_ColorChanged);
+            resources.ApplyResources(this.lineStyleLabel, "lineStyleLabel");
             // 
             // lineColorPanelControl
             // 
@@ -1062,6 +1107,37 @@ namespace SpreadsheetEditorDemo
             this.lineColorPanelControl.Name = "lineColorPanelControl";
             this.lineColorPanelControl.Size = new System.Drawing.Size(219, 22);
             this.lineColorPanelControl.TabIndex = 3;
+            // 
+            // fillTabPage
+            // 
+            this.fillTabPage.Controls.Add(this.noColorButton);
+            this.fillTabPage.Controls.Add(this.backgroundColorLabel);
+            this.fillTabPage.Controls.Add(this.backgroundColorPanelControl);
+            this.fillTabPage.Location = new System.Drawing.Point(4, 22);
+            this.fillTabPage.Name = "fillTabPage";
+            this.fillTabPage.Size = new System.Drawing.Size(505, 247);
+            this.fillTabPage.TabIndex = 3;
+            resources.ApplyResources(this.fillTabPage, "fillTabPage");
+            this.fillTabPage.UseVisualStyleBackColor = true;
+            // 
+            // noColorButton
+            // 
+            this.noColorButton.Location = new System.Drawing.Point(7, 55);
+            this.noColorButton.Name = "noColorButton";
+            this.noColorButton.Size = new System.Drawing.Size(188, 23);
+            this.noColorButton.TabIndex = 6;
+            resources.ApplyResources(this.noColorButton, "noColorButton");
+            this.noColorButton.UseVisualStyleBackColor = true;
+            this.noColorButton.Click += new System.EventHandler(this.noColorButton_Click);
+            // 
+            // backgroundColorLabel
+            // 
+            this.backgroundColorLabel.AutoSize = true;
+            this.backgroundColorLabel.Location = new System.Drawing.Point(5, 9);
+            this.backgroundColorLabel.Name = "backgroundColorLabel";
+            this.backgroundColorLabel.Size = new System.Drawing.Size(48, 13);
+            this.backgroundColorLabel.TabIndex = 4;
+            resources.ApplyResources(this.backgroundColorLabel, "backgroundColorLabel");
             // 
             // backgroundColorPanelControl
             // 
@@ -1089,7 +1165,7 @@ namespace SpreadsheetEditorDemo
             this.Name = "CellsStyleForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Cells Style";
+            resources.ApplyResources(this, "$this");
             this.cellStyleTabControl.ResumeLayout(false);
             this.numberFormatTabPage.ResumeLayout(false);
             this.formatCategoriesTabControl.ResumeLayout(false);
@@ -1122,6 +1198,10 @@ namespace SpreadsheetEditorDemo
             this.fontTabPage.PerformLayout();
             this.bordersTabPage.ResumeLayout(false);
             this.bordersTabPage.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.fillTabPage.ResumeLayout(false);
             this.fillTabPage.PerformLayout();
@@ -1167,7 +1247,6 @@ namespace SpreadsheetEditorDemo
         private System.Windows.Forms.Button horizontalBorderButton;
         private System.Windows.Forms.Button topBorderButton;
         private System.Windows.Forms.Label bordersLabel;
-        private System.Windows.Forms.Label presetsLabel;
         private System.Windows.Forms.Label insidePresetLabel;
         private System.Windows.Forms.Label outlinePresetLabel;
         private System.Windows.Forms.Label nonePresetLabel;
@@ -1213,5 +1292,9 @@ namespace SpreadsheetEditorDemo
         private System.Windows.Forms.CheckBox hideMinusSignCheckBox;
         private System.Windows.Forms.ListBox dateFormatsListBox;
         private System.Windows.Forms.ListBox timeFormatsListBox;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label presetsLabel;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
     }
 }

@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using Vintasoft.Imaging;
 using Vintasoft.Imaging.Office.Spreadsheet.UI;
 using Vintasoft.Imaging.Office.Spreadsheet.Document;
+using DemosCommonCode;
 
 namespace SpreadsheetEditorDemo
 {
@@ -21,6 +22,8 @@ namespace SpreadsheetEditorDemo
         public CommentsPanel()
         {
             InitializeComponent();
+
+            DemosTools.AutoFitToolstripButtons(this.toolStrip1);
         }
 
         #endregion
@@ -69,7 +72,7 @@ namespace SpreadsheetEditorDemo
                 // show the dialog
                 if (dlg.ShowDialog() == DialogResult.OK)
                 {
-                    VisualEditor.StartEditing("Edit comment");
+                    VisualEditor.StartEditing(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_EDIT_COMMENT);
                     try
                     {
                         VisualEditor.SetComment(dlg.Comment);

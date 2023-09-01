@@ -1,0 +1,624 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DEMOSCOMMONCODE_CUSTOMCONTROLS_CLICK_THE_BUTTON_IF_THE_CURRENT_COLOR_MUST_BE_CHANGED" xml:space="preserve">
+    <value>Click the button if the current color must be changed.</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_CUSTOMCONTROLS_CLICK_THE_BUTTON_IF_THE_CURRENT_COLOR_MUST_BE_SET_TO_THE_DEFAULT_COLOR" xml:space="preserve">
+    <value>Click the button if the current color must be set to the default color.</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_CUSTOMCONTROLS_DOUBLE_CLICK_ON_THE_PANEL_IF_THE_CURRENT_COLOR_MUST_BE_CHANGED" xml:space="preserve">
+    <value>Double click on the panel if the current color must be changed.</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_CUSTOMCONTROLS_CLICK_ON_THE_PANEL_IF_CURRENT_COLOR_MUST_BE_CHANGED" xml:space="preserve">
+    <value>Click on the panel if current color must be changed.</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_CUSTOMCONTROLS_VALUE_NAME" xml:space="preserve">
+    <value>Value Name</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_IMAGING__FINISHED_ARG0" xml:space="preserve">
+    <value>  Finished ({0}).</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_IMAGING_CANCEL" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_IMAGING_ERROR" xml:space="preserve">
+    <value>Error.</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_IMAGING_CANCELED" xml:space="preserve">
+    <value>Canceled.</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_IMAGING_FINISHED" xml:space="preserve">
+    <value>Finished.</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_IMAGING_CLOSE" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_IMAGING_CANCELED_ALT1" xml:space="preserve">
+    <value>Canceled.</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_IMAGING_VALUE_CAN_NOT_BE_NULL" xml:space="preserve">
+    <value>Value can not be null.</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_IMAGING_UNDEFINED" xml:space="preserve">
+    <value>Undefined</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_IMAGING_UNDEFINED_ALT1" xml:space="preserve">
+    <value>Undefined</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_IMAGING_UNDEFINED_ALT2" xml:space="preserve">
+    <value>Undefined</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_IMAGING_UNDEFINED_ALT3" xml:space="preserve">
+    <value>Undefined</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_IMAGING_CUSTOM" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_IMAGING_CUSTOM_ALT1" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_IMAGING_PASSWORD_ARG0" xml:space="preserve">
+    <value>Password - {0}</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_IMAGING_PASSWORD" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_IMAGING_THE_ARG0_PASSWORD_IS_INCORRECT" xml:space="preserve">
+    <value>The {0} password is incorrect.</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_IMAGING_ERROR_ALT1" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_IMAGING_AUTHORIZED_AS_ARG0" xml:space="preserve">
+    <value>Authorized as: {0}</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_IMAGING_AUTHORIZATION_RESULT" xml:space="preserve">
+    <value>Authorization Result</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_IMAGING_ANOTHER_PRINT_PROCESS_IS_STILL_WORKING" xml:space="preserve">
+    <value>Another print process is still working.</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_RESOURCE_ARG0_WAS_NOT_FOUND" xml:space="preserve">
+    <value>Resource '{0}' was not found.</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_IMAGING_OPEN_URL_ARG0" xml:space="preserve">
+    <value>Open URL '{0}' ?</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_IMAGING_OPEN_URL" xml:space="preserve">
+    <value>Open URL</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_ABOUT" xml:space="preserve">
+    <value>About...</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_ARG0_HAS_INVALID_FORMAT" xml:space="preserve">
+    <value>{0} has invalid format.</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_ERROR" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_ERROR_ALT1" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_ERROR_ALT2" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_WARNING" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_INFORMATION" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_INNER_EXCEPTION_ARG0" xml:space="preserve">
+    <value>Inner exception: {0}</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_ERROR_ALT3" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_UPLOAD_ARG0_BYTES_TO_ARG1" xml:space="preserve">
+    <value>Upload {0} bytes to {1}...</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_ERROR_ARG0" xml:space="preserve">
+    <value>Error: {0}</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_CANCELED" xml:space="preserve">
+    <value>Canceled.</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_ERROR_ARG0_ALT1" xml:space="preserve">
+    <value>Error: {0}</value>
+  </data>
+  <data name="DEMOSCOMMONCODE_RESPONSE_RECEIVED_ARG0" xml:space="preserve">
+    <value>Response received: {0}</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_CUSTOMCONTROLS_REGULAR" xml:space="preserve">
+    <value>Regular</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_CUSTOMCONTROLS_ITALIC" xml:space="preserve">
+    <value>Italic</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_CUSTOMCONTROLS_BOLD" xml:space="preserve">
+    <value>Bold</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_CUSTOMCONTROLS_BOLD_ITALIC" xml:space="preserve">
+    <value>Bold Italic</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_CUSTOMCONTROLS_BOLD_ALT1" xml:space="preserve">
+    <value>Bold</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_CUSTOMCONTROLS_BOLD_ITALIC_ALT1" xml:space="preserve">
+    <value>Bold Italic</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_CUSTOMCONTROLS_ITALIC_ALT1" xml:space="preserve">
+    <value>Italic</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_CUSTOMCONTROLS_BOLD_ITALIC_ALT2" xml:space="preserve">
+    <value>Bold Italic</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_CUSTOMCONTROLS_REGULAR_ALT1" xml:space="preserve">
+    <value>Regular</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_CUSTOMCONTROLS_BOLD_ALT2" xml:space="preserve">
+    <value>Bold</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_CUSTOMCONTROLS_ITALIC_ALT2" xml:space="preserve">
+    <value>Italic</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_CUSTOMCONTROLS_BOLD_ITALIC_ALT3" xml:space="preserve">
+    <value>Bold Italic</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_CUSTOMCONTROLS_FONT_STYLE_WITH_NAME_ARG0_DOES_NOT_EXIST" xml:space="preserve">
+    <value>Font style with name '{0}' does not exist.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_CUSTOMCONTROLS_FONT_SIZE_MUST_BE_AN_INTEGER_OR_DECIMAL_NUMBER" xml:space="preserve">
+    <value>Font size must be an integer or decimal number.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_CUSTOMCONTROLS_BOLD_ITALIC_ALT4" xml:space="preserve">
+    <value>Bold Italic</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_CUSTOMCONTROLS_BOLD_ALT3" xml:space="preserve">
+    <value>Bold</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_CUSTOMCONTROLS_ITALIC_ALT3" xml:space="preserve">
+    <value>Italic</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_CUSTOMCONTROLS_REGULAR_ALT2" xml:space="preserve">
+    <value>Regular</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_ALL_CHECKBOXES_CANNOT_BE_DISABLED" xml:space="preserve">
+    <value>All checkboxes cannot be disabled.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_ERROR" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_REGULAR" xml:space="preserve">
+    <value>Regular</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_ITALIC" xml:space="preserve">
+    <value>Italic</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_BOLD" xml:space="preserve">
+    <value>Bold</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_BOLD_ITALIC" xml:space="preserve">
+    <value>Bold Italic</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_RED" xml:space="preserve">
+    <value>Red</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_RED_ALT1" xml:space="preserve">
+    <value>Red</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_RED_ALT2" xml:space="preserve">
+    <value>Red</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_BOLD_ITALIC_ALT1" xml:space="preserve">
+    <value>Bold Italic</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_BOLD_ITALIC_ALT2" xml:space="preserve">
+    <value>Bold Italic</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_BOLD_ALT1" xml:space="preserve">
+    <value>Bold</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_BOLD_ALT2" xml:space="preserve">
+    <value>Bold</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_ITALIC_ALT1" xml:space="preserve">
+    <value>Italic</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_ITALIC_ALT2" xml:space="preserve">
+    <value>Italic</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_REGULAR_ALT1" xml:space="preserve">
+    <value>Regular</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_REGULAR_ALT2" xml:space="preserve">
+    <value>Regular</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_BOLD_ITALIC_ALT3" xml:space="preserve">
+    <value>Bold Italic</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_BOLD_ALT3" xml:space="preserve">
+    <value>Bold</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_ITALIC_ALT3" xml:space="preserve">
+    <value>Italic</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_REGULAR_ALT3" xml:space="preserve">
+    <value>Regular</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_BOLD_ALT4" xml:space="preserve">
+    <value>Bold</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_BOLD_ITALIC_ALT4" xml:space="preserve">
+    <value>Bold Italic</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_ITALIC_ALT4" xml:space="preserve">
+    <value>Italic</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_BOLD_ITALIC_ALT5" xml:space="preserve">
+    <value>Bold Italic</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_FONT_STYLE_WITH_NAME_ARG0_DOES_NOT_EXIST" xml:space="preserve">
+    <value>Font style with name '{0}' does not exist.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_FONT_SIZE_MUST_BE_AN_INTEGER_OR_DECIMAL_NUMBER" xml:space="preserve">
+    <value>Font size must be an integer or decimal number.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_ADD_COMMENT" xml:space="preserve">
+    <value>Add Comment</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_ADD_DEFINED_NAME" xml:space="preserve">
+    <value>Add Defined Name</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_NAME_IS_NOT_DEFINED" xml:space="preserve">
+    <value>Name is not defined.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_THE_DRAWING_NAME_CANNOT_BE_EMPTY" xml:space="preserve">
+    <value>The drawing name cannot be empty.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_THE_DRAWING_WITH_ARG0_EXISTS_ALREADY" xml:space="preserve">
+    <value>The drawing with '{0}' exists already.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_ADD_HYPERLINK" xml:space="preserve">
+    <value>Add Hyperlink</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_ADD_HYPERLINK_ALT1" xml:space="preserve">
+    <value>Add hyperlink</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_ERROR_ALT1" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_ADD_HYPERLINK_ALT2" xml:space="preserve">
+    <value>Add hyperlink</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_CELL_REFERENCE_IS_INVALID" xml:space="preserve">
+    <value>Cell reference is invalid.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_ADD_HYPERLINK_ALT3" xml:space="preserve">
+    <value>Add hyperlink</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_DEFINED_NAME_IS_NOT_SELECTED" xml:space="preserve">
+    <value>Defined name is not selected.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_ARG0_MUST_BE_BETWEEN_ARG1_AND_ARG2" xml:space="preserve">
+    <value>{0} must be between {1} and {2}.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_ARG0_REQUIRES_AN_INTEGER_OR_DECIMAL_NUMBER" xml:space="preserve">
+    <value>{0} requires an integer or decimal number.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_TEXT_ARG0_IS_NOT_FOUND" xml:space="preserve">
+    <value>Text '{0}' is not found.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_REPLACE" xml:space="preserve">
+    <value>Replace</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_CANNOT_FIND_A_MATCH" xml:space="preserve">
+    <value>Cannot find a match.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_REPLACE_ALL" xml:space="preserve">
+    <value>Replace all</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_COULD_NOT_FIND_ANYTHING_TO_REPLACE" xml:space="preserve">
+    <value>Could not find anything to replace.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_REPLACE_ALT1" xml:space="preserve">
+    <value>Replace</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_MADE_ARG0_REPLACEMENTS" xml:space="preserve">
+    <value>Made '{0}' replacements.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_REPLACE_ALT2" xml:space="preserve">
+    <value>Replace</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_TEXT_ARG0_IS_NOT_FOUND_ALT1" xml:space="preserve">
+    <value>Text '{0}' is not found.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_ARG0_CELLS_FOUND" xml:space="preserve">
+    <value>{0} cells found.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_FROM_ARG0_PAGES" xml:space="preserve">
+    <value>from {0} pages</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_WORKSHEET_NAME_CANNOT_CONTAINS_MORE_THAN_40_SYMBOLS" xml:space="preserve">
+    <value>Worksheet name cannot contains more than 40 symbols.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_ROW_HEIGHT_MUST_BE_AN_INTEGER_OR_DECIMAL_NUMBER" xml:space="preserve">
+    <value>Row height must be an integer or decimal number.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_COLUMN_WIDTH_MUST_BE_AN_INTEGER_OR_DECIMAL_NUMBER" xml:space="preserve">
+    <value>Column width must be an integer or decimal number.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_ROW_HEIGHT" xml:space="preserve">
+    <value>Row height</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_DEFAULT_ROW_HEIGHT" xml:space="preserve">
+    <value>Default row height</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_COLUMN_WIDTH" xml:space="preserve">
+    <value>Column width</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_DEFAULT_COLUMN_WIDTH" xml:space="preserve">
+    <value>Default column width</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_EDIT_COMMENT" xml:space="preserve">
+    <value>Edit comment</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_THE_LOADED_FILE_IS_XLS_FILE_TO_OPEN_XLS_FILE_APPLICATION_NEEDS_TO_CONVERT_XLS_FILE_TO_THE_XLSX_FILE_DO_YOU_WANT_TO_CREATE_XLSX_FILE_FROM_XLS_FILE" xml:space="preserve">
+    <value>The loaded file is XLS file. To open XLS file application needs to convert XLS file to the XLSX file. Do you want to create XLSX file from XLS file?</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_CONVERT_XLS_TO_XLSX" xml:space="preserve">
+    <value>Convert XLS to XLSX</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_EXPORT_DOCUMENT" xml:space="preserve">
+    <value>Export document</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_CURRENT_WORKBOOK_IS_CHANGED_DO_YOU_WANT_TO_SAVE_CHANGES" xml:space="preserve">
+    <value>Current workbook is changed. Do you want to save changes?</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_NEW_WORKBOOK" xml:space="preserve">
+    <value>New Workbook</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_GENERAL" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_NUMBER" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_DATE" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_TIME" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_CURRENCY" xml:space="preserve">
+    <value>Currency</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_PERCENTAGE" xml:space="preserve">
+    <value>Percentage</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_SCIENTIFIC" xml:space="preserve">
+    <value>Scientific</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_CUSTOM" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_GENERAL_ALT1" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_NUMBER_ALT1" xml:space="preserve">
+    <value>Number</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_DATE_ALT1" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_TIME_ALT1" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_CURRENCY_ALT1" xml:space="preserve">
+    <value>Currency</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_PERCENTAGE_ALT1" xml:space="preserve">
+    <value>Percentage</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_SCIENTIFIC_ALT1" xml:space="preserve">
+    <value>Scientific</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_CUSTOM_ALT1" xml:space="preserve">
+    <value>Custom</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_REMOVE_WORKSHEET_ARG0" xml:space="preserve">
+    <value>Remove worksheet '{0}'?</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_REMOVE_WORKSHEET" xml:space="preserve">
+    <value>Remove Worksheet</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_FORMULA_SYNTAX_ERROR" xml:space="preserve">
+    <value>Formula Syntax Error</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_FORMULA_SYNTAX_ERROR_ALT1" xml:space="preserve">
+    <value>Formula Syntax Error</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_THE_ADDRESS_OF_THIS_SITE_IS_NOT_VALID" xml:space="preserve">
+    <value>The address of this site is not valid: </value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_LINK" xml:space="preserve">
+    <value>Link: </value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_ERROR_ALT2" xml:space="preserve">
+    <value>Error: </value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_REFERENCE_IS_NOT_VALID" xml:space="preserve">
+    <value>Reference is not valid.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_ERROR_ALT3" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_CELL_ARG0_WITH_FORMULA_ARG1_CALCULATION_ERROR_ARG2" xml:space="preserve">
+    <value>Cell {0} with formula '={1}' calculation error: {2}</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_PROCESSING" xml:space="preserve">
+    <value>Processing...</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_LOADING" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_READY" xml:space="preserve">
+    <value>Ready</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_VINTASOFT_SPREADSHEET_EDITOR_DEMO_V" xml:space="preserve">
+    <value>VintaSoft Spreadsheet Editor Demo v</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_UNKNOWN_ERROR" xml:space="preserve">
+    <value>Unknown error.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_ANY_NUMBER_INCLUDING_ZERO_OR_ANY_ERROR_CODE_IS_DIVIDED_BY_ZERO" xml:space="preserve">
+    <value>Any number (including zero) or any error code is divided by zero.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_EXTERNAL_ERROR" xml:space="preserve">
+    <value>External error.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_A_CELL_REFERENCE_CANNOT_BE_EVALUATED_BECAUSE_THE_VALUE_FOR_THE_CELL_HAS_NOT_BEEN_RETRIEVED_OR_CALCULATED" xml:space="preserve">
+    <value>A cell reference cannot be evaluated because the value for the cell has not been retrieved or calculated.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_LOOKS_LIKE_A_NAME_IS_USED_BUT_NO_SUCH_NAME_HAS_BEEN_DEFINED" xml:space="preserve">
+    <value>Looks like a name is used but no such name has been defined.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_NO_ERROR" xml:space="preserve">
+    <value>No error.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_A_DESIGNATED_VALUE_IS_NOT_AVAILABLE" xml:space="preserve">
+    <value>A designated value is not available.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_TWO_AREAS_ARE_REQUIRED_TO_INTERSECT_BUT_DO_NOT" xml:space="preserve">
+    <value>Two areas are required to intersect but do not.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_AN_ARGUMENT_TO_A_FUNCTION_HAS_A_COMPATIBLE_TYPE_BUT_HAS_A_VALUE_THAT_IS_OUTSIDE_THE_DOMAIN_OVER_WHICH_THAT_FUNCTION_IS_DEFINED" xml:space="preserve">
+    <value>An argument to a function has a compatible type but has a value that is outside the domain over which that function is defined.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_A_CELL_REFERENCE_CANNOT_BE_EVALUATED" xml:space="preserve">
+    <value>A cell reference cannot be evaluated.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_AN_INCOMPATIBLE_TYPE_ARGUMENT_IS_PASSED_TO_A_FUNCTION_OR_AN_INCOMPATIBLE_TYPE_OPERAND_IS_USED_WITH_AN_OPERATOR" xml:space="preserve">
+    <value>An incompatible type argument is passed to a function, or an incompatible type operand is used with an operator.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_UNEXPECTED_ERROR" xml:space="preserve">
+    <value>Unexpected error.</value>
+  </data>
+</root>

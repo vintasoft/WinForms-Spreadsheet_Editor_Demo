@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,4 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="locationGroupBox.Text" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="moveAndSizeWithCellsRadioButton.Text" xml:space="preserve">
+    <value>Move and size with cells</value>
+  </data>
+  <data name="moveButDontSizeWithCellsRadioButton.Text" xml:space="preserve">
+    <value>Move but don\&#39;t size with cells</value>
+  </data>
+  <data name="dontMoveOrSizeWithCellsRadioButton.Text" xml:space="preserve">
+    <value>Don\&#39;t move or size with cells</value>
+  </data>
+  <data name="positioningGroupBox.Text" xml:space="preserve">
+    <value>Positioning</value>
+  </data>
+  <data name="widthLabel.Text" xml:space="preserve">
+    <value>Width:</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Height:</value>
+  </data>
+  <data name="sizeGroupBox.Text" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </metadata>
 </root>

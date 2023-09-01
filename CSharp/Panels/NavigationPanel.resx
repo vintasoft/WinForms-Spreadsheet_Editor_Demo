@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -119,5 +119,65 @@
   </resheader>
   <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <data name="panModeToolStripButton.Text" xml:space="preserve">
+    <value>Pan</value>
+  </data>
+  <data name="zoomOutButton.Text" xml:space="preserve">
+    <value>toolStripButton6</value>
+  </data>
+  <data name="zoomInButton.Text" xml:space="preserve">
+    <value>toolStripButton5</value>
+  </data>
+  <data name="formatToolStripMenuItem.Text" xml:space="preserve">
+    <value>Format...</value>
+  </data>
+  <data name="gridColorToolStripMenuItem.Text" xml:space="preserve">
+    <value>Grid Color...</value>
+  </data>
+  <data name="showGridToolStripMenuItem.Text" xml:space="preserve">
+    <value>Show Grid</value>
+  </data>
+  <data name="showFormulasToolStripMenuItem.Text" xml:space="preserve">
+    <value>Show Formulas</value>
+  </data>
+  <data name="showHeadingsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Show Headings</value>
+  </data>
+  <data name="viewToolStripMenuItem.Text" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="renameToolStripMenuItem.Text" xml:space="preserve">
+    <value>Rename...</value>
+  </data>
+  <data name="moveMenuItem.Text" xml:space="preserve">
+    <value>Move...</value>
+  </data>
+  <data name="removeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="copyToolStripMenuItem.Text" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="worksheetsActionsButton.Text" xml:space="preserve">
+    <value>Worksheet Actions</value>
+  </data>
+  <data name="addWorksheetButton.Text" xml:space="preserve">
+    <value>Add Woksheet</value>
+  </data>
+  <data name="lastWorksheetButton.Text" xml:space="preserve">
+    <value>Last Worksheet</value>
+  </data>
+  <data name="nextWorksheetButton.Text" xml:space="preserve">
+    <value>Next Worksheet</value>
+  </data>
+  <data name="prevWorksheetButton.Text" xml:space="preserve">
+    <value>Previous Worksheet</value>
+  </data>
+  <data name="firstWorksheetButton.Text" xml:space="preserve">
+    <value>First Worksheet</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib">
+    <value>True</value>
   </metadata>
 </root>

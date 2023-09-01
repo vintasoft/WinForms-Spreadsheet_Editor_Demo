@@ -29,7 +29,11 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CellsEditorPanel));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.openWorksheetFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.saveWorksheetFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.exportFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.insertButton = new System.Windows.Forms.ToolStripSplitButton();
             this.insertRowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.insertColumnsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,6 +50,7 @@ namespace SpreadsheetEditorDemo
             this.rowHeightToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.autoFitRowHeightToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setRowAutoheightToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.calculateRowAutoHeightToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.defaultRowHeightToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.columnWidthToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -81,16 +86,11 @@ namespace SpreadsheetEditorDemo
             this.addHyperlinkMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editHyperlinkMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeHyperlinkMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openWorksheetFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.saveWorksheetFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this.exportFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this.calculateRowAutoHeightToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStrip1
             // 
-            this.toolStrip1.AutoSize = false;
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStrip1.GripMargin = new System.Windows.Forms.Padding(0);
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
@@ -106,9 +106,18 @@ namespace SpreadsheetEditorDemo
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0);
-            this.toolStrip1.Size = new System.Drawing.Size(505, 53);
+            this.toolStrip1.Size = new System.Drawing.Size(513, 53);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // openWorksheetFileDialog
+            // 
+            this.openWorksheetFileDialog.Filter = "XLSX files|*.xlsx|XLS files|*.xls|All supported Workbooks|*.xlsx;*.xls";
+            this.openWorksheetFileDialog.FilterIndex = 3;
+            // 
+            // saveWorksheetFileDialog
+            // 
+            this.saveWorksheetFileDialog.Filter = "XLSX files|*.xlsx";
             // 
             // insertButton
             // 
@@ -123,10 +132,10 @@ namespace SpreadsheetEditorDemo
             this.insertButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.insertButton.Name = "insertButton";
             this.insertButton.Size = new System.Drawing.Size(60, 50);
-            this.insertButton.Text = "Insert";
+            resources.ApplyResources(this.insertButton, "insertButton");
             this.insertButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.insertButton.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.insertButton.ToolTipText = "Insert Cells";
+            
             this.insertButton.ButtonClick += new System.EventHandler(this.insertButton_ButtonClick);
             // 
             // insertRowsToolStripMenuItem
@@ -134,8 +143,8 @@ namespace SpreadsheetEditorDemo
             this.insertRowsToolStripMenuItem.Image = global::SpreadsheetEditorDemo.Properties.Resources.InsertRows;
             this.insertRowsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.insertRowsToolStripMenuItem.Name = "insertRowsToolStripMenuItem";
-            this.insertRowsToolStripMenuItem.Size = new System.Drawing.Size(156, 24);
-            this.insertRowsToolStripMenuItem.Text = "Insert Rows";
+            this.insertRowsToolStripMenuItem.Size = new System.Drawing.Size(182, 24);
+            resources.ApplyResources(this.insertRowsToolStripMenuItem, "insertRowsToolStripMenuItem");
             this.insertRowsToolStripMenuItem.Click += new System.EventHandler(this.insertRowsToolStripMenuItem_Click);
             // 
             // insertColumnsToolStripMenuItem
@@ -143,8 +152,8 @@ namespace SpreadsheetEditorDemo
             this.insertColumnsToolStripMenuItem.Image = global::SpreadsheetEditorDemo.Properties.Resources.InsertColumns;
             this.insertColumnsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.insertColumnsToolStripMenuItem.Name = "insertColumnsToolStripMenuItem";
-            this.insertColumnsToolStripMenuItem.Size = new System.Drawing.Size(156, 24);
-            this.insertColumnsToolStripMenuItem.Text = "Insert Columns";
+            this.insertColumnsToolStripMenuItem.Size = new System.Drawing.Size(182, 24);
+            resources.ApplyResources(this.insertColumnsToolStripMenuItem, "insertColumnsToolStripMenuItem");
             this.insertColumnsToolStripMenuItem.Click += new System.EventHandler(this.insertColumnsToolStripMenuItem_Click);
             // 
             // insertCellsToolStripMenuItem
@@ -155,21 +164,25 @@ namespace SpreadsheetEditorDemo
             this.insertCellsToolStripMenuItem.Image = global::SpreadsheetEditorDemo.Properties.Resources.InsertCells;
             this.insertCellsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.insertCellsToolStripMenuItem.Name = "insertCellsToolStripMenuItem";
-            this.insertCellsToolStripMenuItem.Size = new System.Drawing.Size(156, 24);
-            this.insertCellsToolStripMenuItem.Text = "Insert Cells";
+            this.insertCellsToolStripMenuItem.Size = new System.Drawing.Size(182, 24);
+            resources.ApplyResources(this.insertCellsToolStripMenuItem, "insertCellsToolStripMenuItem");
             // 
             // insertCellsShiftRightToolStripMenuItem
             // 
+            this.insertCellsShiftRightToolStripMenuItem.Image = global::SpreadsheetEditorDemo.Properties.Resources.InsertCellsAndShiftRight;
+            this.insertCellsShiftRightToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.insertCellsShiftRightToolStripMenuItem.Name = "insertCellsShiftRightToolStripMenuItem";
-            this.insertCellsShiftRightToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
-            this.insertCellsShiftRightToolStripMenuItem.Text = "Shift Right";
+            this.insertCellsShiftRightToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
+            resources.ApplyResources(this.insertCellsShiftRightToolStripMenuItem, "insertCellsShiftRightToolStripMenuItem");
             this.insertCellsShiftRightToolStripMenuItem.Click += new System.EventHandler(this.insertCellsShiftRightToolStripMenuItem_Click);
             // 
             // inserCellsShiftDownToolStripMenuItem
             // 
+            this.inserCellsShiftDownToolStripMenuItem.Image = global::SpreadsheetEditorDemo.Properties.Resources.InsertCellsAndShiftDown;
+            this.inserCellsShiftDownToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.inserCellsShiftDownToolStripMenuItem.Name = "inserCellsShiftDownToolStripMenuItem";
-            this.inserCellsShiftDownToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
-            this.inserCellsShiftDownToolStripMenuItem.Text = "Shift Down";
+            this.inserCellsShiftDownToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
+            resources.ApplyResources(this.inserCellsShiftDownToolStripMenuItem, "inserCellsShiftDownToolStripMenuItem");
             this.inserCellsShiftDownToolStripMenuItem.Click += new System.EventHandler(this.inserCellsShiftDownToolStripMenuItem_Click);
             // 
             // deleteButton
@@ -185,10 +198,10 @@ namespace SpreadsheetEditorDemo
             this.deleteButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(60, 50);
-            this.deleteButton.Text = "Delete";
+            resources.ApplyResources(this.deleteButton, "deleteButton");
             this.deleteButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.deleteButton.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.deleteButton.ToolTipText = "Delete Cells";
+            
             this.deleteButton.ButtonClick += new System.EventHandler(this.deleteButton_ButtonClick);
             // 
             // deleteRowsToolStripMenuItem
@@ -196,8 +209,8 @@ namespace SpreadsheetEditorDemo
             this.deleteRowsToolStripMenuItem.Image = global::SpreadsheetEditorDemo.Properties.Resources.DeleteRows;
             this.deleteRowsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.deleteRowsToolStripMenuItem.Name = "deleteRowsToolStripMenuItem";
-            this.deleteRowsToolStripMenuItem.Size = new System.Drawing.Size(160, 24);
-            this.deleteRowsToolStripMenuItem.Text = "Delete Rows";
+            this.deleteRowsToolStripMenuItem.Size = new System.Drawing.Size(182, 24);
+            resources.ApplyResources(this.deleteRowsToolStripMenuItem, "deleteRowsToolStripMenuItem");
             this.deleteRowsToolStripMenuItem.Click += new System.EventHandler(this.deleteRowsToolStripMenuItem_Click);
             // 
             // deleteColumnsToolStripMenuItem
@@ -205,8 +218,8 @@ namespace SpreadsheetEditorDemo
             this.deleteColumnsToolStripMenuItem.Image = global::SpreadsheetEditorDemo.Properties.Resources.DeleteColumns;
             this.deleteColumnsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.deleteColumnsToolStripMenuItem.Name = "deleteColumnsToolStripMenuItem";
-            this.deleteColumnsToolStripMenuItem.Size = new System.Drawing.Size(160, 24);
-            this.deleteColumnsToolStripMenuItem.Text = "Delete Columns";
+            this.deleteColumnsToolStripMenuItem.Size = new System.Drawing.Size(182, 24);
+            resources.ApplyResources(this.deleteColumnsToolStripMenuItem, "deleteColumnsToolStripMenuItem");
             this.deleteColumnsToolStripMenuItem.Click += new System.EventHandler(this.deleteColumnsToolStripMenuItem_Click);
             // 
             // deleteCellsToolStripMenuItem
@@ -217,21 +230,25 @@ namespace SpreadsheetEditorDemo
             this.deleteCellsToolStripMenuItem.Image = global::SpreadsheetEditorDemo.Properties.Resources.DeleteCells;
             this.deleteCellsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.deleteCellsToolStripMenuItem.Name = "deleteCellsToolStripMenuItem";
-            this.deleteCellsToolStripMenuItem.Size = new System.Drawing.Size(160, 24);
-            this.deleteCellsToolStripMenuItem.Text = "Delete Cells";
+            this.deleteCellsToolStripMenuItem.Size = new System.Drawing.Size(182, 24);
+            resources.ApplyResources(this.deleteCellsToolStripMenuItem, "deleteCellsToolStripMenuItem");
             // 
             // deleteCellsShiftLeftToolStripMenuItem
             // 
+            this.deleteCellsShiftLeftToolStripMenuItem.Image = global::SpreadsheetEditorDemo.Properties.Resources.DeleteCellsAndShiftLeft;
+            this.deleteCellsShiftLeftToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.deleteCellsShiftLeftToolStripMenuItem.Name = "deleteCellsShiftLeftToolStripMenuItem";
-            this.deleteCellsShiftLeftToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
-            this.deleteCellsShiftLeftToolStripMenuItem.Text = "Shift Left";
+            this.deleteCellsShiftLeftToolStripMenuItem.Size = new System.Drawing.Size(123, 24);
+            resources.ApplyResources(this.deleteCellsShiftLeftToolStripMenuItem, "deleteCellsShiftLeftToolStripMenuItem");
             this.deleteCellsShiftLeftToolStripMenuItem.Click += new System.EventHandler(this.deleteCellsShiftLeftToolStripMenuItem_Click);
             // 
             // deleteCellsShiftUpToolStripMenuItem
             // 
+            this.deleteCellsShiftUpToolStripMenuItem.Image = global::SpreadsheetEditorDemo.Properties.Resources.DeleteCellsAndShiftUp;
+            this.deleteCellsShiftUpToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.deleteCellsShiftUpToolStripMenuItem.Name = "deleteCellsShiftUpToolStripMenuItem";
-            this.deleteCellsShiftUpToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
-            this.deleteCellsShiftUpToolStripMenuItem.Text = "Shift Up";
+            this.deleteCellsShiftUpToolStripMenuItem.Size = new System.Drawing.Size(123, 24);
+            resources.ApplyResources(this.deleteCellsShiftUpToolStripMenuItem, "deleteCellsShiftUpToolStripMenuItem");
             this.deleteCellsShiftUpToolStripMenuItem.Click += new System.EventHandler(this.deleteCellsShiftUpToolStripMenuItem_Click);
             // 
             // formatButton
@@ -258,10 +275,10 @@ namespace SpreadsheetEditorDemo
             this.formatButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.formatButton.Name = "formatButton";
             this.formatButton.Size = new System.Drawing.Size(60, 50);
-            this.formatButton.Text = "Format";
+            resources.ApplyResources(this.formatButton, "formatButton");
             this.formatButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.formatButton.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.formatButton.ToolTipText = "Format";
+            
             this.formatButton.ButtonClick += new System.EventHandler(this.formatButton_ButtonClick);
             // 
             // rowHeightToolStripMenuItem
@@ -270,7 +287,7 @@ namespace SpreadsheetEditorDemo
             this.rowHeightToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.rowHeightToolStripMenuItem.Name = "rowHeightToolStripMenuItem";
             this.rowHeightToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
-            this.rowHeightToolStripMenuItem.Text = "Row Height...";
+            resources.ApplyResources(this.rowHeightToolStripMenuItem, "rowHeightToolStripMenuItem");
             this.rowHeightToolStripMenuItem.Click += new System.EventHandler(this.rowHeightToolStripMenuItem_Click);
             // 
             // autoFitRowHeightToolStripMenuItem
@@ -279,21 +296,28 @@ namespace SpreadsheetEditorDemo
             this.autoFitRowHeightToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.autoFitRowHeightToolStripMenuItem.Name = "autoFitRowHeightToolStripMenuItem";
             this.autoFitRowHeightToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
-            this.autoFitRowHeightToolStripMenuItem.Text = "AutoFit Row Height";
+            resources.ApplyResources(this.autoFitRowHeightToolStripMenuItem, "autoFitRowHeightToolStripMenuItem");
             this.autoFitRowHeightToolStripMenuItem.Click += new System.EventHandler(this.autoFitRowHeightToolStripMenuItem_Click);
             // 
             // setRowAutoheightToolStripMenuItem
             // 
             this.setRowAutoheightToolStripMenuItem.Name = "setRowAutoheightToolStripMenuItem";
             this.setRowAutoheightToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
-            this.setRowAutoheightToolStripMenuItem.Text = "Set Row Auto-Height";
+            resources.ApplyResources(this.setRowAutoheightToolStripMenuItem, "setRowAutoheightToolStripMenuItem");
             this.setRowAutoheightToolStripMenuItem.Click += new System.EventHandler(this.setRowAutoheightToolStripMenuItem_Click);
+            // 
+            // calculateRowAutoHeightToolStripMenuItem
+            // 
+            this.calculateRowAutoHeightToolStripMenuItem.Name = "calculateRowAutoHeightToolStripMenuItem";
+            this.calculateRowAutoHeightToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
+            resources.ApplyResources(this.calculateRowAutoHeightToolStripMenuItem, "calculateRowAutoHeightToolStripMenuItem");
+            this.calculateRowAutoHeightToolStripMenuItem.Click += new System.EventHandler(this.calculateRowAutoHeightToolStripMenuItem_Click);
             // 
             // defaultRowHeightToolStripMenuItem
             // 
             this.defaultRowHeightToolStripMenuItem.Name = "defaultRowHeightToolStripMenuItem";
             this.defaultRowHeightToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
-            this.defaultRowHeightToolStripMenuItem.Text = "Default Row Height...";
+            resources.ApplyResources(this.defaultRowHeightToolStripMenuItem, "defaultRowHeightToolStripMenuItem");
             this.defaultRowHeightToolStripMenuItem.Click += new System.EventHandler(this.defaultRowHeightToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
@@ -307,7 +331,7 @@ namespace SpreadsheetEditorDemo
             this.columnWidthToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.columnWidthToolStripMenuItem.Name = "columnWidthToolStripMenuItem";
             this.columnWidthToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
-            this.columnWidthToolStripMenuItem.Text = "Column Width...";
+            resources.ApplyResources(this.columnWidthToolStripMenuItem, "columnWidthToolStripMenuItem");
             this.columnWidthToolStripMenuItem.Click += new System.EventHandler(this.columnWidthToolStripMenuItem_Click);
             // 
             // autoFitColumnWidthToolStripMenuItem
@@ -316,14 +340,14 @@ namespace SpreadsheetEditorDemo
             this.autoFitColumnWidthToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.autoFitColumnWidthToolStripMenuItem.Name = "autoFitColumnWidthToolStripMenuItem";
             this.autoFitColumnWidthToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
-            this.autoFitColumnWidthToolStripMenuItem.Text = "AutoFit Column Width";
+            resources.ApplyResources(this.autoFitColumnWidthToolStripMenuItem, "autoFitColumnWidthToolStripMenuItem");
             this.autoFitColumnWidthToolStripMenuItem.Click += new System.EventHandler(this.autoFitColumnWidthToolStripMenuItem_Click);
             // 
             // defaultColumnWidthToolStripMenuItem
             // 
             this.defaultColumnWidthToolStripMenuItem.Name = "defaultColumnWidthToolStripMenuItem";
             this.defaultColumnWidthToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
-            this.defaultColumnWidthToolStripMenuItem.Text = "Default Column Width...";
+            resources.ApplyResources(this.defaultColumnWidthToolStripMenuItem, "defaultColumnWidthToolStripMenuItem");
             this.defaultColumnWidthToolStripMenuItem.Click += new System.EventHandler(this.defaultColumnWidthToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
@@ -335,28 +359,28 @@ namespace SpreadsheetEditorDemo
             // 
             this.hideRowsToolStripMenuItem.Name = "hideRowsToolStripMenuItem";
             this.hideRowsToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
-            this.hideRowsToolStripMenuItem.Text = "Hide Rows";
+            resources.ApplyResources(this.hideRowsToolStripMenuItem, "hideRowsToolStripMenuItem");
             this.hideRowsToolStripMenuItem.Click += new System.EventHandler(this.hideRowsToolStripMenuItem_Click);
             // 
             // hideColumnsToolStripMenuItem
             // 
             this.hideColumnsToolStripMenuItem.Name = "hideColumnsToolStripMenuItem";
             this.hideColumnsToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
-            this.hideColumnsToolStripMenuItem.Text = "Hide Columns";
+            resources.ApplyResources(this.hideColumnsToolStripMenuItem, "hideColumnsToolStripMenuItem");
             this.hideColumnsToolStripMenuItem.Click += new System.EventHandler(this.hideColumnsToolStripMenuItem_Click);
             // 
             // showRowsToolStripMenuItem
             // 
             this.showRowsToolStripMenuItem.Name = "showRowsToolStripMenuItem";
             this.showRowsToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
-            this.showRowsToolStripMenuItem.Text = "Show Rows";
+            resources.ApplyResources(this.showRowsToolStripMenuItem, "showRowsToolStripMenuItem");
             this.showRowsToolStripMenuItem.Click += new System.EventHandler(this.showRowsToolStripMenuItem_Click);
             // 
             // showColumnsToolStripMenuItem
             // 
             this.showColumnsToolStripMenuItem.Name = "showColumnsToolStripMenuItem";
             this.showColumnsToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
-            this.showColumnsToolStripMenuItem.Text = "Show Columns";
+            resources.ApplyResources(this.showColumnsToolStripMenuItem, "showColumnsToolStripMenuItem");
             this.showColumnsToolStripMenuItem.Click += new System.EventHandler(this.showColumnsToolStripMenuItem_Click);
             // 
             // mergeMenuButton
@@ -373,10 +397,10 @@ namespace SpreadsheetEditorDemo
             this.mergeMenuButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.mergeMenuButton.Name = "mergeMenuButton";
             this.mergeMenuButton.Size = new System.Drawing.Size(60, 50);
-            this.mergeMenuButton.Text = "Merge";
+            resources.ApplyResources(this.mergeMenuButton, "mergeMenuButton");
             this.mergeMenuButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.mergeMenuButton.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.mergeMenuButton.ToolTipText = "Merge and Center";
+            
             this.mergeMenuButton.ButtonClick += new System.EventHandler(this.mergeCenterToolStripMenuItem_Click);
             // 
             // mergeCenterToolStripMenuItem
@@ -385,7 +409,7 @@ namespace SpreadsheetEditorDemo
             this.mergeCenterToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mergeCenterToolStripMenuItem.Name = "mergeCenterToolStripMenuItem";
             this.mergeCenterToolStripMenuItem.Size = new System.Drawing.Size(161, 24);
-            this.mergeCenterToolStripMenuItem.Text = "Merge && Center";
+            resources.ApplyResources(this.mergeCenterToolStripMenuItem, "mergeCenterToolStripMenuItem");
             this.mergeCenterToolStripMenuItem.Click += new System.EventHandler(this.mergeCenterToolStripMenuItem_Click);
             // 
             // mergeToolStripMenuItem
@@ -394,7 +418,7 @@ namespace SpreadsheetEditorDemo
             this.mergeToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mergeToolStripMenuItem.Name = "mergeToolStripMenuItem";
             this.mergeToolStripMenuItem.Size = new System.Drawing.Size(161, 24);
-            this.mergeToolStripMenuItem.Text = "Merge";
+            resources.ApplyResources(this.mergeToolStripMenuItem, "mergeToolStripMenuItem");
             this.mergeToolStripMenuItem.Click += new System.EventHandler(this.mergeToolStripMenuItem_Click);
             // 
             // mergeAcrossToolStripMenuItem
@@ -403,7 +427,7 @@ namespace SpreadsheetEditorDemo
             this.mergeAcrossToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mergeAcrossToolStripMenuItem.Name = "mergeAcrossToolStripMenuItem";
             this.mergeAcrossToolStripMenuItem.Size = new System.Drawing.Size(161, 24);
-            this.mergeAcrossToolStripMenuItem.Text = "Merge Across";
+            resources.ApplyResources(this.mergeAcrossToolStripMenuItem, "mergeAcrossToolStripMenuItem");
             this.mergeAcrossToolStripMenuItem.Click += new System.EventHandler(this.mergeAcrossToolStripMenuItem_Click);
             // 
             // unmergeToolStripMenuItem
@@ -412,7 +436,7 @@ namespace SpreadsheetEditorDemo
             this.unmergeToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.unmergeToolStripMenuItem.Name = "unmergeToolStripMenuItem";
             this.unmergeToolStripMenuItem.Size = new System.Drawing.Size(161, 24);
-            this.unmergeToolStripMenuItem.Text = "Unmerge";
+            resources.ApplyResources(this.unmergeToolStripMenuItem, "unmergeToolStripMenuItem");
             this.unmergeToolStripMenuItem.Click += new System.EventHandler(this.unmergeToolStripMenuItem_Click);
             // 
             // clearButton
@@ -430,10 +454,10 @@ namespace SpreadsheetEditorDemo
             this.clearButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(60, 50);
-            this.clearButton.Text = "Clear";
+            resources.ApplyResources(this.clearButton, "clearButton");
             this.clearButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.clearButton.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.clearButton.ToolTipText = "Clear";
+            
             this.clearButton.ButtonClick += new System.EventHandler(this.clearButton_ButtonClick);
             // 
             // clearAllToolStripMenuItem
@@ -442,7 +466,7 @@ namespace SpreadsheetEditorDemo
             this.clearAllToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.clearAllToolStripMenuItem.Name = "clearAllToolStripMenuItem";
             this.clearAllToolStripMenuItem.Size = new System.Drawing.Size(165, 24);
-            this.clearAllToolStripMenuItem.Text = "Clear All";
+            resources.ApplyResources(this.clearAllToolStripMenuItem, "clearAllToolStripMenuItem");
             this.clearAllToolStripMenuItem.Click += new System.EventHandler(this.clearAllToolStripMenuItem_Click);
             // 
             // clearStylesToolStripMenuItem
@@ -451,7 +475,7 @@ namespace SpreadsheetEditorDemo
             this.clearStylesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.clearStylesToolStripMenuItem.Name = "clearStylesToolStripMenuItem";
             this.clearStylesToolStripMenuItem.Size = new System.Drawing.Size(165, 24);
-            this.clearStylesToolStripMenuItem.Text = "Clear Styles";
+            resources.ApplyResources(this.clearStylesToolStripMenuItem, "clearStylesToolStripMenuItem");
             this.clearStylesToolStripMenuItem.Click += new System.EventHandler(this.clearStylesToolStripMenuItem_Click);
             // 
             // clearContentsToolStripMenuItem
@@ -460,7 +484,7 @@ namespace SpreadsheetEditorDemo
             this.clearContentsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.clearContentsToolStripMenuItem.Name = "clearContentsToolStripMenuItem";
             this.clearContentsToolStripMenuItem.Size = new System.Drawing.Size(165, 24);
-            this.clearContentsToolStripMenuItem.Text = "Clear Contents";
+            resources.ApplyResources(this.clearContentsToolStripMenuItem, "clearContentsToolStripMenuItem");
             this.clearContentsToolStripMenuItem.Click += new System.EventHandler(this.clearContentsToolStripMenuItem_Click);
             // 
             // clearHyperlinksToolStripMenuItem
@@ -469,14 +493,14 @@ namespace SpreadsheetEditorDemo
             this.clearHyperlinksToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.clearHyperlinksToolStripMenuItem.Name = "clearHyperlinksToolStripMenuItem";
             this.clearHyperlinksToolStripMenuItem.Size = new System.Drawing.Size(165, 24);
-            this.clearHyperlinksToolStripMenuItem.Text = "Clear Hyperlinks";
+            resources.ApplyResources(this.clearHyperlinksToolStripMenuItem, "clearHyperlinksToolStripMenuItem");
             this.clearHyperlinksToolStripMenuItem.Click += new System.EventHandler(this.clearHyperlinksToolStripMenuItem_Click);
             // 
             // clearCommentsToolStripMenuItem
             // 
             this.clearCommentsToolStripMenuItem.Name = "clearCommentsToolStripMenuItem";
             this.clearCommentsToolStripMenuItem.Size = new System.Drawing.Size(165, 24);
-            this.clearCommentsToolStripMenuItem.Text = "Clear Comments";
+            resources.ApplyResources(this.clearCommentsToolStripMenuItem, "clearCommentsToolStripMenuItem");
             this.clearCommentsToolStripMenuItem.Click += new System.EventHandler(this.clearCommentsToolStripMenuItem_Click);
             // 
             // fillButton
@@ -493,10 +517,10 @@ namespace SpreadsheetEditorDemo
             this.fillButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.fillButton.Name = "fillButton";
             this.fillButton.Size = new System.Drawing.Size(60, 50);
-            this.fillButton.Text = "Fill";
+            resources.ApplyResources(this.fillButton, "fillButton");
             this.fillButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.fillButton.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.fillButton.ToolTipText = "Fill";
+            
             this.fillButton.ButtonClick += new System.EventHandler(this.fillButton_ButtonClick);
             // 
             // fillDownToolStripMenuItem
@@ -505,7 +529,7 @@ namespace SpreadsheetEditorDemo
             this.fillDownToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.fillDownToolStripMenuItem.Name = "fillDownToolStripMenuItem";
             this.fillDownToolStripMenuItem.Size = new System.Drawing.Size(107, 24);
-            this.fillDownToolStripMenuItem.Text = "Down";
+            resources.ApplyResources(this.fillDownToolStripMenuItem, "fillDownToolStripMenuItem");
             this.fillDownToolStripMenuItem.Click += new System.EventHandler(this.fillDownToolStripMenuItem_Click);
             // 
             // fillRightToolStripMenuItem
@@ -514,7 +538,7 @@ namespace SpreadsheetEditorDemo
             this.fillRightToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.fillRightToolStripMenuItem.Name = "fillRightToolStripMenuItem";
             this.fillRightToolStripMenuItem.Size = new System.Drawing.Size(107, 24);
-            this.fillRightToolStripMenuItem.Text = "Right";
+            resources.ApplyResources(this.fillRightToolStripMenuItem, "fillRightToolStripMenuItem");
             this.fillRightToolStripMenuItem.Click += new System.EventHandler(this.fillRightToolStripMenuItem_Click);
             // 
             // fillUpToolStripMenuItem
@@ -523,7 +547,7 @@ namespace SpreadsheetEditorDemo
             this.fillUpToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.fillUpToolStripMenuItem.Name = "fillUpToolStripMenuItem";
             this.fillUpToolStripMenuItem.Size = new System.Drawing.Size(107, 24);
-            this.fillUpToolStripMenuItem.Text = "Up";
+            resources.ApplyResources(this.fillUpToolStripMenuItem, "fillUpToolStripMenuItem");
             this.fillUpToolStripMenuItem.Click += new System.EventHandler(this.fillUpToolStripMenuItem_Click);
             // 
             // fillLeftToolStripMenuItem
@@ -532,7 +556,7 @@ namespace SpreadsheetEditorDemo
             this.fillLeftToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.fillLeftToolStripMenuItem.Name = "fillLeftToolStripMenuItem";
             this.fillLeftToolStripMenuItem.Size = new System.Drawing.Size(107, 24);
-            this.fillLeftToolStripMenuItem.Text = "Left";
+            resources.ApplyResources(this.fillLeftToolStripMenuItem, "fillLeftToolStripMenuItem");
             this.fillLeftToolStripMenuItem.Click += new System.EventHandler(this.fillLeftToolStripMenuItem_Click);
             // 
             // pictureButton
@@ -549,7 +573,7 @@ namespace SpreadsheetEditorDemo
             this.pictureButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.pictureButton.Name = "pictureButton";
             this.pictureButton.Size = new System.Drawing.Size(60, 50);
-            this.pictureButton.Text = "Picture";
+            resources.ApplyResources(this.pictureButton, "pictureButton");
             this.pictureButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.pictureButton.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.pictureButton.ButtonClick += new System.EventHandler(this.pictureButton_ButtonClick);
@@ -559,28 +583,28 @@ namespace SpreadsheetEditorDemo
             // 
             this.addPictureToolStripMenuItem.Name = "addPictureToolStripMenuItem";
             this.addPictureToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.addPictureToolStripMenuItem.Text = "Add Picture...";
+            resources.ApplyResources(this.addPictureToolStripMenuItem, "addPictureToolStripMenuItem");
             this.addPictureToolStripMenuItem.Click += new System.EventHandler(this.addPictureToolStripMenuItem_Click);
             // 
             // setPictureToolStripMenuItem
             // 
             this.setPictureToolStripMenuItem.Name = "setPictureToolStripMenuItem";
             this.setPictureToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.setPictureToolStripMenuItem.Text = "Set Picture...";
+            resources.ApplyResources(this.setPictureToolStripMenuItem, "setPictureToolStripMenuItem");
             this.setPictureToolStripMenuItem.Click += new System.EventHandler(this.setPictureToolStripMenuItem_Click);
             // 
             // picturePropertiesToolStripMenuItem
             // 
             this.picturePropertiesToolStripMenuItem.Name = "picturePropertiesToolStripMenuItem";
             this.picturePropertiesToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.picturePropertiesToolStripMenuItem.Text = "Properties...";
+            resources.ApplyResources(this.picturePropertiesToolStripMenuItem, "picturePropertiesToolStripMenuItem");
             this.picturePropertiesToolStripMenuItem.Click += new System.EventHandler(this.picturePropertiesToolStripMenuItem_Click);
             // 
             // removePictureToolStripMenuItem
             // 
             this.removePictureToolStripMenuItem.Name = "removePictureToolStripMenuItem";
             this.removePictureToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            this.removePictureToolStripMenuItem.Text = "Remove Picture";
+            resources.ApplyResources(this.removePictureToolStripMenuItem, "removePictureToolStripMenuItem");
             this.removePictureToolStripMenuItem.Click += new System.EventHandler(this.removePictureToolStripMenuItem_Click);
             // 
             // hypelinkSplitButton
@@ -599,7 +623,7 @@ namespace SpreadsheetEditorDemo
             this.hypelinkSplitButton.Text = "Link";
             this.hypelinkSplitButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.hypelinkSplitButton.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.hypelinkSplitButton.ToolTipText = "Add Hyperlink...";
+            resources.ApplyResources(this.hypelinkSplitButton, "hypelinkSplitButton");
             this.hypelinkSplitButton.ButtonClick += new System.EventHandler(this.addHyperlinkMenuItem_Click);
             this.hypelinkSplitButton.DropDownOpened += new System.EventHandler(this.hypelinkSplitButton_DropDownOpened);
             // 
@@ -608,14 +632,14 @@ namespace SpreadsheetEditorDemo
             this.addHyperlinkMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.addHyperlinkMenuItem.Name = "addHyperlinkMenuItem";
             this.addHyperlinkMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.addHyperlinkMenuItem.Text = "Add Hyperlink...";
+            resources.ApplyResources(this.addHyperlinkMenuItem, "addHyperlinkMenuItem");
             this.addHyperlinkMenuItem.Click += new System.EventHandler(this.addHyperlinkMenuItem_Click);
             // 
             // editHyperlinkMenuItem
             // 
             this.editHyperlinkMenuItem.Name = "editHyperlinkMenuItem";
             this.editHyperlinkMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.editHyperlinkMenuItem.Text = "Edit Hyperlink...";
+            resources.ApplyResources(this.editHyperlinkMenuItem, "editHyperlinkMenuItem");
             this.editHyperlinkMenuItem.Click += new System.EventHandler(this.editHyperlinkToolStripMenuItem_Click);
             // 
             // removeHyperlinkMenuItem
@@ -623,34 +647,21 @@ namespace SpreadsheetEditorDemo
             this.removeHyperlinkMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.removeHyperlinkMenuItem.Name = "removeHyperlinkMenuItem";
             this.removeHyperlinkMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.removeHyperlinkMenuItem.Text = "Remove Hyperlink";
+            resources.ApplyResources(this.removeHyperlinkMenuItem, "removeHyperlinkMenuItem");
             this.removeHyperlinkMenuItem.Click += new System.EventHandler(this.removeHyperlinkMenuItem_Click);
-            // 
-            // openWorksheetFileDialog
-            // 
-            this.openWorksheetFileDialog.Filter = "XLSX files|*.xlsx|XLS files|*.xls|All supported Workbooks|*.xlsx;*.xls";
-            this.openWorksheetFileDialog.FilterIndex = 3;
-            // 
-            // saveWorksheetFileDialog
-            // 
-            this.saveWorksheetFileDialog.Filter = "XLSX files|*.xlsx";
-            // 
-            // calculateRowAutoHeightToolStripMenuItem
-            // 
-            this.calculateRowAutoHeightToolStripMenuItem.Name = "calculateRowAutoHeightToolStripMenuItem";
-            this.calculateRowAutoHeightToolStripMenuItem.Size = new System.Drawing.Size(221, 24);
-            this.calculateRowAutoHeightToolStripMenuItem.Text = "Calculate Row Auto-Height";
-            this.calculateRowAutoHeightToolStripMenuItem.Click += new System.EventHandler(this.calculateRowAutoHeightToolStripMenuItem_Click);
             // 
             // CellsEditorPanel
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Controls.Add(this.toolStrip1);
             this.Name = "CellsEditorPanel";
-            this.Size = new System.Drawing.Size(505, 53);
+            this.Size = new System.Drawing.Size(513, 53);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

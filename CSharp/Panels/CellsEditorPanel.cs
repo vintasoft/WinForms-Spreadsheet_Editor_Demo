@@ -42,6 +42,8 @@ namespace SpreadsheetEditorDemo
         public CellsEditorPanel()
         {
             InitializeComponent();
+
+            DemosTools.AutoFitToolstripButtons(this.toolStrip1);
         }
 
         #endregion
@@ -348,7 +350,7 @@ namespace SpreadsheetEditorDemo
         public void SetRowHeight()
         {
             // show value editor dialog
-            using (NumberValueEditorForm dlg = new NumberValueEditorForm(VisualEditor, VisualEditor.RowsHeight, 0, MAX_ROW_HEIGHT, "Row height"))
+            using (NumberValueEditorForm dlg = new NumberValueEditorForm(VisualEditor, VisualEditor.RowsHeight, 0, MAX_ROW_HEIGHT, SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_ROW_HEIGHT))
             {
                 if (dlg.ShowDialog() == DialogResult.OK)
                 {
@@ -365,7 +367,7 @@ namespace SpreadsheetEditorDemo
         {
             WorksheetFormat sheetFormat = VisualEditor.FocusedWorksheet.Format;
             // show value editor dialog
-            using (NumberValueEditorForm dlg = new NumberValueEditorForm(VisualEditor, sheetFormat.RowHeight, 0, MAX_ROW_HEIGHT, "Default row height"))
+            using (NumberValueEditorForm dlg = new NumberValueEditorForm(VisualEditor, sheetFormat.RowHeight, 0, MAX_ROW_HEIGHT, SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_DEFAULT_ROW_HEIGHT))
             {
                 if (dlg.ShowDialog() == DialogResult.OK)
                 {
@@ -389,7 +391,7 @@ namespace SpreadsheetEditorDemo
         public void SetColumnWidth()
         {
             // show value editor dialog
-            using (NumberValueEditorForm dlg = new NumberValueEditorForm(VisualEditor, VisualEditor.ColumnsWidth, 0, MAX_COLUMN_WIDTH, "Column width"))
+            using (NumberValueEditorForm dlg = new NumberValueEditorForm(VisualEditor, VisualEditor.ColumnsWidth, 0, MAX_COLUMN_WIDTH, SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_COLUMN_WIDTH))
             {
                 if (dlg.ShowDialog() == DialogResult.OK)
                 {
@@ -406,7 +408,7 @@ namespace SpreadsheetEditorDemo
         {
             WorksheetFormat sheetFormat = VisualEditor.FocusedWorksheet.Format;
             // show value editor dialog
-            using (NumberValueEditorForm dlg = new NumberValueEditorForm(VisualEditor, sheetFormat.ColumnWidth, 0, MAX_COLUMN_WIDTH, "Default column width"))
+            using (NumberValueEditorForm dlg = new NumberValueEditorForm(VisualEditor, sheetFormat.ColumnWidth, 0, MAX_COLUMN_WIDTH, SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_DEFAULT_COLUMN_WIDTH))
             {
                 if (dlg.ShowDialog() == DialogResult.OK)
                 {

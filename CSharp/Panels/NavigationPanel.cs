@@ -297,8 +297,8 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void removeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(string.Format("Remove worksheet '{0}'?", VisualEditor.FocusedWorksheet.Name),
-                "Remove Worksheet", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (MessageBox.Show(string.Format(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_REMOVE_WORKSHEET_ARG0, VisualEditor.FocusedWorksheet.Name),
+                SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_REMOVE_WORKSHEET, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 // remove focused worksheet
                 try

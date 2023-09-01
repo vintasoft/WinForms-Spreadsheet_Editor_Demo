@@ -29,6 +29,7 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FontPropertiesPanel));
             this.fontPropertiesToolStrip = new System.Windows.Forms.ToolStrip();
             this.fontNameToolStripComboBox = new System.Windows.Forms.ToolStripComboBox();
             this.fontSizeToolStripComboBox = new System.Windows.Forms.ToolStripComboBox();
@@ -137,7 +138,7 @@ namespace SpreadsheetEditorDemo
             this.incFontSizeToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.incFontSizeToolStripButton.Name = "incFontSizeToolStripButton";
             this.incFontSizeToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.incFontSizeToolStripButton.Text = "Increase font size";
+            resources.ApplyResources(this.incFontSizeToolStripButton, "incFontSizeToolStripButton");
             this.incFontSizeToolStripButton.Click += new System.EventHandler(this.incFontSizeToolStripButton_Click);
             // 
             // decFontSizeToolStripButton
@@ -148,7 +149,7 @@ namespace SpreadsheetEditorDemo
             this.decFontSizeToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.decFontSizeToolStripButton.Name = "decFontSizeToolStripButton";
             this.decFontSizeToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.decFontSizeToolStripButton.Text = "Decrease font size";
+            resources.ApplyResources(this.decFontSizeToolStripButton, "decFontSizeToolStripButton");
             this.decFontSizeToolStripButton.Click += new System.EventHandler(this.decFontSizeToolStripButton_Click);
             // 
             // textPropertiesToolStrip
@@ -187,7 +188,7 @@ namespace SpreadsheetEditorDemo
             this.boldFontToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.boldFontToolStripButton.Name = "boldFontToolStripButton";
             this.boldFontToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.boldFontToolStripButton.Text = "Bold";
+            resources.ApplyResources(this.boldFontToolStripButton, "boldFontToolStripButton");
             this.boldFontToolStripButton.Click += new System.EventHandler(this.boldFontToolStripButton_Click);
             // 
             // italicFontToolStripButton
@@ -198,7 +199,7 @@ namespace SpreadsheetEditorDemo
             this.italicFontToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.italicFontToolStripButton.Name = "italicFontToolStripButton";
             this.italicFontToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.italicFontToolStripButton.Text = "Italic";
+            resources.ApplyResources(this.italicFontToolStripButton, "italicFontToolStripButton");
             this.italicFontToolStripButton.Click += new System.EventHandler(this.italicFontToolStripButton_Click);
             // 
             // underlineToolStripButton
@@ -239,21 +240,21 @@ namespace SpreadsheetEditorDemo
             this.fillColorButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.fillColorButton.Name = "fillColorButton";
             this.fillColorButton.Size = new System.Drawing.Size(34, 22);
-            this.fillColorButton.Text = "Fill Color";
+            resources.ApplyResources(this.fillColorButton, "fillColorButton");
             this.fillColorButton.ButtonClick += new System.EventHandler(this.fillColorButton_ButtonClick);
             // 
             // noFillToolStripMenuItem
             // 
             this.noFillToolStripMenuItem.Name = "noFillToolStripMenuItem";
             this.noFillToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
-            this.noFillToolStripMenuItem.Text = "No Fill";
+            resources.ApplyResources(this.noFillToolStripMenuItem, "noFillToolStripMenuItem");
             this.noFillToolStripMenuItem.Click += new System.EventHandler(this.noFillToolStripMenuItem_Click);
             // 
             // selectFillColorToolStripMenuItem
             // 
             this.selectFillColorToolStripMenuItem.Name = "selectFillColorToolStripMenuItem";
             this.selectFillColorToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
-            this.selectFillColorToolStripMenuItem.Text = "Select Color...";
+            resources.ApplyResources(this.selectFillColorToolStripMenuItem, "selectFillColorToolStripMenuItem");
             this.selectFillColorToolStripMenuItem.Click += new System.EventHandler(this.selectFillColorToolStripMenuItem_Click);
             // 
             // fontColorButton
@@ -267,14 +268,14 @@ namespace SpreadsheetEditorDemo
             this.fontColorButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.fontColorButton.Name = "fontColorButton";
             this.fontColorButton.Size = new System.Drawing.Size(34, 22);
-            this.fontColorButton.Text = "Font Color";
+            resources.ApplyResources(this.fontColorButton, "fontColorButton");
             this.fontColorButton.ButtonClick += new System.EventHandler(this.fontColorButton_ButtonClick);
             // 
             // selectColorToolStripMenuItem
             // 
             this.selectColorToolStripMenuItem.Name = "selectColorToolStripMenuItem";
             this.selectColorToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
-            this.selectColorToolStripMenuItem.Text = "Select Color...";
+            resources.ApplyResources(this.selectColorToolStripMenuItem, "selectColorToolStripMenuItem");
             this.selectColorToolStripMenuItem.Click += new System.EventHandler(this.selectFontColorToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
@@ -309,7 +310,7 @@ namespace SpreadsheetEditorDemo
             this.bordersButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.bordersButton.Name = "bordersButton";
             this.bordersButton.Size = new System.Drawing.Size(34, 22);
-            this.bordersButton.Text = "Borders";
+            resources.ApplyResources(this.bordersButton, "bordersButton");
             this.bordersButton.ButtonClick += new System.EventHandler(this.bordersToolStripDropDownButton_Click);
             // 
             // bottomBorderToolStripMenuItem
@@ -318,7 +319,7 @@ namespace SpreadsheetEditorDemo
             this.bottomBorderToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.bottomBorderToolStripMenuItem.Name = "bottomBorderToolStripMenuItem";
             this.bottomBorderToolStripMenuItem.Size = new System.Drawing.Size(240, 24);
-            this.bottomBorderToolStripMenuItem.Text = "Bottom Border";
+            resources.ApplyResources(this.bottomBorderToolStripMenuItem, "bottomBorderToolStripMenuItem");
             this.bottomBorderToolStripMenuItem.Click += new System.EventHandler(this.bordersToolStripDropDownButton_Click);
             // 
             // topBorderToolStripMenuItem
@@ -327,7 +328,7 @@ namespace SpreadsheetEditorDemo
             this.topBorderToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.topBorderToolStripMenuItem.Name = "topBorderToolStripMenuItem";
             this.topBorderToolStripMenuItem.Size = new System.Drawing.Size(240, 24);
-            this.topBorderToolStripMenuItem.Text = "Top Border";
+            resources.ApplyResources(this.topBorderToolStripMenuItem, "topBorderToolStripMenuItem");
             this.topBorderToolStripMenuItem.Click += new System.EventHandler(this.bordersToolStripDropDownButton_Click);
             // 
             // leftBorderToolStripMenuItem
@@ -336,7 +337,7 @@ namespace SpreadsheetEditorDemo
             this.leftBorderToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.leftBorderToolStripMenuItem.Name = "leftBorderToolStripMenuItem";
             this.leftBorderToolStripMenuItem.Size = new System.Drawing.Size(240, 24);
-            this.leftBorderToolStripMenuItem.Text = "Left Border";
+            resources.ApplyResources(this.leftBorderToolStripMenuItem, "leftBorderToolStripMenuItem");
             this.leftBorderToolStripMenuItem.Click += new System.EventHandler(this.bordersToolStripDropDownButton_Click);
             // 
             // rightBorderToolStripMenuItem
@@ -345,7 +346,7 @@ namespace SpreadsheetEditorDemo
             this.rightBorderToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.rightBorderToolStripMenuItem.Name = "rightBorderToolStripMenuItem";
             this.rightBorderToolStripMenuItem.Size = new System.Drawing.Size(240, 24);
-            this.rightBorderToolStripMenuItem.Text = "Right Border";
+            resources.ApplyResources(this.rightBorderToolStripMenuItem, "rightBorderToolStripMenuItem");
             this.rightBorderToolStripMenuItem.Click += new System.EventHandler(this.bordersToolStripDropDownButton_Click);
             // 
             // toolStripSeparator5
@@ -359,7 +360,7 @@ namespace SpreadsheetEditorDemo
             this.noBorderToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.noBorderToolStripMenuItem.Name = "noBorderToolStripMenuItem";
             this.noBorderToolStripMenuItem.Size = new System.Drawing.Size(240, 24);
-            this.noBorderToolStripMenuItem.Text = "No Border";
+            resources.ApplyResources(this.noBorderToolStripMenuItem, "noBorderToolStripMenuItem");
             this.noBorderToolStripMenuItem.Click += new System.EventHandler(this.bordersToolStripDropDownButton_Click);
             // 
             // allBordersToolStripMenuItem
@@ -368,7 +369,7 @@ namespace SpreadsheetEditorDemo
             this.allBordersToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.allBordersToolStripMenuItem.Name = "allBordersToolStripMenuItem";
             this.allBordersToolStripMenuItem.Size = new System.Drawing.Size(240, 24);
-            this.allBordersToolStripMenuItem.Text = "All Borders";
+            resources.ApplyResources(this.allBordersToolStripMenuItem, "allBordersToolStripMenuItem");
             this.allBordersToolStripMenuItem.Click += new System.EventHandler(this.bordersToolStripDropDownButton_Click);
             // 
             // outsideBordersToolStripMenuItem
@@ -377,7 +378,7 @@ namespace SpreadsheetEditorDemo
             this.outsideBordersToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.outsideBordersToolStripMenuItem.Name = "outsideBordersToolStripMenuItem";
             this.outsideBordersToolStripMenuItem.Size = new System.Drawing.Size(240, 24);
-            this.outsideBordersToolStripMenuItem.Text = "Outside Borders";
+            resources.ApplyResources(this.outsideBordersToolStripMenuItem, "outsideBordersToolStripMenuItem");
             this.outsideBordersToolStripMenuItem.Click += new System.EventHandler(this.bordersToolStripDropDownButton_Click);
             // 
             // thickOutsideBordersToolStripMenuItem
@@ -386,7 +387,7 @@ namespace SpreadsheetEditorDemo
             this.thickOutsideBordersToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.thickOutsideBordersToolStripMenuItem.Name = "thickOutsideBordersToolStripMenuItem";
             this.thickOutsideBordersToolStripMenuItem.Size = new System.Drawing.Size(240, 24);
-            this.thickOutsideBordersToolStripMenuItem.Text = "Thick Outside Borders";
+            resources.ApplyResources(this.thickOutsideBordersToolStripMenuItem, "thickOutsideBordersToolStripMenuItem");
             this.thickOutsideBordersToolStripMenuItem.Click += new System.EventHandler(this.bordersToolStripDropDownButton_Click);
             // 
             // toolStripSeparator6
@@ -400,7 +401,7 @@ namespace SpreadsheetEditorDemo
             this.bottomDoubleBorderToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.bottomDoubleBorderToolStripMenuItem.Name = "bottomDoubleBorderToolStripMenuItem";
             this.bottomDoubleBorderToolStripMenuItem.Size = new System.Drawing.Size(240, 24);
-            this.bottomDoubleBorderToolStripMenuItem.Text = "Bottom Double Border";
+            resources.ApplyResources(this.bottomDoubleBorderToolStripMenuItem, "bottomDoubleBorderToolStripMenuItem");
             this.bottomDoubleBorderToolStripMenuItem.Click += new System.EventHandler(this.bordersToolStripDropDownButton_Click);
             // 
             // thickBottomBorderToolStripMenuItem
@@ -409,7 +410,7 @@ namespace SpreadsheetEditorDemo
             this.thickBottomBorderToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.thickBottomBorderToolStripMenuItem.Name = "thickBottomBorderToolStripMenuItem";
             this.thickBottomBorderToolStripMenuItem.Size = new System.Drawing.Size(240, 24);
-            this.thickBottomBorderToolStripMenuItem.Text = "Thick Bottom Border";
+            resources.ApplyResources(this.thickBottomBorderToolStripMenuItem, "thickBottomBorderToolStripMenuItem");
             this.thickBottomBorderToolStripMenuItem.Click += new System.EventHandler(this.bordersToolStripDropDownButton_Click);
             // 
             // topAndBottomBorderToolStripMenuItem
@@ -418,7 +419,7 @@ namespace SpreadsheetEditorDemo
             this.topAndBottomBorderToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.topAndBottomBorderToolStripMenuItem.Name = "topAndBottomBorderToolStripMenuItem";
             this.topAndBottomBorderToolStripMenuItem.Size = new System.Drawing.Size(240, 24);
-            this.topAndBottomBorderToolStripMenuItem.Text = "Top and Bottom Border";
+            resources.ApplyResources(this.topAndBottomBorderToolStripMenuItem, "topAndBottomBorderToolStripMenuItem");
             this.topAndBottomBorderToolStripMenuItem.Click += new System.EventHandler(this.bordersToolStripDropDownButton_Click);
             // 
             // topAndThickBottomBorderToolStripMenuItem
@@ -427,7 +428,7 @@ namespace SpreadsheetEditorDemo
             this.topAndThickBottomBorderToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.topAndThickBottomBorderToolStripMenuItem.Name = "topAndThickBottomBorderToolStripMenuItem";
             this.topAndThickBottomBorderToolStripMenuItem.Size = new System.Drawing.Size(240, 24);
-            this.topAndThickBottomBorderToolStripMenuItem.Text = "Top and Thick Bottom Border";
+            resources.ApplyResources(this.topAndThickBottomBorderToolStripMenuItem, "topAndThickBottomBorderToolStripMenuItem");
             this.topAndThickBottomBorderToolStripMenuItem.Click += new System.EventHandler(this.bordersToolStripDropDownButton_Click);
             // 
             // topAndDoubleBottomBorderToolStripMenuItem
@@ -436,7 +437,7 @@ namespace SpreadsheetEditorDemo
             this.topAndDoubleBottomBorderToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.topAndDoubleBottomBorderToolStripMenuItem.Name = "topAndDoubleBottomBorderToolStripMenuItem";
             this.topAndDoubleBottomBorderToolStripMenuItem.Size = new System.Drawing.Size(240, 24);
-            this.topAndDoubleBottomBorderToolStripMenuItem.Text = "Top and Double Bottom Border";
+            resources.ApplyResources(this.topAndDoubleBottomBorderToolStripMenuItem, "topAndDoubleBottomBorderToolStripMenuItem");
             this.topAndDoubleBottomBorderToolStripMenuItem.Click += new System.EventHandler(this.bordersToolStripDropDownButton_Click);
             // 
             // toolStripSeparator7
@@ -448,7 +449,7 @@ namespace SpreadsheetEditorDemo
             // 
             this.borderColorToolStripMenuItem.Name = "borderColorToolStripMenuItem";
             this.borderColorToolStripMenuItem.Size = new System.Drawing.Size(240, 24);
-            this.borderColorToolStripMenuItem.Text = "Border Color...";
+            resources.ApplyResources(this.borderColorToolStripMenuItem, "borderColorToolStripMenuItem");
             this.borderColorToolStripMenuItem.Click += new System.EventHandler(this.borderColorToolStripMenuItem_Click);
             // 
             // moreBordersToolStripMenuItem
@@ -457,7 +458,7 @@ namespace SpreadsheetEditorDemo
             this.moreBordersToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.moreBordersToolStripMenuItem.Name = "moreBordersToolStripMenuItem";
             this.moreBordersToolStripMenuItem.Size = new System.Drawing.Size(240, 24);
-            this.moreBordersToolStripMenuItem.Text = "More Borders...";
+            resources.ApplyResources(this.moreBordersToolStripMenuItem, "moreBordersToolStripMenuItem");
             this.moreBordersToolStripMenuItem.Click += new System.EventHandler(this.moreBordersToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
@@ -473,7 +474,7 @@ namespace SpreadsheetEditorDemo
             this.copyStyleToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.copyStyleToolStripButton.Name = "copyStyleToolStripButton";
             this.copyStyleToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.copyStyleToolStripButton.Text = "Style Painter (keep Ctrl to use multiple times)";
+            resources.ApplyResources(this.copyStyleToolStripButton, "copyStyleToolStripButton");
             this.copyStyleToolStripButton.Click += new System.EventHandler(this.copyStyleToolStripButton_Click);
             // 
             // toolStripSeparator4
@@ -489,7 +490,7 @@ namespace SpreadsheetEditorDemo
             this.fontPropertiesToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.fontPropertiesToolStripButton.Name = "fontPropertiesToolStripButton";
             this.fontPropertiesToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.fontPropertiesToolStripButton.Text = "Text Properties...";
+            resources.ApplyResources(this.fontPropertiesToolStripButton, "fontPropertiesToolStripButton");
             this.fontPropertiesToolStripButton.Click += new System.EventHandler(this.fontPropertiesToolStripButton_Click);
             // 
             // FontPropertiesPanel

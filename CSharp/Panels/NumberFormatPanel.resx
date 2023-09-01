@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -122,5 +122,32 @@
   </metadata>
   <metadata name="toolStrip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>122, 17</value>
+  </metadata>
+  <data name="numberFormatPropertiesButton.Text" xml:space="preserve">
+    <value>Number Format Properties...</value>
+  </data>
+  <data name="percentStyleButton.Text" xml:space="preserve">
+    <value>Percent Style</value>
+  </data>
+  <data name="decreaseDecimalButton.Text" xml:space="preserve">
+    <value>Decrease Decimal</value>
+  </data>
+  <data name="increaseDecimalButton.Text" xml:space="preserve">
+    <value>Increase Decimal</value>
+  </data>
+  <data name="russianToolStripMenuItem.Text" xml:space="preserve">
+    <value>₽ Russian</value>
+  </data>
+  <data name="euroToolStripMenuItem.Text" xml:space="preserve">
+    <value>€ Euro (€ 123)</value>
+  </data>
+  <data name="currencyButton.Text" xml:space="preserve">
+    <value>Currency</value>
+  </data>
+  <data name="numberFormatComboBox.ToolTipText" xml:space="preserve">
+    <value>Number Format</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib">
+    <value>True</value>
   </metadata>
 </root>

@@ -29,6 +29,7 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MoveWorksheetForm));
             this.worksheetNameListBox = new System.Windows.Forms.ListBox();
             this.moveUpButton = new System.Windows.Forms.Button();
             this.moveDownButton = new System.Windows.Forms.Button();
@@ -54,7 +55,7 @@ namespace SpreadsheetEditorDemo
             this.moveUpButton.Name = "moveUpButton";
             this.moveUpButton.Size = new System.Drawing.Size(75, 23);
             this.moveUpButton.TabIndex = 1;
-            this.moveUpButton.Text = "Move Up";
+            resources.ApplyResources(this.moveUpButton, "moveUpButton");
             this.moveUpButton.UseVisualStyleBackColor = true;
             this.moveUpButton.Click += new System.EventHandler(this.moveUpButton_Click);
             // 
@@ -64,7 +65,7 @@ namespace SpreadsheetEditorDemo
             this.moveDownButton.Name = "moveDownButton";
             this.moveDownButton.Size = new System.Drawing.Size(75, 23);
             this.moveDownButton.TabIndex = 2;
-            this.moveDownButton.Text = "Move Down";
+            resources.ApplyResources(this.moveDownButton, "moveDownButton");
             this.moveDownButton.UseVisualStyleBackColor = true;
             this.moveDownButton.Click += new System.EventHandler(this.moveDownButton_Click);
             // 
@@ -75,7 +76,7 @@ namespace SpreadsheetEditorDemo
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Worksheet Names:";
+            resources.ApplyResources(this.label1, "label1");
             // 
             // buttonCancel
             // 
@@ -85,7 +86,7 @@ namespace SpreadsheetEditorDemo
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 5;
-            this.buttonCancel.Text = "Cancel";
+            resources.ApplyResources(this.buttonCancel, "buttonCancel");
             this.buttonCancel.UseVisualStyleBackColor = true;
             // 
             // okButton
@@ -116,7 +117,7 @@ namespace SpreadsheetEditorDemo
             this.MinimizeBox = false;
             this.Name = "MoveWorksheetForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Move Worksheet";
+            resources.ApplyResources(this, "$this");
             this.ResumeLayout(false);
             this.PerformLayout();
 

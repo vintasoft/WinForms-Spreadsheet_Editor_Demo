@@ -29,6 +29,7 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DefinedNamesPanel));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.insertDefinedNameButton = new System.Windows.Forms.ToolStripButton();
             this.addDefineNameButton = new System.Windows.Forms.ToolStripButton();
@@ -38,7 +39,6 @@ namespace SpreadsheetEditorDemo
             // 
             // toolStrip1
             // 
-            this.toolStrip1.AutoSize = false;
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStrip1.GripMargin = new System.Windows.Forms.Padding(0);
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
@@ -49,7 +49,7 @@ namespace SpreadsheetEditorDemo
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0);
-            this.toolStrip1.Size = new System.Drawing.Size(302, 53);
+            this.toolStrip1.Size = new System.Drawing.Size(272, 53);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -62,10 +62,10 @@ namespace SpreadsheetEditorDemo
             this.insertDefinedNameButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.insertDefinedNameButton.Name = "insertDefinedNameButton";
             this.insertDefinedNameButton.Size = new System.Drawing.Size(90, 50);
-            this.insertDefinedNameButton.Text = "Insert Name";
+            resources.ApplyResources(this.insertDefinedNameButton, "insertDefinedNameButton");
             this.insertDefinedNameButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.insertDefinedNameButton.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.insertDefinedNameButton.ToolTipText = "Select Defined Name and use in Formula...";
+            
             this.insertDefinedNameButton.Click += new System.EventHandler(this.insertDefinedNameInFormulaButton_Click);
             // 
             // addDefineNameButton
@@ -77,10 +77,10 @@ namespace SpreadsheetEditorDemo
             this.addDefineNameButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.addDefineNameButton.Name = "addDefineNameButton";
             this.addDefineNameButton.Size = new System.Drawing.Size(90, 50);
-            this.addDefineNameButton.Text = "Define Name";
+            resources.ApplyResources(this.addDefineNameButton, "addDefineNameButton");
             this.addDefineNameButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.addDefineNameButton.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.addDefineNameButton.ToolTipText = "Define Name from Selected Cells...";
+            
             this.addDefineNameButton.Click += new System.EventHandler(this.addDefineNameButton_Click);
             // 
             // definedNamesButton
@@ -92,21 +92,24 @@ namespace SpreadsheetEditorDemo
             this.definedNamesButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.definedNamesButton.Name = "definedNamesButton";
             this.definedNamesButton.Size = new System.Drawing.Size(90, 50);
-            this.definedNamesButton.Text = "Name Manager";
+            resources.ApplyResources(this.definedNamesButton, "definedNamesButton");
             this.definedNamesButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.definedNamesButton.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.definedNamesButton.ToolTipText = "Open Defined Name Manager...";
+            
             this.definedNamesButton.Click += new System.EventHandler(this.definedNamesButton_Click);
             // 
             // DefinedNamesPanel
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Controls.Add(this.toolStrip1);
             this.Name = "DefinedNamesPanel";
-            this.Size = new System.Drawing.Size(302, 53);
+            this.Size = new System.Drawing.Size(272, 52);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

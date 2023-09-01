@@ -28,6 +28,7 @@ namespace DemosCommonCode.Imaging
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PageLayoutSettingsControl));
             this.defaultSettingsCheckBox = new System.Windows.Forms.CheckBox();
             this.pageSettingsGroupBox = new System.Windows.Forms.GroupBox();
             this.xLabel = new System.Windows.Forms.Label();
@@ -51,7 +52,7 @@ namespace DemosCommonCode.Imaging
             this.defaultSettingsCheckBox.Name = "defaultSettingsCheckBox";
             this.defaultSettingsCheckBox.Size = new System.Drawing.Size(60, 17);
             this.defaultSettingsCheckBox.TabIndex = 0;
-            this.defaultSettingsCheckBox.Text = "Default";
+            resources.ApplyResources(this.defaultSettingsCheckBox, "defaultSettingsCheckBox");
             this.defaultSettingsCheckBox.UseVisualStyleBackColor = true;
             this.defaultSettingsCheckBox.CheckedChanged += new System.EventHandler(this.defaultSettingsCheckBox_CheckedChanged);
             // 
@@ -185,7 +186,7 @@ namespace DemosCommonCode.Imaging
             this.contentScaleLabel.Name = "contentScaleLabel";
             this.contentScaleLabel.Size = new System.Drawing.Size(100, 13);
             this.contentScaleLabel.TabIndex = 3;
-            this.contentScaleLabel.Text = "Content Scale (x10)";
+            resources.ApplyResources(this.contentScaleLabel, "contentScaleLabel");
             // 
             // pagePaddingLabel
             // 
@@ -195,7 +196,7 @@ namespace DemosCommonCode.Imaging
             this.pagePaddingLabel.Name = "pagePaddingLabel";
             this.pagePaddingLabel.Size = new System.Drawing.Size(99, 13);
             this.pagePaddingLabel.TabIndex = 2;
-            this.pagePaddingLabel.Text = "Page Padding (mm)";
+            resources.ApplyResources(this.pagePaddingLabel, "pagePaddingLabel");
             // 
             // pageSizeComboBox
             // 
@@ -215,7 +216,7 @@ namespace DemosCommonCode.Imaging
             this.pageSizeLabel.Name = "pageSizeLabel";
             this.pageSizeLabel.Size = new System.Drawing.Size(55, 13);
             this.pageSizeLabel.TabIndex = 0;
-            this.pageSizeLabel.Text = "Page Size";
+            resources.ApplyResources(this.pageSizeLabel, "pageSizeLabel");
             // 
             // PageLayoutSettingsControl
             // 

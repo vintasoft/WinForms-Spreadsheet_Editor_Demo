@@ -4,6 +4,7 @@ using Vintasoft.Imaging;
 using Vintasoft.Imaging.Office.Spreadsheet.UI;
 
 using Vintasoft.Imaging.Office.Spreadsheet.Document;
+using DemosCommonCode;
 
 namespace SpreadsheetEditorDemo
 {
@@ -21,6 +22,8 @@ namespace SpreadsheetEditorDemo
         public FunctionsPanel()
         {
             InitializeComponent();
+
+            DemosTools.AutoFitToolstripButtons(this.toolStrip1);
         }
 
         #endregion

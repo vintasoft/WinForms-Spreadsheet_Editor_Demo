@@ -142,7 +142,7 @@ namespace SpreadsheetEditorDemo
                 addressTextBox.Text = @"https://www.vintasoft.com";
                 cellReferenceTextBox.Text = "A1";
                 sheetComboBox.SelectedItem = _visualEditor.FocusedWorksheet.Name;
-                this.Text = "Add Hyperlink";
+                this.Text = SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_ADD_HYPERLINK;
             }
         }
 
@@ -168,7 +168,7 @@ namespace SpreadsheetEditorDemo
                     // if new hyperlink is adding
                     else
                     {
-                        _visualEditor.StartEditing("Add hyperlink");
+                        _visualEditor.StartEditing(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_ADD_HYPERLINK_ALT1);
                         try
                         {
                             // add hyperlink to the focused cell
@@ -185,7 +185,7 @@ namespace SpreadsheetEditorDemo
                 }
                 else
                 {
-                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show(ex.Message, SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_ERROR_ALT1, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     return;
                 }
             }
@@ -210,7 +210,7 @@ namespace SpreadsheetEditorDemo
                     // if new hyperlink is adding
                     else
                     {
-                        _visualEditor.StartEditing("Add hyperlink");
+                        _visualEditor.StartEditing(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_ADD_HYPERLINK_ALT2);
                         try
                         {
                             // add hyperlink to the focused cell
@@ -227,7 +227,7 @@ namespace SpreadsheetEditorDemo
                 }
                 catch
                 {
-                    DemosTools.ShowWarningMessage("Spreadsheet Editor Demo", "Cell reference is invalid.");
+                    DemosTools.ShowWarningMessage("Spreadsheet Editor Demo", SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_CELL_REFERENCE_IS_INVALID);
                     return;
                 }
             }
@@ -248,7 +248,7 @@ namespace SpreadsheetEditorDemo
                     // if new hyperlink is adding
                     else
                     {
-                        _visualEditor.StartEditing("Add hyperlink");
+                        _visualEditor.StartEditing(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_ADD_HYPERLINK_ALT3);
                         try
                         {
                             // add hyperlink to the focused cell
@@ -265,7 +265,7 @@ namespace SpreadsheetEditorDemo
                 }
                 else
                 {
-                    DemosTools.ShowWarningMessage("Spreadsheet Editor Demo", "Defined name is not selected.");
+                    DemosTools.ShowWarningMessage("Spreadsheet Editor Demo", SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_DEFINED_NAME_IS_NOT_SELECTED);
                     return;
                 }
             }

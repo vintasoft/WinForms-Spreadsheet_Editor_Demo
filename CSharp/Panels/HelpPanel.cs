@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using DemosCommonCode;
+using System.Windows.Forms;
 
 namespace SpreadsheetEditorDemo
 {
@@ -17,6 +18,8 @@ namespace SpreadsheetEditorDemo
         public HelpPanel()
         {
             InitializeComponent();
+
+            DemosTools.AutoFitToolstripButtons(this.toolStrip1);
         }
 
 

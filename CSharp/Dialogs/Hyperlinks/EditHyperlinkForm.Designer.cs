@@ -29,6 +29,7 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditHyperlinkForm));
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonOk = new System.Windows.Forms.Button();
             this.hyperlinkTabControl = new System.Windows.Forms.TabControl();
@@ -57,7 +58,7 @@ namespace SpreadsheetEditorDemo
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 83;
-            this.buttonCancel.Text = "Cancel";
+            resources.ApplyResources(this.buttonCancel, "buttonCancel");
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
@@ -95,23 +96,23 @@ namespace SpreadsheetEditorDemo
             this.addressTabPage.Padding = new System.Windows.Forms.Padding(3);
             this.addressTabPage.Size = new System.Drawing.Size(316, 178);
             this.addressTabPage.TabIndex = 0;
-            this.addressTabPage.Text = "Existing File or Web Page";
+            resources.ApplyResources(this.addressTabPage, "addressTabPage");
             this.addressTabPage.UseVisualStyleBackColor = true;
             // 
             // addressLabel
             // 
             this.addressLabel.AutoSize = true;
-            this.addressLabel.Location = new System.Drawing.Point(9, 7);
+            this.addressLabel.Location = new System.Drawing.Point(3, 3);
             this.addressLabel.Name = "addressLabel";
             this.addressLabel.Size = new System.Drawing.Size(48, 13);
             this.addressLabel.TabIndex = 1;
-            this.addressLabel.Text = "Address:";
+            resources.ApplyResources(this.addressLabel, "addressLabel");
             // 
             // addressTextBox
             // 
-            this.addressTextBox.Location = new System.Drawing.Point(7, 25);
+            this.addressTextBox.Location = new System.Drawing.Point(6, 19);
             this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(301, 20);
+            this.addressTextBox.Size = new System.Drawing.Size(302, 20);
             this.addressTextBox.TabIndex = 0;
             // 
             // referenceTabPage
@@ -125,42 +126,43 @@ namespace SpreadsheetEditorDemo
             this.referenceTabPage.Padding = new System.Windows.Forms.Padding(3);
             this.referenceTabPage.Size = new System.Drawing.Size(316, 178);
             this.referenceTabPage.TabIndex = 1;
-            this.referenceTabPage.Text = "Cell Reference";
+            resources.ApplyResources(this.referenceTabPage, "referenceTabPage");
             this.referenceTabPage.UseVisualStyleBackColor = true;
             // 
             // sheetLabel
             // 
             this.sheetLabel.AutoSize = true;
-            this.sheetLabel.Location = new System.Drawing.Point(9, 53);
+            this.sheetLabel.Location = new System.Drawing.Point(3, 49);
             this.sheetLabel.Name = "sheetLabel";
             this.sheetLabel.Size = new System.Drawing.Size(38, 13);
             this.sheetLabel.TabIndex = 7;
-            this.sheetLabel.Text = "Sheet:";
+            resources.ApplyResources(this.sheetLabel, "sheetLabel");
             // 
             // sheetComboBox
             // 
             this.sheetComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.sheetComboBox.FormattingEnabled = true;
             this.sheetComboBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.sheetComboBox.Location = new System.Drawing.Point(7, 71);
+            this.sheetComboBox.Location = new System.Drawing.Point(6, 65);
             this.sheetComboBox.Name = "sheetComboBox";
-            this.sheetComboBox.Size = new System.Drawing.Size(301, 21);
+            this.sheetComboBox.Size = new System.Drawing.Size(302, 21);
             this.sheetComboBox.TabIndex = 6;
             // 
             // cellReferenceLabel
             // 
             this.cellReferenceLabel.AutoSize = true;
-            this.cellReferenceLabel.Location = new System.Drawing.Point(9, 7);
+            this.cellReferenceLabel.Location = new System.Drawing.Point(3, 3);
             this.cellReferenceLabel.Name = "cellReferenceLabel";
             this.cellReferenceLabel.Size = new System.Drawing.Size(80, 13);
             this.cellReferenceLabel.TabIndex = 3;
-            this.cellReferenceLabel.Text = "Cell Reference:";
+            resources.ApplyResources(this.cellReferenceLabel, "cellReferenceLabel");
             // 
             // cellReferenceTextBox
             // 
-            this.cellReferenceTextBox.Location = new System.Drawing.Point(7, 25);
+            this.cellReferenceTextBox.Location = new System.Drawing.Point(6, 19);
+            this.cellReferenceTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.cellReferenceTextBox.Name = "cellReferenceTextBox";
-            this.cellReferenceTextBox.Size = new System.Drawing.Size(301, 20);
+            this.cellReferenceTextBox.Size = new System.Drawing.Size(304, 20);
             this.cellReferenceTextBox.TabIndex = 2;
             // 
             // nameTabPage
@@ -171,24 +173,25 @@ namespace SpreadsheetEditorDemo
             this.nameTabPage.Name = "nameTabPage";
             this.nameTabPage.Size = new System.Drawing.Size(316, 178);
             this.nameTabPage.TabIndex = 2;
-            this.nameTabPage.Text = "Defined Name";
+            resources.ApplyResources(this.nameTabPage, "nameTabPage");
             this.nameTabPage.UseVisualStyleBackColor = true;
             // 
             // definedNamesLabel
             // 
             this.definedNamesLabel.AutoSize = true;
-            this.definedNamesLabel.Location = new System.Drawing.Point(9, 7);
+            this.definedNamesLabel.Location = new System.Drawing.Point(3, 3);
+            this.definedNamesLabel.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.definedNamesLabel.Name = "definedNamesLabel";
             this.definedNamesLabel.Size = new System.Drawing.Size(83, 13);
             this.definedNamesLabel.TabIndex = 7;
-            this.definedNamesLabel.Text = "Defined Names:";
+            resources.ApplyResources(this.definedNamesLabel, "definedNamesLabel");
             // 
             // definedNamesListBox
             // 
             this.definedNamesListBox.FormattingEnabled = true;
-            this.definedNamesListBox.Location = new System.Drawing.Point(7, 25);
+            this.definedNamesListBox.Location = new System.Drawing.Point(6, 19);
             this.definedNamesListBox.Name = "definedNamesListBox";
-            this.definedNamesListBox.Size = new System.Drawing.Size(301, 134);
+            this.definedNamesListBox.Size = new System.Drawing.Size(302, 147);
             this.definedNamesListBox.TabIndex = 6;
             // 
             // EditHyperlinkForm
@@ -206,7 +209,7 @@ namespace SpreadsheetEditorDemo
             this.Name = "EditHyperlinkForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Edit Hyperlink";
+            resources.ApplyResources(this, "$this");
             this.hyperlinkTabControl.ResumeLayout(false);
             this.addressTabPage.ResumeLayout(false);
             this.addressTabPage.PerformLayout();

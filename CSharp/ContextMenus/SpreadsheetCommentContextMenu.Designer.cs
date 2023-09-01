@@ -1,4 +1,4 @@
-﻿
+
 namespace SpreadsheetEditorDemo
 {
     partial class SpreadsheetCommentContextMenu
@@ -29,6 +29,7 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SpreadsheetCommentContextMenu));
             components = new System.ComponentModel.Container();
             this.editCommentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteCommentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,21 +49,21 @@ namespace SpreadsheetEditorDemo
             // 
             this.editCommentToolStripMenuItem.Name = "editCommentToolStripMenuItem";
             this.editCommentToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.editCommentToolStripMenuItem.Text = "Edit Comment...";
+            resources.ApplyResources(this.editCommentToolStripMenuItem, "editCommentToolStripMenuItem");
             this.editCommentToolStripMenuItem.Click += new System.EventHandler(this.editCommentToolStripMenuItem_Click);
             // 
             // deleteCommentToolStripMenuItem
             // 
             this.deleteCommentToolStripMenuItem.Name = "deleteCommentToolStripMenuItem";
             this.deleteCommentToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.deleteCommentToolStripMenuItem.Text = "Delete Comment";
+            resources.ApplyResources(this.deleteCommentToolStripMenuItem, "deleteCommentToolStripMenuItem");
             this.deleteCommentToolStripMenuItem.Click += new System.EventHandler(this.deleteCommentToolStripMenuItem_Click);
             // 
             // hideCommentToolStripMenuItem
             // 
             this.hideCommentToolStripMenuItem.Name = "hideCommentToolStripMenuItem";
             this.hideCommentToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.hideCommentToolStripMenuItem.Text = "Hide Comment";
+            resources.ApplyResources(this.hideCommentToolStripMenuItem, "hideCommentToolStripMenuItem");
             this.hideCommentToolStripMenuItem.Click += new System.EventHandler(this.hideCommentToolStripMenuItem_Click);
         }
 

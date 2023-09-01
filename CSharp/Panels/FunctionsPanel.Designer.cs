@@ -29,6 +29,7 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FunctionsPanel));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.insertFunctionButton = new System.Windows.Forms.ToolStripButton();
             this.showFomulasButton = new System.Windows.Forms.ToolStripButton();
@@ -37,7 +38,6 @@ namespace SpreadsheetEditorDemo
             // 
             // toolStrip1
             // 
-            this.toolStrip1.AutoSize = false;
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStrip1.GripMargin = new System.Windows.Forms.Padding(0);
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
@@ -47,7 +47,7 @@ namespace SpreadsheetEditorDemo
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0);
-            this.toolStrip1.Size = new System.Drawing.Size(236, 53);
+            this.toolStrip1.Size = new System.Drawing.Size(182, 53);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -60,7 +60,7 @@ namespace SpreadsheetEditorDemo
             this.insertFunctionButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.insertFunctionButton.Name = "insertFunctionButton";
             this.insertFunctionButton.Size = new System.Drawing.Size(90, 50);
-            this.insertFunctionButton.Text = "Insert Function";
+            resources.ApplyResources(this.insertFunctionButton, "insertFunctionButton");
             this.insertFunctionButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.insertFunctionButton.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.insertFunctionButton.Click += new System.EventHandler(this.insertFunctionButton_Click);
@@ -74,7 +74,7 @@ namespace SpreadsheetEditorDemo
             this.showFomulasButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.showFomulasButton.Name = "showFomulasButton";
             this.showFomulasButton.Size = new System.Drawing.Size(90, 50);
-            this.showFomulasButton.Text = "Show Formulas";
+            resources.ApplyResources(this.showFomulasButton, "showFomulasButton");
             this.showFomulasButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.showFomulasButton.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
             this.showFomulasButton.Click += new System.EventHandler(this.showFomulasButton_Click);
@@ -82,12 +82,15 @@ namespace SpreadsheetEditorDemo
             // FunctionsPanel
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Controls.Add(this.toolStrip1);
             this.Name = "FunctionsPanel";
-            this.Size = new System.Drawing.Size(236, 53);
+            this.Size = new System.Drawing.Size(182, 52);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

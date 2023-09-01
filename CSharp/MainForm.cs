@@ -141,7 +141,7 @@ namespace SpreadsheetEditorDemo
             }
             catch 
             {
-                DemosTools.ShowWarningMessage("The address of this site is not valid: " + e.Uri);
+                DemosTools.ShowWarningMessage(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_THE_ADDRESS_OF_THIS_SITE_IS_NOT_VALID + e.Uri);
             }
         }
 
@@ -163,7 +163,7 @@ namespace SpreadsheetEditorDemo
                     hyperlinkDecription = hyperlink.Location.ToString();
                 else
                     hyperlinkDecription = hyperlink.Name;
-                hyperlinkDecription = "Link: " + hyperlinkDecription;
+                hyperlinkDecription = SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_LINK + hyperlinkDecription;
                 if (VisualEditor.HoveredDrawing != null)
                     SetStatus(VisualEditor.HoveredDrawing.Name + ": " + hyperlinkDecription);
                 else
@@ -176,13 +176,13 @@ namespace SpreadsheetEditorDemo
             Worksheet worksheet = spreadsheetEditorControl1.VisualEditor.FocusedWorksheet;
             SheetCell cell = worksheet.FindCell(e.Cell);
             string errorMessage = GetErrorMessage(cell.ErrorType);
-            DemosTools.ShowWarningMessage("Error: " + cell.Value, errorMessage);
+            DemosTools.ShowWarningMessage(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_ERROR_ALT2 + cell.Value, errorMessage);
             e.Handled = true;
         }
 
         private void VisualEditor_InvalidCellReferences(object sender, CellReferencesEventArgs e)
         {
-            MessageBox.Show("Reference is not valid.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            MessageBox.Show(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_REFERENCE_IS_NOT_VALID, SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_ERROR_ALT3, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
 
         private void VisualEditor_FocusedCellChanged(object sender, PropertyChangedEventArgs<CellReference> e)
@@ -192,7 +192,7 @@ namespace SpreadsheetEditorDemo
                 SheetCell cell = VisualEditor.FocusedWorksheet.FindCell(e.NewValue);
                 if (cell != null && cell.ErrorType != CellErrorType.NoError)
                 {
-                    SetStatus(string.Format("Cell {0} with formula '={1}' calculation error: {2}", e.NewValue, cell.Formula, GetErrorMessage(cell.ErrorType)));
+                    SetStatus(string.Format(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_CELL_ARG0_WITH_FORMULA_ARG1_CALCULATION_ERROR_ARG2, e.NewValue, cell.Formula, GetErrorMessage(cell.ErrorType)));
                     return;
                 }
             }
@@ -214,9 +214,9 @@ namespace SpreadsheetEditorDemo
         private void VisualEditor_SynchronizationStarted(object sender, EventArgs e)
         {
             if (VisualEditor.IsInitialized)
-                SetStatus("Processing...");
+                SetStatus(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_PROCESSING);
             else
-                SetStatus("Loading...");
+                SetStatus(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_LOADING);
         }
 
         private void VisualEditor_SynchronizationException(object sender, ExceptionEventArgs e)
@@ -234,7 +234,7 @@ namespace SpreadsheetEditorDemo
             else
             {
                 if (string.IsNullOrEmpty(status))
-                    statusLabel.Text = "Ready";
+                    statusLabel.Text = SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_READY;
                 else
                     statusLabel.Text = status;
             }
@@ -250,7 +250,7 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void UpdateUI()
         {
-            Text = "VintaSoft Spreadsheet Editor Demo v" + ImagingGlobalSettings.ProductVersion;
+            Text = SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_VINTASOFT_SPREADSHEET_EDITOR_DEMO_V + ImagingGlobalSettings.ProductVersion;
             if (!string.IsNullOrEmpty(filePanel1.Filename))
                 Text += " - " + Path.GetFileName(filePanel1.Filename);
         }
@@ -265,29 +265,29 @@ namespace SpreadsheetEditorDemo
             switch (errorType)
             {
                 case CellErrorType.Unknown:
-                    return "Unknown error.";
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_UNKNOWN_ERROR;
                 case CellErrorType.DivByZero:
-                    return "Any number (including zero) or any error code is divided by zero.";
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_ANY_NUMBER_INCLUDING_ZERO_OR_ANY_ERROR_CODE_IS_DIVIDED_BY_ZERO;
                 case CellErrorType.External:
-                    return "External error.";
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_EXTERNAL_ERROR;
                 case CellErrorType.GettingData:
-                    return "A cell reference cannot be evaluated because the value for the cell has not been retrieved or calculated.";
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_A_CELL_REFERENCE_CANNOT_BE_EVALUATED_BECAUSE_THE_VALUE_FOR_THE_CELL_HAS_NOT_BEEN_RETRIEVED_OR_CALCULATED;
                 case CellErrorType.Name:
-                    return "Looks like a name is used but no such name has been defined.";
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_LOOKS_LIKE_A_NAME_IS_USED_BUT_NO_SUCH_NAME_HAS_BEEN_DEFINED;
                 case CellErrorType.NoError:
-                    return "No error.";
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_NO_ERROR;
                 case CellErrorType.NotANumber:
-                    return "A designated value is not available.";
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_A_DESIGNATED_VALUE_IS_NOT_AVAILABLE;
                 case CellErrorType.Null:
-                    return "Two areas are required to intersect but do not.";
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_TWO_AREAS_ARE_REQUIRED_TO_INTERSECT_BUT_DO_NOT;
                 case CellErrorType.Num:
-                    return "An argument to a function has a compatible type but has a value that is outside the domain over which that function is defined.";
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_AN_ARGUMENT_TO_A_FUNCTION_HAS_A_COMPATIBLE_TYPE_BUT_HAS_A_VALUE_THAT_IS_OUTSIDE_THE_DOMAIN_OVER_WHICH_THAT_FUNCTION_IS_DEFINED;
                 case CellErrorType.Ref:
-                    return "A cell reference cannot be evaluated.";
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_A_CELL_REFERENCE_CANNOT_BE_EVALUATED;
                 case CellErrorType.Value:
-                    return "An incompatible type argument is passed to a function, or an incompatible type operand is used with an operator.";
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_AN_INCOMPATIBLE_TYPE_ARGUMENT_IS_PASSED_TO_A_FUNCTION_OR_AN_INCOMPATIBLE_TYPE_OPERAND_IS_USED_WITH_AN_OPERATOR;
             }
-            return "Unexpected error.";
+            return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_UNEXPECTED_ERROR;
         }
 
         /// <summary>

@@ -72,7 +72,7 @@ namespace SpreadsheetEditorDemo
             string worksheetName = worksheetNameTextBox.Text;
             if (worksheetName.Length > 40)
             {
-                DemosTools.ShowWarningMessage("Spreadsheet Editor Demo", "Worksheet name cannot contains more than 40 symbols.");
+                DemosTools.ShowWarningMessage("Spreadsheet Editor Demo", SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_WORKSHEET_NAME_CANNOT_CONTAINS_MORE_THAN_40_SYMBOLS);
                 return;
             }
 

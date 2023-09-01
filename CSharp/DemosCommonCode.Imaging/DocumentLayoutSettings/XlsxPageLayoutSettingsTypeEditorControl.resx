@@ -1,4 +1,4 @@
-﻿<root>
+<root>
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
@@ -57,4 +57,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="usePageScaleCheckBox.Text" xml:space="preserve">
+    <value>Use page scale</value>
+  </data>
+  <data name="usePageMarginCheckBox.Text" xml:space="preserve">
+    <value>Use page margin</value>
+  </data>
+  <data name="usePrintAreaCheckBox.Text" xml:space="preserve">
+    <value>Use print area</value>
+  </data>
+  <data name="useWorksheetHeightAsPageHeightCheckBox.Text" xml:space="preserve">
+    <value>Use worksheet height as page height</value>
+  </data>
+  <data name="useWorksheetWidthAsPageWidthCheckBox.Text" xml:space="preserve">
+    <value>Use worksheet width as page width</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </metadata>
 </root>

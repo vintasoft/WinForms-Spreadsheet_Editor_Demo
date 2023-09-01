@@ -29,6 +29,7 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HelpPanel));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.insertDefinedNameButton = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
@@ -58,10 +59,10 @@ namespace SpreadsheetEditorDemo
             this.insertDefinedNameButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.insertDefinedNameButton.Name = "insertDefinedNameButton";
             this.insertDefinedNameButton.Size = new System.Drawing.Size(50, 50);
-            this.insertDefinedNameButton.Text = "About";
+            resources.ApplyResources(this.insertDefinedNameButton, "insertDefinedNameButton");
             this.insertDefinedNameButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.insertDefinedNameButton.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.insertDefinedNameButton.ToolTipText = "About Spreadsheet Editor Demo";
+            
             this.insertDefinedNameButton.Click += new System.EventHandler(this.aboutButton_Click);
             // 
             // HelpPanel

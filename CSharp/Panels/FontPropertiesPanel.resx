@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -125,5 +125,89 @@
   </metadata>
   <metadata name="colorDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>227, 17</value>
+  </metadata>
+  <data name="fontPropertiesToolStripButton.Text" xml:space="preserve">
+    <value>Text Properties...</value>
+  </data>
+  <data name="copyStyleToolStripButton.Text" xml:space="preserve">
+    <value>Style Painter (keep Ctrl to use multiple times)</value>
+  </data>
+  <data name="moreBordersToolStripMenuItem.Text" xml:space="preserve">
+    <value>More Borders...</value>
+  </data>
+  <data name="borderColorToolStripMenuItem.Text" xml:space="preserve">
+    <value>Border Color...</value>
+  </data>
+  <data name="topAndDoubleBottomBorderToolStripMenuItem.Text" xml:space="preserve">
+    <value>Top and Double Bottom Border</value>
+  </data>
+  <data name="topAndThickBottomBorderToolStripMenuItem.Text" xml:space="preserve">
+    <value>Top and Thick Bottom Border</value>
+  </data>
+  <data name="topAndBottomBorderToolStripMenuItem.Text" xml:space="preserve">
+    <value>Top and Bottom Border</value>
+  </data>
+  <data name="thickBottomBorderToolStripMenuItem.Text" xml:space="preserve">
+    <value>Thick Bottom Border</value>
+  </data>
+  <data name="bottomDoubleBorderToolStripMenuItem.Text" xml:space="preserve">
+    <value>Bottom Double Border</value>
+  </data>
+  <data name="thickOutsideBordersToolStripMenuItem.Text" xml:space="preserve">
+    <value>Thick Outside Borders</value>
+  </data>
+  <data name="outsideBordersToolStripMenuItem.Text" xml:space="preserve">
+    <value>Outside Borders</value>
+  </data>
+  <data name="allBordersToolStripMenuItem.Text" xml:space="preserve">
+    <value>All Borders</value>
+  </data>
+  <data name="noBorderToolStripMenuItem.Text" xml:space="preserve">
+    <value>No Border</value>
+  </data>
+  <data name="rightBorderToolStripMenuItem.Text" xml:space="preserve">
+    <value>Right Border</value>
+  </data>
+  <data name="leftBorderToolStripMenuItem.Text" xml:space="preserve">
+    <value>Left Border</value>
+  </data>
+  <data name="topBorderToolStripMenuItem.Text" xml:space="preserve">
+    <value>Top Border</value>
+  </data>
+  <data name="bottomBorderToolStripMenuItem.Text" xml:space="preserve">
+    <value>Bottom Border</value>
+  </data>
+  <data name="bordersButton.Text" xml:space="preserve">
+    <value>Borders</value>
+  </data>
+  <data name="selectColorToolStripMenuItem.Text" xml:space="preserve">
+    <value>Select Color...</value>
+  </data>
+  <data name="fontColorButton.Text" xml:space="preserve">
+    <value>Font Color</value>
+  </data>
+  <data name="selectFillColorToolStripMenuItem.Text" xml:space="preserve">
+    <value>Select Color...</value>
+  </data>
+  <data name="noFillToolStripMenuItem.Text" xml:space="preserve">
+    <value>No Fill</value>
+  </data>
+  <data name="fillColorButton.Text" xml:space="preserve">
+    <value>Fill Color</value>
+  </data>
+  <data name="italicFontToolStripButton.Text" xml:space="preserve">
+    <value>Italic</value>
+  </data>
+  <data name="boldFontToolStripButton.Text" xml:space="preserve">
+    <value>Bold</value>
+  </data>
+  <data name="decFontSizeToolStripButton.Text" xml:space="preserve">
+    <value>Decrease font size</value>
+  </data>
+  <data name="incFontSizeToolStripButton.Text" xml:space="preserve">
+    <value>Increase font size</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib">
+    <value>True</value>
   </metadata>
 </root>

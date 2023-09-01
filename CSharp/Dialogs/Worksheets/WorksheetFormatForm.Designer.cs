@@ -29,6 +29,7 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WorksheetFormatForm));
             this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonOk = new System.Windows.Forms.Button();
             this.rowHeightTextBox = new System.Windows.Forms.TextBox();
@@ -42,18 +43,18 @@ namespace SpreadsheetEditorDemo
             // 
             this.buttonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(95, 95);
+            this.buttonCancel.Location = new System.Drawing.Point(164, 137);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 83;
-            this.buttonCancel.Text = "Cancel";
+            resources.ApplyResources(this.buttonCancel, "buttonCancel");
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // buttonOk
             // 
             this.buttonOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonOk.Location = new System.Drawing.Point(14, 95);
+            this.buttonOk.Location = new System.Drawing.Point(83, 137);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(75, 23);
             this.buttonOk.TabIndex = 82;
@@ -65,46 +66,48 @@ namespace SpreadsheetEditorDemo
             // 
             this.rowHeightTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.rowHeightTextBox.Location = new System.Drawing.Point(104, 14);
+            this.rowHeightTextBox.Location = new System.Drawing.Point(15, 25);
+            this.rowHeightTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.rowHeightTextBox.Name = "rowHeightTextBox";
-            this.rowHeightTextBox.Size = new System.Drawing.Size(65, 20);
+            this.rowHeightTextBox.Size = new System.Drawing.Size(224, 20);
             this.rowHeightTextBox.TabIndex = 84;
             // 
             // rowHeightLabel
             // 
             this.rowHeightLabel.AutoSize = true;
-            this.rowHeightLabel.Location = new System.Drawing.Point(12, 17);
+            this.rowHeightLabel.Location = new System.Drawing.Point(12, 9);
             this.rowHeightLabel.Name = "rowHeightLabel";
             this.rowHeightLabel.Size = new System.Drawing.Size(64, 13);
             this.rowHeightLabel.TabIndex = 87;
-            this.rowHeightLabel.Text = "Row height:";
+            resources.ApplyResources(this.rowHeightLabel, "rowHeightLabel");
             // 
             // columnWidthLabel
             // 
             this.columnWidthLabel.AutoSize = true;
-            this.columnWidthLabel.Location = new System.Drawing.Point(12, 43);
+            this.columnWidthLabel.Location = new System.Drawing.Point(12, 55);
             this.columnWidthLabel.Name = "columnWidthLabel";
             this.columnWidthLabel.Size = new System.Drawing.Size(73, 13);
             this.columnWidthLabel.TabIndex = 89;
-            this.columnWidthLabel.Text = "Column width:";
+            resources.ApplyResources(this.columnWidthLabel, "columnWidthLabel");
             // 
             // columnWidthTextBox
             // 
             this.columnWidthTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.columnWidthTextBox.Location = new System.Drawing.Point(104, 40);
+            this.columnWidthTextBox.Location = new System.Drawing.Point(15, 71);
+            this.columnWidthTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.columnWidthTextBox.Name = "columnWidthTextBox";
-            this.columnWidthTextBox.Size = new System.Drawing.Size(65, 20);
+            this.columnWidthTextBox.Size = new System.Drawing.Size(224, 20);
             this.columnWidthTextBox.TabIndex = 85;
             // 
             // rowAutoHeightCheckBox
             // 
             this.rowAutoHeightCheckBox.AutoSize = true;
-            this.rowAutoHeightCheckBox.Location = new System.Drawing.Point(15, 70);
+            this.rowAutoHeightCheckBox.Location = new System.Drawing.Point(15, 104);
             this.rowAutoHeightCheckBox.Name = "rowAutoHeightCheckBox";
             this.rowAutoHeightCheckBox.Size = new System.Drawing.Size(104, 17);
             this.rowAutoHeightCheckBox.TabIndex = 92;
-            this.rowAutoHeightCheckBox.Text = "Row auto height";
+            resources.ApplyResources(this.rowAutoHeightCheckBox, "rowAutoHeightCheckBox");
             this.rowAutoHeightCheckBox.UseVisualStyleBackColor = true;
             // 
             // WorksheetFormatForm
@@ -112,7 +115,7 @@ namespace SpreadsheetEditorDemo
             this.AcceptButton = this.buttonOk;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(182, 130);
+            this.ClientSize = new System.Drawing.Size(251, 172);
             this.Controls.Add(this.rowAutoHeightCheckBox);
             this.Controls.Add(this.columnWidthLabel);
             this.Controls.Add(this.columnWidthTextBox);
@@ -126,7 +129,7 @@ namespace SpreadsheetEditorDemo
             this.Name = "WorksheetFormatForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Worksheet Format";
+            resources.ApplyResources(this, "$this");
             this.ResumeLayout(false);
             this.PerformLayout();
 

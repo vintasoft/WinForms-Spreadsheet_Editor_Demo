@@ -29,6 +29,7 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FilePanel));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.newToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.openToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -55,6 +56,7 @@ namespace SpreadsheetEditorDemo
             // 
             // toolStrip1
             // 
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStrip1.GripMargin = new System.Windows.Forms.Padding(0);
             this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -72,7 +74,7 @@ namespace SpreadsheetEditorDemo
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0);
-            this.toolStrip1.Size = new System.Drawing.Size(561, 53);
+            this.toolStrip1.Size = new System.Drawing.Size(561, 52);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -85,10 +87,10 @@ namespace SpreadsheetEditorDemo
             this.newToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.newToolStripButton.Name = "newToolStripButton";
             this.newToolStripButton.Size = new System.Drawing.Size(50, 50);
-            this.newToolStripButton.Text = "New";
+            resources.ApplyResources(this.newToolStripButton, "newToolStripButton");
             this.newToolStripButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.newToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.newToolStripButton.ToolTipText = "New blank Workbook (Ctrl+N)";
+            
             this.newToolStripButton.Click += new System.EventHandler(this.newToolStripButton_Click);
             // 
             // openToolStripButton
@@ -100,10 +102,10 @@ namespace SpreadsheetEditorDemo
             this.openToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.openToolStripButton.Name = "openToolStripButton";
             this.openToolStripButton.Size = new System.Drawing.Size(50, 50);
-            this.openToolStripButton.Text = "Open";
+            resources.ApplyResources(this.openToolStripButton, "openToolStripButton");
             this.openToolStripButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.openToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.openToolStripButton.ToolTipText = "Open Workbook... (Ctrl+O)";
+            
             this.openToolStripButton.Click += new System.EventHandler(this.openToolStripButton_Click);
             // 
             // infoToolStripButton
@@ -115,10 +117,10 @@ namespace SpreadsheetEditorDemo
             this.infoToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.infoToolStripButton.Name = "infoToolStripButton";
             this.infoToolStripButton.Size = new System.Drawing.Size(50, 50);
-            this.infoToolStripButton.Text = "Info";
+            resources.ApplyResources(this.infoToolStripButton, "infoToolStripButton");
             this.infoToolStripButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.infoToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.infoToolStripButton.ToolTipText = "Info...";
+            
             this.infoToolStripButton.Click += new System.EventHandler(this.infoToolStripButton_Click);
             // 
             // saveToolStripButton
@@ -130,10 +132,10 @@ namespace SpreadsheetEditorDemo
             this.saveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripButton.Name = "saveToolStripButton";
             this.saveToolStripButton.Size = new System.Drawing.Size(50, 50);
-            this.saveToolStripButton.Text = "Save";
+            resources.ApplyResources(this.saveToolStripButton, "saveToolStripButton");
             this.saveToolStripButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.saveToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.saveToolStripButton.ToolTipText = "Save Changes (Ctrl+S)";
+            
             this.saveToolStripButton.Click += new System.EventHandler(this.saveToolStripButton_Click);
             // 
             // saveAsToolStripButton
@@ -145,10 +147,10 @@ namespace SpreadsheetEditorDemo
             this.saveAsToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveAsToolStripButton.Name = "saveAsToolStripButton";
             this.saveAsToolStripButton.Size = new System.Drawing.Size(50, 50);
-            this.saveAsToolStripButton.Text = "Save As";
+            resources.ApplyResources(this.saveAsToolStripButton, "saveAsToolStripButton");
             this.saveAsToolStripButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.saveAsToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.saveAsToolStripButton.ToolTipText = "Save As... (Ctrl+Shift+S)";
+            
             this.saveAsToolStripButton.Click += new System.EventHandler(this.saveAsToolStripButton_Click);
             // 
             // exportToolStripButton
@@ -160,16 +162,16 @@ namespace SpreadsheetEditorDemo
             this.exportToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.exportToolStripButton.Name = "exportToolStripButton";
             this.exportToolStripButton.Size = new System.Drawing.Size(50, 50);
-            this.exportToolStripButton.Text = "Export";
+            resources.ApplyResources(this.exportToolStripButton, "exportToolStripButton");
             this.exportToolStripButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.exportToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.exportToolStripButton.ToolTipText = "Export Workbook";
+            
             this.exportToolStripButton.Click += new System.EventHandler(this.exportToolStripButton_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 53);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 52);
             // 
             // printToolStripSplitButton
             // 
@@ -184,37 +186,37 @@ namespace SpreadsheetEditorDemo
             this.printToolStripSplitButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.printToolStripSplitButton.Name = "printToolStripSplitButton";
             this.printToolStripSplitButton.Size = new System.Drawing.Size(50, 50);
-            this.printToolStripSplitButton.Text = "Print";
+            resources.ApplyResources(this.printToolStripSplitButton, "printToolStripSplitButton");
             this.printToolStripSplitButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.printToolStripSplitButton.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.printToolStripSplitButton.ToolTipText = "Print... (Ctrl+P)";
+            
             this.printToolStripSplitButton.ButtonClick += new System.EventHandler(this.printToolStripSplitButton_ButtonClick);
             // 
             // layoutSettingsToolStripMenuItem
             // 
             this.layoutSettingsToolStripMenuItem.Name = "layoutSettingsToolStripMenuItem";
-            this.layoutSettingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.layoutSettingsToolStripMenuItem.Text = "Layout Settings...";
+            this.layoutSettingsToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            resources.ApplyResources(this.layoutSettingsToolStripMenuItem, "layoutSettingsToolStripMenuItem");
             this.layoutSettingsToolStripMenuItem.Click += new System.EventHandler(this.layoutSettingsToolStripMenuItem_Click);
             // 
             // pageSettingsToolStripMenuItem
             // 
             this.pageSettingsToolStripMenuItem.Name = "pageSettingsToolStripMenuItem";
-            this.pageSettingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.pageSettingsToolStripMenuItem.Text = "Page Settings...";
+            this.pageSettingsToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            resources.ApplyResources(this.pageSettingsToolStripMenuItem, "pageSettingsToolStripMenuItem");
             this.pageSettingsToolStripMenuItem.Click += new System.EventHandler(this.pageSettingsToolStripMenuItem_Click);
             // 
             // printPreviewToolStripMenuItem
             // 
             this.printPreviewToolStripMenuItem.Name = "printPreviewToolStripMenuItem";
-            this.printPreviewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.printPreviewToolStripMenuItem.Text = "Print Preview...";
+            this.printPreviewToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            resources.ApplyResources(this.printPreviewToolStripMenuItem, "printPreviewToolStripMenuItem");
             this.printPreviewToolStripMenuItem.Click += new System.EventHandler(this.printPreviewToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 53);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 52);
             // 
             // closeToolStripButton
             // 
@@ -225,10 +227,10 @@ namespace SpreadsheetEditorDemo
             this.closeToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.closeToolStripButton.Name = "closeToolStripButton";
             this.closeToolStripButton.Size = new System.Drawing.Size(50, 50);
-            this.closeToolStripButton.Text = "Close";
+            resources.ApplyResources(this.closeToolStripButton, "closeToolStripButton");
             this.closeToolStripButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.closeToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.closeToolStripButton.ToolTipText = "Close Workbook (Ctrl+X)";
+            
             this.closeToolStripButton.Click += new System.EventHandler(this.closeToolStripButton_Click);
             // 
             // optionsToolStripButton
@@ -242,10 +244,10 @@ namespace SpreadsheetEditorDemo
             this.optionsToolStripButton.Margin = new System.Windows.Forms.Padding(0, 1, 2, 2);
             this.optionsToolStripButton.Name = "optionsToolStripButton";
             this.optionsToolStripButton.Size = new System.Drawing.Size(50, 50);
-            this.optionsToolStripButton.Text = "Options";
+            resources.ApplyResources(this.optionsToolStripButton, "optionsToolStripButton");
             this.optionsToolStripButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.optionsToolStripButton.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
-            this.optionsToolStripButton.ToolTipText = "Options...";
+            
             this.optionsToolStripButton.Click += new System.EventHandler(this.optionsToolStripButton_Click);
             // 
             // openWorksheetFileDialog
@@ -278,7 +280,7 @@ namespace SpreadsheetEditorDemo
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.toolStrip1);
             this.Name = "FilePanel";
-            this.Size = new System.Drawing.Size(561, 53);
+            this.Size = new System.Drawing.Size(561, 52);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);

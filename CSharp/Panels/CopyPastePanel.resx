@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -119,5 +119,41 @@
   </resheader>
   <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <data name="pasteSpecialToolStripMenuItem.Text" xml:space="preserve">
+    <value>Paste Special...</value>
+  </data>
+  <data name="pasteFormulasToolStripMenuItem.Text" xml:space="preserve">
+    <value>Paste Formulas</value>
+  </data>
+  <data name="pasteValuesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Paste Values</value>
+  </data>
+  <data name="pasteValuesAndStyleToolStripMenuItem.Text" xml:space="preserve">
+    <value>Paste Values and Styles</value>
+  </data>
+  <data name="pasteContentsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Paste Contents</value>
+  </data>
+  <data name="pasteButton.ToolTipText" xml:space="preserve">
+    <value>Paste (Ctrl+V) (keep Ctrl to paste to focused cells)</value>
+  </data>
+  <data name="pasteButton.Text" xml:space="preserve">
+    <value>Paste</value>
+  </data>
+  <data name="cutMenuItem.ToolTipText" xml:space="preserve">
+    <value>Cut (Ctrl+X)</value>
+  </data>
+  <data name="cutMenuItem.Text" xml:space="preserve">
+    <value>Cut</value>
+  </data>
+  <data name="copyButton.ToolTipText" xml:space="preserve">
+    <value>Copy (Ctrl+C)</value>
+  </data>
+  <data name="copyButton.Text" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib">
+    <value>True</value>
   </metadata>
 </root>

@@ -29,6 +29,7 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditCommentForm));
             this.authorLabel = new System.Windows.Forms.Label();
             this.commentLabel = new System.Windows.Forms.Label();
             this.authorTextBox = new System.Windows.Forms.TextBox();
@@ -60,28 +61,29 @@ namespace SpreadsheetEditorDemo
             // authorLabel
             // 
             this.authorLabel.AutoSize = true;
-            this.authorLabel.Location = new System.Drawing.Point(6, 18);
+            this.authorLabel.Location = new System.Drawing.Point(7, 3);
             this.authorLabel.Name = "authorLabel";
             this.authorLabel.Size = new System.Drawing.Size(41, 13);
             this.authorLabel.TabIndex = 0;
-            this.authorLabel.Text = "Author:";
+            resources.ApplyResources(this.authorLabel, "authorLabel");
             // 
             // commentLabel
             // 
             this.commentLabel.AutoSize = true;
-            this.commentLabel.Location = new System.Drawing.Point(6, 105);
+            this.commentLabel.Location = new System.Drawing.Point(7, 120);
             this.commentLabel.Name = "commentLabel";
             this.commentLabel.Size = new System.Drawing.Size(54, 13);
             this.commentLabel.TabIndex = 2;
-            this.commentLabel.Text = "Comment:";
+            resources.ApplyResources(this.commentLabel, "commentLabel");
             // 
             // authorTextBox
             // 
             this.authorTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.authorTextBox.Location = new System.Drawing.Point(76, 15);
+            this.authorTextBox.Location = new System.Drawing.Point(10, 19);
+            this.authorTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 6, 3);
             this.authorTextBox.Name = "authorTextBox";
-            this.authorTextBox.Size = new System.Drawing.Size(341, 20);
+            this.authorTextBox.Size = new System.Drawing.Size(427, 20);
             this.authorTextBox.TabIndex = 4;
             // 
             // commentTextBox
@@ -89,28 +91,29 @@ namespace SpreadsheetEditorDemo
             this.commentTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.commentTextBox.Location = new System.Drawing.Point(76, 105);
+            this.commentTextBox.Location = new System.Drawing.Point(10, 136);
+            this.commentTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 6, 6);
             this.commentTextBox.Multiline = true;
             this.commentTextBox.Name = "commentTextBox";
-            this.commentTextBox.Size = new System.Drawing.Size(341, 99);
+            this.commentTextBox.Size = new System.Drawing.Size(427, 129);
             this.commentTextBox.TabIndex = 6;
             // 
             // buttonCancel
             // 
             this.buttonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(355, 266);
+            this.buttonCancel.Location = new System.Drawing.Point(355, 311);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(94, 23);
             this.buttonCancel.TabIndex = 9;
-            this.buttonCancel.Text = "Cancel";
+            resources.ApplyResources(this.buttonCancel, "buttonCancel");
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // okButton
             // 
             this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.okButton.Location = new System.Drawing.Point(255, 266);
+            this.okButton.Location = new System.Drawing.Point(255, 311);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(94, 23);
             this.okButton.TabIndex = 8;
@@ -127,7 +130,7 @@ namespace SpreadsheetEditorDemo
             this.commentTabControl.Location = new System.Drawing.Point(1, 3);
             this.commentTabControl.Name = "commentTabControl";
             this.commentTabControl.SelectedIndex = 0;
-            this.commentTabControl.Size = new System.Drawing.Size(451, 250);
+            this.commentTabControl.Size = new System.Drawing.Size(451, 300);
             this.commentTabControl.TabIndex = 10;
             // 
             // commonTabPage
@@ -142,20 +145,20 @@ namespace SpreadsheetEditorDemo
             this.commonTabPage.Location = new System.Drawing.Point(4, 22);
             this.commonTabPage.Name = "commonTabPage";
             this.commonTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.commonTabPage.Size = new System.Drawing.Size(443, 224);
+            this.commonTabPage.Size = new System.Drawing.Size(443, 274);
             this.commonTabPage.TabIndex = 0;
-            this.commonTabPage.Text = "Common";
+            resources.ApplyResources(this.commonTabPage, "commonTabPage");
             this.commonTabPage.UseVisualStyleBackColor = true;
             // 
             // colorLabel
             // 
             this.colorLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.colorLabel.AutoSize = true;
-            this.colorLabel.Location = new System.Drawing.Point(7, 77);
+            this.colorLabel.Location = new System.Drawing.Point(7, 72);
             this.colorLabel.Name = "colorLabel";
             this.colorLabel.Size = new System.Drawing.Size(34, 13);
             this.colorLabel.TabIndex = 14;
-            this.colorLabel.Text = "Color:";
+            resources.ApplyResources(this.colorLabel, "colorLabel");
             // 
             // commentColorPanelControl
             // 
@@ -163,7 +166,8 @@ namespace SpreadsheetEditorDemo
             this.commentColorPanelControl.CanEditAlphaChannel = false;
             this.commentColorPanelControl.Color = System.Drawing.Color.Transparent;
             this.commentColorPanelControl.DefaultColor = System.Drawing.Color.Empty;
-            this.commentColorPanelControl.Location = new System.Drawing.Point(76, 70);
+            this.commentColorPanelControl.Location = new System.Drawing.Point(10, 88);
+            this.commentColorPanelControl.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.commentColorPanelControl.Name = "commentColorPanelControl";
             this.commentColorPanelControl.Size = new System.Drawing.Size(116, 22);
             this.commentColorPanelControl.TabIndex = 13;
@@ -171,11 +175,12 @@ namespace SpreadsheetEditorDemo
             // showAuthorCheckBox
             // 
             this.showAuthorCheckBox.AutoSize = true;
-            this.showAuthorCheckBox.Location = new System.Drawing.Point(76, 44);
+            this.showAuthorCheckBox.Location = new System.Drawing.Point(10, 45);
+            this.showAuthorCheckBox.Margin = new System.Windows.Forms.Padding(3, 3, 3, 10);
             this.showAuthorCheckBox.Name = "showAuthorCheckBox";
             this.showAuthorCheckBox.Size = new System.Drawing.Size(87, 17);
             this.showAuthorCheckBox.TabIndex = 7;
-            this.showAuthorCheckBox.Text = "Show Author";
+            resources.ApplyResources(this.showAuthorCheckBox, "showAuthorCheckBox");
             this.showAuthorCheckBox.UseVisualStyleBackColor = true;
             // 
             // textAlignTabPage
@@ -187,9 +192,9 @@ namespace SpreadsheetEditorDemo
             this.textAlignTabPage.Location = new System.Drawing.Point(4, 22);
             this.textAlignTabPage.Name = "textAlignTabPage";
             this.textAlignTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.textAlignTabPage.Size = new System.Drawing.Size(443, 224);
+            this.textAlignTabPage.Size = new System.Drawing.Size(192, 74);
             this.textAlignTabPage.TabIndex = 1;
-            this.textAlignTabPage.Text = "Text Align";
+            resources.ApplyResources(this.textAlignTabPage, "textAlignTabPage");
             this.textAlignTabPage.UseVisualStyleBackColor = true;
             // 
             // textVerticalAlignmentComboBox
@@ -208,7 +213,7 @@ namespace SpreadsheetEditorDemo
             this.textVerticalAlignmentLabel.Name = "textVerticalAlignmentLabel";
             this.textVerticalAlignmentLabel.Size = new System.Drawing.Size(116, 13);
             this.textVerticalAlignmentLabel.TabIndex = 6;
-            this.textVerticalAlignmentLabel.Text = "Text vertical alignment:";
+            resources.ApplyResources(this.textVerticalAlignmentLabel, "textVerticalAlignmentLabel");
             // 
             // textHorizontalAlignmentComboBox
             // 
@@ -226,16 +231,16 @@ namespace SpreadsheetEditorDemo
             this.textHorizontalAlignmentlabel.Name = "textHorizontalAlignmentlabel";
             this.textHorizontalAlignmentlabel.Size = new System.Drawing.Size(127, 13);
             this.textHorizontalAlignmentlabel.TabIndex = 4;
-            this.textHorizontalAlignmentlabel.Text = "Text horizontal alignment:";
+            resources.ApplyResources(this.textHorizontalAlignmentlabel, "textHorizontalAlignmentlabel");
             // 
             // fontPropertiesTabPage
             // 
             this.fontPropertiesTabPage.Controls.Add(this.fontPropertiesEditorControl);
             this.fontPropertiesTabPage.Location = new System.Drawing.Point(4, 22);
             this.fontPropertiesTabPage.Name = "fontPropertiesTabPage";
-            this.fontPropertiesTabPage.Size = new System.Drawing.Size(443, 224);
+            this.fontPropertiesTabPage.Size = new System.Drawing.Size(443, 274);
             this.fontPropertiesTabPage.TabIndex = 2;
-            this.fontPropertiesTabPage.Text = "Font Properties";
+            resources.ApplyResources(this.fontPropertiesTabPage, "fontPropertiesTabPage");
             this.fontPropertiesTabPage.UseVisualStyleBackColor = true;
             // 
             // fontPropertiesEditorControl
@@ -245,7 +250,7 @@ namespace SpreadsheetEditorDemo
             this.fontPropertiesEditorControl.Location = new System.Drawing.Point(3, 3);
             this.fontPropertiesEditorControl.Name = "fontPropertiesEditorControl";
             this.fontPropertiesEditorControl.NormalFontProperties = null;
-            this.fontPropertiesEditorControl.Size = new System.Drawing.Size(440, 229);
+            this.fontPropertiesEditorControl.Size = new System.Drawing.Size(440, 268);
             this.fontPropertiesEditorControl.TabIndex = 0;
             // 
             // locationAndSizeTabPage
@@ -253,9 +258,9 @@ namespace SpreadsheetEditorDemo
             this.locationAndSizeTabPage.Controls.Add(this.sheetDrawingLocationEditorControl1);
             this.locationAndSizeTabPage.Location = new System.Drawing.Point(4, 22);
             this.locationAndSizeTabPage.Name = "locationAndSizeTabPage";
-            this.locationAndSizeTabPage.Size = new System.Drawing.Size(443, 224);
+            this.locationAndSizeTabPage.Size = new System.Drawing.Size(192, 74);
             this.locationAndSizeTabPage.TabIndex = 3;
-            this.locationAndSizeTabPage.Text = "Location & Size";
+            resources.ApplyResources(this.locationAndSizeTabPage, "locationAndSizeTabPage");
             this.locationAndSizeTabPage.UseVisualStyleBackColor = true;
             // 
             // sheetDrawingLocationEditorControl1
@@ -265,7 +270,7 @@ namespace SpreadsheetEditorDemo
             this.sheetDrawingLocationEditorControl1.MinimumSize = new System.Drawing.Size(240, 200);
             this.sheetDrawingLocationEditorControl1.Name = "sheetDrawingLocationEditorControl1";
             this.sheetDrawingLocationEditorControl1.SheetDrawingLocation = null;
-            this.sheetDrawingLocationEditorControl1.Size = new System.Drawing.Size(443, 224);
+            this.sheetDrawingLocationEditorControl1.Size = new System.Drawing.Size(240, 200);
             this.sheetDrawingLocationEditorControl1.TabIndex = 0;
             this.sheetDrawingLocationEditorControl1.Worksheet = null;
             // 
@@ -284,7 +289,7 @@ namespace SpreadsheetEditorDemo
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.CancelButton = this.buttonCancel;
-            this.ClientSize = new System.Drawing.Size(461, 301);
+            this.ClientSize = new System.Drawing.Size(461, 346);
             this.Controls.Add(this.commentTabControl);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.okButton);
@@ -295,7 +300,7 @@ namespace SpreadsheetEditorDemo
             this.Name = "EditCommentForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Edit Comment";
+            resources.ApplyResources(this, "$this");
             this.commentTabControl.ResumeLayout(false);
             this.commonTabPage.ResumeLayout(false);
             this.commonTabPage.PerformLayout();

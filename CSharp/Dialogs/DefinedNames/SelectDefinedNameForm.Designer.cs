@@ -29,6 +29,7 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SelectDefinedNameForm));
             this.namesLabel = new System.Windows.Forms.Label();
             this.namesListBox = new System.Windows.Forms.ListBox();
             this.buttonCancel = new System.Windows.Forms.Button();
@@ -42,7 +43,7 @@ namespace SpreadsheetEditorDemo
             this.namesLabel.Name = "namesLabel";
             this.namesLabel.Size = new System.Drawing.Size(43, 13);
             this.namesLabel.TabIndex = 0;
-            this.namesLabel.Text = "Names:";
+            resources.ApplyResources(this.namesLabel, "namesLabel");
             // 
             // namesListBox
             // 
@@ -59,7 +60,7 @@ namespace SpreadsheetEditorDemo
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(94, 23);
             this.buttonCancel.TabIndex = 7;
-            this.buttonCancel.Text = "Cancel";
+            resources.ApplyResources(this.buttonCancel, "buttonCancel");
             this.buttonCancel.UseVisualStyleBackColor = true;
             // 
             // okButton
@@ -87,7 +88,7 @@ namespace SpreadsheetEditorDemo
             this.MinimizeBox = false;
             this.Name = "SelectDefinedNameForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Defined Name List";
+            resources.ApplyResources(this, "$this");
             this.ResumeLayout(false);
             this.PerformLayout();
 

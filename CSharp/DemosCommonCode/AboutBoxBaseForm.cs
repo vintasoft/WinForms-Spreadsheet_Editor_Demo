@@ -142,7 +142,7 @@ namespace DemosCommonCode
         /// </summary>
         protected override void OnLoad(EventArgs e)
         {
-            Text = "About...";
+            Text = SpreadsheetEditorDemo.Localization.Strings.DEMOSCOMMONCODE_ABOUT;
             base.OnLoad(e);
         }
 
