@@ -43,6 +43,7 @@ This C# project uses <a href="https://www.vintasoft.com/vsimaging-dotnet-index.h
 * Work with comments
   * Render comments on worksheet
   * Add, edit, delete a comment
+* Application contains German localization as an example how to translate application UI to any language.
 
 
 ## Screenshot
