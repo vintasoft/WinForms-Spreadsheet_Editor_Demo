@@ -30,6 +30,10 @@ namespace SpreadsheetEditorDemo
         public SheetDrawingLocationEditorControl()
         {
             InitializeComponent();
+
+            xNumericUpDown.Minimum = decimal.MinValue;
+            yNumericUpDown.Minimum = decimal.MinValue;
+
             UpdateUI();
         }
 

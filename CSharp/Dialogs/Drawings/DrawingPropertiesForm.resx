@@ -120,6 +120,9 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Drawing Properties</value>
   </data>
+  <data name="smoothLineCheckBox.Text" xml:space="preserve">
+    <value>Smooth Line</value>
+  </data>
   <data name="buttonCancel.Text" xml:space="preserve">
     <value>Cancel</value>
   </data>
@@ -129,14 +132,47 @@
   <data name="locationAndSizeTabPage.Text" xml:space="preserve">
     <value>Location &amp; Size</value>
   </data>
-  <data name="commentLabel.Text" xml:space="preserve">
+  <data name="descriptionLabel.Text" xml:space="preserve">
     <value>Description:</value>
   </data>
-  <data name="authorLabel.Text" xml:space="preserve">
+  <data name="nameLabel.Text" xml:space="preserve">
     <value>Name:</value>
   </data>
   <data name="commonTabPage.Text" xml:space="preserve">
     <value>Common</value>
+  </data>
+  <data name="titleLabel.Text" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="valuesRangeLabel.Text" xml:space="preserve">
+    <value>Values</value>
+  </data>
+  <data name="nameRangeLabel.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="dataPointAppearanceGroupBox.Text" xml:space="preserve">
+    <value>Appearance</value>
+  </data>
+  <data name="markerTypeLabel.Text" xml:space="preserve">
+    <value>Marker Type</value>
+  </data>
+  <data name="markerSizeLabel.Text" xml:space="preserve">
+    <value>Marker Size</value>
+  </data>
+  <data name="markerAppearanceGroupBox.Text" xml:space="preserve">
+    <value>Marker appearance</value>
+  </data>
+  <data name="dataPointGroupBox.Text" xml:space="preserve">
+    <value>Data Point</value>
+  </data>
+  <data name="seriesGroupBox.Text" xml:space="preserve">
+    <value>Legend Entries (Series)</value>
+  </data>
+  <data name="categoriesGroupBox.Text" xml:space="preserve">
+    <value>Category Axis Labels</value>
+  </data>
+  <data name="dataRangeLabel.Text" xml:space="preserve">
+    <value>References range</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib">
     <value>True</value>

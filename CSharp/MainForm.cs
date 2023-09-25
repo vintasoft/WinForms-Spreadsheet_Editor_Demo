@@ -55,6 +55,7 @@ namespace SpreadsheetEditorDemo
             VisualEditor.CellCommentClick += VisualEditor_CellCommentClick;
             VisualEditor.InvalidCellReferences += VisualEditor_InvalidCellReferences;
             VisualEditor.FocusedCellChanged += VisualEditor_FocusedCellChanged;
+            VisualEditor.FocusedCellsChanged += VisualEditor_FocusedCellsChanged;
             VisualEditor.Editor = null;
             SetStatus("");
 
@@ -104,6 +105,20 @@ namespace SpreadsheetEditorDemo
                 SetStatus("");
         }
 
+        private void VisualEditor_FocusedCellsChanged(object sender, PropertyChangedEventArgs<CellReferences> e)
+        {
+            if (e.NewValue != null)
+            {
+                if (VisualEditor.IsFocusedCellsChanging)
+                    SetStatus(e.NewValue.ToString());
+                else if (Equals(e.NewValue, e.OldValue))
+                    SetStatus("");
+            }
+            else
+            {
+                SetStatus("");
+            }
+        }
 
         private void VisualEditor_HoveredCellChanged(object sender, PropertyChangedEventArgs<CellReference> e)
         {

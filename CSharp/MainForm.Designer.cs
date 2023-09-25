@@ -43,9 +43,10 @@ namespace SpreadsheetEditorDemo
             this.fontPropertiesPanel1 = new SpreadsheetEditorDemo.FontPropertiesPanel();
             this.textAlignmentPanel1 = new SpreadsheetEditorDemo.TextAlignmentPanel();
             this.editTabPage = new System.Windows.Forms.TabPage();
-            this.findReplacePanel1 = new SpreadsheetEditorDemo.FindReplacePanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.copyPastePanel1 = new SpreadsheetEditorDemo.CopyPastePanel();
             this.cellsEditorPanel1 = new SpreadsheetEditorDemo.CellsEditorPanel();
+            this.findReplacePanel1 = new SpreadsheetEditorDemo.FindReplacePanel();
             this.formulasTabPage = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.functionsPanel1 = new SpreadsheetEditorDemo.FunctionsPanel();
@@ -64,7 +65,6 @@ namespace SpreadsheetEditorDemo
             this.spreadsheetCellContextMenu = new SpreadsheetEditorDemo.SpreadsheetCellContextMenu();
             this.spreadsheetCommentContextMenu = new SpreadsheetEditorDemo.SpreadsheetCommentContextMenu();
             this.spreadsheetDrawingContextMenu = new SpreadsheetEditorDemo.SpreadsheetDrawingContextMenu();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.topTabControl.SuspendLayout();
             this.fileTabPage.SuspendLayout();
             this.fileToolStripContainer.ContentPanel.SuspendLayout();
@@ -73,6 +73,7 @@ namespace SpreadsheetEditorDemo
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.editTabPage.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.formulasTabPage.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.reviewTabPage.SuspendLayout();
@@ -80,7 +81,6 @@ namespace SpreadsheetEditorDemo
             this.statusStrip1.SuspendLayout();
             this.editorPanel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // topTabControl
@@ -97,7 +97,7 @@ namespace SpreadsheetEditorDemo
             this.topTabControl.Margin = new System.Windows.Forms.Padding(0);
             this.topTabControl.Name = "topTabControl";
             this.topTabControl.SelectedIndex = 0;
-            this.topTabControl.Size = new System.Drawing.Size(1057, 81);
+            this.topTabControl.Size = new System.Drawing.Size(955, 81);
             this.topTabControl.TabIndex = 0;
             // 
             // fileTabPage
@@ -105,7 +105,7 @@ namespace SpreadsheetEditorDemo
             this.fileTabPage.Controls.Add(this.fileToolStripContainer);
             this.fileTabPage.Location = new System.Drawing.Point(4, 22);
             this.fileTabPage.Name = "fileTabPage";
-            this.fileTabPage.Size = new System.Drawing.Size(1049, 55);
+            this.fileTabPage.Size = new System.Drawing.Size(947, 55);
             this.fileTabPage.TabIndex = 0;
             resources.ApplyResources(this.fileTabPage, "fileTabPage");
             this.fileTabPage.UseVisualStyleBackColor = true;
@@ -117,13 +117,13 @@ namespace SpreadsheetEditorDemo
             // fileToolStripContainer.ContentPanel
             // 
             this.fileToolStripContainer.ContentPanel.Controls.Add(this.filePanel1);
-            this.fileToolStripContainer.ContentPanel.Size = new System.Drawing.Size(1049, 55);
+            this.fileToolStripContainer.ContentPanel.Size = new System.Drawing.Size(947, 55);
             this.fileToolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fileToolStripContainer.LeftToolStripPanelVisible = false;
             this.fileToolStripContainer.Location = new System.Drawing.Point(0, 0);
             this.fileToolStripContainer.Name = "fileToolStripContainer";
             this.fileToolStripContainer.RightToolStripPanelVisible = false;
-            this.fileToolStripContainer.Size = new System.Drawing.Size(1049, 55);
+            this.fileToolStripContainer.Size = new System.Drawing.Size(947, 55);
             this.fileToolStripContainer.TabIndex = 0;
             this.fileToolStripContainer.Text = "toolStripContainer1";
             this.fileToolStripContainer.TopToolStripPanelVisible = false;
@@ -137,7 +137,7 @@ namespace SpreadsheetEditorDemo
             this.filePanel1.Location = new System.Drawing.Point(1, 2);
             this.filePanel1.Margin = new System.Windows.Forms.Padding(1, 2, 2, 1);
             this.filePanel1.Name = "filePanel1";
-            this.filePanel1.Size = new System.Drawing.Size(1046, 52);
+            this.filePanel1.Size = new System.Drawing.Size(944, 52);
             this.filePanel1.SpreadsheetEditor = this.spreadsheetEditorControl1;
             this.filePanel1.TabIndex = 0;
             this.filePanel1.FilenameChanged += new System.EventHandler(this.filePanel1_FilenameChanged);
@@ -172,7 +172,7 @@ namespace SpreadsheetEditorDemo
             this.homeTabPage.Controls.Add(this.tableLayoutPanel4);
             this.homeTabPage.Location = new System.Drawing.Point(4, 22);
             this.homeTabPage.Name = "homeTabPage";
-            this.homeTabPage.Size = new System.Drawing.Size(1049, 55);
+            this.homeTabPage.Size = new System.Drawing.Size(947, 55);
             this.homeTabPage.TabIndex = 1;
             resources.ApplyResources(this.homeTabPage, "homeTabPage");
             this.homeTabPage.UseVisualStyleBackColor = true;
@@ -192,7 +192,7 @@ namespace SpreadsheetEditorDemo
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1049, 55);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(947, 55);
             this.tableLayoutPanel4.TabIndex = 4;
             // 
             // copyPastePanel2
@@ -205,7 +205,7 @@ namespace SpreadsheetEditorDemo
             this.copyPastePanel2.Margin = new System.Windows.Forms.Padding(1, 2, 2, 1);
             this.copyPastePanel2.MinimumSize = new System.Drawing.Size(20, 52);
             this.copyPastePanel2.Name = "copyPastePanel2";
-            this.copyPastePanel2.Size = new System.Drawing.Size(20, 52);
+            this.copyPastePanel2.Size = new System.Drawing.Size(122, 52);
             this.copyPastePanel2.SpreadsheetEditor = this.spreadsheetEditorControl1;
             this.copyPastePanel2.TabIndex = 5;
             // 
@@ -221,12 +221,12 @@ namespace SpreadsheetEditorDemo
             this.tableLayoutPanel3.Controls.Add(this.numberFormatPanel1, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.fontPropertiesPanel1, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.textAlignmentPanel1, 1, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(23, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(125, 0);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1026, 55);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(822, 55);
             this.tableLayoutPanel3.TabIndex = 4;
             // 
             // numberFormatPanel1
@@ -238,7 +238,7 @@ namespace SpreadsheetEditorDemo
             this.numberFormatPanel1.Location = new System.Drawing.Point(453, 2);
             this.numberFormatPanel1.Margin = new System.Windows.Forms.Padding(1, 2, 0, 1);
             this.numberFormatPanel1.Name = "numberFormatPanel1";
-            this.numberFormatPanel1.Size = new System.Drawing.Size(573, 52);
+            this.numberFormatPanel1.Size = new System.Drawing.Size(369, 52);
             this.numberFormatPanel1.SpreadsheetEditor = this.spreadsheetEditorControl1;
             this.numberFormatPanel1.TabIndex = 6;
             // 
@@ -269,26 +269,29 @@ namespace SpreadsheetEditorDemo
             this.editTabPage.Controls.Add(this.tableLayoutPanel2);
             this.editTabPage.Location = new System.Drawing.Point(4, 22);
             this.editTabPage.Name = "editTabPage";
-            this.editTabPage.Size = new System.Drawing.Size(1049, 55);
+            this.editTabPage.Size = new System.Drawing.Size(947, 55);
             this.editTabPage.TabIndex = 2;
             resources.ApplyResources(this.editTabPage, "editTabPage");
             this.editTabPage.UseVisualStyleBackColor = true;
             // 
-            // findReplacePanel1
+            // tableLayoutPanel2
             // 
-            this.findReplacePanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.findReplacePanel1.AutoSize = true;
-            this.findReplacePanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.findReplacePanel1.Enabled = false;
-            this.findReplacePanel1.Location = new System.Drawing.Point(47, 2);
-            this.findReplacePanel1.Margin = new System.Windows.Forms.Padding(1, 2, 2, 1);
-            this.findReplacePanel1.MinimumSize = new System.Drawing.Size(20, 50);
-            this.findReplacePanel1.Name = "findReplacePanel1";
-            this.findReplacePanel1.Size = new System.Drawing.Size(1000, 52);
-            this.findReplacePanel1.SpreadsheetEditor = this.spreadsheetEditorControl1;
-            this.findReplacePanel1.TabIndex = 6;
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Controls.Add(this.copyPastePanel1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.cellsEditorPanel1, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.findReplacePanel1, 2, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(947, 55);
+            this.tableLayoutPanel2.TabIndex = 4;
             // 
             // copyPastePanel1
             // 
@@ -302,7 +305,7 @@ namespace SpreadsheetEditorDemo
             this.copyPastePanel1.Margin = new System.Windows.Forms.Padding(1, 2, 2, 1);
             this.copyPastePanel1.MinimumSize = new System.Drawing.Size(20, 52);
             this.copyPastePanel1.Name = "copyPastePanel1";
-            this.copyPastePanel1.Size = new System.Drawing.Size(20, 52);
+            this.copyPastePanel1.Size = new System.Drawing.Size(122, 52);
             this.copyPastePanel1.SpreadsheetEditor = this.spreadsheetEditorControl1;
             this.copyPastePanel1.TabIndex = 4;
             // 
@@ -314,20 +317,36 @@ namespace SpreadsheetEditorDemo
             this.cellsEditorPanel1.AutoSize = true;
             this.cellsEditorPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.cellsEditorPanel1.Enabled = false;
-            this.cellsEditorPanel1.Location = new System.Drawing.Point(24, 2);
+            this.cellsEditorPanel1.Location = new System.Drawing.Point(126, 2);
             this.cellsEditorPanel1.Margin = new System.Windows.Forms.Padding(1, 2, 2, 1);
             this.cellsEditorPanel1.MinimumSize = new System.Drawing.Size(20, 52);
             this.cellsEditorPanel1.Name = "cellsEditorPanel1";
-            this.cellsEditorPanel1.Size = new System.Drawing.Size(20, 52);
+            this.cellsEditorPanel1.Size = new System.Drawing.Size(482, 52);
             this.cellsEditorPanel1.SpreadsheetEditor = this.spreadsheetEditorControl1;
             this.cellsEditorPanel1.TabIndex = 5;
+            // 
+            // findReplacePanel1
+            // 
+            this.findReplacePanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.findReplacePanel1.AutoSize = true;
+            this.findReplacePanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.findReplacePanel1.Enabled = false;
+            this.findReplacePanel1.Location = new System.Drawing.Point(611, 2);
+            this.findReplacePanel1.Margin = new System.Windows.Forms.Padding(1, 2, 2, 1);
+            this.findReplacePanel1.MinimumSize = new System.Drawing.Size(20, 50);
+            this.findReplacePanel1.Name = "findReplacePanel1";
+            this.findReplacePanel1.Size = new System.Drawing.Size(334, 52);
+            this.findReplacePanel1.SpreadsheetEditor = this.spreadsheetEditorControl1;
+            this.findReplacePanel1.TabIndex = 6;
             // 
             // formulasTabPage
             // 
             this.formulasTabPage.Controls.Add(this.tableLayoutPanel5);
             this.formulasTabPage.Location = new System.Drawing.Point(4, 22);
             this.formulasTabPage.Name = "formulasTabPage";
-            this.formulasTabPage.Size = new System.Drawing.Size(1049, 55);
+            this.formulasTabPage.Size = new System.Drawing.Size(947, 55);
             this.formulasTabPage.TabIndex = 3;
             resources.ApplyResources(this.formulasTabPage, "formulasTabPage");
             this.formulasTabPage.UseVisualStyleBackColor = true;
@@ -347,7 +366,7 @@ namespace SpreadsheetEditorDemo
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(1049, 55);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(947, 55);
             this.tableLayoutPanel5.TabIndex = 4;
             // 
             // functionsPanel1
@@ -362,7 +381,7 @@ namespace SpreadsheetEditorDemo
             this.functionsPanel1.Margin = new System.Windows.Forms.Padding(1, 2, 2, 1);
             this.functionsPanel1.MinimumSize = new System.Drawing.Size(20, 52);
             this.functionsPanel1.Name = "functionsPanel1";
-            this.functionsPanel1.Size = new System.Drawing.Size(20, 52);
+            this.functionsPanel1.Size = new System.Drawing.Size(182, 52);
             this.functionsPanel1.SpreadsheetEditor = this.spreadsheetEditorControl1;
             this.functionsPanel1.TabIndex = 0;
             // 
@@ -371,12 +390,14 @@ namespace SpreadsheetEditorDemo
             this.definedNamesPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.definedNamesPanel1.AutoSize = true;
+            this.definedNamesPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.definedNamesPanel1.Enabled = false;
-            this.definedNamesPanel1.Location = new System.Drawing.Point(24, 2);
+            this.definedNamesPanel1.Location = new System.Drawing.Point(186, 2);
             this.definedNamesPanel1.Margin = new System.Windows.Forms.Padding(1, 2, 2, 1);
             this.definedNamesPanel1.MinimumSize = new System.Drawing.Size(20, 52);
             this.definedNamesPanel1.Name = "definedNamesPanel1";
-            this.definedNamesPanel1.Size = new System.Drawing.Size(1023, 52);
+            this.definedNamesPanel1.Size = new System.Drawing.Size(759, 52);
             this.definedNamesPanel1.SpreadsheetEditor = this.spreadsheetEditorControl1;
             this.definedNamesPanel1.TabIndex = 1;
             // 
@@ -385,7 +406,7 @@ namespace SpreadsheetEditorDemo
             this.reviewTabPage.Controls.Add(this.commentsPanel1);
             this.reviewTabPage.Location = new System.Drawing.Point(4, 22);
             this.reviewTabPage.Name = "reviewTabPage";
-            this.reviewTabPage.Size = new System.Drawing.Size(1049, 55);
+            this.reviewTabPage.Size = new System.Drawing.Size(947, 55);
             this.reviewTabPage.TabIndex = 5;
             resources.ApplyResources(this.reviewTabPage, "reviewTabPage");
             this.reviewTabPage.UseVisualStyleBackColor = true;
@@ -400,7 +421,7 @@ namespace SpreadsheetEditorDemo
             this.commentsPanel1.Margin = new System.Windows.Forms.Padding(1, 2, 2, 1);
             this.commentsPanel1.MinimumSize = new System.Drawing.Size(20, 52);
             this.commentsPanel1.Name = "commentsPanel1";
-            this.commentsPanel1.Size = new System.Drawing.Size(1046, 52);
+            this.commentsPanel1.Size = new System.Drawing.Size(944, 52);
             this.commentsPanel1.SpreadsheetEditor = this.spreadsheetEditorControl1;
             this.commentsPanel1.TabIndex = 0;
             // 
@@ -409,7 +430,7 @@ namespace SpreadsheetEditorDemo
             this.helpTabPage.Controls.Add(this.helpPanel1);
             this.helpTabPage.Location = new System.Drawing.Point(4, 22);
             this.helpTabPage.Name = "helpTabPage";
-            this.helpTabPage.Size = new System.Drawing.Size(1049, 55);
+            this.helpTabPage.Size = new System.Drawing.Size(947, 55);
             this.helpTabPage.TabIndex = 6;
             resources.ApplyResources(this.helpTabPage, "helpTabPage");
             this.helpTabPage.UseVisualStyleBackColor = true;
@@ -422,7 +443,7 @@ namespace SpreadsheetEditorDemo
             this.helpPanel1.Location = new System.Drawing.Point(1, 2);
             this.helpPanel1.Margin = new System.Windows.Forms.Padding(1, 2, 2, 1);
             this.helpPanel1.Name = "helpPanel1";
-            this.helpPanel1.Size = new System.Drawing.Size(1046, 52);
+            this.helpPanel1.Size = new System.Drawing.Size(944, 52);
             this.helpPanel1.TabIndex = 2;
             // 
             // statusStrip1
@@ -475,11 +496,11 @@ namespace SpreadsheetEditorDemo
             this.undoPanel2.AutoSize = true;
             this.undoPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.undoPanel2.Enabled = false;
-            this.undoPanel2.Location = new System.Drawing.Point(1057, 25);
+            this.undoPanel2.Location = new System.Drawing.Point(955, 24);
             this.undoPanel2.Margin = new System.Windows.Forms.Padding(0, 3, 0, 4);
             this.undoPanel2.MinimumSize = new System.Drawing.Size(20, 52);
             this.undoPanel2.Name = "undoPanel2";
-            this.undoPanel2.Size = new System.Drawing.Size(20, 52);
+            this.undoPanel2.Size = new System.Drawing.Size(122, 53);
             this.undoPanel2.SpreadsheetEditor = this.spreadsheetEditorControl1;
             this.undoPanel2.TabIndex = 8;
             // 
@@ -527,25 +548,6 @@ namespace SpreadsheetEditorDemo
             this.spreadsheetDrawingContextMenu.Size = new System.Drawing.Size(143, 126);
             this.spreadsheetDrawingContextMenu.SpreadsheetEditor = this.spreadsheetEditorControl1;
             // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.copyPastePanel1, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.cellsEditorPanel1, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.findReplacePanel1, 2, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1049, 55);
-            this.tableLayoutPanel2.TabIndex = 4;
-            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -573,6 +575,8 @@ namespace SpreadsheetEditorDemo
             this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.editTabPage.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.formulasTabPage.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
@@ -583,8 +587,6 @@ namespace SpreadsheetEditorDemo
             this.editorPanel.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

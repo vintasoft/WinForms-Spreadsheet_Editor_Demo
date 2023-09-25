@@ -98,6 +98,14 @@ namespace SpreadsheetEditorDemo
             this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.chartCellsTabPage = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.categoryAxisAppearanceGroupBox = new System.Windows.Forms.GroupBox();
+            this.categoryAxisAppearanceEditor = new SpreadsheetEditorDemo.CustomControls.CellReferencesAppearanceEditorControl();
+            this.seriesValuesAppearanceGroupBox = new System.Windows.Forms.GroupBox();
+            this.seriesValuesAppearanceEditor = new SpreadsheetEditorDemo.CustomControls.CellReferencesAppearanceEditorControl();
+            this.seriesNameAppearanceGroupBox = new System.Windows.Forms.GroupBox();
+            this.seriesNameAppearanceEditor = new SpreadsheetEditorDemo.CustomControls.CellReferencesAppearanceEditorControl();
             this.appearanceTabControl.SuspendLayout();
             this.focusedCellsTabPage.SuspendLayout();
             this.cellsBufferTabPage.SuspendLayout();
@@ -127,6 +135,11 @@ namespace SpreadsheetEditorDemo
             ((System.ComponentModel.ISupportInitialize)(this.calculationMinIntervalNumericUpDown)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.chartCellsTabPage.SuspendLayout();
+            this.tableLayoutPanel9.SuspendLayout();
+            this.categoryAxisAppearanceGroupBox.SuspendLayout();
+            this.seriesValuesAppearanceGroupBox.SuspendLayout();
+            this.seriesNameAppearanceGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -214,11 +227,12 @@ namespace SpreadsheetEditorDemo
             this.appearanceTabControl.Controls.Add(this.cellsBufferTabPage);
             this.appearanceTabControl.Controls.Add(this.formulaTabPage);
             this.appearanceTabControl.Controls.Add(this.focusedFormulaTabPage);
+            this.appearanceTabControl.Controls.Add(this.chartCellsTabPage);
             this.appearanceTabControl.Controls.Add(this.headingsTabPage);
             this.appearanceTabControl.Controls.Add(this.errorsTabPage);
             this.appearanceTabControl.Controls.Add(this.commentsTabPage);
-            this.appearanceTabControl.Controls.Add(this.miscellaneousTabPage);
             this.appearanceTabControl.Controls.Add(this.transformHighlightTabPage);
+            this.appearanceTabControl.Controls.Add(this.miscellaneousTabPage);
             this.appearanceTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.appearanceTabControl.Location = new System.Drawing.Point(3, 16);
             this.appearanceTabControl.Multiline = true;
@@ -764,7 +778,7 @@ namespace SpreadsheetEditorDemo
             this.cellsTransformHighlightAppearanceGroupBox.Controls.Add(this.cellsTransformHighlightAppearanceEditor);
             this.cellsTransformHighlightAppearanceGroupBox.Location = new System.Drawing.Point(363, 3);
             this.cellsTransformHighlightAppearanceGroupBox.Name = "cellsTransformHighlightAppearanceGroupBox";
-            this.cellsTransformHighlightAppearanceGroupBox.Size = new System.Drawing.Size(175, 109);
+            this.cellsTransformHighlightAppearanceGroupBox.Size = new System.Drawing.Size(176, 109);
             this.cellsTransformHighlightAppearanceGroupBox.TabIndex = 27;
             this.cellsTransformHighlightAppearanceGroupBox.TabStop = false;
             resources.ApplyResources(this.cellsTransformHighlightAppearanceGroupBox, "cellsTransformHighlightAppearanceGroupBox");
@@ -776,7 +790,7 @@ namespace SpreadsheetEditorDemo
             this.cellsTransformHighlightAppearanceEditor.CellsAppearance = null;
             this.cellsTransformHighlightAppearanceEditor.Location = new System.Drawing.Point(3, 17);
             this.cellsTransformHighlightAppearanceEditor.Name = "cellsTransformHighlightAppearanceEditor";
-            this.cellsTransformHighlightAppearanceEditor.Size = new System.Drawing.Size(166, 86);
+            this.cellsTransformHighlightAppearanceEditor.Size = new System.Drawing.Size(167, 86);
             this.cellsTransformHighlightAppearanceEditor.TabIndex = 22;
             // 
             // sheetDrawingTransformHighlightAppearanceGroupBox
@@ -786,7 +800,7 @@ namespace SpreadsheetEditorDemo
             this.sheetDrawingTransformHighlightAppearanceGroupBox.Controls.Add(this.sheetDrawingTransformHighlightAppearanceEditor);
             this.sheetDrawingTransformHighlightAppearanceGroupBox.Location = new System.Drawing.Point(183, 3);
             this.sheetDrawingTransformHighlightAppearanceGroupBox.Name = "sheetDrawingTransformHighlightAppearanceGroupBox";
-            this.sheetDrawingTransformHighlightAppearanceGroupBox.Size = new System.Drawing.Size(175, 109);
+            this.sheetDrawingTransformHighlightAppearanceGroupBox.Size = new System.Drawing.Size(174, 109);
             this.sheetDrawingTransformHighlightAppearanceGroupBox.TabIndex = 26;
             this.sheetDrawingTransformHighlightAppearanceGroupBox.TabStop = false;
             resources.ApplyResources(this.sheetDrawingTransformHighlightAppearanceGroupBox, "sheetDrawingTransformHighlightAppearanceGroupBox");
@@ -798,7 +812,7 @@ namespace SpreadsheetEditorDemo
             this.sheetDrawingTransformHighlightAppearanceEditor.CellsAppearance = null;
             this.sheetDrawingTransformHighlightAppearanceEditor.Location = new System.Drawing.Point(3, 17);
             this.sheetDrawingTransformHighlightAppearanceEditor.Name = "sheetDrawingTransformHighlightAppearanceEditor";
-            this.sheetDrawingTransformHighlightAppearanceEditor.Size = new System.Drawing.Size(166, 86);
+            this.sheetDrawingTransformHighlightAppearanceEditor.Size = new System.Drawing.Size(165, 86);
             this.sheetDrawingTransformHighlightAppearanceEditor.TabIndex = 22;
             // 
             // headersTransformHighlightAppearanceGroupBox
@@ -808,7 +822,7 @@ namespace SpreadsheetEditorDemo
             this.headersTransformHighlightAppearanceGroupBox.Controls.Add(this.headersTransformHighlightAppearanceEditor);
             this.headersTransformHighlightAppearanceGroupBox.Location = new System.Drawing.Point(3, 3);
             this.headersTransformHighlightAppearanceGroupBox.Name = "headersTransformHighlightAppearanceGroupBox";
-            this.headersTransformHighlightAppearanceGroupBox.Size = new System.Drawing.Size(175, 109);
+            this.headersTransformHighlightAppearanceGroupBox.Size = new System.Drawing.Size(174, 109);
             this.headersTransformHighlightAppearanceGroupBox.TabIndex = 25;
             this.headersTransformHighlightAppearanceGroupBox.TabStop = false;
             resources.ApplyResources(this.headersTransformHighlightAppearanceGroupBox, "headersTransformHighlightAppearanceGroupBox");
@@ -820,7 +834,7 @@ namespace SpreadsheetEditorDemo
             this.headersTransformHighlightAppearanceEditor.CellsAppearance = null;
             this.headersTransformHighlightAppearanceEditor.Location = new System.Drawing.Point(3, 17);
             this.headersTransformHighlightAppearanceEditor.Name = "headersTransformHighlightAppearanceEditor";
-            this.headersTransformHighlightAppearanceEditor.Size = new System.Drawing.Size(166, 86);
+            this.headersTransformHighlightAppearanceEditor.Size = new System.Drawing.Size(165, 86);
             this.headersTransformHighlightAppearanceEditor.TabIndex = 22;
             // 
             // panel1
@@ -923,6 +937,98 @@ namespace SpreadsheetEditorDemo
             this.tableLayoutPanel2.Size = new System.Drawing.Size(105, 26);
             this.tableLayoutPanel2.TabIndex = 90;
             // 
+            // chartCellsTabPage
+            // 
+            this.chartCellsTabPage.Controls.Add(this.tableLayoutPanel9);
+            this.chartCellsTabPage.Location = new System.Drawing.Point(4, 40);
+            this.chartCellsTabPage.Name = "chartCellsTabPage";
+            this.chartCellsTabPage.Size = new System.Drawing.Size(548, 182);
+            this.chartCellsTabPage.TabIndex = 9;
+            resources.ApplyResources(this.chartCellsTabPage, "chartCellsTabPage");
+            this.chartCellsTabPage.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel9
+            // 
+            this.tableLayoutPanel9.ColumnCount = 3;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel9.Controls.Add(this.categoryAxisAppearanceGroupBox, 0, 0);
+            this.tableLayoutPanel9.Controls.Add(this.seriesValuesAppearanceGroupBox, 0, 0);
+            this.tableLayoutPanel9.Controls.Add(this.seriesNameAppearanceGroupBox, 0, 0);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            this.tableLayoutPanel9.RowCount = 1;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(542, 119);
+            this.tableLayoutPanel9.TabIndex = 2;
+            // 
+            // categoryAxisAppearanceGroupBox
+            // 
+            this.categoryAxisAppearanceGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.categoryAxisAppearanceGroupBox.Controls.Add(this.categoryAxisAppearanceEditor);
+            this.categoryAxisAppearanceGroupBox.Location = new System.Drawing.Point(363, 3);
+            this.categoryAxisAppearanceGroupBox.Name = "categoryAxisAppearanceGroupBox";
+            this.categoryAxisAppearanceGroupBox.Size = new System.Drawing.Size(176, 109);
+            this.categoryAxisAppearanceGroupBox.TabIndex = 27;
+            this.categoryAxisAppearanceGroupBox.TabStop = false;
+            resources.ApplyResources(this.categoryAxisAppearanceGroupBox, "categoryAxisAppearanceGroupBox");
+            // 
+            // categoryAxisAppearanceEditor
+            // 
+            this.categoryAxisAppearanceEditor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.categoryAxisAppearanceEditor.CellsAppearance = null;
+            this.categoryAxisAppearanceEditor.Location = new System.Drawing.Point(3, 17);
+            this.categoryAxisAppearanceEditor.Name = "categoryAxisAppearanceEditor";
+            this.categoryAxisAppearanceEditor.Size = new System.Drawing.Size(167, 86);
+            this.categoryAxisAppearanceEditor.TabIndex = 22;
+            // 
+            // seriesValuesAppearanceGroupBox
+            // 
+            this.seriesValuesAppearanceGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.seriesValuesAppearanceGroupBox.Controls.Add(this.seriesValuesAppearanceEditor);
+            this.seriesValuesAppearanceGroupBox.Location = new System.Drawing.Point(183, 3);
+            this.seriesValuesAppearanceGroupBox.Name = "seriesValuesAppearanceGroupBox";
+            this.seriesValuesAppearanceGroupBox.Size = new System.Drawing.Size(174, 109);
+            this.seriesValuesAppearanceGroupBox.TabIndex = 26;
+            this.seriesValuesAppearanceGroupBox.TabStop = false;
+            resources.ApplyResources(this.seriesValuesAppearanceGroupBox, "seriesValuesAppearanceGroupBox");
+            // 
+            // seriesValuesAppearanceEditor
+            // 
+            this.seriesValuesAppearanceEditor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.seriesValuesAppearanceEditor.CellsAppearance = null;
+            this.seriesValuesAppearanceEditor.Location = new System.Drawing.Point(3, 17);
+            this.seriesValuesAppearanceEditor.Name = "seriesValuesAppearanceEditor";
+            this.seriesValuesAppearanceEditor.Size = new System.Drawing.Size(165, 86);
+            this.seriesValuesAppearanceEditor.TabIndex = 22;
+            // 
+            // seriesNameAppearanceGroupBox
+            // 
+            this.seriesNameAppearanceGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.seriesNameAppearanceGroupBox.Controls.Add(this.seriesNameAppearanceEditor);
+            this.seriesNameAppearanceGroupBox.Location = new System.Drawing.Point(3, 3);
+            this.seriesNameAppearanceGroupBox.Name = "seriesNameAppearanceGroupBox";
+            this.seriesNameAppearanceGroupBox.Size = new System.Drawing.Size(174, 109);
+            this.seriesNameAppearanceGroupBox.TabIndex = 25;
+            this.seriesNameAppearanceGroupBox.TabStop = false;
+            resources.ApplyResources(this.seriesNameAppearanceGroupBox, "seriesNameAppearanceGroupBox");
+            // 
+            // seriesNameAppearanceEditor
+            // 
+            this.seriesNameAppearanceEditor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.seriesNameAppearanceEditor.CellsAppearance = null;
+            this.seriesNameAppearanceEditor.Location = new System.Drawing.Point(3, 17);
+            this.seriesNameAppearanceEditor.Name = "seriesNameAppearanceEditor";
+            this.seriesNameAppearanceEditor.Size = new System.Drawing.Size(165, 86);
+            this.seriesNameAppearanceEditor.TabIndex = 22;
+            // 
             // OptionsForm
             // 
             this.AcceptButton = this.buttonOk;
@@ -976,6 +1082,11 @@ namespace SpreadsheetEditorDemo
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.chartCellsTabPage.ResumeLayout(false);
+            this.tableLayoutPanel9.ResumeLayout(false);
+            this.categoryAxisAppearanceGroupBox.ResumeLayout(false);
+            this.seriesValuesAppearanceGroupBox.ResumeLayout(false);
+            this.seriesNameAppearanceGroupBox.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1050,5 +1161,13 @@ namespace SpreadsheetEditorDemo
         private CustomControls.CellReferencesAppearanceEditorControl headersTransformHighlightAppearanceEditor;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.CheckBox showInteractiveAreaHighlightCheckBox;
+        private System.Windows.Forms.TabPage chartCellsTabPage;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
+        private System.Windows.Forms.GroupBox categoryAxisAppearanceGroupBox;
+        private CustomControls.CellReferencesAppearanceEditorControl categoryAxisAppearanceEditor;
+        private System.Windows.Forms.GroupBox seriesValuesAppearanceGroupBox;
+        private CustomControls.CellReferencesAppearanceEditorControl seriesValuesAppearanceEditor;
+        private System.Windows.Forms.GroupBox seriesNameAppearanceGroupBox;
+        private CustomControls.CellReferencesAppearanceEditorControl seriesNameAppearanceEditor;
     }
 }

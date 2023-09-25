@@ -30,6 +30,11 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         const double MAX_ROW_HEIGHT = 545;
 
+        /// <summary>
+        /// The chart templates resource name.
+        /// </summary>
+        const string ChartTemplatesResourceName = "ChartSource.xlsx";
+
         #endregion
 
 
@@ -65,18 +70,26 @@ namespace SpreadsheetEditorDemo
             if (args.OldValue != null)
             {
                 args.OldValue.VisualEditor.FocusedCellsChanged -= VisualEditor_FocusedCellsChanged;
+                args.OldValue.VisualEditor.FocusedDrawingChanged -= VisualEditor_FocusedDrawingChanged;
                 args.OldValue.MouseDoubleClick -= SpreadsheetEditorControl_MouseDoubleClick;
+                args.NewValue.VisualEditor.ChartTemplatesRequest -= VisualEditor_ChartTemplatesRequest;
             }
 
             if (args.NewValue != null)
             {
                 args.NewValue.VisualEditor.FocusedCellsChanged += VisualEditor_FocusedCellsChanged;
+                args.NewValue.VisualEditor.FocusedDrawingChanged += VisualEditor_FocusedDrawingChanged;
+                args.NewValue.VisualEditor.ChartTemplatesRequest += VisualEditor_ChartTemplatesRequest;
                 args.NewValue.MouseDoubleClick += SpreadsheetEditorControl_MouseDoubleClick;
             }
 
             UpdateUI();
         }
 
+        private void VisualEditor_FocusedDrawingChanged(object sender, PropertyChangedEventArgs<SheetDrawing> e)
+        {
+            UpdateUI();
+        }
 
         private void VisualEditor_FocusedCellsChanged(object sender, PropertyChangedEventArgs<CellReferences> e)
         {
@@ -104,6 +117,15 @@ namespace SpreadsheetEditorDemo
                 fillButton.Enabled = hasFcousedCells;
                 insertColumnsToolStripMenuItem.Enabled = VisualEditor.CanInsertEmptyColumns;
                 insertRowsToolStripMenuItem.Enabled = VisualEditor.CanInsertEmptyRows;
+                insertChartToolStripMenuItem.Enabled = VisualEditor.FocusedCells != null;
+
+                bool chartIsSelected = VisualEditor.FocusedDrawing != null && VisualEditor.FocusedDrawing.ChartProperties != null;
+                pictureButton.Enabled = !chartIsSelected || VisualEditor.FocusedDrawing == null;
+                chartToolStripSplitButton.Enabled = chartIsSelected || VisualEditor.FocusedDrawing == null;
+                removeChartToolStripMenuItem.Enabled = chartIsSelected;
+                chartPropertiesToolStripMenuItem.Enabled = chartIsSelected;
+                selectChartValuesToolStripMenuItem.Enabled = chartIsSelected;
+                switchRowColumnToolStripMenuItem.Enabled = chartIsSelected;
             }
         }
 
@@ -680,6 +702,96 @@ namespace SpreadsheetEditorDemo
         #endregion
 
 
+        #region Chart
+
+        private void VisualEditor_ChartTemplatesRequest(object sender, StreamRequestEventArgs e)
+        {
+            e.Stream = DemosResourcesManager.GetResourceAsStream(ChartTemplatesResourceName);
+        }
+
+        /// <summary>
+        /// Handles the ButtonClick event of ChartToolStripSplitButton object.
+        /// </summary>
+        private void chartToolStripSplitButton_ButtonClick(object sender, EventArgs e)
+        {
+            chartToolStripSplitButton.ShowDropDown();
+        }
+
+        /// <summary>
+        /// Handles the Click event of AddChartToolStripMenuItem object.
+        /// </summary>
+        private void addChartToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                InsertChartForm chartForm = new InsertChartForm();
+                chartForm.SetChartDataSource(VisualEditor, ChartTemplatesResourceName);
+                chartForm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                DemosTools.ShowWarningMessage(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_INSERT_CHART, ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// Handles the Click event of SwitchRowColumnToolStripMenuItem object.
+        /// </summary>
+        private void switchRowColumnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                VisualEditor.ChartSwitchRowColumn();
+            }
+            catch (Exception ex)
+            {
+                DemosTools.ShowErrorMessage(ex);
+            }
+        }
+
+        /// <summary>
+        /// Handles the Click event of ChartPropertiesToolStripMenuItem object.
+        /// </summary>
+        private void chartPropertiesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditDrawing();
+        }
+
+        /// <summary>
+        /// Handles the Click event of RemoveChartToolStripMenuItem object.
+        /// </summary>
+        private void removeChartToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                VisualEditor.RemoveFocusedDrawing();
+            }
+            catch (Exception ex)
+            {
+                DemosTools.ShowErrorMessage(ex);
+            }
+        }
+
+        /// <summary>
+        /// Handles the Click event of SelectChartValuesToolStripMenuItem object.
+        /// </summary>
+        private void selectChartValuesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                CellReferencesSet chartData = VisualEditor.FocusedDrawing.ChartProperties.GetSeriesValuesReferencesSet();
+                VisualEditor.SetFocusedAndSelectedCells(chartData);
+            }
+            catch (Exception ex)
+            {
+                DemosTools.ShowWarningMessage(ex.Message);
+            }
+            SpreadsheetEditor.Focus();
+        }
+
+        #endregion
+
+
         #region Image
 
         /// <summary>
@@ -849,10 +961,13 @@ namespace SpreadsheetEditorDemo
             VisualEditor.RemoveHyperlinks();
         }
 
-        #endregion
+
+
 
         #endregion
 
+        #endregion
 
+      
     }
 }

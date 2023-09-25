@@ -120,6 +120,18 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Options</value>
   </data>
+  <data name="seriesNameAppearanceGroupBox.Text" xml:space="preserve">
+    <value>Series name area:</value>
+  </data>
+  <data name="seriesValuesAppearanceGroupBox.Text" xml:space="preserve">
+    <value>Series values area:</value>
+  </data>
+  <data name="categoryAxisAppearanceGroupBox.Text" xml:space="preserve">
+    <value>Category axis area:</value>
+  </data>
+  <data name="chartCellsTabPage.Text" xml:space="preserve">
+    <value>Chart Cells</value>
+  </data>
   <data name="label3.Text" xml:space="preserve">
     <value>Formulas calculation minimum interval (requires reopen)</value>
   </data>

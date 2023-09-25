@@ -44,7 +44,7 @@ namespace SpreadsheetEditorDemo
             _panelFormats.Add(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_NUMBER, new NumberingFormat(2, false));
             _panelFormats.Add(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_DATE, DateFormat.Create("mm-dd-yy"));
             _panelFormats.Add(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_TIME, TimeFormat.Create("h:mm"));
-            _panelFormats.Add(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_CURRENCY, new CurrencyFormat(2, "[$$-en-US]", true));
+            _panelFormats.Add(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_CURRENCY, new CurrencyFormat(2, true, "[$$-en-US]"));
             _panelFormats.Add(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_PERCENTAGE, new PercentageFormat(2));
             _panelFormats.Add(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_SCIENTIFIC, new ScientificFormat(2));
             _panelFormats.Add("Text", new TextFormat());
@@ -172,7 +172,7 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void englishUnitedStatesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CurrencyFormat format = new CurrencyFormat(2, "[$$-en-US]", true);
+            CurrencyFormat format = new CurrencyFormat(2, true, "[$$-en-US]");
             VisualEditor.NumberFormat = format.ToString(VisualEditor.Document.Defaults.FormattingProperties);
             UpdateUI();
         }
@@ -182,7 +182,7 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void englishUnitedKingdomToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CurrencyFormat format = new CurrencyFormat(2, "[$£-en-GB]", true);
+            CurrencyFormat format = new CurrencyFormat(2, true, "[$£-en-GB]");
             VisualEditor.NumberFormat = format.ToString(VisualEditor.Document.Defaults.FormattingProperties);
             UpdateUI();
         }
@@ -192,7 +192,7 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void euroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CurrencyFormat format = new CurrencyFormat(2, "[$€-x-euro2]\\ ", true);
+            CurrencyFormat format = new CurrencyFormat(2, true, "[$€-x-euro2]\\ ");
             VisualEditor.NumberFormat = format.ToString(VisualEditor.Document.Defaults.FormattingProperties);
             UpdateUI();
         }
@@ -202,7 +202,7 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void chineseSimplifiedToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CurrencyFormat format = new CurrencyFormat(2, "[$¥-zh-CN]", true);
+            CurrencyFormat format = new CurrencyFormat(2, true, "[$¥-zh-CN]");
             VisualEditor.NumberFormat = format.ToString(VisualEditor.Document.Defaults.FormattingProperties);
             UpdateUI();
         }
@@ -212,7 +212,7 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void russianToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CurrencyFormat format = new CurrencyFormat(2, "\\ [$₽-ru-RU]", false);
+            CurrencyFormat format = new CurrencyFormat(2, false, "\\ [$₽-ru-RU]");
             VisualEditor.NumberFormat = format.ToString(VisualEditor.Document.Defaults.FormattingProperties);
             UpdateUI();
         }
@@ -222,7 +222,7 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void englishIndiaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CurrencyFormat format = new CurrencyFormat(2, "[$₹-en-IN]\\ ", true);
+            CurrencyFormat format = new CurrencyFormat(2, true, "[$₹-en-IN]\\ ");
             VisualEditor.NumberFormat = format.ToString(VisualEditor.Document.Defaults.FormattingProperties);
             UpdateUI();
         }

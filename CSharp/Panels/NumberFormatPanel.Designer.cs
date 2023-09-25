@@ -1,4 +1,4 @@
-﻿
+
 namespace SpreadsheetEditorDemo
 {
     partial class NumberFormatPanel

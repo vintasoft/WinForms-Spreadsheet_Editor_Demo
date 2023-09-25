@@ -141,11 +141,11 @@
   <data name="hypelinkSplitButton.ToolTipText" xml:space="preserve">
     <value>Add Hyperlink...</value>
   </data>
-  <data name="removePictureToolStripMenuItem.Text" xml:space="preserve">
-    <value>Remove Picture</value>
-  </data>
   <data name="picturePropertiesToolStripMenuItem.Text" xml:space="preserve">
     <value>Properties...</value>
+  </data>
+  <data name="removePictureToolStripMenuItem.Text" xml:space="preserve">
+    <value>Remove Picture</value>
   </data>
   <data name="setPictureToolStripMenuItem.Text" xml:space="preserve">
     <value>Set Picture...</value>
@@ -155,6 +155,21 @@
   </data>
   <data name="pictureButton.Text" xml:space="preserve">
     <value>Picture</value>
+  </data>
+  <data name="chartPropertiesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Properties...</value>
+  </data>
+  <data name="selectChartValuesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Select Chart Values</value>
+  </data>
+  <data name="switchRowColumnToolStripMenuItem.Text" xml:space="preserve">
+    <value>Switch Rows/Columns</value>
+  </data>
+  <data name="removeChartToolStripMenuItem.Text" xml:space="preserve">
+    <value>Remove Chart</value>
+  </data>
+  <data name="insertChartToolStripMenuItem.Text" xml:space="preserve">
+    <value>Add Chart...</value>
   </data>
   <data name="fillLeftToolStripMenuItem.Text" xml:space="preserve">
     <value>Left</value>

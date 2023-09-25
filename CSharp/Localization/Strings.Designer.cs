@@ -452,6 +452,96 @@ namespace SpreadsheetEditorDemo.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 100% Stacked Area.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_100_STACKED_AREA {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_100_STACKED_AREA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 100% Stacked Bar.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_100_STACKED_BAR {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_100_STACKED_BAR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 100% Stacked Column.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_100_STACKED_COLUMN {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_100_STACKED_COLUMN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 100% Stacked Curved Line.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_100_STACKED_CURVED_LINE {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_100_STACKED_CURVED_LINE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 100% Stacked Curved Line With Markers.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_100_STACKED_CURVED_LINE_WITH_MARKERS {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_100_STACKED_CURVED_LINE_WITH_MARKERS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 100% Stacked Line.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_100_STACKED_LINE {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_100_STACKED_LINE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 100% Stacked Line With Markers.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_100_STACKED_LINE_WITH_MARKERS {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_100_STACKED_LINE_WITH_MARKERS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3D 100% Stacked Column.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_3D_100_STACKED_COLUMN {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_3D_100_STACKED_COLUMN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3D Clustered Column.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_3D_CLUSTERED_COLUMN {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_3D_CLUSTERED_COLUMN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3D Stacked Column.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_3D_STACKED_COLUMN {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_3D_STACKED_COLUMN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to A cell reference cannot be evaluated..
         /// </summary>
         internal static string SPREADSHEETEDITORDEMO_A_CELL_REFERENCE_CANNOT_BE_EVALUATED {
@@ -534,6 +624,42 @@ namespace SpreadsheetEditorDemo.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to All.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_ALL {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_ALL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_ALL_ALT1 {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_ALL_ALT1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_ALL_ALT2 {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_ALL_ALT2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_ALL_ALT3 {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_ALL_ALT3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to All checkboxes cannot be disabled..
         /// </summary>
         internal static string SPREADSHEETEDITORDEMO_ALL_CHECKBOXES_CANNOT_BE_DISABLED {
@@ -573,6 +699,24 @@ namespace SpreadsheetEditorDemo.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Area.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_AREA {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_AREA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Area.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_AREA_ALT1 {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_AREA_ALT1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {0} cells found..
         /// </summary>
         internal static string SPREADSHEETEDITORDEMO_ARG0_CELLS_FOUND {
@@ -596,6 +740,15 @@ namespace SpreadsheetEditorDemo.Localization {
         internal static string SPREADSHEETEDITORDEMO_ARG0_REQUIRES_AN_INTEGER_OR_DECIMAL_NUMBER {
             get {
                 return ResourceManager.GetString("SPREADSHEETEDITORDEMO_ARG0_REQUIRES_AN_INTEGER_OR_DECIMAL_NUMBER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bar.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_BAR {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_BAR", resourceCulture);
             }
         }
         
@@ -726,6 +879,42 @@ namespace SpreadsheetEditorDemo.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Chart ({0}).
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_CHART_ARG0 {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_CHART_ARG0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clustered Bar.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_CLUSTERED_BAR {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_CLUSTERED_BAR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clustered Column.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_CLUSTERED_COLUMN {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_CLUSTERED_COLUMN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Column.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_COLUMN {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_COLUMN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Column width.
         /// </summary>
         internal static string SPREADSHEETEDITORDEMO_COLUMN_WIDTH {
@@ -785,6 +974,24 @@ namespace SpreadsheetEditorDemo.Localization {
         internal static string SPREADSHEETEDITORDEMO_CURRENT_WORKBOOK_IS_CHANGED_DO_YOU_WANT_TO_SAVE_CHANGES {
             get {
                 return ResourceManager.GetString("SPREADSHEETEDITORDEMO_CURRENT_WORKBOOK_IS_CHANGED_DO_YOU_WANT_TO_SAVE_CHANGES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Curved Line.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_CURVED_LINE {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_CURVED_LINE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Curved Line With Markers.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_CURVED_LINE_WITH_MARKERS {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_CURVED_LINE_WITH_MARKERS", resourceCulture);
             }
         }
         
@@ -970,6 +1177,24 @@ namespace SpreadsheetEditorDemo.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Data point appearance.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_DATA_POINT_APPEARANCE {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_DATA_POINT_APPEARANCE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Data Point {0}.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_DATA_POINT_ARG0 {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_DATA_POINT_ARG0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Date.
         /// </summary>
         internal static string SPREADSHEETEDITORDEMO_DATE {
@@ -1011,6 +1236,15 @@ namespace SpreadsheetEditorDemo.Localization {
         internal static string SPREADSHEETEDITORDEMO_DEFINED_NAME_IS_NOT_SELECTED {
             get {
                 return ResourceManager.GetString("SPREADSHEETEDITORDEMO_DEFINED_NAME_IS_NOT_SELECTED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Doughnut.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_DOUGHNUT {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_DOUGHNUT", resourceCulture);
             }
         }
         
@@ -1141,6 +1375,15 @@ namespace SpreadsheetEditorDemo.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Insert Chart.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_INSERT_CHART {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_INSERT_CHART", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Italic.
         /// </summary>
         internal static string SPREADSHEETEDITORDEMO_ITALIC {
@@ -1182,6 +1425,15 @@ namespace SpreadsheetEditorDemo.Localization {
         internal static string SPREADSHEETEDITORDEMO_ITALIC_ALT4 {
             get {
                 return ResourceManager.GetString("SPREADSHEETEDITORDEMO_ITALIC_ALT4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Line With Markers.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_LINE_WITH_MARKERS {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_LINE_WITH_MARKERS", resourceCulture);
             }
         }
         
@@ -1282,6 +1534,33 @@ namespace SpreadsheetEditorDemo.Localization {
         internal static string SPREADSHEETEDITORDEMO_PERCENTAGE_ALT1 {
             get {
                 return ResourceManager.GetString("SPREADSHEETEDITORDEMO_PERCENTAGE_ALT1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pie.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_PIE {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_PIE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pie.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_PIE_ALT1 {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_PIE_ALT1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pie (Explosion).
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_PIE_EXPLOSION {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_PIE_EXPLOSION", resourceCulture);
             }
         }
         
@@ -1466,6 +1745,87 @@ namespace SpreadsheetEditorDemo.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Series appearance.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_SERIES_APPEARANCE {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_SERIES_APPEARANCE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Series {0}.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_SERIES_ARG0 {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_SERIES_ARG0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stacked Area.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_STACKED_AREA {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_STACKED_AREA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stacked Bar.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_STACKED_BAR {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_STACKED_BAR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stacked Column.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_STACKED_COLUMN {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_STACKED_COLUMN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stacked Curved Line.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_STACKED_CURVED_LINE {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_STACKED_CURVED_LINE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stacked Curved Line With Markers.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_STACKED_CURVED_LINE_WITH_MARKERS {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_STACKED_CURVED_LINE_WITH_MARKERS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stacked Line.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_STACKED_LINE {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_STACKED_LINE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stacked Line With Markers.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_STACKED_LINE_WITH_MARKERS {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_STACKED_LINE_WITH_MARKERS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Text &apos;{0}&apos; is not found..
         /// </summary>
         internal static string SPREADSHEETEDITORDEMO_TEXT_ARG0_IS_NOT_FOUND {
@@ -1498,15 +1858,6 @@ namespace SpreadsheetEditorDemo.Localization {
         internal static string SPREADSHEETEDITORDEMO_THE_DRAWING_NAME_CANNOT_BE_EMPTY {
             get {
                 return ResourceManager.GetString("SPREADSHEETEDITORDEMO_THE_DRAWING_NAME_CANNOT_BE_EMPTY", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The drawing with &apos;{0}&apos; exists already..
-        /// </summary>
-        internal static string SPREADSHEETEDITORDEMO_THE_DRAWING_WITH_ARG0_EXISTS_ALREADY {
-            get {
-                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_THE_DRAWING_WITH_ARG0_EXISTS_ALREADY", resourceCulture);
             }
         }
         

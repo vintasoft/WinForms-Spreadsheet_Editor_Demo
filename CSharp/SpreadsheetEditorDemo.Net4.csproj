@@ -238,6 +238,12 @@
     <Compile Include="CustomControls\CellReferencesAppearanceEditorControl.Designer.cs">
       <DependentUpon>CellReferencesAppearanceEditorControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomControls\ShapeAppearanceEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\ShapeAppearanceEditorControl.Designer.cs">
+      <DependentUpon>ShapeAppearanceEditorControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomControls\FontPropertiesEditorControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -269,6 +275,8 @@
     <Compile Include="Dialogs\CellsStyleForm.Designer.cs">
       <DependentUpon>CellsStyleForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dialogs\Charts\ChartSubtypeItem.cs" />
+    <Compile Include="Dialogs\Charts\ChartTypeItem.cs" />
     <Compile Include="Dialogs\Comments\EditCommentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -304,6 +312,12 @@
     </Compile>
     <Compile Include="Dialogs\Hyperlinks\EditHyperlinkForm.Designer.cs">
       <DependentUpon>EditHyperlinkForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Charts\InsertChartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Charts\InsertChartForm.Designer.cs">
+      <DependentUpon>InsertChartForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Dialogs\NumberValueEditorForm.cs">
       <SubType>Form</SubType>
@@ -499,11 +513,17 @@
     <EmbeddedResource Include="CustomControls\CellReferencesAppearanceEditorControl.de.resx">
       <DependentUpon>CellReferencesAppearanceEditorControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\CellReferencesAppearanceEditorControl.resx">
+      <DependentUpon>CellReferencesAppearanceEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\ColorPickerControl\ColorPickerControl.de.resx">
       <DependentUpon>ColorPickerControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\FontPropertiesEditorControl.de.resx">
       <DependentUpon>FontPropertiesEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\ShapeAppearanceEditorControl.de.resx">
+      <DependentUpon>ShapeAppearanceEditorControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\SheetDrawingLocationEditorControl.de.resx">
       <DependentUpon>SheetDrawingLocationEditorControl.cs</DependentUpon>
@@ -552,6 +572,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\CellsStyleForm.de.resx">
       <DependentUpon>CellsStyleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Charts\InsertChartForm.de.resx">
+      <DependentUpon>InsertChartForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\Comments\EditCommentForm.de.resx">
       <DependentUpon>EditCommentForm.cs</DependentUpon>
@@ -648,6 +671,7 @@
     <EmbeddedResource Include="Panels\UndoPanel.de.resx">
       <DependentUpon>UndoPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ChartSource.xlsx" />
     <None Include="Resources\ClearAll.png" />
     <None Include="Resources\ClearAllBig.png" />
     <None Include="Resources\ClearContents.png" />
@@ -658,6 +682,7 @@
     <Content Include="Resources\Borders_TopBottomDouble.png" />
     <Content Include="Resources\Borders_TopBottomThick.png" />
     <Content Include="Resources\Borders_Vertical.png" />
+    <Content Include="Resources\ChartBig.png" />
     <Content Include="Resources\Close.png" />
     <None Include="Resources\Copy.png" />
     <None Include="Resources\Cut.png" />
@@ -794,8 +819,8 @@
     <EmbeddedResource Include="DemosCommonCode.Imaging\DocumentPasswordForm.resx">
       <DependentUpon>DocumentPasswordForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CustomControls\CellReferencesAppearanceEditorControl.resx">
-      <DependentUpon>CellReferencesAppearanceEditorControl.cs</DependentUpon>
+    <EmbeddedResource Include="CustomControls\ShapeAppearanceEditorControl.resx">
+      <DependentUpon>ShapeAppearanceEditorControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\FontPropertiesEditorControl.resx">
       <DependentUpon>FontPropertiesEditorControl.cs</DependentUpon>
@@ -830,6 +855,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\Hyperlinks\EditHyperlinkForm.resx">
       <DependentUpon>EditHyperlinkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Charts\InsertChartForm.resx">
+      <DependentUpon>InsertChartForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\NumberValueEditorForm.resx">
       <DependentUpon>NumberValueEditorForm.cs</DependentUpon>

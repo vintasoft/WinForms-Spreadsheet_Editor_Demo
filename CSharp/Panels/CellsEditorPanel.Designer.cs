@@ -31,9 +31,6 @@ namespace SpreadsheetEditorDemo
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CellsEditorPanel));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.openWorksheetFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.saveWorksheetFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this.exportFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.insertButton = new System.Windows.Forms.ToolStripSplitButton();
             this.insertRowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.insertColumnsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -77,15 +74,26 @@ namespace SpreadsheetEditorDemo
             this.fillRightToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fillUpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fillLeftToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chartToolStripSplitButton = new System.Windows.Forms.ToolStripSplitButton();
+            this.insertChartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeChartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.switchRowColumnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.selectChartValuesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chartPropertiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureButton = new System.Windows.Forms.ToolStripSplitButton();
             this.addPictureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setPictureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.picturePropertiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removePictureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.picturePropertiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hypelinkSplitButton = new System.Windows.Forms.ToolStripSplitButton();
             this.addHyperlinkMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editHyperlinkMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeHyperlinkMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openWorksheetFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.saveWorksheetFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.exportFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -101,23 +109,15 @@ namespace SpreadsheetEditorDemo
             this.mergeMenuButton,
             this.clearButton,
             this.fillButton,
+            this.chartToolStripSplitButton,
             this.pictureButton,
             this.hypelinkSplitButton});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0);
-            this.toolStrip1.Size = new System.Drawing.Size(513, 53);
+            this.toolStrip1.Size = new System.Drawing.Size(573, 53);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // openWorksheetFileDialog
-            // 
-            this.openWorksheetFileDialog.Filter = "XLSX files|*.xlsx|XLS files|*.xls|All supported Workbooks|*.xlsx;*.xls";
-            this.openWorksheetFileDialog.FilterIndex = 3;
-            // 
-            // saveWorksheetFileDialog
-            // 
-            this.saveWorksheetFileDialog.Filter = "XLSX files|*.xlsx";
             // 
             // insertButton
             // 
@@ -143,7 +143,7 @@ namespace SpreadsheetEditorDemo
             this.insertRowsToolStripMenuItem.Image = global::SpreadsheetEditorDemo.Properties.Resources.InsertRows;
             this.insertRowsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.insertRowsToolStripMenuItem.Name = "insertRowsToolStripMenuItem";
-            this.insertRowsToolStripMenuItem.Size = new System.Drawing.Size(182, 24);
+            this.insertRowsToolStripMenuItem.Size = new System.Drawing.Size(156, 24);
             resources.ApplyResources(this.insertRowsToolStripMenuItem, "insertRowsToolStripMenuItem");
             this.insertRowsToolStripMenuItem.Click += new System.EventHandler(this.insertRowsToolStripMenuItem_Click);
             // 
@@ -152,7 +152,7 @@ namespace SpreadsheetEditorDemo
             this.insertColumnsToolStripMenuItem.Image = global::SpreadsheetEditorDemo.Properties.Resources.InsertColumns;
             this.insertColumnsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.insertColumnsToolStripMenuItem.Name = "insertColumnsToolStripMenuItem";
-            this.insertColumnsToolStripMenuItem.Size = new System.Drawing.Size(182, 24);
+            this.insertColumnsToolStripMenuItem.Size = new System.Drawing.Size(156, 24);
             resources.ApplyResources(this.insertColumnsToolStripMenuItem, "insertColumnsToolStripMenuItem");
             this.insertColumnsToolStripMenuItem.Click += new System.EventHandler(this.insertColumnsToolStripMenuItem_Click);
             // 
@@ -164,7 +164,7 @@ namespace SpreadsheetEditorDemo
             this.insertCellsToolStripMenuItem.Image = global::SpreadsheetEditorDemo.Properties.Resources.InsertCells;
             this.insertCellsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.insertCellsToolStripMenuItem.Name = "insertCellsToolStripMenuItem";
-            this.insertCellsToolStripMenuItem.Size = new System.Drawing.Size(182, 24);
+            this.insertCellsToolStripMenuItem.Size = new System.Drawing.Size(156, 24);
             resources.ApplyResources(this.insertCellsToolStripMenuItem, "insertCellsToolStripMenuItem");
             // 
             // insertCellsShiftRightToolStripMenuItem
@@ -209,7 +209,7 @@ namespace SpreadsheetEditorDemo
             this.deleteRowsToolStripMenuItem.Image = global::SpreadsheetEditorDemo.Properties.Resources.DeleteRows;
             this.deleteRowsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.deleteRowsToolStripMenuItem.Name = "deleteRowsToolStripMenuItem";
-            this.deleteRowsToolStripMenuItem.Size = new System.Drawing.Size(182, 24);
+            this.deleteRowsToolStripMenuItem.Size = new System.Drawing.Size(160, 24);
             resources.ApplyResources(this.deleteRowsToolStripMenuItem, "deleteRowsToolStripMenuItem");
             this.deleteRowsToolStripMenuItem.Click += new System.EventHandler(this.deleteRowsToolStripMenuItem_Click);
             // 
@@ -218,7 +218,7 @@ namespace SpreadsheetEditorDemo
             this.deleteColumnsToolStripMenuItem.Image = global::SpreadsheetEditorDemo.Properties.Resources.DeleteColumns;
             this.deleteColumnsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.deleteColumnsToolStripMenuItem.Name = "deleteColumnsToolStripMenuItem";
-            this.deleteColumnsToolStripMenuItem.Size = new System.Drawing.Size(182, 24);
+            this.deleteColumnsToolStripMenuItem.Size = new System.Drawing.Size(160, 24);
             resources.ApplyResources(this.deleteColumnsToolStripMenuItem, "deleteColumnsToolStripMenuItem");
             this.deleteColumnsToolStripMenuItem.Click += new System.EventHandler(this.deleteColumnsToolStripMenuItem_Click);
             // 
@@ -230,7 +230,7 @@ namespace SpreadsheetEditorDemo
             this.deleteCellsToolStripMenuItem.Image = global::SpreadsheetEditorDemo.Properties.Resources.DeleteCells;
             this.deleteCellsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.deleteCellsToolStripMenuItem.Name = "deleteCellsToolStripMenuItem";
-            this.deleteCellsToolStripMenuItem.Size = new System.Drawing.Size(182, 24);
+            this.deleteCellsToolStripMenuItem.Size = new System.Drawing.Size(160, 24);
             resources.ApplyResources(this.deleteCellsToolStripMenuItem, "deleteCellsToolStripMenuItem");
             // 
             // deleteCellsShiftLeftToolStripMenuItem
@@ -559,14 +559,76 @@ namespace SpreadsheetEditorDemo
             resources.ApplyResources(this.fillLeftToolStripMenuItem, "fillLeftToolStripMenuItem");
             this.fillLeftToolStripMenuItem.Click += new System.EventHandler(this.fillLeftToolStripMenuItem_Click);
             // 
+            // chartToolStripSplitButton
+            // 
+            this.chartToolStripSplitButton.AutoSize = false;
+            this.chartToolStripSplitButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.insertChartToolStripMenuItem,
+            this.removeChartToolStripMenuItem,
+            this.switchRowColumnToolStripMenuItem,
+            this.toolStripSeparator3,
+            this.selectChartValuesToolStripMenuItem,
+            this.chartPropertiesToolStripMenuItem});
+            this.chartToolStripSplitButton.Image = global::SpreadsheetEditorDemo.Properties.Resources.ChartBig;
+            this.chartToolStripSplitButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.chartToolStripSplitButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.chartToolStripSplitButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.chartToolStripSplitButton.Name = "chartToolStripSplitButton";
+            this.chartToolStripSplitButton.Size = new System.Drawing.Size(60, 50);
+            this.chartToolStripSplitButton.Text = "Chart";
+            this.chartToolStripSplitButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.chartToolStripSplitButton.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
+            this.chartToolStripSplitButton.ButtonClick += new System.EventHandler(this.chartToolStripSplitButton_ButtonClick);
+            // 
+            // insertChartToolStripMenuItem
+            // 
+            this.insertChartToolStripMenuItem.Name = "insertChartToolStripMenuItem";
+            this.insertChartToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            resources.ApplyResources(this.insertChartToolStripMenuItem, "insertChartToolStripMenuItem");
+            this.insertChartToolStripMenuItem.Click += new System.EventHandler(this.addChartToolStripMenuItem_Click);
+            // 
+            // removeChartToolStripMenuItem
+            // 
+            this.removeChartToolStripMenuItem.Name = "removeChartToolStripMenuItem";
+            this.removeChartToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            resources.ApplyResources(this.removeChartToolStripMenuItem, "removeChartToolStripMenuItem");
+            this.removeChartToolStripMenuItem.Click += new System.EventHandler(this.removeChartToolStripMenuItem_Click);
+            // 
+            // switchRowColumnToolStripMenuItem
+            // 
+            this.switchRowColumnToolStripMenuItem.Name = "switchRowColumnToolStripMenuItem";
+            this.switchRowColumnToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            resources.ApplyResources(this.switchRowColumnToolStripMenuItem, "switchRowColumnToolStripMenuItem");
+            this.switchRowColumnToolStripMenuItem.Click += new System.EventHandler(this.switchRowColumnToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(190, 6);
+            // 
+            // selectChartValuesToolStripMenuItem
+            // 
+            this.selectChartValuesToolStripMenuItem.Name = "selectChartValuesToolStripMenuItem";
+            this.selectChartValuesToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            resources.ApplyResources(this.selectChartValuesToolStripMenuItem, "selectChartValuesToolStripMenuItem");
+            this.selectChartValuesToolStripMenuItem.Click += new System.EventHandler(this.selectChartValuesToolStripMenuItem_Click);
+            // 
+            // chartPropertiesToolStripMenuItem
+            // 
+            this.chartPropertiesToolStripMenuItem.Name = "chartPropertiesToolStripMenuItem";
+            this.chartPropertiesToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            resources.ApplyResources(this.chartPropertiesToolStripMenuItem, "chartPropertiesToolStripMenuItem");
+            this.chartPropertiesToolStripMenuItem.Click += new System.EventHandler(this.chartPropertiesToolStripMenuItem_Click);
+            // 
             // pictureButton
             // 
             this.pictureButton.AutoSize = false;
             this.pictureButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addPictureToolStripMenuItem,
             this.setPictureToolStripMenuItem,
-            this.picturePropertiesToolStripMenuItem,
-            this.removePictureToolStripMenuItem});
+            this.removePictureToolStripMenuItem,
+            this.toolStripSeparator4,
+            this.picturePropertiesToolStripMenuItem});
             this.pictureButton.Image = global::SpreadsheetEditorDemo.Properties.Resources.Image;
             this.pictureButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.pictureButton.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -582,30 +644,35 @@ namespace SpreadsheetEditorDemo
             // addPictureToolStripMenuItem
             // 
             this.addPictureToolStripMenuItem.Name = "addPictureToolStripMenuItem";
-            this.addPictureToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.addPictureToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             resources.ApplyResources(this.addPictureToolStripMenuItem, "addPictureToolStripMenuItem");
             this.addPictureToolStripMenuItem.Click += new System.EventHandler(this.addPictureToolStripMenuItem_Click);
             // 
             // setPictureToolStripMenuItem
             // 
             this.setPictureToolStripMenuItem.Name = "setPictureToolStripMenuItem";
-            this.setPictureToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.setPictureToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             resources.ApplyResources(this.setPictureToolStripMenuItem, "setPictureToolStripMenuItem");
             this.setPictureToolStripMenuItem.Click += new System.EventHandler(this.setPictureToolStripMenuItem_Click);
-            // 
-            // picturePropertiesToolStripMenuItem
-            // 
-            this.picturePropertiesToolStripMenuItem.Name = "picturePropertiesToolStripMenuItem";
-            this.picturePropertiesToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
-            resources.ApplyResources(this.picturePropertiesToolStripMenuItem, "picturePropertiesToolStripMenuItem");
-            this.picturePropertiesToolStripMenuItem.Click += new System.EventHandler(this.picturePropertiesToolStripMenuItem_Click);
             // 
             // removePictureToolStripMenuItem
             // 
             this.removePictureToolStripMenuItem.Name = "removePictureToolStripMenuItem";
-            this.removePictureToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.removePictureToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             resources.ApplyResources(this.removePictureToolStripMenuItem, "removePictureToolStripMenuItem");
             this.removePictureToolStripMenuItem.Click += new System.EventHandler(this.removePictureToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(177, 6);
+            // 
+            // picturePropertiesToolStripMenuItem
+            // 
+            this.picturePropertiesToolStripMenuItem.Name = "picturePropertiesToolStripMenuItem";
+            this.picturePropertiesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            resources.ApplyResources(this.picturePropertiesToolStripMenuItem, "picturePropertiesToolStripMenuItem");
+            this.picturePropertiesToolStripMenuItem.Click += new System.EventHandler(this.picturePropertiesToolStripMenuItem_Click);
             // 
             // hypelinkSplitButton
             // 
@@ -650,6 +717,15 @@ namespace SpreadsheetEditorDemo
             resources.ApplyResources(this.removeHyperlinkMenuItem, "removeHyperlinkMenuItem");
             this.removeHyperlinkMenuItem.Click += new System.EventHandler(this.removeHyperlinkMenuItem_Click);
             // 
+            // openWorksheetFileDialog
+            // 
+            this.openWorksheetFileDialog.Filter = "XLSX files|*.xlsx|XLS files|*.xls|All supported Workbooks|*.xlsx;*.xls";
+            this.openWorksheetFileDialog.FilterIndex = 3;
+            // 
+            // saveWorksheetFileDialog
+            // 
+            this.saveWorksheetFileDialog.Filter = "XLSX files|*.xlsx";
+            // 
             // CellsEditorPanel
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -657,7 +733,7 @@ namespace SpreadsheetEditorDemo
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Controls.Add(this.toolStrip1);
             this.Name = "CellsEditorPanel";
-            this.Size = new System.Drawing.Size(513, 53);
+            this.Size = new System.Drawing.Size(573, 53);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -723,5 +799,13 @@ namespace SpreadsheetEditorDemo
         private System.Windows.Forms.ToolStripMenuItem picturePropertiesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removePictureToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem calculateRowAutoHeightToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSplitButton chartToolStripSplitButton;
+        private System.Windows.Forms.ToolStripMenuItem insertChartToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem chartPropertiesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem removeChartToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem selectChartValuesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem switchRowColumnToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
     }
 }

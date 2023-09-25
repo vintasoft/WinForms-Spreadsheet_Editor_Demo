@@ -38,9 +38,9 @@ namespace SpreadsheetEditorDemo
         Dictionary<CellStyleProperty, object> _changedProperties = new Dictionary<CellStyleProperty, object>();
 
         /// <summary>
-        /// Current cells borders.
+        /// The preview manager for cell borders.
         /// </summary>
-        CellsBorders _currentBorders;
+        CellBordersPreviewManager _bordersPreview;
 
         /// <summary>
         /// Current number format.
@@ -155,6 +155,21 @@ namespace SpreadsheetEditorDemo
                     return _visualEditor.Document.Defaults.FormattingProperties;
 
                 return null;
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets current cells borders.
+        /// </summary>
+        public CellsBorders CurrentBorders
+        {
+            get
+            {
+                return _bordersPreview.Borders;
+            }
+            set
+            {
+                _bordersPreview.Borders = value;
             }
         }
 
@@ -318,8 +333,8 @@ namespace SpreadsheetEditorDemo
                 // create currency format
                 format = new CurrencyFormat(
                     (int)currencyDecimalPlacesNumericUpDown.Value,
-                    currencyFormat.CurrencySymbolFormat,
-                    currencyFormat.IsCurrencySymbolBeforeValue);
+                    currencyFormat.IsCurrencySymbolBeforeValue,
+                    currencyFormat.CurrencySymbolFormat);
             }
             else if (formatCategoriesTabControl.SelectedTab == dateTabPage)
             {
@@ -463,8 +478,10 @@ namespace SpreadsheetEditorDemo
             // get currency symbol format
             CurrencyFormat currencyFormat = _currencyFormatNameToFormat[currencySymbolComboBox.SelectedItem.ToString()];
 
-            ((CurrencyFormat)_currentFormat).CurrencySymbolFormat = currencyFormat.CurrencySymbolFormat;
-            ((CurrencyFormat)_currentFormat).IsCurrencySymbolBeforeValue = currencyFormat.IsCurrencySymbolBeforeValue;
+            CurrencyFormat currentCurrencyFormat = _currentFormat as CurrencyFormat;
+            // create format with new currency symbol
+            _currentFormat = new CurrencyFormat(currentCurrencyFormat.DecimalPlaces, currencyFormat.IsCurrencySymbolBeforeValue, currencyFormat.CurrencySymbolFormat);
+
             // save changes about number format
             _changedProperties[CellStyleProperty.NumberFormat] = _currentFormat.ToString(FormattingProperties);
         }
@@ -1198,7 +1215,6 @@ namespace SpreadsheetEditorDemo
             }
         }
 
-
         /// <summary>
         /// Initializes the UI with border properties.
         /// </summary>
@@ -1209,81 +1225,19 @@ namespace SpreadsheetEditorDemo
             lineStylesListBox.SelectedIndex = 6;
             lineColorPanelControl.Color = Color.Black;
 
-            // init borders preview control
-            bordersPreviewControl.VisualEditor.Editor = new SpreadsheetEditor();
+            // init the borders preview control
             bordersPreviewControl.AutoScroll = false;
             bordersPreviewControl.Enabled = false;
+            
+             // create the preview manager for cell borders
+            _bordersPreview = new CellBordersPreviewManager(bordersPreviewControl.VisualEditor, selectedCells);
+            // set borders to border preview
+            CurrentBorders = _visualEditor.CellsBorders;
 
-            SpreadsheetVisualEditor visualEditor = bordersPreviewControl.VisualEditor;
-
-            visualEditor.ShowHeadings = false;
-            visualEditor.FocusedCellsAppearance = null;
-            visualEditor.SelectedCellColor = VintasoftColor.Empty;
-            visualEditor.CanTransformFocusedFormula = false;
-            visualEditor.CanTransfromChart = false;
-            visualEditor.CanTransfromComment = false;
-            visualEditor.CanTransfromFocusedCells = false;
-            visualEditor.CanTransfromPicture = false;
-            visualEditor.CanTransfromShape = false;
-
-            bool hasRows = false;
-            bool hasColumns = false;
-
-            // identify selection type
-            foreach (CellReferences cellReferences in selectedCells)
-            {
-                if (cellReferences.RowCount > 1)
-                    hasRows = true;
-                if (cellReferences.ColumnCount > 1)
-                    hasColumns = true;
-            }
-
-            const int borderPreviewPadding = 15;
-
-            Size previewCellsArea = new Size(
-                bordersPreviewControl.Width - borderPreviewPadding,
-                bordersPreviewControl.Height - borderPreviewPadding);
-
-            // if multiple rows and columns are selected
-            if (hasRows && hasColumns)
-            {
-                visualEditor.SetFocusedAndSelectedCells(new CellReferences(1, 1, 2, 2));
-                visualEditor.ColumnsWidth = previewCellsArea.Width / 2;
-                visualEditor.RowsHeight = previewCellsArea.Height / 2;
-            }
-            // if multiple rows are selected
-            else if (hasRows)
-            {
-                visualEditor.SetFocusedAndSelectedCells(new CellReferences(1, 1, 1, 2));
-                visualEditor.ColumnsWidth = previewCellsArea.Width;
-                visualEditor.RowsHeight = previewCellsArea.Height / 2;
-                verticalBorderButton.Enabled = false;
-            }
-            // if multiple columns are selected
-            else if (hasColumns)
-            {
-                visualEditor.SetFocusedAndSelectedCells(new CellReferences(1, 1, 2, 1));
-                visualEditor.ColumnsWidth = previewCellsArea.Width / 2;
-                visualEditor.RowsHeight = previewCellsArea.Height;
-                horizontalBorderButton.Enabled = false;
-            }
-            // if one cell is selected
-            else
-            {
-                visualEditor.SetFocusedAndSelectedCells(new CellReferences(1, 1, 1, 1));
-                visualEditor.ColumnsWidth = previewCellsArea.Width;
-                visualEditor.RowsHeight = previewCellsArea.Height;
-                verticalBorderButton.Enabled = false;
-                horizontalBorderButton.Enabled = false;
-                insideBorderPresetButton.Enabled = false;
-            }
-
-            VintasoftSize a1Size = visualEditor.FocusedWorksheet.GetCellSize(new CellReference(0, 0));
-
-            visualEditor.ScrollPosition = new VintasoftPoint(a1Size.Width - borderPreviewPadding / 2, a1Size.Height - borderPreviewPadding / 2);
-
-            _currentBorders = _visualEditor.CellsBorders;
-            bordersPreviewControl.VisualEditor.CellsBorders = _currentBorders;
+            // update border buttons
+            verticalBorderButton.Enabled = _bordersPreview.CanEditVerticalBorder;
+            horizontalBorderButton.Enabled = _bordersPreview.CanEditHorizontalBorder;
+            insideBorderPresetButton.Enabled = _bordersPreview.CanEditVerticalBorder || _bordersPreview.CanEditHorizontalBorder;
         }
 
         /// <summary>
@@ -1291,10 +1245,8 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void noneBorderPresetButton_Click(object sender, EventArgs e)
         {
-            _currentBorders = new CellsBorders(new CellBorders(CellBorder.Invisible), CellBorder.Invisible, CellBorder.Invisible);
-            _changedProperties[CellStyleProperty.Borders] = _currentBorders;
-
-            bordersPreviewControl.VisualEditor.CellsBorders = _currentBorders;
+            CurrentBorders = new CellsBorders(new CellBorders(CellBorder.Invisible), CellBorder.Invisible, CellBorder.Invisible);
+            _changedProperties[CellStyleProperty.Borders] = CurrentBorders;
         }
 
         /// <summary>
@@ -1303,10 +1255,8 @@ namespace SpreadsheetEditorDemo
         private void outlineBorderPresetButton_Click(object sender, EventArgs e)
         {
             CellBorder border = GetSelectedBorder();
-            _currentBorders = new CellsBorders(new CellBorders(border), _currentBorders.HorizontalBorder, _currentBorders.VerticalBorder);
-            _changedProperties[CellStyleProperty.Borders] = _currentBorders;
-
-            bordersPreviewControl.VisualEditor.CellsBorders = _currentBorders;
+            CurrentBorders = new CellsBorders(new CellBorders(border), CurrentBorders.HorizontalBorder, CurrentBorders.VerticalBorder);
+            _changedProperties[CellStyleProperty.Borders] = CurrentBorders;
         }
 
         /// <summary>
@@ -1315,10 +1265,8 @@ namespace SpreadsheetEditorDemo
         private void insideBorderPresetButton_Click(object sender, EventArgs e)
         {
             CellBorder border = GetSelectedBorder();
-            _currentBorders = new CellsBorders(_currentBorders.OutsideBorders, border, border);
-            _changedProperties[CellStyleProperty.Borders] = _currentBorders;
-
-            bordersPreviewControl.VisualEditor.CellsBorders = _currentBorders;
+            CurrentBorders = new CellsBorders(CurrentBorders.OutsideBorders, border, border);
+            _changedProperties[CellStyleProperty.Borders] = CurrentBorders;
         }
 
         /// <summary>
@@ -1328,19 +1276,17 @@ namespace SpreadsheetEditorDemo
         {
             CellBorder border = GetSelectedBorder();
 
-            if (Equals(_currentBorders.OutsideBorders.Top, border))
+            if (Equals(CurrentBorders.OutsideBorders.Top, border))
                 border = CellBorder.Invisible;
 
             CellBorders borders = new CellBorders(
-                _currentBorders.OutsideBorders.Left,
-                _currentBorders.OutsideBorders.Right,
+                CurrentBorders.OutsideBorders.Left,
+                CurrentBorders.OutsideBorders.Right,
                 border,
-                _currentBorders.OutsideBorders.Bottom);
+                CurrentBorders.OutsideBorders.Bottom);
 
-            _currentBorders = new CellsBorders(borders, _currentBorders.HorizontalBorder, _currentBorders.VerticalBorder);
-            _changedProperties[CellStyleProperty.Borders] = _currentBorders;
-
-            bordersPreviewControl.VisualEditor.CellsBorders = _currentBorders;
+            CurrentBorders = new CellsBorders(borders, CurrentBorders.HorizontalBorder, CurrentBorders.VerticalBorder);
+            _changedProperties[CellStyleProperty.Borders] = CurrentBorders;
         }
 
         /// <summary>
@@ -1350,13 +1296,11 @@ namespace SpreadsheetEditorDemo
         {
             CellBorder border = GetSelectedBorder();
 
-            if (Equals(_currentBorders.HorizontalBorder, border))
+            if (Equals(CurrentBorders.HorizontalBorder, border))
                 border = CellBorder.Invisible;
 
-            _currentBorders = new CellsBorders(_currentBorders.OutsideBorders, border, _currentBorders.VerticalBorder);
-            _changedProperties[CellStyleProperty.Borders] = _currentBorders;
-
-            bordersPreviewControl.VisualEditor.CellsBorders = _currentBorders;
+            CurrentBorders = new CellsBorders(CurrentBorders.OutsideBorders, border, CurrentBorders.VerticalBorder);
+            _changedProperties[CellStyleProperty.Borders] = CurrentBorders;
         }
 
         /// <summary>
@@ -1366,19 +1310,17 @@ namespace SpreadsheetEditorDemo
         {
             CellBorder border = GetSelectedBorder();
 
-            if (Equals(_currentBorders.OutsideBorders.Bottom, border))
+            if (Equals(CurrentBorders.OutsideBorders.Bottom, border))
                 border = CellBorder.Invisible;
 
             CellBorders borders = new CellBorders(
-                _currentBorders.OutsideBorders.Left,
-                _currentBorders.OutsideBorders.Right,
-                _currentBorders.OutsideBorders.Top,
+                CurrentBorders.OutsideBorders.Left,
+                CurrentBorders.OutsideBorders.Right,
+                CurrentBorders.OutsideBorders.Top,
                 border);
 
-            _currentBorders = new CellsBorders(borders, _currentBorders.HorizontalBorder, _currentBorders.VerticalBorder);
-            _changedProperties[CellStyleProperty.Borders] = _currentBorders;
-
-            bordersPreviewControl.VisualEditor.CellsBorders = _currentBorders;
+            CurrentBorders = new CellsBorders(borders, CurrentBorders.HorizontalBorder, CurrentBorders.VerticalBorder);
+            _changedProperties[CellStyleProperty.Borders] = CurrentBorders;
         }
 
         /// <summary>
@@ -1388,19 +1330,17 @@ namespace SpreadsheetEditorDemo
         {
             CellBorder border = GetSelectedBorder();
 
-            if (Equals(_currentBorders.OutsideBorders.Left, border))
+            if (Equals(CurrentBorders.OutsideBorders.Left, border))
                 border = CellBorder.Invisible;
 
             CellBorders borders = new CellBorders(
                 border,
-                _currentBorders.OutsideBorders.Right,
-                _currentBorders.OutsideBorders.Top,
-                _currentBorders.OutsideBorders.Bottom);
+                CurrentBorders.OutsideBorders.Right,
+                CurrentBorders.OutsideBorders.Top,
+                CurrentBorders.OutsideBorders.Bottom);
 
-            _currentBorders = new CellsBorders(borders, _currentBorders.HorizontalBorder, _currentBorders.VerticalBorder);
-            _changedProperties[CellStyleProperty.Borders] = _currentBorders;
-
-            bordersPreviewControl.VisualEditor.CellsBorders = _currentBorders;
+            CurrentBorders = new CellsBorders(borders, CurrentBorders.HorizontalBorder, CurrentBorders.VerticalBorder);
+            _changedProperties[CellStyleProperty.Borders] = CurrentBorders;
         }
 
         /// <summary>
@@ -1410,13 +1350,11 @@ namespace SpreadsheetEditorDemo
         {
             CellBorder border = GetSelectedBorder();
 
-            if (Equals(_currentBorders.VerticalBorder, border))
+            if (Equals(CurrentBorders.VerticalBorder, border))
                 border = CellBorder.Invisible;
 
-            _currentBorders = new CellsBorders(_currentBorders.OutsideBorders, _currentBorders.HorizontalBorder, border);
-            _changedProperties[CellStyleProperty.Borders] = _currentBorders;
-
-            bordersPreviewControl.VisualEditor.CellsBorders = _currentBorders;
+            CurrentBorders = new CellsBorders(CurrentBorders.OutsideBorders, CurrentBorders.HorizontalBorder, border);
+            _changedProperties[CellStyleProperty.Borders] = CurrentBorders;
         }
 
         /// <summary>
@@ -1426,19 +1364,17 @@ namespace SpreadsheetEditorDemo
         {
             CellBorder border = GetSelectedBorder();
 
-            if (Equals(_currentBorders.OutsideBorders.Right, border))
+            if (Equals(CurrentBorders.OutsideBorders.Right, border))
                 border = CellBorder.Invisible;
 
             CellBorders borders = new CellBorders(
-                _currentBorders.OutsideBorders.Left,
+                CurrentBorders.OutsideBorders.Left,
                 border,
-                _currentBorders.OutsideBorders.Top,
-                _currentBorders.OutsideBorders.Bottom);
+                CurrentBorders.OutsideBorders.Top,
+                CurrentBorders.OutsideBorders.Bottom);
 
-            _currentBorders = new CellsBorders(borders, _currentBorders.HorizontalBorder, _currentBorders.VerticalBorder);
-            _changedProperties[CellStyleProperty.Borders] = _currentBorders;
-
-            bordersPreviewControl.VisualEditor.CellsBorders = _currentBorders;
+            CurrentBorders = new CellsBorders(borders, CurrentBorders.HorizontalBorder, CurrentBorders.VerticalBorder);
+            _changedProperties[CellStyleProperty.Borders] = CurrentBorders;
         }
 
         /// <summary>

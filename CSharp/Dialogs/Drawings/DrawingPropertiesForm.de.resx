@@ -120,6 +120,9 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Zeichnungseigenschaften</value>
   </data>
+  <data name="smoothLineCheckBox.Text" xml:space="preserve">
+    <value>Glatte Linie</value>
+  </data>
   <data name="buttonCancel.Text" xml:space="preserve">
     <value>Abbrechen</value>
   </data>
@@ -129,13 +132,46 @@
   <data name="locationAndSizeTabPage.Text" xml:space="preserve">
     <value>Standort und Größe</value>
   </data>
-  <data name="commentLabel.Text" xml:space="preserve">
+  <data name="descriptionLabel.Text" xml:space="preserve">
     <value>Beschreibung:</value>
   </data>
-  <data name="authorLabel.Text" xml:space="preserve">
+  <data name="nameLabel.Text" xml:space="preserve">
     <value>Name:</value>
   </data>
   <data name="commonTabPage.Text" xml:space="preserve">
     <value>Allgemein</value>
+  </data>
+  <data name="titleLabel.Text" xml:space="preserve">
+    <value>Titel</value>
+  </data>
+  <data name="valuesRangeLabel.Text" xml:space="preserve">
+    <value>Werte</value>
+  </data>
+  <data name="nameRangeLabel.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="dataPointAppearanceGroupBox.Text" xml:space="preserve">
+    <value>Aussehen</value>
+  </data>
+  <data name="markerTypeLabel.Text" xml:space="preserve">
+    <value>Markertyp</value>
+  </data>
+  <data name="markerSizeLabel.Text" xml:space="preserve">
+    <value>Markergröße</value>
+  </data>
+  <data name="markerAppearanceGroupBox.Text" xml:space="preserve">
+    <value>Aussehen der Markierung</value>
+  </data>
+  <data name="dataPointGroupBox.Text" xml:space="preserve">
+    <value>Datenpunkt</value>
+  </data>
+  <data name="seriesGroupBox.Text" xml:space="preserve">
+    <value>Legendeneinträge (Serie)</value>
+  </data>
+  <data name="categoriesGroupBox.Text" xml:space="preserve">
+    <value>Kategorieachsenbeschriftungen</value>
+  </data>
+  <data name="dataRangeLabel.Text" xml:space="preserve">
+    <value>Referenzbereich</value>
   </data>
 </root>

@@ -381,6 +381,96 @@
   <data name="SPREADSHEETEDITORDEMO_FONT_SIZE_MUST_BE_AN_INTEGER_OR_DECIMAL_NUMBER" xml:space="preserve">
     <value>Die Schriftgröße muss eine Ganzzahl oder eine Dezimalzahl sein.</value>
   </data>
+  <data name="SPREADSHEETEDITORDEMO_CLUSTERED_COLUMN" xml:space="preserve">
+    <value>Clusterierte Spalte</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_STACKED_COLUMN" xml:space="preserve">
+    <value>Gestapelte Spalte</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_100_STACKED_COLUMN" xml:space="preserve">
+    <value>100 % gestapelte Spalte</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_3D_CLUSTERED_COLUMN" xml:space="preserve">
+    <value>3D-Clusterspalte</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_3D_STACKED_COLUMN" xml:space="preserve">
+    <value>3D-Stapelsäule</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_3D_100_STACKED_COLUMN" xml:space="preserve">
+    <value>3D 100 % gestapelte Säule</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_STACKED_LINE" xml:space="preserve">
+    <value>Gestapelte Zeile</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_100_STACKED_LINE" xml:space="preserve">
+    <value>100 % gestapelte Linie</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_LINE_WITH_MARKERS" xml:space="preserve">
+    <value>Linie mit Markierungen</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_STACKED_LINE_WITH_MARKERS" xml:space="preserve">
+    <value>Gestapelte Linie mit Markierungen</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_100_STACKED_LINE_WITH_MARKERS" xml:space="preserve">
+    <value>100% gestapelte Linie mit Markierungen</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_CURVED_LINE" xml:space="preserve">
+    <value>Gekrümmte Linie</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_STACKED_CURVED_LINE" xml:space="preserve">
+    <value>Gestapelte gekrümmte Linie</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_100_STACKED_CURVED_LINE" xml:space="preserve">
+    <value>100% gestapelte gekrümmte Linie</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_CURVED_LINE_WITH_MARKERS" xml:space="preserve">
+    <value>Gebogene Linie mit Markierungen</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_STACKED_CURVED_LINE_WITH_MARKERS" xml:space="preserve">
+    <value>Gestapelte gekrümmte Linie mit Markierungen</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_100_STACKED_CURVED_LINE_WITH_MARKERS" xml:space="preserve">
+    <value>100% gestapelte gekrümmte Linie mit Markierungen</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_PIE" xml:space="preserve">
+    <value>Kuchen</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_PIE_EXPLOSION" xml:space="preserve">
+    <value>Kuchen (Explosion)</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_DOUGHNUT" xml:space="preserve">
+    <value>Donut</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_CLUSTERED_BAR" xml:space="preserve">
+    <value>Gruppierte Leiste</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_STACKED_BAR" xml:space="preserve">
+    <value>Gestapelter Balken</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_100_STACKED_BAR" xml:space="preserve">
+    <value>100 % gestapelter Balken</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_AREA" xml:space="preserve">
+    <value>Fläche</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_STACKED_AREA" xml:space="preserve">
+    <value>Gestapelter Bereich</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_100_STACKED_AREA" xml:space="preserve">
+    <value>100 % gestapelter Bereich</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_COLUMN" xml:space="preserve">
+    <value>Spalte</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_PIE_ALT1" xml:space="preserve">
+    <value>Kuchen</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_BAR" xml:space="preserve">
+    <value>Balken</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_AREA_ALT1" xml:space="preserve">
+    <value>Fläche</value>
+  </data>
   <data name="SPREADSHEETEDITORDEMO_ADD_COMMENT" xml:space="preserve">
     <value>Kommentar hinzufügen</value>
   </data>
@@ -390,11 +480,35 @@
   <data name="SPREADSHEETEDITORDEMO_NAME_IS_NOT_DEFINED" xml:space="preserve">
     <value>Name ist nicht definiert.</value>
   </data>
+  <data name="SPREADSHEETEDITORDEMO_CHART_ARG0" xml:space="preserve">
+    <value>Diagramm ({0})</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_SERIES_ARG0" xml:space="preserve">
+    <value>Serie {0}</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_ALL" xml:space="preserve">
+    <value>Alle</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_DATA_POINT_ARG0" xml:space="preserve">
+    <value>Datenpunkt {0}</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_ALL_ALT1" xml:space="preserve">
+    <value>Alle</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_SERIES_APPEARANCE" xml:space="preserve">
+    <value>Serienauftritt</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_DATA_POINT_APPEARANCE" xml:space="preserve">
+    <value>Darstellung des Datenpunkts</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_ALL_ALT2" xml:space="preserve">
+    <value>Alle</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_ALL_ALT3" xml:space="preserve">
+    <value>Alle</value>
+  </data>
   <data name="SPREADSHEETEDITORDEMO_THE_DRAWING_NAME_CANNOT_BE_EMPTY" xml:space="preserve">
     <value>Der Zeichnungsname darf nicht leer sein.</value>
-  </data>
-  <data name="SPREADSHEETEDITORDEMO_THE_DRAWING_WITH_ARG0_EXISTS_ALREADY" xml:space="preserve">
-    <value>Die Zeichnung mit „{0}“ existiert bereits.</value>
   </data>
   <data name="SPREADSHEETEDITORDEMO_ADD_HYPERLINK" xml:space="preserve">
     <value>Hyperlink hinzufügen</value>
@@ -476,6 +590,9 @@
   </data>
   <data name="SPREADSHEETEDITORDEMO_DEFAULT_COLUMN_WIDTH" xml:space="preserve">
     <value>Standardspaltenbreite</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_INSERT_CHART" xml:space="preserve">
+    <value>Diagramm einfügen</value>
   </data>
   <data name="SPREADSHEETEDITORDEMO_EDIT_COMMENT" xml:space="preserve">
     <value>Kommentar bearbeiten</value>

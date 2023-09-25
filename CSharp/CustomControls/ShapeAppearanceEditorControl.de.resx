@@ -117,115 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Optionen</value>
+  <data name="outlineWidthLabel.Text" xml:space="preserve">
+    <value>Umrissbreite:</value>
   </data>
-  <data name="seriesNameAppearanceGroupBox.Text" xml:space="preserve">
-    <value>Seriennamensbereich:</value>
+  <data name="outlineColorLabel.Text" xml:space="preserve">
+    <value>Umrissfarbe:</value>
   </data>
-  <data name="seriesValuesAppearanceGroupBox.Text" xml:space="preserve">
-    <value>Bereich der Serienwerte:</value>
-  </data>
-  <data name="categoryAxisAppearanceGroupBox.Text" xml:space="preserve">
-    <value>Bereich der Kategorieachse:</value>
-  </data>
-  <data name="chartCellsTabPage.Text" xml:space="preserve">
-    <value>Diagrammzellen</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Mindestintervall für Formelberechnungen (erneutes Öffnen erforderlich)</value>
-  </data>
-  <data name="appearanceGroupBox.Text" xml:space="preserve">
-    <value>Aussehen:</value>
-  </data>
-  <data name="showInteractiveAreaHighlightCheckBox.Text" xml:space="preserve">
-    <value>Interaktive Bereichshervorhebung anzeigen</value>
-  </data>
-  <data name="headersTransformHighlightAppearanceGroupBox.Text" xml:space="preserve">
-    <value>Header-Transformationsbereich:</value>
-  </data>
-  <data name="sheetDrawingTransformHighlightAppearanceGroupBox.Text" xml:space="preserve">
-    <value>Zeichnungstransformationsbereich:</value>
-  </data>
-  <data name="cellsTransformHighlightAppearanceGroupBox.Text" xml:space="preserve">
-    <value>Zellentransformationsbereich:</value>
-  </data>
-  <data name="transformHighlightTabPage.Text" xml:space="preserve">
-    <value>Hervorhebung transformieren</value>
-  </data>
-  <data name="gridColorAlphaLabel.Text" xml:space="preserve">
-    <value>Gitterfarbe Alpha:</value>
-  </data>
-  <data name="hyperlinkColorLabel.Text" xml:space="preserve">
-    <value>Hyperlink-Farbe:</value>
-  </data>
-  <data name="miscellaneousTabPage.Text" xml:space="preserve">
-    <value>Verschiedenes</value>
-  </data>
-  <data name="commentIndicatorSizeLabel.Text" xml:space="preserve">
-    <value>Indikatorgröße:</value>
-  </data>
-  <data name="commentIndicatorColorLabel.Text" xml:space="preserve">
-    <value>Anzeigefarbe:</value>
-  </data>
-  <data name="focusedCommentAppearanceGroupBox.Text" xml:space="preserve">
-    <value>Fokussierter Auftritt:</value>
-  </data>
-  <data name="commentAppearanceGroupBox.Text" xml:space="preserve">
-    <value>Aussehen:</value>
-  </data>
-  <data name="commentsTabPage.Text" xml:space="preserve">
-    <value>Kommentare</value>
-  </data>
-  <data name="errorIndicatorSizeLabel.Text" xml:space="preserve">
-    <value>Indikatorgröße:</value>
-  </data>
-  <data name="errorIndicatorColorLabel.Text" xml:space="preserve">
-    <value>Anzeigefarbe:</value>
-  </data>
-  <data name="errorsTabPage.Text" xml:space="preserve">
-    <value>Fehler</value>
-  </data>
-  <data name="headingsBorderColorLabel.Text" xml:space="preserve">
-    <value>Rahmenfarbe für Überschriften:</value>
-  </data>
-  <data name="selectedCellColorLabel.Text" xml:space="preserve">
-    <value>Ausgewählte Zellenfarbe:</value>
-  </data>
-  <data name="headingsTextColorLabel.Text" xml:space="preserve">
-    <value>Textfarbe für Überschriften:</value>
-  </data>
-  <data name="selectedHeaderColorLabel.Text" xml:space="preserve">
-    <value>Ausgewählte Kopfzeilenfarbe:</value>
-  </data>
-  <data name="coveredHeaderColorLabel.Text" xml:space="preserve">
-    <value>Farbe der abgedeckten Kopfzeile:</value>
-  </data>
-  <data name="headingsColorLabel.Text" xml:space="preserve">
-    <value>Farbe der Überschriften:</value>
-  </data>
-  <data name="headingsTabPage.Text" xml:space="preserve">
-    <value>Überschriften und Auswahl</value>
-  </data>
-  <data name="focusedFormulaTabPage.Text" xml:space="preserve">
-    <value>Fokussierte Formelzellen</value>
-  </data>
-  <data name="formulaTabPage.Text" xml:space="preserve">
-    <value>Formelzellen</value>
-  </data>
-  <data name="cellsBufferTabPage.Text" xml:space="preserve">
-    <value>Zwischenablagezellen</value>
-  </data>
-  <data name="focusedCellsTabPage.Text" xml:space="preserve">
-    <value>Fokussierte Zellen</value>
-  </data>
-  <data name="buttonCancel.Text" xml:space="preserve">
-    <value>Abbrechen</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>UI-Kultur (Funktionsnamen, Fehlernamen und Konstanten)</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Kultur (Zahlenformate, Datumsformate)</value>
+  <data name="fillColorLabel.Text" xml:space="preserve">
+    <value>Füllfarbe:</value>
   </data>
 </root>

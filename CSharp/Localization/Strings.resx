@@ -381,6 +381,96 @@
   <data name="SPREADSHEETEDITORDEMO_FONT_SIZE_MUST_BE_AN_INTEGER_OR_DECIMAL_NUMBER" xml:space="preserve">
     <value>Font size must be an integer or decimal number.</value>
   </data>
+  <data name="SPREADSHEETEDITORDEMO_CLUSTERED_COLUMN" xml:space="preserve">
+    <value>Clustered Column</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_STACKED_COLUMN" xml:space="preserve">
+    <value>Stacked Column</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_100_STACKED_COLUMN" xml:space="preserve">
+    <value>100% Stacked Column</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_3D_CLUSTERED_COLUMN" xml:space="preserve">
+    <value>3D Clustered Column</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_3D_STACKED_COLUMN" xml:space="preserve">
+    <value>3D Stacked Column</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_3D_100_STACKED_COLUMN" xml:space="preserve">
+    <value>3D 100% Stacked Column</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_STACKED_LINE" xml:space="preserve">
+    <value>Stacked Line</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_100_STACKED_LINE" xml:space="preserve">
+    <value>100% Stacked Line</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_LINE_WITH_MARKERS" xml:space="preserve">
+    <value>Line With Markers</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_STACKED_LINE_WITH_MARKERS" xml:space="preserve">
+    <value>Stacked Line With Markers</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_100_STACKED_LINE_WITH_MARKERS" xml:space="preserve">
+    <value>100% Stacked Line With Markers</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_CURVED_LINE" xml:space="preserve">
+    <value>Curved Line</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_STACKED_CURVED_LINE" xml:space="preserve">
+    <value>Stacked Curved Line</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_100_STACKED_CURVED_LINE" xml:space="preserve">
+    <value>100% Stacked Curved Line</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_CURVED_LINE_WITH_MARKERS" xml:space="preserve">
+    <value>Curved Line With Markers</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_STACKED_CURVED_LINE_WITH_MARKERS" xml:space="preserve">
+    <value>Stacked Curved Line With Markers</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_100_STACKED_CURVED_LINE_WITH_MARKERS" xml:space="preserve">
+    <value>100% Stacked Curved Line With Markers</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_PIE" xml:space="preserve">
+    <value>Pie</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_PIE_EXPLOSION" xml:space="preserve">
+    <value>Pie (Explosion)</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_DOUGHNUT" xml:space="preserve">
+    <value>Doughnut</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_CLUSTERED_BAR" xml:space="preserve">
+    <value>Clustered Bar</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_STACKED_BAR" xml:space="preserve">
+    <value>Stacked Bar</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_100_STACKED_BAR" xml:space="preserve">
+    <value>100% Stacked Bar</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_AREA" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_STACKED_AREA" xml:space="preserve">
+    <value>Stacked Area</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_100_STACKED_AREA" xml:space="preserve">
+    <value>100% Stacked Area</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_COLUMN" xml:space="preserve">
+    <value>Column</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_PIE_ALT1" xml:space="preserve">
+    <value>Pie</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_BAR" xml:space="preserve">
+    <value>Bar</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_AREA_ALT1" xml:space="preserve">
+    <value>Area</value>
+  </data>
   <data name="SPREADSHEETEDITORDEMO_ADD_COMMENT" xml:space="preserve">
     <value>Add Comment</value>
   </data>
@@ -390,11 +480,35 @@
   <data name="SPREADSHEETEDITORDEMO_NAME_IS_NOT_DEFINED" xml:space="preserve">
     <value>Name is not defined.</value>
   </data>
+  <data name="SPREADSHEETEDITORDEMO_CHART_ARG0" xml:space="preserve">
+    <value>Chart ({0})</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_SERIES_ARG0" xml:space="preserve">
+    <value>Series {0}</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_ALL" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_DATA_POINT_ARG0" xml:space="preserve">
+    <value>Data Point {0}</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_ALL_ALT1" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_SERIES_APPEARANCE" xml:space="preserve">
+    <value>Series appearance</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_DATA_POINT_APPEARANCE" xml:space="preserve">
+    <value>Data point appearance</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_ALL_ALT2" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_ALL_ALT3" xml:space="preserve">
+    <value>All</value>
+  </data>
   <data name="SPREADSHEETEDITORDEMO_THE_DRAWING_NAME_CANNOT_BE_EMPTY" xml:space="preserve">
     <value>The drawing name cannot be empty.</value>
-  </data>
-  <data name="SPREADSHEETEDITORDEMO_THE_DRAWING_WITH_ARG0_EXISTS_ALREADY" xml:space="preserve">
-    <value>The drawing with '{0}' exists already.</value>
   </data>
   <data name="SPREADSHEETEDITORDEMO_ADD_HYPERLINK" xml:space="preserve">
     <value>Add Hyperlink</value>
@@ -476,6 +590,9 @@
   </data>
   <data name="SPREADSHEETEDITORDEMO_DEFAULT_COLUMN_WIDTH" xml:space="preserve">
     <value>Default column width</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_INSERT_CHART" xml:space="preserve">
+    <value>Insert Chart</value>
   </data>
   <data name="SPREADSHEETEDITORDEMO_EDIT_COMMENT" xml:space="preserve">
     <value>Edit comment</value>

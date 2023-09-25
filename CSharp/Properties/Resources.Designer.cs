@@ -253,6 +253,16 @@ namespace SpreadsheetEditorDemo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ChartBig {
+            get {
+                object obj = ResourceManager.GetObject("ChartBig", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ClearAll {
             get {
                 object obj = ResourceManager.GetObject("ClearAll", resourceCulture);

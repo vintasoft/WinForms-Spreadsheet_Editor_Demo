@@ -111,6 +111,7 @@ namespace SpreadsheetEditorDemo
                 args.OldValue.VisualEditor.FocusedCellChanged -= VisualEditor_FocusedCellChanged;
                 args.OldValue.VisualEditor.FocusedCellsChanged -= VisualEditor_FocusedCellsChanged;
                 args.OldValue.VisualEditor.FocusedCommentChanged -= VisualEditor_FocusedCommentChanged;
+                args.OldValue.VisualEditor.FocusedDrawingChanged -= VisualEditor_FocusedDrawingChanged;
                 args.OldValue.VisualEditor.CellsStylePropertiesChanged -= VisualEditor_CellsStylePropertiesChanged;
                 args.OldValue.VisualEditor.FocusedWorksheetChanged -= VisualEditor_FocusedWorksheetChanged;
             }
@@ -119,11 +120,12 @@ namespace SpreadsheetEditorDemo
                 args.NewValue.VisualEditor.FocusedCellChanged += VisualEditor_FocusedCellChanged;
                 args.NewValue.VisualEditor.FocusedCellsChanged += VisualEditor_FocusedCellsChanged;
                 args.NewValue.VisualEditor.FocusedCommentChanged += VisualEditor_FocusedCommentChanged;
+                args.NewValue.VisualEditor.FocusedDrawingChanged += VisualEditor_FocusedDrawingChanged;
                 args.NewValue.VisualEditor.CellsStylePropertiesChanged += VisualEditor_CellsStylePropertiesChanged;
                 args.NewValue.VisualEditor.FocusedWorksheetChanged += VisualEditor_FocusedWorksheetChanged;
             }
             UpdateUI();
-        }      
+        }       
 
         #endregion
 
@@ -609,6 +611,11 @@ namespace SpreadsheetEditorDemo
             UpdateUI();
         }
 
+        private void VisualEditor_FocusedDrawingChanged(object sender, PropertyChangedEventArgs<SheetDrawing> e)
+        {
+            UpdateUI();
+        }
+
         #endregion
 
         #endregion
@@ -627,14 +634,15 @@ namespace SpreadsheetEditorDemo
             _updateUI = true;
             try
             {
-                if (VisualEditor.FocusedCell == null && VisualEditor.FocusedComment == null)
+                SheetDrawing focusedDrawing = VisualEditor.FocusedDrawing;
+                if (VisualEditor.FocusedCell == null && VisualEditor.FocusedComment == null && (focusedDrawing == null || focusedDrawing.Appearance == null))
                 {
                     Enabled = false;
                 }
                 else
                 {
                     Enabled = true;
-                    // update panel state from focused cell properties
+                    // update panel state from focused font properties
                     FontProperties fontProperties = VisualEditor.FocusedFontProperties;
                     fontNameToolStripComboBox.Text = fontProperties.Name;
                     fontSizeToolStripComboBox.Text = fontProperties.Size.ToString(UICulture);
@@ -644,10 +652,10 @@ namespace SpreadsheetEditorDemo
                     underlineToolStripButton.Checked = fontProperties.IsUnderline;
                     strikeoutToolStripButton.Checked = fontProperties.IsStrikeout;
 
-                    bool commentIsFocused = VisualEditor.FocusedComment != null;
-                    bordersButton.Enabled = !commentIsFocused;
-                    fontPropertiesToolStripButton.Enabled = !commentIsFocused;
-                    copyStyleToolStripButton.Enabled = !commentIsFocused;
+                    bool sheetIsFocused = VisualEditor.FocusedComment == null && (focusedDrawing == null || focusedDrawing.Appearance == null);
+                    bordersButton.Enabled = sheetIsFocused;
+                    fontPropertiesToolStripButton.Enabled = sheetIsFocused;
+                    copyStyleToolStripButton.Enabled = sheetIsFocused;
                 }
             }
             finally
