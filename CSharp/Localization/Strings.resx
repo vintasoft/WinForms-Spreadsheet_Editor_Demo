@@ -597,13 +597,45 @@
   <data name="SPREADSHEETEDITORDEMO_EDIT_COMMENT" xml:space="preserve">
     <value>Edit comment</value>
   </data>
+  <data name="SPREADSHEETEDITORDEMO_TSV_FILESTSVCSV_FILESCSV" xml:space="preserve">
+    <value>|TSV files|*.tsv|CSV files|*.csv</value>
+  </data>
   <data name="SPREADSHEETEDITORDEMO_THE_LOADED_FILE_IS_XLS_FILE_TO_OPEN_XLS_FILE_APPLICATION_NEEDS_TO_CONVERT_XLS_FILE_TO_THE_XLSX_FILE_DO_YOU_WANT_TO_CREATE_XLSX_FILE_FROM_XLS_FILE" xml:space="preserve">
     <value>The loaded file is XLS file. To open XLS file application needs to convert XLS file to the XLSX file. Do you want to create XLSX file from XLS file?</value>
   </data>
   <data name="SPREADSHEETEDITORDEMO_CONVERT_XLS_TO_XLSX" xml:space="preserve">
     <value>Convert XLS to XLSX</value>
   </data>
+  <data name="SPREADSHEETEDITORDEMO_THE_LOADED_FILE_IS_CSV_FILE_TO_OPEN_CSV_FILE_APPLICATION_NEEDS_TO_CONVERT_CSV_FILE_TO_THE_XLSX_FILE_DO_YOU_WANT_TO_CREATE_XLSX_FILE_FROM_CSV_FILE" xml:space="preserve">
+    <value>The loaded file is CSV file. To open CSV file application needs to convert CSV file to the XLSX file. Do you want to create XLSX file from CSV file?</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_CONVERT_CSV_TO_XLSX" xml:space="preserve">
+    <value>Convert CSV to XLSX</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_THE_LOADED_FILE_IS_TSV_FILE_TO_OPEN_TSV_FILE_APPLICATION_NEEDS_TO_CONVERT_TSV_FILE_TO_THE_XLSX_FILE_DO_YOU_WANT_TO_CREATE_XLSX_FILE_FROM_TSV_FILE" xml:space="preserve">
+    <value>The loaded file is TSV file. To open TSV file application needs to convert TSV file to the XLSX file. Do you want to create XLSX file from TSV file?</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_CONVERT_TSV_TO_XLSX" xml:space="preserve">
+    <value>Convert TSV to XLSX</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_TSV" xml:space="preserve">
+    <value>.tsv</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_CSV" xml:space="preserve">
+    <value>.csv</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_THE_SELECTED_FILE_TYPE_DOES_NOT_SUPPORT_WORKBOOKS_THAT_CONTAIN_MULTIPLE_SHEETSRNTO_SAVE_ONLY_THE_ACTIVE_SHEET_CLICK_OKRNTO_SAVE_ALL_SHEETS_SAVE_THEM_INDIVIDUALLY_USING_A_DIFFERENT_FILE_NAME_FOR_EACH_OR_CHOOSE_A_FILE_TYPE_THAT_SUPPORTS_MULTIPLE_SHEETS" xml:space="preserve">
+    <value>The selected file type does not support workbooks that contain multiple sheets.
+To save only the active sheet, click OK.
+To save all sheets, save them individually using a different file name for each, or choose a file type that supports multiple sheets.</value>
+  </data>
   <data name="SPREADSHEETEDITORDEMO_EXPORT_DOCUMENT" xml:space="preserve">
+    <value>Export document</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_TSV_ALT1" xml:space="preserve">
+    <value>.tsv</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_EXPORT_DOCUMENT_ALT1" xml:space="preserve">
     <value>Export document</value>
   </data>
   <data name="SPREADSHEETEDITORDEMO_CURRENT_WORKBOOK_IS_CHANGED_DO_YOU_WANT_TO_SAVE_CHANGES" xml:space="preserve">

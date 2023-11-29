@@ -66,6 +66,9 @@ namespace SpreadsheetEditorDemo
 
             CodecsFileFilters.SetSaveFileDialogFilter(exportFileDialog, false, false);
 
+            exportFileDialog.Filter += SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_TSV_FILESTSVCSV_FILESCSV;
+
+
             // set default filter index to PDF
             string[] filters = exportFileDialog.Filter.Split('|');
             for (int i = 1; i < filters.Length; i++)
@@ -164,6 +167,42 @@ namespace SpreadsheetEditorDemo
                             filename = saveWorksheetFileDialog.FileName;
                             // convert XLS file to the XLSX file
                             OpenXmlDocumentConverter.ConvertXlsToXlsx(openWorksheetFileDialog.FileName, filename);
+                        }
+                        // if file is CSV file
+                        else if (XlsxDecoder.IsCsvFile(filename))
+                        {
+                            if (MessageBox.Show(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_THE_LOADED_FILE_IS_CSV_FILE_TO_OPEN_CSV_FILE_APPLICATION_NEEDS_TO_CONVERT_CSV_FILE_TO_THE_XLSX_FILE_DO_YOU_WANT_TO_CREATE_XLSX_FILE_FROM_CSV_FILE, SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_CONVERT_CSV_TO_XLSX, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                                return true;
+
+                            // create path to an XLSX file
+                            filename = Path.Combine(Path.GetDirectoryName(filename), Path.GetFileNameWithoutExtension(filename) + ".xlsx");
+                            // set file to the save dialog
+                            saveWorksheetFileDialog.FileName = filename;
+                            // show the save dialog
+                            if (saveWorksheetFileDialog.ShowDialog() != DialogResult.OK)
+                                return true;
+                            // get file path from save dialog
+                            filename = saveWorksheetFileDialog.FileName;
+                            // convert XLS file to the XLSX file
+                            OpenXmlDocumentConverter.ConvertCsvToXlsx(openWorksheetFileDialog.FileName, filename);
+                        }
+                        // if file is TSV file
+                        else if (XlsxDecoder.IsTsvFile(filename))
+                        {
+                            if (MessageBox.Show(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_THE_LOADED_FILE_IS_TSV_FILE_TO_OPEN_TSV_FILE_APPLICATION_NEEDS_TO_CONVERT_TSV_FILE_TO_THE_XLSX_FILE_DO_YOU_WANT_TO_CREATE_XLSX_FILE_FROM_TSV_FILE, SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_CONVERT_TSV_TO_XLSX, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                                return true;
+
+                            // create path to an XLSX file
+                            filename = Path.Combine(Path.GetDirectoryName(filename), Path.GetFileNameWithoutExtension(filename) + ".xlsx");
+                            // set file to the save dialog
+                            saveWorksheetFileDialog.FileName = filename;
+                            // show the save dialog
+                            if (saveWorksheetFileDialog.ShowDialog() != DialogResult.OK)
+                                return true;
+                            // get file path from save dialog
+                            filename = saveWorksheetFileDialog.FileName;
+                            // convert XLS file to the XLSX file
+                            OpenXmlDocumentConverter.ConvertTsvToXlsx(openWorksheetFileDialog.FileName, filename);
                         }
 
                         // save information about path to XLSX file
@@ -317,7 +356,7 @@ namespace SpreadsheetEditorDemo
             UpdateUI();
         }
 
-    
+
 
 
         /// <summary>
@@ -344,7 +383,7 @@ namespace SpreadsheetEditorDemo
         {
             NewDocument();
         }
-       
+
         /// <summary>
         /// "Open" button is clicked.
         /// </summary>
@@ -376,7 +415,7 @@ namespace SpreadsheetEditorDemo
         {
             SaveDocumentAs();
         }
-        
+
 
         #region Export
 
@@ -388,37 +427,71 @@ namespace SpreadsheetEditorDemo
             exportFileDialog.FileName = Path.GetFileNameWithoutExtension(Filename);
             if (exportFileDialog.ShowDialog() == DialogResult.OK)
             {
-                if (!_isLayoutSettingsInitialized)
-                {
-                    // set layout settings
-                    if (_layoutSettingsManager.EditLayoutSettingsUseDialog())
-                        _isLayoutSettingsInitialized = true;
-                    else
-                        return;
-                }
-
                 try
                 {
-                    // create a temporary stream
-                    using (MemoryStream tempStream = new MemoryStream())
+                    string extension = Path.GetExtension(exportFileDialog.FileName);
+
+                    if (string.Equals(extension, SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_TSV, StringComparison.OrdinalIgnoreCase) ||
+                        string.Equals(extension, SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_CSV, StringComparison.OrdinalIgnoreCase))
                     {
-                        // save XLSX file to a temporary stream
-                        VisualEditor.SaveDocumentTo(tempStream);
-
-                        // add XLSX file to the image collection of document converter
-                        _converter.Images.Add(tempStream);
-
-                        // create dialog that displays progress for document conversion process
-                        using (ActionProgressForm dlg = new ActionProgressForm(ExportDocument, 1, SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_EXPORT_DOCUMENT))
+                        if (MessageBox.Show(
+                            SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_THE_SELECTED_FILE_TYPE_DOES_NOT_SUPPORT_WORKBOOKS_THAT_CONTAIN_MULTIPLE_SHEETSRNTO_SAVE_ONLY_THE_ACTIVE_SHEET_CLICK_OKRNTO_SAVE_ALL_SHEETS_SAVE_THEM_INDIVIDUALLY_USING_A_DIFFERENT_FILE_NAME_FOR_EACH_OR_CHOOSE_A_FILE_TYPE_THAT_SUPPORTS_MULTIPLE_SHEETS,
+                            SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_EXPORT_DOCUMENT, MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
                         {
-                            // specify that dialog should be closed when conversion is finished
-                            dlg.CloseAfterComplete = true;
-                            // show dialog and run conversion process
-                            dlg.RunAndShowDialog(this.FindForm());
+                            // create a temporary stream
+                            using (MemoryStream tempStream = new MemoryStream())
+                            {
+                                // save XLSX file to a temporary stream
+                                VisualEditor.SaveDocumentTo(tempStream);
+
+                                tempStream.Position = 0;
+
+                                using (Stream stream = File.Create(exportFileDialog.FileName))
+                                {
+                                    DocumentEnvironmentProperties environmentProperties = DocumentEnvironmentProperties.Default;
+                                    environmentProperties.Culture = CultureInfo.CurrentCulture;
+                                    environmentProperties.UICulture = CultureInfo.CurrentUICulture;
+
+                                    if (string.Equals(extension, SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_TSV_ALT1, StringComparison.OrdinalIgnoreCase))
+                                        OpenXmlDocumentConverter.ConvertXlsxToTsv(environmentProperties, tempStream, VisualEditor.FocusedWorksheetIndex, stream);
+                                    else
+                                        OpenXmlDocumentConverter.ConvertXlsxToCsv(environmentProperties, tempStream, VisualEditor.FocusedWorksheetIndex, stream, System.Text.Encoding.UTF8);
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        if (!_isLayoutSettingsInitialized)
+                        {
+                            // set layout settings
+                            if (_layoutSettingsManager.EditLayoutSettingsUseDialog())
+                                _isLayoutSettingsInitialized = true;
+                            else
+                                return;
                         }
 
-                        // clear image collection of document converter
-                        _converter.Images.ClearAndDisposeItems();
+                        // create a temporary stream
+                        using (MemoryStream tempStream = new MemoryStream())
+                        {
+                            // save XLSX file to a temporary stream
+                            VisualEditor.SaveDocumentTo(tempStream);
+
+                            // add XLSX file to the image collection of document converter
+                            _converter.Images.Add(tempStream);
+
+                            // create dialog that displays progress for document conversion process
+                            using (ActionProgressForm dlg = new ActionProgressForm(ExportDocument, 1, SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_EXPORT_DOCUMENT_ALT1))
+                            {
+                                // specify that dialog should be closed when conversion is finished
+                                dlg.CloseAfterComplete = true;
+                                // show dialog and run conversion process
+                                dlg.RunAndShowDialog(this.FindForm());
+                            }
+
+                            // clear image collection of document converter
+                            _converter.Images.ClearAndDisposeItems();
+                        }
                     }
                 }
                 catch (Exception ex)
@@ -451,7 +524,7 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void printToolStripSplitButton_ButtonClick(object sender, EventArgs e)
         {
-            PrintDocument();            
+            PrintDocument();
         }
 
 
@@ -674,7 +747,7 @@ namespace SpreadsheetEditorDemo
             saveToolStripButton.Enabled = false;
         }
 
-       
+
         #endregion
 
         #endregion

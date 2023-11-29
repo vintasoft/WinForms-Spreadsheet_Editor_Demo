@@ -252,8 +252,9 @@ namespace SpreadsheetEditorDemo
             // 
             // openWorksheetFileDialog
             // 
-            this.openWorksheetFileDialog.Filter = "XLSX files|*.xlsx|XLS files|*.xls|All supported Workbooks|*.xlsx;*.xls";
-            this.openWorksheetFileDialog.FilterIndex = 3;
+            this.openWorksheetFileDialog.Filter = "XLSX files|*.xlsx|XLS files|*.xls|TSV files|*.tsv;*.tab|CSV files|*.csv|All suppo" +
+    "rted Workbooks|*.xlsx;*.xls;*.tsv;*.tab;*.csv";
+            this.openWorksheetFileDialog.FilterIndex = 5;
             // 
             // saveWorksheetFileDialog
             // 

@@ -933,6 +933,24 @@ namespace SpreadsheetEditorDemo.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Convert CSV to XLSX.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_CONVERT_CSV_TO_XLSX {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_CONVERT_CSV_TO_XLSX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Convert TSV to XLSX.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_CONVERT_TSV_TO_XLSX {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_CONVERT_TSV_TO_XLSX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Convert XLS to XLSX.
         /// </summary>
         internal static string SPREADSHEETEDITORDEMO_CONVERT_XLS_TO_XLSX {
@@ -947,6 +965,15 @@ namespace SpreadsheetEditorDemo.Localization {
         internal static string SPREADSHEETEDITORDEMO_COULD_NOT_FIND_ANYTHING_TO_REPLACE {
             get {
                 return ResourceManager.GetString("SPREADSHEETEDITORDEMO_COULD_NOT_FIND_ANYTHING_TO_REPLACE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .csv.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_CSV {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_CSV", resourceCulture);
             }
         }
         
@@ -1299,6 +1326,15 @@ namespace SpreadsheetEditorDemo.Localization {
         internal static string SPREADSHEETEDITORDEMO_EXPORT_DOCUMENT {
             get {
                 return ResourceManager.GetString("SPREADSHEETEDITORDEMO_EXPORT_DOCUMENT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Export document.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_EXPORT_DOCUMENT_ALT1 {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_EXPORT_DOCUMENT_ALT1", resourceCulture);
             }
         }
         
@@ -1862,6 +1898,28 @@ namespace SpreadsheetEditorDemo.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The loaded file is CSV file. To open CSV file application needs to convert CSV file to the XLSX file. Do you want to create XLSX file from CSV file?.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_THE_LOADED_FILE_IS_CSV_FILE_TO_OPEN_CSV_FILE_APPLICATION_NEEDS_TO_CONVERT_CSV_FILE_TO_THE_XLSX_FILE_DO_YOU_WANT_TO_CREATE_XLSX_FILE_FROM_CSV_FILE {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_THE_LOADED_FILE_IS_CSV_FILE_TO_OPEN_CSV_FILE_APPLICATION_NE" +
+                        "EDS_TO_CONVERT_CSV_FILE_TO_THE_XLSX_FILE_DO_YOU_WANT_TO_CREATE_XLSX_FILE_FROM_CS" +
+                        "V_FILE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The loaded file is TSV file. To open TSV file application needs to convert TSV file to the XLSX file. Do you want to create XLSX file from TSV file?.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_THE_LOADED_FILE_IS_TSV_FILE_TO_OPEN_TSV_FILE_APPLICATION_NEEDS_TO_CONVERT_TSV_FILE_TO_THE_XLSX_FILE_DO_YOU_WANT_TO_CREATE_XLSX_FILE_FROM_TSV_FILE {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_THE_LOADED_FILE_IS_TSV_FILE_TO_OPEN_TSV_FILE_APPLICATION_NE" +
+                        "EDS_TO_CONVERT_TSV_FILE_TO_THE_XLSX_FILE_DO_YOU_WANT_TO_CREATE_XLSX_FILE_FROM_TS" +
+                        "V_FILE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The loaded file is XLS file. To open XLS file application needs to convert XLS file to the XLSX file. Do you want to create XLSX file from XLS file?.
         /// </summary>
         internal static string SPREADSHEETEDITORDEMO_THE_LOADED_FILE_IS_XLS_FILE_TO_OPEN_XLS_FILE_APPLICATION_NEEDS_TO_CONVERT_XLS_FILE_TO_THE_XLSX_FILE_DO_YOU_WANT_TO_CREATE_XLSX_FILE_FROM_XLS_FILE {
@@ -1869,6 +1927,17 @@ namespace SpreadsheetEditorDemo.Localization {
                 return ResourceManager.GetString("SPREADSHEETEDITORDEMO_THE_LOADED_FILE_IS_XLS_FILE_TO_OPEN_XLS_FILE_APPLICATION_NE" +
                         "EDS_TO_CONVERT_XLS_FILE_TO_THE_XLSX_FILE_DO_YOU_WANT_TO_CREATE_XLSX_FILE_FROM_XL" +
                         "S_FILE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The selected file type does not support workbooks that contain multiple sheets.
+        ///To save only the active sheet, click OK.
+        ///To save all sheets, save them individually using a different file name for each, or choose a file type that supports multiple sheets..
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_THE_SELECTED_FILE_TYPE_DOES_NOT_SUPPORT_WORKBOOKS_THAT_CONTAIN_MULTIPLE_SHEETSRNTO_SAVE_ONLY_THE_ACTIVE_SHEET_CLICK_OKRNTO_SAVE_ALL_SHEETS_SAVE_THEM_INDIVIDUALLY_USING_A_DIFFERENT_FILE_NAME_FOR_EACH_OR_CHOOSE_A_FILE_TYPE_THAT_SUPPORTS_MULTIPLE_SHEETS {
+            get {
+                return ResourceManager.GetString(@"SPREADSHEETEDITORDEMO_THE_SELECTED_FILE_TYPE_DOES_NOT_SUPPORT_WORKBOOKS_THAT_CONTAIN_MULTIPLE_SHEETSRNTO_SAVE_ONLY_THE_ACTIVE_SHEET_CLICK_OKRNTO_SAVE_ALL_SHEETS_SAVE_THEM_INDIVIDUALLY_USING_A_DIFFERENT_FILE_NAME_FOR_EACH_OR_CHOOSE_A_FILE_TYPE_THAT_SUPPORTS_MULTIPLE_SHEETS", resourceCulture);
             }
         }
         
@@ -1887,6 +1956,33 @@ namespace SpreadsheetEditorDemo.Localization {
         internal static string SPREADSHEETEDITORDEMO_TIME_ALT1 {
             get {
                 return ResourceManager.GetString("SPREADSHEETEDITORDEMO_TIME_ALT1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .tsv.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_TSV {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_TSV", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .tsv.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_TSV_ALT1 {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_TSV_ALT1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to |TSV files|*.tsv|CSV files|*.csv.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_TSV_FILESTSVCSV_FILESCSV {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_TSV_FILESTSVCSV_FILESCSV", resourceCulture);
             }
         }
         
