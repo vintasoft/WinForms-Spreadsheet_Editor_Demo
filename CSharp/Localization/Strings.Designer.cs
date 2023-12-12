@@ -1799,6 +1799,15 @@ namespace SpreadsheetEditorDemo.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Set chart properties.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_SET_CHART_PROPERTIES {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_SET_CHART_PROPERTIES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Stacked Area.
         /// </summary>
         internal static string SPREADSHEETEDITORDEMO_STACKED_AREA {

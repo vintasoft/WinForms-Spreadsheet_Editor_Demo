@@ -151,125 +151,131 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void buttonOk_Click(object sender, EventArgs e)
         {
-            // if "Existing file or web page" tab is selected
-            if (hyperlinkTabControl.SelectedTab == addressTabPage)
+            try
             {
-                Exception ex = null;
-                if (TryCreateUri(addressTextBox.Text, out ex))
+                // if "Existing file or web page" tab is selected
+                if (hyperlinkTabControl.SelectedTab == addressTabPage)
                 {
-                    // create hyperlink to the URL
-                    Hyperlink hyperlink = Hyperlink.CreateUrl(addressTextBox.Text);
-                    // if existing hyperlink is editing
-                    if (_isEditDialog)
+                    Exception ex = null;
+                    if (TryCreateUri(addressTextBox.Text, out ex))
                     {
-                        // edit hyperlink of focused cell
-                        _visualEditor.FocusedHyperlink = hyperlink;
+                        // create hyperlink to the URL
+                        Hyperlink hyperlink = Hyperlink.CreateUrl(addressTextBox.Text);
+                        // if existing hyperlink is editing
+                        if (_isEditDialog)
+                        {
+                            // edit hyperlink of focused cell
+                            _visualEditor.FocusedHyperlink = hyperlink;
+                        }
+                        // if new hyperlink is adding
+                        else
+                        {
+                            _visualEditor.StartEditing(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_ADD_HYPERLINK_ALT1);
+                            try
+                            {
+                                // add hyperlink to the focused cell
+                                _visualEditor.AddHyperlink(hyperlink);
+
+                                if (_visualEditor.FocusedCell != null && string.IsNullOrEmpty(_visualEditor.FocusedCellValue))
+                                    _visualEditor.FocusedCellValue = addressTextBox.Text;
+                            }
+                            finally
+                            {
+                                _visualEditor.FinishEditing();
+                            }
+                        }
                     }
-                    // if new hyperlink is adding
                     else
                     {
-                        _visualEditor.StartEditing(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_ADD_HYPERLINK_ALT1);
-                        try
-                        {
-                            // add hyperlink to the focused cell
-                            _visualEditor.AddHyperlink(hyperlink);
-
-                            if (_visualEditor.FocusedCell != null && string.IsNullOrEmpty(_visualEditor.FocusedCellValue))
-                                _visualEditor.FocusedCellValue = addressTextBox.Text;
-                        }
-                        finally
-                        {
-                            _visualEditor.FinishEditing();
-                        }
+                        MessageBox.Show(ex.Message, SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_ERROR_ALT1, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        return;
                     }
                 }
+                // if "Cell reference" tab is selected
+                else if (hyperlinkTabControl.SelectedTab == referenceTabPage)
+                {
+                    try
+                    {
+                        // parse cell references
+                        CellReferences cellReferences = CellReferences.Parse(cellReferenceTextBox.Text);
+
+                        // create reference with sheet name
+                        CellReferences fullReference = new CellReferences(sheetComboBox.SelectedItem.ToString(), cellReferences);
+                        // create hyperlink
+                        Hyperlink hyperlink = Hyperlink.CreateCellReferences(fullReference);
+                        // if existing hyperlink is editing
+                        if (_isEditDialog)
+                        {
+                            // edit hyperlink of focused cell
+                            _visualEditor.FocusedHyperlink = hyperlink;
+                        }
+                        // if new hyperlink is adding
+                        else
+                        {
+                            _visualEditor.StartEditing(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_ADD_HYPERLINK_ALT2);
+                            try
+                            {
+                                // add hyperlink to the focused cell
+                                _visualEditor.AddHyperlink(hyperlink);
+
+                                if (_visualEditor.FocusedCell != null && string.IsNullOrEmpty(_visualEditor.FocusedCellValue))
+                                    _visualEditor.FocusedCellValue = fullReference.GetA1Name();
+                            }
+                            finally
+                            {
+                                _visualEditor.FinishEditing();
+                            }
+                        }
+                    }
+                    catch
+                    {
+                        DemosTools.ShowWarningMessage("Spreadsheet Editor Demo", SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_CELL_REFERENCE_IS_INVALID);
+                        return;
+                    }
+                }
+                // if "Defined names" tab is selected
                 else
                 {
-                    MessageBox.Show(ex.Message, SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_ERROR_ALT1, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    return;
-                }
-            }
-            // if "Cell reference" tab is selected
-            else if (hyperlinkTabControl.SelectedTab == referenceTabPage)
-            {
-                try
-                {
-                    // parse cell references
-                    CellReferences cellReferences = CellReferences.Parse(cellReferenceTextBox.Text);
-
-                    // create reference with sheet name
-                    CellReferences fullReference = new CellReferences(sheetComboBox.SelectedItem.ToString(), cellReferences);
-                    // create hyperlink
-                    Hyperlink hyperlink = Hyperlink.CreateCellReferences(fullReference);
-                    // if existing hyperlink is editing
-                    if (_isEditDialog)
+                    // if defined name is selected
+                    if (definedNamesListBox.SelectedItem != null)
                     {
-                        // edit hyperlink of focused cell
-                        _visualEditor.FocusedHyperlink = hyperlink;
+                        // create hyperlink to the defined name
+                        Hyperlink hyperlink = Hyperlink.CreateDefinedName(definedNamesListBox.SelectedItem.ToString());
+                        // if existing hyperlink is editing
+                        if (_isEditDialog)
+                        {
+                            // edit hyperlink of focused cell
+                            _visualEditor.FocusedHyperlink = hyperlink;
+                        }
+                        // if new hyperlink is adding
+                        else
+                        {
+                            _visualEditor.StartEditing(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_ADD_HYPERLINK_ALT3);
+                            try
+                            {
+                                // add hyperlink to the focused cell
+                                _visualEditor.AddHyperlink(hyperlink);
+
+                                if (_visualEditor.FocusedCell != null && string.IsNullOrEmpty(_visualEditor.FocusedCellValue))
+                                    _visualEditor.FocusedCellValue = definedNamesListBox.SelectedItem.ToString();
+                            }
+                            finally
+                            {
+                                _visualEditor.FinishEditing();
+                            }
+                        }
                     }
-                    // if new hyperlink is adding
                     else
                     {
-                        _visualEditor.StartEditing(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_ADD_HYPERLINK_ALT2);
-                        try
-                        {
-                            // add hyperlink to the focused cell
-                            _visualEditor.AddHyperlink(hyperlink);
-
-                            if (_visualEditor.FocusedCell != null && string.IsNullOrEmpty(_visualEditor.FocusedCellValue))
-                                _visualEditor.FocusedCellValue = fullReference.GetA1Name();
-                        }
-                        finally
-                        {
-                            _visualEditor.FinishEditing();
-                        }
+                        DemosTools.ShowWarningMessage("Spreadsheet Editor Demo", SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_DEFINED_NAME_IS_NOT_SELECTED);
+                        return;
                     }
                 }
-                catch
-                {
-                    DemosTools.ShowWarningMessage("Spreadsheet Editor Demo", SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_CELL_REFERENCE_IS_INVALID);
-                    return;
-                }
             }
-            // if "Defined names" tab is selected
-            else
+            catch (Exception ex)
             {
-                // if defined name is selected
-                if (definedNamesListBox.SelectedItem != null)
-                {
-                    // create hyperlink to the defined name
-                    Hyperlink hyperlink = Hyperlink.CreateDefinedName(definedNamesListBox.SelectedItem.ToString());
-                    // if existing hyperlink is editing
-                    if (_isEditDialog)
-                    {
-                        // edit hyperlink of focused cell
-                        _visualEditor.FocusedHyperlink = hyperlink;
-                    }
-                    // if new hyperlink is adding
-                    else
-                    {
-                        _visualEditor.StartEditing(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_ADD_HYPERLINK_ALT3);
-                        try
-                        {
-                            // add hyperlink to the focused cell
-                            _visualEditor.AddHyperlink(hyperlink);
-
-                            if (_visualEditor.FocusedCell != null && string.IsNullOrEmpty(_visualEditor.FocusedCellValue))
-                                _visualEditor.FocusedCellValue = definedNamesListBox.SelectedItem.ToString();
-                        }
-                        finally
-                        {
-                            _visualEditor.FinishEditing();
-                        }
-                    }
-                }
-                else
-                {
-                    DemosTools.ShowWarningMessage("Spreadsheet Editor Demo", SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_DEFINED_NAME_IS_NOT_SELECTED);
-                    return;
-                }
+                DemosTools.ShowErrorMessage(ex);
             }
-
             DialogResult = DialogResult.OK;
         }
 

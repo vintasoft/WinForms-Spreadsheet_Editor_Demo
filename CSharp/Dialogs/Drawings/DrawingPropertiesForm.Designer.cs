@@ -36,6 +36,7 @@ namespace SpreadsheetEditorDemo
             this.categoriesGroupBox = new System.Windows.Forms.GroupBox();
             this.categoriesDataRangeTextBox = new System.Windows.Forms.TextBox();
             this.seriesGroupBox = new System.Windows.Forms.GroupBox();
+            this.smoothLineCheckBox = new System.Windows.Forms.CheckBox();
             this.dataPointGroupBox = new System.Windows.Forms.GroupBox();
             this.markerAppearanceGroupBox = new System.Windows.Forms.GroupBox();
             this.markerAppearanceEditor = new SpreadsheetEditorDemo.CustomControls.ShapeAppearanceEditorControl();
@@ -65,7 +66,12 @@ namespace SpreadsheetEditorDemo
             this.sheetDrawingLocationEditorControl = new SpreadsheetEditorDemo.SheetDrawingLocationEditorControl();
             this.okButton = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
-            this.smoothLineCheckBox = new System.Windows.Forms.CheckBox();
+            this.categoryAxisLabelsLabel = new System.Windows.Forms.Label();
+            this.categoryAxisTitleLabel = new System.Windows.Forms.Label();
+            this.categoryAxisTitleTextBox = new System.Windows.Forms.TextBox();
+            this.valuesGroupBox = new System.Windows.Forms.GroupBox();
+            this.valuesAxisTitleTextBox = new System.Windows.Forms.TextBox();
+            this.valuesAxisTitleLabel = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.chartTabPage.SuspendLayout();
             this.categoriesGroupBox.SuspendLayout();
@@ -78,6 +84,7 @@ namespace SpreadsheetEditorDemo
             this.locationAndSizeTabPage.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rotationAngleNumericUpDown)).BeginInit();
+            this.valuesGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -92,11 +99,12 @@ namespace SpreadsheetEditorDemo
             this.tabControl1.MinimumSize = new System.Drawing.Size(300, 200);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(438, 450);
+            this.tabControl1.Size = new System.Drawing.Size(438, 523);
             this.tabControl1.TabIndex = 0;
             // 
             // chartTabPage
             // 
+            this.chartTabPage.Controls.Add(this.valuesGroupBox);
             this.chartTabPage.Controls.Add(this.dataRangeTextBox);
             this.chartTabPage.Controls.Add(this.dataRangeLabel);
             this.chartTabPage.Controls.Add(this.categoriesGroupBox);
@@ -105,7 +113,7 @@ namespace SpreadsheetEditorDemo
             this.chartTabPage.Controls.Add(this.titleLabel);
             this.chartTabPage.Location = new System.Drawing.Point(4, 22);
             this.chartTabPage.Name = "chartTabPage";
-            this.chartTabPage.Size = new System.Drawing.Size(430, 424);
+            this.chartTabPage.Size = new System.Drawing.Size(430, 497);
             this.chartTabPage.TabIndex = 2;
             this.chartTabPage.Text = "Chart";
             this.chartTabPage.UseVisualStyleBackColor = true;
@@ -131,12 +139,14 @@ namespace SpreadsheetEditorDemo
             // 
             // categoriesGroupBox
             // 
-            this.categoriesGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.categoriesGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.categoriesGroupBox.Controls.Add(this.categoryAxisTitleTextBox);
+            this.categoriesGroupBox.Controls.Add(this.categoryAxisTitleLabel);
+            this.categoriesGroupBox.Controls.Add(this.categoryAxisLabelsLabel);
             this.categoriesGroupBox.Controls.Add(this.categoriesDataRangeTextBox);
-            this.categoriesGroupBox.Location = new System.Drawing.Point(8, 371);
+            this.categoriesGroupBox.Location = new System.Drawing.Point(8, 369);
             this.categoriesGroupBox.Name = "categoriesGroupBox";
-            this.categoriesGroupBox.Size = new System.Drawing.Size(415, 50);
+            this.categoriesGroupBox.Size = new System.Drawing.Size(415, 73);
             this.categoriesGroupBox.TabIndex = 3;
             this.categoriesGroupBox.TabStop = false;
             resources.ApplyResources(this.categoriesGroupBox, "categoriesGroupBox");
@@ -145,10 +155,10 @@ namespace SpreadsheetEditorDemo
             // 
             this.categoriesDataRangeTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.categoriesDataRangeTextBox.Location = new System.Drawing.Point(9, 19);
+            this.categoriesDataRangeTextBox.Location = new System.Drawing.Point(142, 19);
             this.categoriesDataRangeTextBox.Name = "categoriesDataRangeTextBox";
             this.categoriesDataRangeTextBox.ReadOnly = true;
-            this.categoriesDataRangeTextBox.Size = new System.Drawing.Size(400, 20);
+            this.categoriesDataRangeTextBox.Size = new System.Drawing.Size(267, 20);
             this.categoriesDataRangeTextBox.TabIndex = 0;
             // 
             // seriesGroupBox
@@ -168,6 +178,17 @@ namespace SpreadsheetEditorDemo
             this.seriesGroupBox.TabIndex = 2;
             this.seriesGroupBox.TabStop = false;
             resources.ApplyResources(this.seriesGroupBox, "seriesGroupBox");
+            // 
+            // smoothLineCheckBox
+            // 
+            this.smoothLineCheckBox.AutoSize = true;
+            this.smoothLineCheckBox.Location = new System.Drawing.Point(9, 81);
+            this.smoothLineCheckBox.Name = "smoothLineCheckBox";
+            this.smoothLineCheckBox.Size = new System.Drawing.Size(85, 17);
+            this.smoothLineCheckBox.TabIndex = 17;
+            resources.ApplyResources(this.smoothLineCheckBox, "smoothLineCheckBox");
+            this.smoothLineCheckBox.UseVisualStyleBackColor = true;
+            this.smoothLineCheckBox.CheckedChanged += new System.EventHandler(this.smoothLineCheckBox_CheckedChanged);
             // 
             // dataPointGroupBox
             // 
@@ -344,7 +365,6 @@ namespace SpreadsheetEditorDemo
             this.titleTextBox.Name = "titleTextBox";
             this.titleTextBox.Size = new System.Drawing.Size(273, 20);
             this.titleTextBox.TabIndex = 1;
-            this.titleTextBox.TextChanged += new System.EventHandler(this.titleTextBox_TextChanged);
             // 
             // titleLabel
             // 
@@ -364,7 +384,7 @@ namespace SpreadsheetEditorDemo
             this.commonTabPage.Location = new System.Drawing.Point(4, 22);
             this.commonTabPage.Name = "commonTabPage";
             this.commonTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.commonTabPage.Size = new System.Drawing.Size(430, 406);
+            this.commonTabPage.Size = new System.Drawing.Size(430, 424);
             this.commonTabPage.TabIndex = 0;
             resources.ApplyResources(this.commonTabPage, "commonTabPage");
             this.commonTabPage.UseVisualStyleBackColor = true;
@@ -406,7 +426,7 @@ namespace SpreadsheetEditorDemo
             this.descriptionTextBox.Margin = new System.Windows.Forms.Padding(3, 3, 6, 6);
             this.descriptionTextBox.Multiline = true;
             this.descriptionTextBox.Name = "descriptionTextBox";
-            this.descriptionTextBox.Size = new System.Drawing.Size(411, 326);
+            this.descriptionTextBox.Size = new System.Drawing.Size(411, 344);
             this.descriptionTextBox.TabIndex = 10;
             // 
             // locationAndSizeTabPage
@@ -416,7 +436,7 @@ namespace SpreadsheetEditorDemo
             this.locationAndSizeTabPage.Location = new System.Drawing.Point(4, 22);
             this.locationAndSizeTabPage.Name = "locationAndSizeTabPage";
             this.locationAndSizeTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.locationAndSizeTabPage.Size = new System.Drawing.Size(430, 406);
+            this.locationAndSizeTabPage.Size = new System.Drawing.Size(430, 497);
             this.locationAndSizeTabPage.TabIndex = 1;
             resources.ApplyResources(this.locationAndSizeTabPage, "locationAndSizeTabPage");
             this.locationAndSizeTabPage.UseVisualStyleBackColor = true;
@@ -478,14 +498,14 @@ namespace SpreadsheetEditorDemo
             this.sheetDrawingLocationEditorControl.MinimumSize = new System.Drawing.Size(240, 200);
             this.sheetDrawingLocationEditorControl.Name = "sheetDrawingLocationEditorControl";
             this.sheetDrawingLocationEditorControl.SheetDrawingLocation = null;
-            this.sheetDrawingLocationEditorControl.Size = new System.Drawing.Size(414, 373);
+            this.sheetDrawingLocationEditorControl.Size = new System.Drawing.Size(414, 464);
             this.sheetDrawingLocationEditorControl.TabIndex = 10;
             this.sheetDrawingLocationEditorControl.Worksheet = null;
             // 
             // okButton
             // 
             this.okButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.okButton.Location = new System.Drawing.Point(281, 459);
+            this.okButton.Location = new System.Drawing.Point(281, 532);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(75, 23);
             this.okButton.TabIndex = 1;
@@ -497,28 +517,71 @@ namespace SpreadsheetEditorDemo
             // 
             this.buttonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCancel.Location = new System.Drawing.Point(362, 459);
+            this.buttonCancel.Location = new System.Drawing.Point(362, 532);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 2;
             resources.ApplyResources(this.buttonCancel, "buttonCancel");
             this.buttonCancel.UseVisualStyleBackColor = true;
             // 
-            // smoothLineCheckBox
+            // categoryAxisLabelsLabel
             // 
-            this.smoothLineCheckBox.AutoSize = true;
-            this.smoothLineCheckBox.Location = new System.Drawing.Point(9, 81);
-            this.smoothLineCheckBox.Name = "smoothLineCheckBox";
-            this.smoothLineCheckBox.Size = new System.Drawing.Size(85, 17);
-            this.smoothLineCheckBox.TabIndex = 17;
-            resources.ApplyResources(this.smoothLineCheckBox, "smoothLineCheckBox");
-            this.smoothLineCheckBox.UseVisualStyleBackColor = true;
-            this.smoothLineCheckBox.CheckedChanged += new System.EventHandler(this.smoothLineCheckBox_CheckedChanged);
+            this.categoryAxisLabelsLabel.AutoSize = true;
+            this.categoryAxisLabelsLabel.Location = new System.Drawing.Point(12, 22);
+            this.categoryAxisLabelsLabel.Name = "categoryAxisLabelsLabel";
+            this.categoryAxisLabelsLabel.Size = new System.Drawing.Size(38, 13);
+            this.categoryAxisLabelsLabel.TabIndex = 1;
+            resources.ApplyResources(this.categoryAxisLabelsLabel, "categoryAxisLabelsLabel");
+            // 
+            // categoryAxisTitleLabel
+            // 
+            this.categoryAxisTitleLabel.AutoSize = true;
+            this.categoryAxisTitleLabel.Location = new System.Drawing.Point(12, 49);
+            this.categoryAxisTitleLabel.Name = "categoryAxisTitleLabel";
+            this.categoryAxisTitleLabel.Size = new System.Drawing.Size(27, 13);
+            this.categoryAxisTitleLabel.TabIndex = 2;
+            resources.ApplyResources(this.categoryAxisTitleLabel, "categoryAxisTitleLabel");
+            // 
+            // categoryAxisTitleTextBox
+            // 
+            this.categoryAxisTitleTextBox.Location = new System.Drawing.Point(142, 46);
+            this.categoryAxisTitleTextBox.Name = "categoryAxisTitleTextBox";
+            this.categoryAxisTitleTextBox.Size = new System.Drawing.Size(267, 20);
+            this.categoryAxisTitleTextBox.TabIndex = 3;
+            // 
+            // valuesGroupBox
+            // 
+            this.valuesGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.valuesGroupBox.Controls.Add(this.valuesAxisTitleTextBox);
+            this.valuesGroupBox.Controls.Add(this.valuesAxisTitleLabel);
+            this.valuesGroupBox.Location = new System.Drawing.Point(8, 445);
+            this.valuesGroupBox.Name = "valuesGroupBox";
+            this.valuesGroupBox.Size = new System.Drawing.Size(415, 47);
+            this.valuesGroupBox.TabIndex = 4;
+            this.valuesGroupBox.TabStop = false;
+            resources.ApplyResources(this.valuesGroupBox, "valuesGroupBox");
+            // 
+            // valuesAxisTitleTextBox
+            // 
+            this.valuesAxisTitleTextBox.Location = new System.Drawing.Point(142, 19);
+            this.valuesAxisTitleTextBox.Name = "valuesAxisTitleTextBox";
+            this.valuesAxisTitleTextBox.Size = new System.Drawing.Size(267, 20);
+            this.valuesAxisTitleTextBox.TabIndex = 3;
+            // 
+            // valuesAxisTitleLabel
+            // 
+            this.valuesAxisTitleLabel.AutoSize = true;
+            this.valuesAxisTitleLabel.Location = new System.Drawing.Point(12, 22);
+            this.valuesAxisTitleLabel.Name = "valuesAxisTitleLabel";
+            this.valuesAxisTitleLabel.Size = new System.Drawing.Size(27, 13);
+            this.valuesAxisTitleLabel.TabIndex = 2;
+            resources.ApplyResources(this.valuesAxisTitleLabel, "valuesAxisTitleLabel");
             // 
             // DrawingPropertiesForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(442, 493);
+            this.ClientSize = new System.Drawing.Size(442, 566);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.tabControl1);
@@ -548,6 +611,8 @@ namespace SpreadsheetEditorDemo
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rotationAngleNumericUpDown)).EndInit();
+            this.valuesGroupBox.ResumeLayout(false);
+            this.valuesGroupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -591,5 +656,11 @@ namespace SpreadsheetEditorDemo
         private System.Windows.Forms.GroupBox dataPointAppearanceGroupBox;
         private CustomControls.ShapeAppearanceEditorControl dataPointAppearanceEditor;
         private System.Windows.Forms.CheckBox smoothLineCheckBox;
+        private System.Windows.Forms.GroupBox valuesGroupBox;
+        private System.Windows.Forms.TextBox valuesAxisTitleTextBox;
+        private System.Windows.Forms.Label valuesAxisTitleLabel;
+        private System.Windows.Forms.TextBox categoryAxisTitleTextBox;
+        private System.Windows.Forms.Label categoryAxisTitleLabel;
+        private System.Windows.Forms.Label categoryAxisLabelsLabel;
     }
 }

@@ -120,8 +120,17 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Zeichnungseigenschaften</value>
   </data>
-  <data name="smoothLineCheckBox.Text" xml:space="preserve">
-    <value>Glatte Linie</value>
+  <data name="valuesAxisTitleLabel.Text" xml:space="preserve">
+    <value>Titel</value>
+  </data>
+  <data name="valuesGroupBox.Text" xml:space="preserve">
+    <value>Werteachse</value>
+  </data>
+  <data name="categoryAxisTitleLabel.Text" xml:space="preserve">
+    <value>Titel</value>
+  </data>
+  <data name="categoryAxisLabelsLabel.Text" xml:space="preserve">
+    <value>Beschriftungen</value>
   </data>
   <data name="buttonCancel.Text" xml:space="preserve">
     <value>Abbrechen</value>
@@ -165,11 +174,14 @@
   <data name="dataPointGroupBox.Text" xml:space="preserve">
     <value>Datenpunkt</value>
   </data>
+  <data name="smoothLineCheckBox.Text" xml:space="preserve">
+    <value>Glatte Linie</value>
+  </data>
   <data name="seriesGroupBox.Text" xml:space="preserve">
     <value>Legendeneinträge (Serie)</value>
   </data>
   <data name="categoriesGroupBox.Text" xml:space="preserve">
-    <value>Kategorieachsenbeschriftungen</value>
+    <value>Kategorieachse</value>
   </data>
   <data name="dataRangeLabel.Text" xml:space="preserve">
     <value>Referenzbereich</value>

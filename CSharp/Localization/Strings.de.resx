@@ -507,6 +507,9 @@
   <data name="SPREADSHEETEDITORDEMO_ALL_ALT3" xml:space="preserve">
     <value>Alle</value>
   </data>
+  <data name="SPREADSHEETEDITORDEMO_SET_CHART_PROPERTIES" xml:space="preserve">
+    <value>Diagrammeigenschaften festlegen</value>
+  </data>
   <data name="SPREADSHEETEDITORDEMO_THE_DRAWING_NAME_CANNOT_BE_EMPTY" xml:space="preserve">
     <value>Der Zeichnungsname darf nicht leer sein.</value>
   </data>
