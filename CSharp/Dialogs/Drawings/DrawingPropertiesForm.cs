@@ -422,7 +422,7 @@ namespace SpreadsheetEditorDemo
                     // if drawing location is changed
                     if (!Equals(_drawing.Location, sheetDrawingLocationEditorControl.SheetDrawingLocation))
                         // set the drawing location
-                        drawingEditor.SetLocation(sheetDrawingLocationEditorControl.SheetDrawingLocation);
+                        drawingEditor.SetLocation(sheetDrawingLocationEditorControl.SheetDrawingLocation);   
                 }
                 finally
                 {

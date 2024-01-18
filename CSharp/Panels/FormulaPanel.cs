@@ -17,7 +17,7 @@ namespace SpreadsheetEditorDemo
         #region Fields
 
         /// <summary>
-        /// Indicates when changing <see cref="cellsReferenceComboBox"/>.Text.
+        /// A value indicating whether <see cref="cellsReferenceComboBox"/>.Text is changing.
         /// </summary>
         bool _changingCellsReferenceComboBoxText = false;
 

@@ -86,6 +86,7 @@ namespace SpreadsheetEditorDemo
             UpdateUI();
         }
 
+
         private void VisualEditor_FocusedDrawingChanged(object sender, PropertyChangedEventArgs<SheetDrawing> e)
         {
             UpdateUI();
@@ -327,6 +328,39 @@ namespace SpreadsheetEditorDemo
         #region Format
 
         /// <summary>
+        /// Shows a dialog, which allows to enter a new row height value, and applies height to the selected rows.
+        /// </summary>
+        public void SetRowHeight()
+        {
+            // show value editor dialog
+            using (NumberValueEditorForm dlg = new NumberValueEditorForm(VisualEditor, VisualEditor.RowsHeight, 0, MAX_ROW_HEIGHT, SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_ROW_HEIGHT))
+            {
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    // set height of focused rows
+                    VisualEditor.RowsHeight = dlg.Value;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Shows a dialog, which allows to enter a new column width value, and applies width to the selected columns.
+        /// </summary>
+        public void SetColumnWidth()
+        {
+            // show value editor dialog
+            using (NumberValueEditorForm dlg = new NumberValueEditorForm(VisualEditor, VisualEditor.ColumnsWidth, 0, MAX_COLUMN_WIDTH, SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_COLUMN_WIDTH))
+            {
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    // set width of focused columns
+                    VisualEditor.ColumnsWidth = dlg.Value;
+                }
+            }
+        }
+
+
+        /// <summary>
         /// Handles the ButtonClick event of FormatButton object.
         /// </summary>
         private void formatButton_ButtonClick(object sender, EventArgs e)
@@ -367,22 +401,6 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Shows a dialog, which allows to enter a new row height value, and applies height to the selected rows.
-        /// </summary>
-        public void SetRowHeight()
-        {
-            // show value editor dialog
-            using (NumberValueEditorForm dlg = new NumberValueEditorForm(VisualEditor, VisualEditor.RowsHeight, 0, MAX_ROW_HEIGHT, SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_ROW_HEIGHT))
-            {
-                if (dlg.ShowDialog() == DialogResult.OK)
-                {
-                    // set height of focused rows
-                    VisualEditor.RowsHeight = dlg.Value;
-                }
-            }
-        }
-
-        /// <summary>
         /// Handles the Click event of DefaultRowHeightToolStripMenuItem object.
         /// </summary>
         private void defaultRowHeightToolStripMenuItem_Click(object sender, EventArgs e)
@@ -405,22 +423,6 @@ namespace SpreadsheetEditorDemo
         private void columnWidthToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SetColumnWidth();
-        }
-
-        /// <summary>
-        /// Shows a dialog, which allows to enter a new column width value, and applies width to the selected columns.
-        /// </summary>
-        public void SetColumnWidth()
-        {
-            // show value editor dialog
-            using (NumberValueEditorForm dlg = new NumberValueEditorForm(VisualEditor, VisualEditor.ColumnsWidth, 0, MAX_COLUMN_WIDTH, SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_COLUMN_WIDTH))
-            {
-                if (dlg.ShowDialog() == DialogResult.OK)
-                {
-                    // set width of focused columns
-                    VisualEditor.ColumnsWidth = dlg.Value;
-                }
-            }
         }
 
         /// <summary>
@@ -968,6 +970,6 @@ namespace SpreadsheetEditorDemo
 
         #endregion
 
-      
+
     }
 }

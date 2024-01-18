@@ -162,7 +162,7 @@ namespace SpreadsheetEditorDemo
             this.Controls.Add(this.nameLabel);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(400, 200);
+            this.MinimumSize = new System.Drawing.Size(400, 300);
             this.Name = "EditDefinedNameForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

@@ -132,7 +132,7 @@ namespace SpreadsheetEditorDemo
                 ListViewItem listViewItem = new ListViewItem();
                 listViewItem.Tag = definedName;
                 listViewItem.Text = definedName.Name;
-                listViewItem.SubItems.Add(definedName.Value);
+                listViewItem.SubItems.Add(_spreadsheetVisualEditor.GetActualValueByDefinedName(definedName.Name));
 
                 string worksheetName = definedName.WorksheetName;
                 if (string.IsNullOrEmpty(worksheetName))

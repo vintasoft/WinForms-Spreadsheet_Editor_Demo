@@ -585,11 +585,11 @@
   <data name="SPREADSHEETEDITORDEMO_ROW_HEIGHT" xml:space="preserve">
     <value>Zeilenhöhe</value>
   </data>
-  <data name="SPREADSHEETEDITORDEMO_DEFAULT_ROW_HEIGHT" xml:space="preserve">
-    <value>Standardzeilenhöhe</value>
-  </data>
   <data name="SPREADSHEETEDITORDEMO_COLUMN_WIDTH" xml:space="preserve">
     <value>Spaltenbreite</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_DEFAULT_ROW_HEIGHT" xml:space="preserve">
+    <value>Standardzeilenhöhe</value>
   </data>
   <data name="SPREADSHEETEDITORDEMO_DEFAULT_COLUMN_WIDTH" xml:space="preserve">
     <value>Standardspaltenbreite</value>

@@ -152,12 +152,6 @@ namespace SpreadsheetEditorDemo
         {
         }
 
-
-        private void VisualEditor_EditorChanged(object sender, PropertyChangedEventArgs<Vintasoft.Imaging.Office.Spreadsheet.SpreadsheetEditor> e)
-        {
-            UpdateCoreUI();
-        }
-
         /// <summary>
         /// Updates the user interface.
         /// </summary>
@@ -174,6 +168,15 @@ namespace SpreadsheetEditorDemo
                 else
                     Enabled = true;
             }
+        }
+
+
+        /// <summary>
+        /// Handles the EditorChanged event of the VisualEditor.
+        /// </summary>
+        private void VisualEditor_EditorChanged(object sender, PropertyChangedEventArgs<Vintasoft.Imaging.Office.Spreadsheet.SpreadsheetEditor> e)
+        {
+            UpdateCoreUI();
         }
 
         /// <summary>
