@@ -244,7 +244,7 @@ namespace SpreadsheetEditorDemo.CustomControls
         }
 
         /// <summary>
-        /// Handles the SelectedIndexChanged event of FontNamesListBox object.
+        /// Handles the SelectedIndexChanged event of fontNamesListBox object.
         /// </summary>
         private void fontNamesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -253,7 +253,7 @@ namespace SpreadsheetEditorDemo.CustomControls
         }
 
         /// <summary>
-        /// Handles the SelectedIndexChanged event of FontStylesListBox object.
+        /// Handles the SelectedIndexChanged event of fontStylesListBox object.
         /// </summary>
         private void fontStylesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -262,7 +262,7 @@ namespace SpreadsheetEditorDemo.CustomControls
         }
 
         /// <summary>
-        /// Handles the SelectedIndexChanged event of FontSizesListBox object.
+        /// Handles the SelectedIndexChanged event of fontSizesListBox object.
         /// </summary>
         private void fontSizesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -271,7 +271,7 @@ namespace SpreadsheetEditorDemo.CustomControls
         }
 
         /// <summary>
-        /// Handles the Click event of NormalFontButton object.
+        /// Handles the Click event of normalFontButton object.
         /// </summary>
         private void normalFontButton_Click(object sender, EventArgs e)
         {

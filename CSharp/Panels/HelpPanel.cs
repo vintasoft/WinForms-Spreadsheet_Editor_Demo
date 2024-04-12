@@ -27,7 +27,9 @@ namespace SpreadsheetEditorDemo
 
 
 
-        #region Methods
+        #region Methods 
+
+        #region PUBLIC  
 
         /// <summary>
         /// Shows the about dialog.
@@ -40,13 +42,20 @@ namespace SpreadsheetEditorDemo
             }
         }
 
+        #endregion
+
+
+        #region PRIVATE
+
         /// <summary>
-        /// Handles the Click event of AboutButton object.
+        /// Handles the Click event of aboutButton object.
         /// </summary>
         private void aboutButton_Click(object sender, System.EventArgs e)
         {
             ShowAboutDialog();
         }
+
+        #endregion
 
         #endregion
 

@@ -92,6 +92,9 @@
                 case "100%_Stacked_CurvLineMark":
                     return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_100_STACKED_CURVED_LINE_WITH_MARKERS;
 
+                case "3D_Line":
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_3D_LINE;
+
                 case "Pie":
                     return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_PIE;
 

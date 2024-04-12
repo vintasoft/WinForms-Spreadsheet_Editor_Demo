@@ -120,6 +120,9 @@ namespace SpreadsheetEditorDemo
             findWhatComboBox.Focus();
         }
 
+
+        #region UI
+
         /// <summary>
         /// Updates the user interface.
         /// </summary>
@@ -150,7 +153,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the Click event of CloseButton object.
+        /// Handles the Click event of closeButton object.
         /// </summary>
         private void closeButton_Click(object sender, EventArgs e)
         {
@@ -169,7 +172,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the CheckedChanged event of ReplaceCheckBox object.
+        /// Handles the CheckedChanged event of replaceCheckBox object.
         /// </summary>
         private void replaceCheckBox_CheckedChanged(object sender, EventArgs e)
         {
@@ -177,7 +180,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the Click event of FindNextButton object.
+        /// Handles the Click event of findNextButton object.
         /// </summary>
         private void findNextButton_Click(object sender, EventArgs e)
         {
@@ -185,7 +188,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the Click event of AddToSelectionButton object.
+        /// Handles the Click event of addToSelectionButton object.
         /// </summary>
         private void addToSelectionButton_Click(object sender, EventArgs e)
         {
@@ -193,7 +196,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the Click event of FindAllButton object.
+        /// Handles the Click event of findAllButton object.
         /// </summary>
         private void findAllButton_Click(object sender, EventArgs e)
         {
@@ -211,7 +214,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the Click event of ReplaceButton object.
+        /// Handles the Click event of replaceButton object.
         /// </summary>
         private void replaceButton_Click(object sender, EventArgs e)
         {
@@ -236,7 +239,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the Click event of ReplaceAllButton object.
+        /// Handles the Click event of replaceAllButton object.
         /// </summary>
         private void replaceAllButton_Click(object sender, EventArgs e)
         {
@@ -263,12 +266,12 @@ namespace SpreadsheetEditorDemo
                 if (textReplacer.FoundCellCount == 0)
                     ShowMessage(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_COULD_NOT_FIND_ANYTHING_TO_REPLACE, SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_REPLACE_ALT1, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else
-                    ShowMessage(string.Format(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_MADE_ARG0_REPLACEMENTS, textReplacer.FoundCellCount), SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_REPLACE_ALT2, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ShowMessage(string.Format(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_ARG0_REPLACEMENTS_ARE_MADE, textReplacer.FoundCellCount), SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_REPLACE_ALT2, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
         /// <summary>
-        /// Handles the TextChanged event of FindWhatComboBox object.
+        /// Handles the TextChanged event of findWhatComboBox object.
         /// </summary>
         private void findWhatComboBox_TextChanged(object sender, EventArgs e)
         {
@@ -276,7 +279,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the SelectedIndexChanged event of ResultListView object.
+        /// Handles the SelectedIndexChanged event of resultListView object.
         /// </summary>
         private void resultListView_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -291,7 +294,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the SelectedIndexChanged event of FindWithinComboBox object.
+        /// Handles the SelectedIndexChanged event of findWithinComboBox object.
         /// </summary>
         private void findWithinComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -299,7 +302,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the SelectedIndexChanged event of SearchComboBox object.
+        /// Handles the SelectedIndexChanged event of searchComboBox object.
         /// </summary>
         private void searchComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -307,12 +310,15 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the SelectedIndexChanged event of LookInComboBox object.
+        /// Handles the SelectedIndexChanged event of lookInComboBox object.
         /// </summary>
         private void lookInComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             _needReset = true;
         }
+
+        #endregion
+
 
         /// <summary>
         /// Handles the Changed event of SelectedCells object.
@@ -323,6 +329,9 @@ namespace SpreadsheetEditorDemo
                 _needReset = true;
         }
 
+        /// <summary>
+        /// Handles the FocusedWorksheetChanged event of visualEditor object.
+        /// </summary>
         private void visualEditor_FocusedWorksheetChanged(object sender, Vintasoft.Imaging.PropertyChangedEventArgs<Worksheet> e)
         {
             if (e.NewValue == null)
@@ -333,6 +342,7 @@ namespace SpreadsheetEditorDemo
 
             UpdateUI();
         }
+
 
         /// <summary>
         /// Finds the next cell.
@@ -365,7 +375,7 @@ namespace SpreadsheetEditorDemo
                 VisualEditor.FocusedSpreadsheetCell = textReplacer.GetCurrentSpreadsheetCell();
                 _updateFocusedCell = false;
             }
-        }     
+        }
 
         /// <summary>
         /// Updates the status.

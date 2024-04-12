@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Windows.Forms;
 
-using DemosCommonCode;
-
 using Vintasoft.Imaging.Office.Spreadsheet.Document;
 using Vintasoft.Imaging.Office.Spreadsheet.Document.Editors;
 using Vintasoft.Imaging.Office.Spreadsheet.UI;
+
+using DemosCommonCode;
 
 namespace SpreadsheetEditorDemo
 {
@@ -168,15 +168,16 @@ namespace SpreadsheetEditorDemo
             descriptionTextBox.Focus();
         }
 
+
         #region UI
 
         /// <summary>
-        /// Handles the SelectedIndexChanged event of SeriesComboBox object.
+        /// Handles the SelectedIndexChanged event of seriesComboBox object.
         /// </summary>
         private void seriesComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             _isSeriesPropertiesInitializing = true;
-            
+
             // get selected series
             _selectedSeries = _drawing.ChartProperties.Series[seriesComboBox.SelectedIndex];
 
@@ -214,7 +215,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the SelectedIndexChanged event of DataPointComboBox object.
+        /// Handles the SelectedIndexChanged event of dataPointComboBox object.
         /// </summary>
         private void dataPointComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -268,6 +269,9 @@ namespace SpreadsheetEditorDemo
             _isSeriesPropertiesInitializing = false;
         }
 
+        /// <summary>
+        /// Handles the ShapeAppearanceChanged event of dataPointAppearanceEditor object.
+        /// </summary>
         private void dataPointAppearanceEditor_ShapeAppearanceChanged(object sender, EventArgs e)
         {
             if (_isSeriesPropertiesInitializing)
@@ -320,7 +324,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the Changed event of MarkerProperties object.
+        /// Handles the Changed event of markerProperties object.
         /// </summary>
         private void markerProperties_Changed(object sender, EventArgs e)
         {
@@ -369,9 +373,8 @@ namespace SpreadsheetEditorDemo
             }
         }
 
-
         /// <summary>
-        /// Handles the CheckedChanged event of SmoothLineCheckBox object.
+        /// Handles the CheckedChanged event of smoothLineCheckBox object.
         /// </summary>
         private void smoothLineCheckBox_CheckedChanged(object sender, EventArgs e)
         {
@@ -394,7 +397,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the Click event of OkButton object.
+        /// Handles the Click event of okButton object.
         /// </summary>
         private void okButton_Click(object sender, EventArgs e)
         {
@@ -422,7 +425,7 @@ namespace SpreadsheetEditorDemo
                     // if drawing location is changed
                     if (!Equals(_drawing.Location, sheetDrawingLocationEditorControl.SheetDrawingLocation))
                         // set the drawing location
-                        drawingEditor.SetLocation(sheetDrawingLocationEditorControl.SheetDrawingLocation);   
+                        drawingEditor.SetLocation(sheetDrawingLocationEditorControl.SheetDrawingLocation);
                 }
                 finally
                 {

@@ -120,6 +120,27 @@
   <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>212, 17</value>
   </metadata>
+  <metadata name="saveWorksheetFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1020, 17</value>
+  </metadata>
+  <metadata name="openWorksheetFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 54</value>
+  </metadata>
+  <metadata name="exportFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>206, 54</value>
+  </metadata>
+  <metadata name="pageSetupDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>346, 54</value>
+  </metadata>
+  <metadata name="imagePrintDocument1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>496, 54</value>
+  </metadata>
+  <metadata name="printDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>670, 54</value>
+  </metadata>
+  <metadata name="colorDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>789, 54</value>
+  </metadata>
   <metadata name="spreadsheetCellContextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>810, 17</value>
   </metadata>
@@ -432,24 +453,6 @@
   </data>
   <data name="statusLabel.Text" xml:space="preserve">
     <value>statusLabel</value>
-  </data>
-  <data name="helpTabPage.Text" xml:space="preserve">
-    <value>Help</value>
-  </data>
-  <data name="reviewTabPage.Text" xml:space="preserve">
-    <value>Comments</value>
-  </data>
-  <data name="formulasTabPage.Text" xml:space="preserve">
-    <value>Formulas</value>
-  </data>
-  <data name="editTabPage.Text" xml:space="preserve">
-    <value>Edit</value>
-  </data>
-  <data name="homeTabPage.Text" xml:space="preserve">
-    <value>Home</value>
-  </data>
-  <data name="fileTabPage.Text" xml:space="preserve">
-    <value>File</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib">
     <value>True</value>

@@ -1,17 +1,17 @@
-﻿using DemosCommonCode;
-using System;
+﻿using System;
 using System.Windows.Forms;
 
 using Vintasoft.Imaging;
 using Vintasoft.Imaging.Office.Spreadsheet.UI;
 
+using DemosCommonCode;
 
 namespace SpreadsheetEditorDemo
 {
     /// <summary>
     /// Provides a "Find and Replace" panel.
     /// </summary>
-    public partial class FindReplacePanel : SpreadsheetVisualEditorPanel
+    public partial class FindReplacePanel : Vintasoft.Imaging.Office.Spreadsheet.UI.Controls.SpreadsheetVisualEditorPanel
     {
 
         #region Fields
@@ -42,7 +42,9 @@ namespace SpreadsheetEditorDemo
 
 
 
-        #region Methods
+        #region Methods 
+
+        #region PUBLIC  
 
         /// <summary>
         /// Shows the find dialog.
@@ -60,9 +62,13 @@ namespace SpreadsheetEditorDemo
             ShowFindReplaceForm(true);
         }
 
+        #endregion
+
+
+        #region PROTECTED  
 
         /// <summary>
-        /// Raises the <see cref="SpreadsheetEditorChanged" /> event.
+        /// Executes when the spreadsheet editor is changed.
         /// </summary>
         /// <param name="args">The <see cref="PropertyChangedEventArgs{SpreadsheetEditorControl}"/> instance containing the event data.</param>
         protected override void OnSpreadsheetEditorChanged(PropertyChangedEventArgs<SpreadsheetEditorControl> args)
@@ -78,9 +84,13 @@ namespace SpreadsheetEditorDemo
             }
         }
 
+        #endregion
+
+
+        #region PRIVATE
 
         /// <summary>
-        /// Handles the Click event of FindButton object.
+        /// Handles the Click event of findButton object.
         /// </summary>
         private void findButton_Click(object sender, EventArgs e)
         {
@@ -88,7 +98,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the Click event of ReplaceButton object.
+        /// Handles the Click event of replaceButton object.
         /// </summary>
         private void replaceButton_Click(object sender, EventArgs e)
         {
@@ -126,6 +136,8 @@ namespace SpreadsheetEditorDemo
             }
             _findReplaceForm.Reset();
         }
+
+        #endregion
 
         #endregion
 

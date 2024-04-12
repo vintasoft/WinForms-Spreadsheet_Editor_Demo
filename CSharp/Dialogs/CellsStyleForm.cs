@@ -297,7 +297,7 @@ namespace SpreadsheetEditorDemo
         #region Format tab control
 
         /// <summary>
-        /// Handles the SelectedIndexChanged event of FormatCategoriesTabControl object.
+        /// Handles the SelectedIndexChanged event of formatCategoriesTabControl object.
         /// </summary>
         private void formatCategoriesTabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -392,7 +392,7 @@ namespace SpreadsheetEditorDemo
         #region Number tab page
 
         /// <summary>
-        /// Handles the ValueChanged event of NumberDecimalPlacesNumericUpDown object.
+        /// Handles the ValueChanged event of numberDecimalPlacesNumericUpDown object.
         /// </summary>
         private void numberDecimalPlacesNumericUpDown_ValueChanged(object sender, EventArgs e)
         {
@@ -405,7 +405,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the CheckedChanged event of UseThousandsSeparatorCheckBox object.
+        /// Handles the CheckedChanged event of useThousandsSeparatorCheckBox object.
         /// </summary>
         private void useThousandsSeparatorCheckBox_CheckedChanged(object sender, EventArgs e)
         {
@@ -418,7 +418,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the CheckedChanged event of UseRedColorForNegativeCheckBox object.
+        /// Handles the CheckedChanged event of useRedColorForNegativeCheckBox object.
         /// </summary>
         private void useRedColorForNegativeCheckBox_CheckedChanged(object sender, EventArgs e)
         {
@@ -435,7 +435,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the CheckedChanged event of HideMinusSignCheckBox object.
+        /// Handles the CheckedChanged event of hideMinusSignCheckBox object.
         /// </summary>
         private void hideMinusSignCheckBox_CheckedChanged(object sender, EventArgs e)
         {
@@ -454,7 +454,7 @@ namespace SpreadsheetEditorDemo
         #region Currency tab page
 
         /// <summary>
-        /// Handles the ValueChanged event of CurrencyDecimalPlacesNumericUpDown object.
+        /// Handles the ValueChanged event of currencyDecimalPlacesNumericUpDown object.
         /// </summary>
         private void currencyDecimalPlacesNumericUpDown_ValueChanged(object sender, EventArgs e)
         {
@@ -468,7 +468,7 @@ namespace SpreadsheetEditorDemo
 
 
         /// <summary>
-        /// Handles the SelectedIndexChanged event of CurrencySymbolComboBox object.
+        /// Handles the SelectedIndexChanged event of currencySymbolComboBox object.
         /// </summary>
         private void currencySymbolComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -492,7 +492,7 @@ namespace SpreadsheetEditorDemo
         #region Date tab page
 
         /// <summary>
-        /// Handles the SelectedIndexChanged event of DateFormatsListBox object.
+        /// Handles the SelectedIndexChanged event of dateFormatsListBox object.
         /// </summary>
         private void dateFormatsListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -516,7 +516,7 @@ namespace SpreadsheetEditorDemo
 
 
         /// <summary>
-        /// Handles the SelectedIndexChanged event of TimeFormatsListBox object.
+        /// Handles the SelectedIndexChanged event of timeFormatsListBox object.
         /// </summary>
         private void timeFormatsListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -539,7 +539,7 @@ namespace SpreadsheetEditorDemo
         #region Percentage tab page
 
         /// <summary>
-        /// Handles the ValueChanged event of PercentageDecimalPlacesNumericUpDown object.
+        /// Handles the ValueChanged event of percentageDecimalPlacesNumericUpDown object.
         /// </summary>
         private void percentageDecimalPlacesNumericUpDown_ValueChanged(object sender, EventArgs e)
         {
@@ -557,7 +557,7 @@ namespace SpreadsheetEditorDemo
         #region Scientific tab page
 
         /// <summary>
-        /// Handles the ValueChanged event of ScientificDecimalPlacesNumericUpDown object.
+        /// Handles the ValueChanged event of scientificDecimalPlacesNumericUpDown object.
         /// </summary>
         private void scientificDecimalPlacesNumericUpDown_ValueChanged(object sender, EventArgs e)
         {
@@ -575,7 +575,7 @@ namespace SpreadsheetEditorDemo
         #region Custom tab page
 
         /// <summary>
-        /// Handles the SelectedIndexChanged event of CustomFormatsListBox object.
+        /// Handles the SelectedIndexChanged event of customFormatsListBox object.
         /// </summary>
         private void customFormatsListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -593,7 +593,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the Leave event of CustomFormatTextBox object.
+        /// Handles the Leave event of customFormatTextBox object.
         /// </summary>
         private void customFormatTextBox_Leave(object sender, EventArgs e)
         {
@@ -603,6 +603,9 @@ namespace SpreadsheetEditorDemo
             _changedProperties[CellStyleProperty.NumberFormat] = _currentFormat.ToString(FormattingProperties);
         }
 
+        /// <summary>
+        /// Handles the PreviewKeyDown event of customFormatTextBox object.
+        /// </summary>
         private void customFormatTextBox_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -690,7 +693,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the SelectedIndexChanged event of TextHorizontalAlignmentComboBox object.
+        /// Handles the SelectedIndexChanged event of textHorizontalAlignmentComboBox object.
         /// </summary>
         private void textHorizontalAlignmentComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -714,7 +717,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the SelectedIndexChanged event of TextVerticalAlignmentComboBox object.
+        /// Handles the SelectedIndexChanged event of textVerticalAlignmentComboBox object.
         /// </summary>
         private void textVerticalAlignmentComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -730,7 +733,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the ValueChanged event of TextIndentNumericUpDown object.
+        /// Handles the ValueChanged event of textIndentNumericUpDown object.
         /// </summary>
         private void textIndentNumericUpDown_ValueChanged(object sender, EventArgs e)
         {
@@ -741,6 +744,9 @@ namespace SpreadsheetEditorDemo
             SetIndentValue();
         }
 
+        /// <summary>
+        /// Handles the Validated event of textIndentNumericUpDown object.
+        /// </summary>
         private void textIndentNumericUpDown_Validated(object sender, EventArgs e)
         {
             if (!_initializationFinished)
@@ -751,7 +757,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the CheckStateChanged event of WrapTextCheckBox object.
+        /// Handles the CheckStateChanged event of wrapTextCheckBox object.
         /// </summary>
         private void wrapTextCheckBox_CheckStateChanged(object sender, EventArgs e)
         {
@@ -906,7 +912,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the SelectedIndexChanged event of FontNamesListBox object.
+        /// Handles the SelectedIndexChanged event of fontNamesListBox object.
         /// </summary>
         private void fontNamesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -921,7 +927,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the Leave event of FontNameTextBox object.
+        /// Handles the Leave event of fontNameTextBox object.
         /// </summary>
         private void fontNameTextBox_Leave(object sender, EventArgs e)
         {
@@ -933,6 +939,9 @@ namespace SpreadsheetEditorDemo
                 fontNamesListBox.ClearSelected();
         }
 
+        /// <summary>
+        /// Handles the PreviewKeyDown event of fontNameTextBox object.
+        /// </summary>
         private void fontNameTextBox_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -940,7 +949,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the SelectedIndexChanged event of FontStylesListBox object.
+        /// Handles the SelectedIndexChanged event of fontStylesListBox object.
         /// </summary>
         private void fontStylesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -955,7 +964,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the Leave event of FontStyleTextBox object.
+        /// Handles the Leave event of fontStyleTextBox object.
         /// </summary>
         private void fontStyleTextBox_Leave(object sender, EventArgs e)
         {
@@ -967,6 +976,9 @@ namespace SpreadsheetEditorDemo
                 fontStylesListBox.ClearSelected();
         }
 
+        /// <summary>
+        /// Handles the PreviewKeyDown event of fontStyleTextBox object.
+        /// </summary>
         private void fontStyleTextBox_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -974,7 +986,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the SelectedIndexChanged event of FontSizesListBox object.
+        /// Handles the SelectedIndexChanged event of fontSizesListBox object.
         /// </summary>
         private void fontSizesListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -989,7 +1001,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the Leave event of FontSizeTextBox object.
+        /// Handles the Leave event of fontSizeTextBox object.
         /// </summary>
         private void fontSizeTextBox_Leave(object sender, EventArgs e)
         {
@@ -1001,6 +1013,9 @@ namespace SpreadsheetEditorDemo
                 fontSizesListBox.ClearSelected();
         }
 
+        /// <summary>
+        /// Handles the PreviewKeyDown event of fontSizeTextBox object.
+        /// </summary>
         private void fontSizeTextBox_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -1008,7 +1023,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the CheckStateChanged event of UnderlineCheckBox object.
+        /// Handles the CheckStateChanged event of underlineCheckBox object.
         /// </summary>
         private void underlineCheckBox_CheckStateChanged(object sender, EventArgs e)
         {
@@ -1030,7 +1045,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the CheckStateChanged event of StrikethroughCheckBox object.
+        /// Handles the CheckStateChanged event of strikethroughCheckBox object.
         /// </summary>
         private void strikethroughCheckBox_CheckStateChanged(object sender, EventArgs e)
         {
@@ -1052,7 +1067,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the ColorChanged event of FontColorPanelControl object.
+        /// Handles the ColorChanged event of fontColorPanelControl object.
         /// </summary>
         private void fontColorPanelControl_ColorChanged(object sender, EventArgs e)
         {
@@ -1063,7 +1078,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the Click event of NormalFontButton object.
+        /// Handles the Click event of normalFontButton object.
         /// </summary>
         private void normalFontButton_Click(object sender, EventArgs e)
         {
@@ -1241,7 +1256,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the Click event of NoneBorderPresetButton object.
+        /// Handles the Click event of noneBorderPresetButton object.
         /// </summary>
         private void noneBorderPresetButton_Click(object sender, EventArgs e)
         {
@@ -1250,7 +1265,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the Click event of OutlineBorderPresetButton object.
+        /// Handles the Click event of outlineBorderPresetButton object.
         /// </summary>
         private void outlineBorderPresetButton_Click(object sender, EventArgs e)
         {
@@ -1260,7 +1275,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the Click event of InsideBorderPresetButton object.
+        /// Handles the Click event of insideBorderPresetButton object.
         /// </summary>
         private void insideBorderPresetButton_Click(object sender, EventArgs e)
         {
@@ -1270,7 +1285,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the Click event of TopBorderButton object.
+        /// Handles the Click event of topBorderButton object.
         /// </summary>
         private void topBorderButton_Click(object sender, EventArgs e)
         {
@@ -1290,7 +1305,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the Click event of HorizontalBorderButton object.
+        /// Handles the Click event of horizontalBorderButton object.
         /// </summary>
         private void horizontalBorderButton_Click(object sender, EventArgs e)
         {
@@ -1304,7 +1319,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the Click event of BottomBorderButton object.
+        /// Handles the Click event of bottomBorderButton object.
         /// </summary>
         private void bottomBorderButton_Click(object sender, EventArgs e)
         {
@@ -1324,7 +1339,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the Click event of LeftBorderButton object.
+        /// Handles the Click event of leftBorderButton object.
         /// </summary>
         private void leftBorderButton_Click(object sender, EventArgs e)
         {
@@ -1344,7 +1359,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the Click event of VerticalBorderButton object.
+        /// Handles the Click event of verticalBorderButton object.
         /// </summary>
         private void verticalBorderButton_Click(object sender, EventArgs e)
         {
@@ -1358,7 +1373,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the Click event of RightBorderButton object.
+        /// Handles the Click event of rightBorderButton object.
         /// </summary>
         private void rightBorderButton_Click(object sender, EventArgs e)
         {
@@ -1408,7 +1423,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the ColorChanged event of BackgroundColorPanelControl object.
+        /// Handles the ColorChanged event of backgroundColorPanelControl object.
         /// </summary>
         private void backgroundColorPanelControl_ColorChanged(object sender, EventArgs e)
         {
@@ -1416,7 +1431,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the Click event of NoColorButton object.
+        /// Handles the Click event of noColorButton object.
         /// </summary>
         private void noColorButton_Click(object sender, EventArgs e)
         {
@@ -1467,7 +1482,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the Click event of ButtonOk object.
+        /// Handles the Click event of buttonOk object.
         /// </summary>
         private void buttonOk_Click(object sender, EventArgs e)
         {
@@ -1477,7 +1492,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the Click event of ButtonCancel object.
+        /// Handles the Click event of buttonCancel object.
         /// </summary>
         private void buttonCancel_Click(object sender, EventArgs e)
         {

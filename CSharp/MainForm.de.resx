@@ -123,22 +123,4 @@
   <data name="statusLabel.Text" xml:space="preserve">
     <value>statusLabel</value>
   </data>
-  <data name="helpTabPage.Text" xml:space="preserve">
-    <value>Hilfe</value>
-  </data>
-  <data name="reviewTabPage.Text" xml:space="preserve">
-    <value>Kommentare</value>
-  </data>
-  <data name="formulasTabPage.Text" xml:space="preserve">
-    <value>Formeln</value>
-  </data>
-  <data name="editTabPage.Text" xml:space="preserve">
-    <value>Bearbeiten</value>
-  </data>
-  <data name="homeTabPage.Text" xml:space="preserve">
-    <value>Zuhause</value>
-  </data>
-  <data name="fileTabPage.Text" xml:space="preserve">
-    <value>Datei</value>
-  </data>
 </root>

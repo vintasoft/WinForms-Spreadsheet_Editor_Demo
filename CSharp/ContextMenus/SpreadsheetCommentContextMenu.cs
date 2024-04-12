@@ -1,13 +1,14 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Drawing;
+using System.Windows.Forms;
 
+using Vintasoft.Imaging.Office.Spreadsheet.Document;
 using Vintasoft.Imaging.Office.Spreadsheet.UI;
 
 namespace SpreadsheetEditorDemo
 {
     /// <summary>
-    /// Provides a context menu for comments.
+    /// Provides a context menu for spreadsheet comments in spreadsheet visual editor.
     /// </summary>
     public partial class SpreadsheetCommentContextMenu : SpreadsheetVisualEditorContextMenu
     {
@@ -20,29 +21,6 @@ namespace SpreadsheetEditorDemo
         public SpreadsheetCommentContextMenu()
         {
             InitializeComponent();
-        }
-
-        #endregion
-
-
-
-        #region Properties
-
-        CommentsPanel _commentsPanel;
-        /// <summary>
-        /// Gets or sets the comment panel.
-        /// </summary>
-        [Description("The comment panel.")]
-        public CommentsPanel CommentsPanel
-        {
-            get
-            {
-                return _commentsPanel;
-            }
-            set
-            {
-                _commentsPanel = value;
-            }
         }
 
         #endregion
@@ -70,15 +48,38 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the Click event of EditCommentToolStripMenuItem object.
+        /// Handles the Click event of editCommentToolStripMenuItem object.
         /// </summary>
         private void editCommentToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CommentsPanel.EditComment();
+            SpreadsheetVisualEditor visualEditor = SpreadsheetEditor.VisualEditor;
+
+            CellComment sourceCellComment = visualEditor.FocusedComment ?? visualEditor.FocusedCellComment;
+            Comment sourceComment = sourceCellComment.Comment;
+            SheetDrawingLocation sourceLocation = sourceCellComment.Location;
+
+            // create dialog that allows to edit the comment
+            using (EditCommentForm dlg = new EditCommentForm(visualEditor, sourceComment, sourceLocation))
+            {
+                // show the dialog
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    visualEditor.StartEditing(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_EDIT_COMMENT_ALT1);
+                    try
+                    {
+                        visualEditor.SetComment(dlg.Comment);
+                        visualEditor.SetCommentLocation(dlg.CommentLocation);
+                    }
+                    finally
+                    {
+                        visualEditor.FinishEditing();
+                    }
+                }
+            }
         }
 
         /// <summary>
-        /// Handles the Click event of DeleteCommentToolStripMenuItem object.
+        /// Handles the Click event of deleteCommentToolStripMenuItem object.
         /// </summary>
         private void deleteCommentToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -86,7 +87,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the Click event of HideCommentToolStripMenuItem object.
+        /// Handles the Click event of hideCommentToolStripMenuItem object.
         /// </summary>
         private void hideCommentToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -95,5 +96,6 @@ namespace SpreadsheetEditorDemo
         }
 
         #endregion
+
     }
 }

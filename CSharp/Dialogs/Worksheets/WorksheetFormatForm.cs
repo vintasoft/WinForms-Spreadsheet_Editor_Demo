@@ -5,6 +5,7 @@ using System.Windows.Forms;
 
 using Vintasoft.Imaging.Office.Spreadsheet.Document;
 using Vintasoft.Imaging.Office.Spreadsheet.UI;
+using Vintasoft.Imaging.Office.Spreadsheet.UI.Controls;
 
 using DemosCommonCode;
 
@@ -108,7 +109,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the Click event of ButtonOk object.
+        /// Handles the Click event of buttonOk object.
         /// </summary>
         private void buttonOk_Click(object sender, EventArgs e)
         {
@@ -118,11 +119,31 @@ namespace SpreadsheetEditorDemo
                 DemosTools.ShowWarningMessage("Spreadsheet Editor Demo", SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_ROW_HEIGHT_MUST_BE_AN_INTEGER_OR_DECIMAL_NUMBER);
                 return;
             }
+            if (rowHeight > CellsEditorPanel.MAX_ROW_HEIGHT)
+            {
+                DemosTools.ShowWarningMessage("Spreadsheet Editor Demo", $"Row height must be less than or equal {CellsEditorPanel.MAX_ROW_HEIGHT}.");
+                return;
+            }
+            if (rowHeight < 0)
+            {
+                DemosTools.ShowWarningMessage("Spreadsheet Editor Demo", $"Row height must be greater than or equal 0.");
+                return;
+            }
 
             double columnWidth;
             if (!double.TryParse(columnWidthTextBox.Text, NumberStyles.Float, Culture, out columnWidth))
             {
                 DemosTools.ShowWarningMessage("Spreadsheet Editor Demo", SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_COLUMN_WIDTH_MUST_BE_AN_INTEGER_OR_DECIMAL_NUMBER);
+                return;
+            }
+            if (columnWidth > CellsEditorPanel.MAX_COLUMN_WIDTH)
+            {
+                DemosTools.ShowWarningMessage("Spreadsheet Editor Demo", $"Column width must be less than or equal {CellsEditorPanel.MAX_COLUMN_WIDTH}.");
+                return;
+            }
+            if (columnWidth < 0)
+            {
+                DemosTools.ShowWarningMessage("Spreadsheet Editor Demo", $"Column width must be greater than or equal 0.");
                 return;
             }
 
@@ -140,7 +161,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the Click event of ButtonCancel object.
+        /// Handles the Click event of buttonCancel object.
         /// </summary>
         private void buttonCancel_Click(object sender, EventArgs e)
         {

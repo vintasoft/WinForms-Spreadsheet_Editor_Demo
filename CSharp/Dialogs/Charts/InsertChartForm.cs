@@ -93,16 +93,25 @@ namespace SpreadsheetEditorDemo
         }
 
 
+        /// <summary>
+        /// Handles the SelectedChartChanged event of ChartPreview object.
+        /// </summary>
         private void ChartPreview_SelectedChartChanged(object sender, EventArgs e)
         {
             buttonOk.Enabled = _chartPreview.IsChartSelected;
         }
     
+        /// <summary>
+        /// Handles the InitializationException event of ChartPreview object.
+        /// </summary>
         private void ChartPreview_InitializationException(object sender, Vintasoft.Imaging.ExceptionEventArgs e)
         {
             DemosTools.ShowErrorMessage(e.Exception);
         }
 
+        /// <summary>
+        /// Handles the InitializationFinished event of ChartPreview object.
+        /// </summary>
         private void ChartPreview_InitializationFinished(object sender, EventArgs e)
         {
             if (_chartPreview.ChartTypes.Count > 0)
@@ -116,7 +125,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the SelectedIndexChanged event of ChartTypeListBox object.
+        /// Handles the SelectedIndexChanged event of chartTypeListBox object.
         /// </summary>
         private void chartTypeListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -129,7 +138,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the SelectedIndexChanged event of ChartSubtypeListBox object.
+        /// Handles the SelectedIndexChanged event of chartSubtypeListBox object.
         /// </summary>
         private void chartSubtypeListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -140,7 +149,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the Click event of ButtonOk object.
+        /// Handles the Click event of buttonOk object.
         /// </summary>
         private void buttonOk_Click(object sender, EventArgs e)
         {

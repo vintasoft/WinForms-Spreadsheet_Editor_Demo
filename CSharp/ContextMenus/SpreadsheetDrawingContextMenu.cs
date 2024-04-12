@@ -13,7 +13,7 @@ using DemosCommonCode.Imaging.Codecs;
 namespace SpreadsheetEditorDemo
 {
     /// <summary>
-    /// Provides a context menu for drawings.
+    /// Provides a context menu for spreadsheet drawings in spreadsheet visual editor.
     /// </summary>
     public partial class SpreadsheetDrawingContextMenu : SpreadsheetVisualEditorContextMenu
     {
@@ -52,8 +52,9 @@ namespace SpreadsheetEditorDemo
             Show(spreadsheetEditor, menuLocation);
         }
 
+
         /// <summary>
-        /// Handles the Opening event of DrawingContextMenuStrip object.
+        /// Handles the Opening event of drawingContextMenuStrip object.
         /// </summary>
         private void drawingContextMenuStrip_Opening(object sender, System.ComponentModel.CancelEventArgs e)
         {
@@ -62,7 +63,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the Click event of DrawingSetImageToolStripMenuItem object.
+        /// Handles the Click event of drawingSetImageToolStripMenuItem object.
         /// </summary>
         private void drawingSetImageToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -76,13 +77,15 @@ namespace SpreadsheetEditorDemo
 
                 // if image must be changed
                 if (dialog.ShowDialog() == DialogResult.OK)
+                {
                     using (Stream stream = dialog.OpenFile())
                         SpreadsheetEditor.VisualEditor.SetDrawingPicture(new ImageData(stream));
+                }
             }
         }
 
         /// <summary>
-        /// Handles the Click event of DeleteDrawingToolStripMenuItem object.
+        /// Handles the Click event of deleteDrawingToolStripMenuItem object.
         /// </summary>
         private void deleteDrawingToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -90,7 +93,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the Click event of DrawingLinkToolStripMenuItem object.
+        /// Handles the Click event of drawingLinkToolStripMenuItem object.
         /// </summary>
         private void drawingLinkToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -98,7 +101,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the Click event of DrawingRemoveLinkToolStripMenuItem object.
+        /// Handles the Click event of drawingRemoveLinkToolStripMenuItem object.
         /// </summary>
         private void drawingRemoveLinkToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -106,7 +109,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the Click event of DrawingPropertiesToolStripMenuItem object.
+        /// Handles the Click event of drawingPropertiesToolStripMenuItem object.
         /// </summary>
         private void drawingPropertiesToolStripMenuItem_Click(object sender, EventArgs e)
         {

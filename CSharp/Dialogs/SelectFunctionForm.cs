@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using Vintasoft.Imaging.Office.Spreadsheet;
 using Vintasoft.Imaging.Office.Spreadsheet.Document;
 using Vintasoft.Imaging.Office.Spreadsheet.Functions;
 
@@ -118,7 +117,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the TextChanged event of SearchTextBox object.
+        /// Handles the TextChanged event of searchTextBox object.
         /// </summary>
         private void searchTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -126,7 +125,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the SelectedIndexChanged event of CategoryComboBox object.
+        /// Handles the SelectedIndexChanged event of categoryComboBox object.
         /// </summary>
         private void categoryComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -134,7 +133,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the Click event of ButtonOk object.
+        /// Handles the Click event of buttonOk object.
         /// </summary>
         private void buttonOk_Click(object sender, EventArgs e)
         {
@@ -142,7 +141,7 @@ namespace SpreadsheetEditorDemo
         }
 
         /// <summary>
-        /// Handles the Click event of ButtonCancel object.
+        /// Handles the Click event of buttonCancel object.
         /// </summary>
         private void buttonCancel_Click(object sender, EventArgs e)
         {

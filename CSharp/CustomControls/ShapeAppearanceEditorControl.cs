@@ -81,7 +81,7 @@ namespace SpreadsheetEditorDemo.CustomControls
         }
 
         /// <summary>
-        /// Handles the ColorChanged event of FillColorPanelControl object.
+        /// Handles the ColorChanged event of fillColorPanelControl object.
         /// </summary>
         private void fillColorPanelControl_ColorChanged(object sender, EventArgs e)
         {
@@ -89,7 +89,7 @@ namespace SpreadsheetEditorDemo.CustomControls
         }
 
         /// <summary>
-        /// Handles the ColorChanged event of OutlineColorPanelControl object.
+        /// Handles the ColorChanged event of outlineColorPanelControl object.
         /// </summary>
         private void outlineColorPanelControl_ColorChanged(object sender, EventArgs e)
         {
@@ -97,7 +97,7 @@ namespace SpreadsheetEditorDemo.CustomControls
         }
 
         /// <summary>
-        /// Handles the ValueChanged event of OutlineWidthNumericUpDown object.
+        /// Handles the ValueChanged event of outlineWidthNumericUpDown object.
         /// </summary>
         private void outlineWidthNumericUpDown_ValueChanged(object sender, EventArgs e)
         {

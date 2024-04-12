@@ -153,6 +153,9 @@
   <data name="DEMOSCOMMONCODE_IMAGING_CANCELED_ALT1" xml:space="preserve">
     <value>Abgebrochen.</value>
   </data>
+  <data name="DEMOSCOMMONCODE_IMAGING_CODECS_NDPI" xml:space="preserve">
+    <value>Ndpi</value>
+  </data>
   <data name="DEMOSCOMMONCODE_IMAGING_VALUE_CAN_NOT_BE_NULL" xml:space="preserve">
     <value>Wert darf nicht null sein.</value>
   </data>
@@ -181,28 +184,19 @@
     <value>Passwort</value>
   </data>
   <data name="DEMOSCOMMONCODE_IMAGING_THE_ARG0_PASSWORD_IS_INCORRECT" xml:space="preserve">
-    <value>Das {0}-Passwort ist falsch.</value>
+    <value>Das Passwort '{0}' ist falsch.</value>
   </data>
   <data name="DEMOSCOMMONCODE_IMAGING_ERROR_ALT1" xml:space="preserve">
     <value>Fehler</value>
   </data>
   <data name="DEMOSCOMMONCODE_IMAGING_AUTHORIZED_AS_ARG0" xml:space="preserve">
-    <value>Autorisiert als: {0}</value>
+    <value>Autorisiert als: '{0}'</value>
   </data>
   <data name="DEMOSCOMMONCODE_IMAGING_AUTHORIZATION_RESULT" xml:space="preserve">
     <value>Autorisierungsergebnis</value>
   </data>
-  <data name="DEMOSCOMMONCODE_IMAGING_ANOTHER_PRINT_PROCESS_IS_STILL_WORKING" xml:space="preserve">
-    <value>Ein anderer Druckvorgang läuft noch.</value>
-  </data>
   <data name="DEMOSCOMMONCODE_RESOURCE_ARG0_WAS_NOT_FOUND" xml:space="preserve">
     <value>Ressource „{0}“ wurde nicht gefunden.</value>
-  </data>
-  <data name="DEMOSCOMMONCODE_IMAGING_OPEN_URL_ARG0" xml:space="preserve">
-    <value>URL „{0}“ öffnen?</value>
-  </data>
-  <data name="DEMOSCOMMONCODE_IMAGING_OPEN_URL" xml:space="preserve">
-    <value>URL öffnen</value>
   </data>
   <data name="DEMOSCOMMONCODE_ABOUT" xml:space="preserve">
     <value>Über das Programm...</value>
@@ -231,20 +225,17 @@
   <data name="DEMOSCOMMONCODE_ERROR_ALT3" xml:space="preserve">
     <value>Fehler</value>
   </data>
-  <data name="DEMOSCOMMONCODE_UPLOAD_ARG0_BYTES_TO_ARG1" xml:space="preserve">
-    <value>Laden Sie {0} Bytes auf {1} hoch...</value>
+  <data name="SPREADSHEETEDITORDEMO_EDIT_COMMENT" xml:space="preserve">
+    <value>Kommentar bearbeiten</value>
   </data>
-  <data name="DEMOSCOMMONCODE_ERROR_ARG0" xml:space="preserve">
-    <value>Fehler: {0}</value>
+  <data name="SPREADSHEETEDITORDEMO_COLUMN_WIDTH" xml:space="preserve">
+    <value>Spaltenbreite</value>
   </data>
-  <data name="DEMOSCOMMONCODE_CANCELED" xml:space="preserve">
-    <value>Abgebrochen.</value>
+  <data name="SPREADSHEETEDITORDEMO_ROW_HEIGHT" xml:space="preserve">
+    <value>Zeilenhöhe</value>
   </data>
-  <data name="DEMOSCOMMONCODE_ERROR_ARG0_ALT1" xml:space="preserve">
-    <value>Fehler: {0}</value>
-  </data>
-  <data name="DEMOSCOMMONCODE_RESPONSE_RECEIVED_ARG0" xml:space="preserve">
-    <value>Antwort erhalten: {0}</value>
+  <data name="SPREADSHEETEDITORDEMO_EDIT_COMMENT_ALT1" xml:space="preserve">
+    <value>Kommentar bearbeiten</value>
   </data>
   <data name="SPREADSHEETEDITORDEMO_CUSTOMCONTROLS_REGULAR" xml:space="preserve">
     <value>Normal</value>
@@ -432,6 +423,9 @@
   <data name="SPREADSHEETEDITORDEMO_100_STACKED_CURVED_LINE_WITH_MARKERS" xml:space="preserve">
     <value>100% gestapelte gekrümmte Linie mit Markierungen</value>
   </data>
+  <data name="SPREADSHEETEDITORDEMO_3D_LINE" xml:space="preserve">
+    <value>3D-Linie</value>
+  </data>
   <data name="SPREADSHEETEDITORDEMO_PIE" xml:space="preserve">
     <value>Kuchen</value>
   </data>
@@ -558,8 +552,8 @@
   <data name="SPREADSHEETEDITORDEMO_REPLACE_ALT1" xml:space="preserve">
     <value>Ersetzen</value>
   </data>
-  <data name="SPREADSHEETEDITORDEMO_MADE_ARG0_REPLACEMENTS" xml:space="preserve">
-    <value>Ersetzungen für „{0}“ vorgenommen.</value>
+  <data name="SPREADSHEETEDITORDEMO_ARG0_REPLACEMENTS_ARE_MADE" xml:space="preserve">
+    <value>'{0}' Ersetzungen werden durchgeführt.</value>
   </data>
   <data name="SPREADSHEETEDITORDEMO_REPLACE_ALT2" xml:space="preserve">
     <value>Ersetzen</value>
@@ -582,26 +576,47 @@
   <data name="SPREADSHEETEDITORDEMO_COLUMN_WIDTH_MUST_BE_AN_INTEGER_OR_DECIMAL_NUMBER" xml:space="preserve">
     <value>Spaltenbreite muss eine Ganzzahl oder eine Dezimalzahl sein.</value>
   </data>
-  <data name="SPREADSHEETEDITORDEMO_ROW_HEIGHT" xml:space="preserve">
-    <value>Zeilenhöhe</value>
-  </data>
-  <data name="SPREADSHEETEDITORDEMO_COLUMN_WIDTH" xml:space="preserve">
-    <value>Spaltenbreite</value>
-  </data>
-  <data name="SPREADSHEETEDITORDEMO_DEFAULT_ROW_HEIGHT" xml:space="preserve">
-    <value>Standardzeilenhöhe</value>
-  </data>
-  <data name="SPREADSHEETEDITORDEMO_DEFAULT_COLUMN_WIDTH" xml:space="preserve">
-    <value>Standardspaltenbreite</value>
-  </data>
-  <data name="SPREADSHEETEDITORDEMO_INSERT_CHART" xml:space="preserve">
-    <value>Diagramm einfügen</value>
-  </data>
-  <data name="SPREADSHEETEDITORDEMO_EDIT_COMMENT" xml:space="preserve">
-    <value>Kommentar bearbeiten</value>
-  </data>
   <data name="SPREADSHEETEDITORDEMO_TSV_FILESTSVCSV_FILESCSV" xml:space="preserve">
     <value>|TSV-Dateien|*.tsv|CSV-Dateien|*.csv</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_EDIT" xml:space="preserve">
+    <value>Bearbeiten</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_HELP" xml:space="preserve">
+    <value>Hilfe</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_HELP_ALT1" xml:space="preserve">
+    <value>Hilfe</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_HELP_ALT2" xml:space="preserve">
+    <value>Hilfe</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_VINTASOFT_SPREADSHEET_EDITOR_DEMO_V" xml:space="preserve">
+    <value>VintaSoft Spreadsheet Editor Demo v</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_THE_URI_IS_NOT_VALID" xml:space="preserve">
+    <value>Der URI ist ungültig:</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_LINK" xml:space="preserve">
+    <value>Link:</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_ERROR_ALT2" xml:space="preserve">
+    <value>Fehler:</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_REFERENCE_IS_NOT_VALID" xml:space="preserve">
+    <value>Referenz ist ungültig.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_ERROR_ALT3" xml:space="preserve">
+    <value>Fehler</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_CELL_ARG0_WITH_FORMULA_ARG1_CALCULATION_ERROR_ARG2" xml:space="preserve">
+    <value>Zelle {0} mit Formel „={1}“ Berechnungsfehler: {2}</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_PROCESSING" xml:space="preserve">
+    <value>Verarbeitung...</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_LOADING" xml:space="preserve">
+    <value>Laden...</value>
   </data>
   <data name="SPREADSHEETEDITORDEMO_THE_LOADED_FILE_IS_XLS_FILE_TO_OPEN_XLS_FILE_APPLICATION_NEEDS_TO_CONVERT_XLS_FILE_TO_THE_XLSX_FILE_DO_YOU_WANT_TO_CREATE_XLSX_FILE_FROM_XLS_FILE" xml:space="preserve">
     <value>Die geladene Datei ist eine XLS-Datei. Um eine XLS-Datei zu öffnen, muss die Anwendung die XLS-Datei in die XLSX-Datei konvertieren. Möchten Sie eine XLSX-Datei aus einer XLS-Datei erstellen?</value>
@@ -620,6 +635,12 @@
   </data>
   <data name="SPREADSHEETEDITORDEMO_CONVERT_TSV_TO_XLSX" xml:space="preserve">
     <value>TSV in XLSX konvertieren</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_THE_LOADED_FILE_IS_SECURED_XLSX_FILE_TO_OPEN_SECURED_FILE_APPLICATION_NEEDS_TO_DECRYPT_XLSX_FILE_DO_YOU_WANT_TO_CREATE_DECRYPTED_XLSX_FILE" xml:space="preserve">
+    <value>Die geladene Datei ist eine verschlüsselte XLSX-Datei. Um eine verschlüsselte Datei zu öffnen, muss die XLSX-Datei entschlüsselt werden. Möchten Sie eine entschlüsselte XLSX-Datei erstellen?</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_DECRYPT_XLSX" xml:space="preserve">
+    <value>XLSX entschlüsseln</value>
   </data>
   <data name="SPREADSHEETEDITORDEMO_TSV" xml:space="preserve">
     <value>.tsv</value>
@@ -648,53 +669,26 @@ Um alle Blätter zu speichern, speichern Sie sie einzeln unter jeweils einem and
   <data name="SPREADSHEETEDITORDEMO_NEW_WORKBOOK" xml:space="preserve">
     <value>Neue Arbeitsmappe</value>
   </data>
-  <data name="SPREADSHEETEDITORDEMO_GENERAL" xml:space="preserve">
-    <value>Allgemein</value>
+  <data name="SPREADSHEETEDITORDEMO_ROW_HEIGHT_ALT1" xml:space="preserve">
+    <value>Zeilenhöhe</value>
   </data>
-  <data name="SPREADSHEETEDITORDEMO_NUMBER" xml:space="preserve">
-    <value>Anzahl</value>
+  <data name="SPREADSHEETEDITORDEMO_DEFAULT_ROW_HEIGHT" xml:space="preserve">
+    <value>Standardzeilenhöhe</value>
   </data>
-  <data name="SPREADSHEETEDITORDEMO_DATE" xml:space="preserve">
-    <value>Datum</value>
+  <data name="SPREADSHEETEDITORDEMO_COLUMN_WIDTH_ALT1" xml:space="preserve">
+    <value>Spaltenbreite</value>
   </data>
-  <data name="SPREADSHEETEDITORDEMO_TIME" xml:space="preserve">
-    <value>Zeit</value>
+  <data name="SPREADSHEETEDITORDEMO_DEFAULT_COLUMN_WIDTH" xml:space="preserve">
+    <value>Standardspaltenbreite</value>
   </data>
-  <data name="SPREADSHEETEDITORDEMO_CURRENCY" xml:space="preserve">
-    <value>Währung</value>
+  <data name="SPREADSHEETEDITORDEMO_INSERT_CHART" xml:space="preserve">
+    <value>Diagramm einfügen</value>
   </data>
-  <data name="SPREADSHEETEDITORDEMO_PERCENTAGE" xml:space="preserve">
-    <value>Prozentsatz</value>
+  <data name="SPREADSHEETEDITORDEMO_EDIT_COMMENT_ALT2" xml:space="preserve">
+    <value>Kommentar bearbeiten</value>
   </data>
-  <data name="SPREADSHEETEDITORDEMO_SCIENTIFIC" xml:space="preserve">
-    <value>Wissenschaftlich</value>
-  </data>
-  <data name="SPREADSHEETEDITORDEMO_CUSTOM" xml:space="preserve">
-    <value>Benutzerdefiniert</value>
-  </data>
-  <data name="SPREADSHEETEDITORDEMO_GENERAL_ALT1" xml:space="preserve">
-    <value>Allgemein</value>
-  </data>
-  <data name="SPREADSHEETEDITORDEMO_NUMBER_ALT1" xml:space="preserve">
-    <value>Anzahl</value>
-  </data>
-  <data name="SPREADSHEETEDITORDEMO_DATE_ALT1" xml:space="preserve">
-    <value>Datum</value>
-  </data>
-  <data name="SPREADSHEETEDITORDEMO_TIME_ALT1" xml:space="preserve">
-    <value>Zeit</value>
-  </data>
-  <data name="SPREADSHEETEDITORDEMO_CURRENCY_ALT1" xml:space="preserve">
-    <value>Währung</value>
-  </data>
-  <data name="SPREADSHEETEDITORDEMO_PERCENTAGE_ALT1" xml:space="preserve">
-    <value>Prozentsatz</value>
-  </data>
-  <data name="SPREADSHEETEDITORDEMO_SCIENTIFIC_ALT1" xml:space="preserve">
-    <value>Wissenschaftlich</value>
-  </data>
-  <data name="SPREADSHEETEDITORDEMO_CUSTOM_ALT1" xml:space="preserve">
-    <value>Benutzerdefiniert</value>
+  <data name="SPREADSHEETEDITORDEMO_FORMULA_SYNTAX_ERROR" xml:space="preserve">
+    <value>Formelsyntaxfehler</value>
   </data>
   <data name="SPREADSHEETEDITORDEMO_REMOVE_WORKSHEET_ARG0" xml:space="preserve">
     <value>Arbeitsblatt „{0}“ entfernen?</value>
@@ -702,41 +696,8 @@ Um alle Blätter zu speichern, speichern Sie sie einzeln unter jeweils einem and
   <data name="SPREADSHEETEDITORDEMO_REMOVE_WORKSHEET" xml:space="preserve">
     <value>Arbeitsblatt entfernen</value>
   </data>
-  <data name="SPREADSHEETEDITORDEMO_FORMULA_SYNTAX_ERROR" xml:space="preserve">
-    <value>Formelsyntaxfehler</value>
-  </data>
-  <data name="SPREADSHEETEDITORDEMO_FORMULA_SYNTAX_ERROR_ALT1" xml:space="preserve">
-    <value>Formelsyntaxfehler</value>
-  </data>
-  <data name="SPREADSHEETEDITORDEMO_THE_ADDRESS_OF_THIS_SITE_IS_NOT_VALID" xml:space="preserve">
-    <value>Die Adresse dieser Site ist ungültig:</value>
-  </data>
-  <data name="SPREADSHEETEDITORDEMO_LINK" xml:space="preserve">
-    <value>Link:</value>
-  </data>
-  <data name="SPREADSHEETEDITORDEMO_ERROR_ALT2" xml:space="preserve">
-    <value>Fehler:</value>
-  </data>
-  <data name="SPREADSHEETEDITORDEMO_REFERENCE_IS_NOT_VALID" xml:space="preserve">
-    <value>Referenz ist ungültig.</value>
-  </data>
-  <data name="SPREADSHEETEDITORDEMO_ERROR_ALT3" xml:space="preserve">
-    <value>Fehler</value>
-  </data>
-  <data name="SPREADSHEETEDITORDEMO_CELL_ARG0_WITH_FORMULA_ARG1_CALCULATION_ERROR_ARG2" xml:space="preserve">
-    <value>Zelle {0} mit Formel „={1}“ Berechnungsfehler: {2}</value>
-  </data>
-  <data name="SPREADSHEETEDITORDEMO_PROCESSING" xml:space="preserve">
-    <value>Verarbeitung...</value>
-  </data>
-  <data name="SPREADSHEETEDITORDEMO_LOADING" xml:space="preserve">
-    <value>Laden...</value>
-  </data>
   <data name="SPREADSHEETEDITORDEMO_READY" xml:space="preserve">
     <value>Bereit</value>
-  </data>
-  <data name="SPREADSHEETEDITORDEMO_VINTASOFT_SPREADSHEET_EDITOR_DEMO_V" xml:space="preserve">
-    <value>VintaSoft Spreadsheet Editor Demo v</value>
   </data>
   <data name="SPREADSHEETEDITORDEMO_UNKNOWN_ERROR" xml:space="preserve">
     <value>Unbekannter Fehler.</value>

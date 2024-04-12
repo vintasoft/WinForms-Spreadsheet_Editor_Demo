@@ -79,15 +79,6 @@ namespace SpreadsheetEditorDemo.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Canceled..
-        /// </summary>
-        internal static string DEMOSCOMMONCODE_CANCELED {
-            get {
-                return ResourceManager.GetString("DEMOSCOMMONCODE_CANCELED", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Click on the panel if current color must be changed..
         /// </summary>
         internal static string DEMOSCOMMONCODE_CUSTOMCONTROLS_CLICK_ON_THE_PANEL_IF_CURRENT_COLOR_MUST_BE_CHANGED {
@@ -173,38 +164,11 @@ namespace SpreadsheetEditorDemo.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Error: {0}.
-        /// </summary>
-        internal static string DEMOSCOMMONCODE_ERROR_ARG0 {
-            get {
-                return ResourceManager.GetString("DEMOSCOMMONCODE_ERROR_ARG0", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Error: {0}.
-        /// </summary>
-        internal static string DEMOSCOMMONCODE_ERROR_ARG0_ALT1 {
-            get {
-                return ResourceManager.GetString("DEMOSCOMMONCODE_ERROR_ARG0_ALT1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to   Finished ({0})..
         /// </summary>
         internal static string DEMOSCOMMONCODE_IMAGING__FINISHED_ARG0 {
             get {
                 return ResourceManager.GetString("DEMOSCOMMONCODE_IMAGING__FINISHED_ARG0", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Another print process is still working..
-        /// </summary>
-        internal static string DEMOSCOMMONCODE_IMAGING_ANOTHER_PRINT_PROCESS_IS_STILL_WORKING {
-            get {
-                return ResourceManager.GetString("DEMOSCOMMONCODE_IMAGING_ANOTHER_PRINT_PROCESS_IS_STILL_WORKING", resourceCulture);
             }
         }
         
@@ -218,7 +182,7 @@ namespace SpreadsheetEditorDemo.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Authorized as: {0}.
+        ///   Looks up a localized string similar to Authorized as: &apos;{0}&apos;.
         /// </summary>
         internal static string DEMOSCOMMONCODE_IMAGING_AUTHORIZED_AS_ARG0 {
             get {
@@ -259,6 +223,15 @@ namespace SpreadsheetEditorDemo.Localization {
         internal static string DEMOSCOMMONCODE_IMAGING_CLOSE {
             get {
                 return ResourceManager.GetString("DEMOSCOMMONCODE_IMAGING_CLOSE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ndpi.
+        /// </summary>
+        internal static string DEMOSCOMMONCODE_IMAGING_CODECS_NDPI {
+            get {
+                return ResourceManager.GetString("DEMOSCOMMONCODE_IMAGING_CODECS_NDPI", resourceCulture);
             }
         }
         
@@ -308,24 +281,6 @@ namespace SpreadsheetEditorDemo.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Open URL.
-        /// </summary>
-        internal static string DEMOSCOMMONCODE_IMAGING_OPEN_URL {
-            get {
-                return ResourceManager.GetString("DEMOSCOMMONCODE_IMAGING_OPEN_URL", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Open URL &apos;{0}&apos; ?.
-        /// </summary>
-        internal static string DEMOSCOMMONCODE_IMAGING_OPEN_URL_ARG0 {
-            get {
-                return ResourceManager.GetString("DEMOSCOMMONCODE_IMAGING_OPEN_URL_ARG0", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Password.
         /// </summary>
         internal static string DEMOSCOMMONCODE_IMAGING_PASSWORD {
@@ -344,7 +299,7 @@ namespace SpreadsheetEditorDemo.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The {0} password is incorrect..
+        ///   Looks up a localized string similar to The &apos;{0}&apos; password is incorrect..
         /// </summary>
         internal static string DEMOSCOMMONCODE_IMAGING_THE_ARG0_PASSWORD_IS_INCORRECT {
             get {
@@ -421,24 +376,6 @@ namespace SpreadsheetEditorDemo.Localization {
         internal static string DEMOSCOMMONCODE_RESOURCE_ARG0_WAS_NOT_FOUND {
             get {
                 return ResourceManager.GetString("DEMOSCOMMONCODE_RESOURCE_ARG0_WAS_NOT_FOUND", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Response received: {0}.
-        /// </summary>
-        internal static string DEMOSCOMMONCODE_RESPONSE_RECEIVED_ARG0 {
-            get {
-                return ResourceManager.GetString("DEMOSCOMMONCODE_RESPONSE_RECEIVED_ARG0", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Upload {0} bytes to {1}....
-        /// </summary>
-        internal static string DEMOSCOMMONCODE_UPLOAD_ARG0_BYTES_TO_ARG1 {
-            get {
-                return ResourceManager.GetString("DEMOSCOMMONCODE_UPLOAD_ARG0_BYTES_TO_ARG1", resourceCulture);
             }
         }
         
@@ -529,6 +466,15 @@ namespace SpreadsheetEditorDemo.Localization {
         internal static string SPREADSHEETEDITORDEMO_3D_CLUSTERED_COLUMN {
             get {
                 return ResourceManager.GetString("SPREADSHEETEDITORDEMO_3D_CLUSTERED_COLUMN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3D Line.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_3D_LINE {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_3D_LINE", resourceCulture);
             }
         }
         
@@ -735,6 +681,15 @@ namespace SpreadsheetEditorDemo.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &apos;{0}&apos; replacements are made..
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_ARG0_REPLACEMENTS_ARE_MADE {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_ARG0_REPLACEMENTS_ARE_MADE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to {0} requires an integer or decimal number..
         /// </summary>
         internal static string SPREADSHEETEDITORDEMO_ARG0_REQUIRES_AN_INTEGER_OR_DECIMAL_NUMBER {
@@ -924,6 +879,15 @@ namespace SpreadsheetEditorDemo.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Column width.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_COLUMN_WIDTH_ALT1 {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_COLUMN_WIDTH_ALT1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Column width must be an integer or decimal number..
         /// </summary>
         internal static string SPREADSHEETEDITORDEMO_COLUMN_WIDTH_MUST_BE_AN_INTEGER_OR_DECIMAL_NUMBER {
@@ -978,24 +942,6 @@ namespace SpreadsheetEditorDemo.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Currency.
-        /// </summary>
-        internal static string SPREADSHEETEDITORDEMO_CURRENCY {
-            get {
-                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_CURRENCY", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Currency.
-        /// </summary>
-        internal static string SPREADSHEETEDITORDEMO_CURRENCY_ALT1 {
-            get {
-                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_CURRENCY_ALT1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Current workbook is changed. Do you want to save changes?.
         /// </summary>
         internal static string SPREADSHEETEDITORDEMO_CURRENT_WORKBOOK_IS_CHANGED_DO_YOU_WANT_TO_SAVE_CHANGES {
@@ -1019,24 +965,6 @@ namespace SpreadsheetEditorDemo.Localization {
         internal static string SPREADSHEETEDITORDEMO_CURVED_LINE_WITH_MARKERS {
             get {
                 return ResourceManager.GetString("SPREADSHEETEDITORDEMO_CURVED_LINE_WITH_MARKERS", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Custom.
-        /// </summary>
-        internal static string SPREADSHEETEDITORDEMO_CUSTOM {
-            get {
-                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_CUSTOM", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Custom.
-        /// </summary>
-        internal static string SPREADSHEETEDITORDEMO_CUSTOM_ALT1 {
-            get {
-                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_CUSTOM_ALT1", resourceCulture);
             }
         }
         
@@ -1222,20 +1150,11 @@ namespace SpreadsheetEditorDemo.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Date.
+        ///   Looks up a localized string similar to Decrypt XLSX.
         /// </summary>
-        internal static string SPREADSHEETEDITORDEMO_DATE {
+        internal static string SPREADSHEETEDITORDEMO_DECRYPT_XLSX {
             get {
-                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_DATE", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Date.
-        /// </summary>
-        internal static string SPREADSHEETEDITORDEMO_DATE_ALT1 {
-            get {
-                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_DATE_ALT1", resourceCulture);
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_DECRYPT_XLSX", resourceCulture);
             }
         }
         
@@ -1276,11 +1195,38 @@ namespace SpreadsheetEditorDemo.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_EDIT {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_EDIT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Edit comment.
         /// </summary>
         internal static string SPREADSHEETEDITORDEMO_EDIT_COMMENT {
             get {
                 return ResourceManager.GetString("SPREADSHEETEDITORDEMO_EDIT_COMMENT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit comment.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_EDIT_COMMENT_ALT1 {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_EDIT_COMMENT_ALT1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit comment.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_EDIT_COMMENT_ALT2 {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_EDIT_COMMENT_ALT2", resourceCulture);
             }
         }
         
@@ -1375,15 +1321,6 @@ namespace SpreadsheetEditorDemo.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Formula Syntax Error.
-        /// </summary>
-        internal static string SPREADSHEETEDITORDEMO_FORMULA_SYNTAX_ERROR_ALT1 {
-            get {
-                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_FORMULA_SYNTAX_ERROR_ALT1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to from {0} pages.
         /// </summary>
         internal static string SPREADSHEETEDITORDEMO_FROM_ARG0_PAGES {
@@ -1393,20 +1330,29 @@ namespace SpreadsheetEditorDemo.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to General.
+        ///   Looks up a localized string similar to Help.
         /// </summary>
-        internal static string SPREADSHEETEDITORDEMO_GENERAL {
+        internal static string SPREADSHEETEDITORDEMO_HELP {
             get {
-                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_GENERAL", resourceCulture);
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_HELP", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to General.
+        ///   Looks up a localized string similar to Help.
         /// </summary>
-        internal static string SPREADSHEETEDITORDEMO_GENERAL_ALT1 {
+        internal static string SPREADSHEETEDITORDEMO_HELP_ALT1 {
             get {
-                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_GENERAL_ALT1", resourceCulture);
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_HELP_ALT1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Help.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_HELP_ALT2 {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_HELP_ALT2", resourceCulture);
             }
         }
         
@@ -1502,15 +1448,6 @@ namespace SpreadsheetEditorDemo.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Made &apos;{0}&apos; replacements..
-        /// </summary>
-        internal static string SPREADSHEETEDITORDEMO_MADE_ARG0_REPLACEMENTS {
-            get {
-                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_MADE_ARG0_REPLACEMENTS", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Name is not defined..
         /// </summary>
         internal static string SPREADSHEETEDITORDEMO_NAME_IS_NOT_DEFINED {
@@ -1534,42 +1471,6 @@ namespace SpreadsheetEditorDemo.Localization {
         internal static string SPREADSHEETEDITORDEMO_NO_ERROR {
             get {
                 return ResourceManager.GetString("SPREADSHEETEDITORDEMO_NO_ERROR", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Number.
-        /// </summary>
-        internal static string SPREADSHEETEDITORDEMO_NUMBER {
-            get {
-                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_NUMBER", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Number.
-        /// </summary>
-        internal static string SPREADSHEETEDITORDEMO_NUMBER_ALT1 {
-            get {
-                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_NUMBER_ALT1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Percentage.
-        /// </summary>
-        internal static string SPREADSHEETEDITORDEMO_PERCENTAGE {
-            get {
-                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_PERCENTAGE", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Percentage.
-        /// </summary>
-        internal static string SPREADSHEETEDITORDEMO_PERCENTAGE_ALT1 {
-            get {
-                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_PERCENTAGE_ALT1", resourceCulture);
             }
         }
         
@@ -1754,29 +1655,20 @@ namespace SpreadsheetEditorDemo.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Row height.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_ROW_HEIGHT_ALT1 {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_ROW_HEIGHT_ALT1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Row height must be an integer or decimal number..
         /// </summary>
         internal static string SPREADSHEETEDITORDEMO_ROW_HEIGHT_MUST_BE_AN_INTEGER_OR_DECIMAL_NUMBER {
             get {
                 return ResourceManager.GetString("SPREADSHEETEDITORDEMO_ROW_HEIGHT_MUST_BE_AN_INTEGER_OR_DECIMAL_NUMBER", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Scientific.
-        /// </summary>
-        internal static string SPREADSHEETEDITORDEMO_SCIENTIFIC {
-            get {
-                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_SCIENTIFIC", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Scientific.
-        /// </summary>
-        internal static string SPREADSHEETEDITORDEMO_SCIENTIFIC_ALT1 {
-            get {
-                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_SCIENTIFIC_ALT1", resourceCulture);
             }
         }
         
@@ -1889,15 +1781,6 @@ namespace SpreadsheetEditorDemo.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The address of this site is not valid: .
-        /// </summary>
-        internal static string SPREADSHEETEDITORDEMO_THE_ADDRESS_OF_THIS_SITE_IS_NOT_VALID {
-            get {
-                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_THE_ADDRESS_OF_THIS_SITE_IS_NOT_VALID", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to The drawing name cannot be empty..
         /// </summary>
         internal static string SPREADSHEETEDITORDEMO_THE_DRAWING_NAME_CANNOT_BE_EMPTY {
@@ -1914,6 +1797,16 @@ namespace SpreadsheetEditorDemo.Localization {
                 return ResourceManager.GetString("SPREADSHEETEDITORDEMO_THE_LOADED_FILE_IS_CSV_FILE_TO_OPEN_CSV_FILE_APPLICATION_NE" +
                         "EDS_TO_CONVERT_CSV_FILE_TO_THE_XLSX_FILE_DO_YOU_WANT_TO_CREATE_XLSX_FILE_FROM_CS" +
                         "V_FILE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The loaded file is secured XLSX file. To open secured file application needs to decrypt XLSX file. Do you want to create decrypted XLSX file?.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_THE_LOADED_FILE_IS_SECURED_XLSX_FILE_TO_OPEN_SECURED_FILE_APPLICATION_NEEDS_TO_DECRYPT_XLSX_FILE_DO_YOU_WANT_TO_CREATE_DECRYPTED_XLSX_FILE {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_THE_LOADED_FILE_IS_SECURED_XLSX_FILE_TO_OPEN_SECURED_FILE_A" +
+                        "PPLICATION_NEEDS_TO_DECRYPT_XLSX_FILE_DO_YOU_WANT_TO_CREATE_DECRYPTED_XLSX_FILE", resourceCulture);
             }
         }
         
@@ -1951,20 +1844,11 @@ namespace SpreadsheetEditorDemo.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Time.
+        ///   Looks up a localized string similar to The URI is not valid: .
         /// </summary>
-        internal static string SPREADSHEETEDITORDEMO_TIME {
+        internal static string SPREADSHEETEDITORDEMO_THE_URI_IS_NOT_VALID {
             get {
-                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_TIME", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Time.
-        /// </summary>
-        internal static string SPREADSHEETEDITORDEMO_TIME_ALT1 {
-            get {
-                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_TIME_ALT1", resourceCulture);
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_THE_URI_IS_NOT_VALID", resourceCulture);
             }
         }
         

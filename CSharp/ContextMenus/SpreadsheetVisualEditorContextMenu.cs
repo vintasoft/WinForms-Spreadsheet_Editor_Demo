@@ -8,7 +8,7 @@ using Vintasoft.Imaging.Office.Spreadsheet.UI;
 namespace SpreadsheetEditorDemo
 {
     /// <summary>
-    /// Provides a base class for context menu.
+    /// Provides a base class for context menu for spreadsheet visual editor.
     /// </summary>
     public partial class SpreadsheetVisualEditorContextMenu : ContextMenuStrip
     {
@@ -80,16 +80,22 @@ namespace SpreadsheetEditorDemo
             throw new NotImplementedException();
         }
 
+
+        /// <summary>
+        /// Handles the ContextMenuOpen event of VisualEditor object.
+        /// </summary>
         private void VisualEditor_ContextMenuOpen(object sender, Vintasoft.Imaging.UI.VintasoftControlMouseEventArgs e)
         {
             // if context menu should be shown
             if (NeedShowContextMenu() && !e.Handled)
             {
+                // show context menu
                 ShowContextMenu(SpreadsheetEditor, new Point((int)e.Location.X, (int)e.Location.Y));
                 e.Handled = true;
             }
         }
 
         #endregion
+
     }
 }
