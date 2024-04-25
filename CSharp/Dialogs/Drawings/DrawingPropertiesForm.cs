@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
+
+using DemosCommonCode;
 
 using Vintasoft.Imaging.Office.Spreadsheet.Document;
 using Vintasoft.Imaging.Office.Spreadsheet.Document.Editors;
 using Vintasoft.Imaging.Office.Spreadsheet.UI;
-
-using DemosCommonCode;
 
 namespace SpreadsheetEditorDemo
 {
@@ -26,6 +27,11 @@ namespace SpreadsheetEditorDemo
         /// The drawing.
         /// </summary>
         SheetDrawing _drawing;
+
+        /// <summary> 
+        /// The chart series.
+        /// </summary>
+        List<ChartDataSeries> _series = new List<ChartDataSeries>();
 
         /// <summary>
         /// The chart series, which are selected in combobox.
@@ -114,8 +120,17 @@ namespace SpreadsheetEditorDemo
                 // init series comboBox
                 if (drawing.ChartProperties.Series.Count > 0)
                 {
+                    int seriesIndex = 0;
                     for (int i = 0; i < drawing.ChartProperties.Series.Count; i++)
-                        seriesComboBox.Items.Add(string.Format(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_SERIES_ARG0, i + 1));
+                    {
+                        if (drawing.ChartProperties.Series[i].SeriesType == ChartDataSeriesType.DataSeries)
+                        {
+                            seriesComboBox.Items.Add(string.Format(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_SERIES_ARG0, seriesIndex + 1));
+                            seriesIndex++;
+
+                            _series.Add(drawing.ChartProperties.Series[i]);
+                        }
+                    }
 
                     seriesComboBox.SelectedIndex = 0;
                 }
@@ -179,7 +194,7 @@ namespace SpreadsheetEditorDemo
             _isSeriesPropertiesInitializing = true;
 
             // get selected series
-            _selectedSeries = _drawing.ChartProperties.Series[seriesComboBox.SelectedIndex];
+            _selectedSeries = _series[seriesComboBox.SelectedIndex];
 
             // set the selected series properties to the UI
             if (_selectedSeries.Name != null)

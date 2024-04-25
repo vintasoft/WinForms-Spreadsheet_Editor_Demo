@@ -122,6 +122,21 @@
                 case "100%_Stacked_Area":
                     return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_100_STACKED_AREA;
 
+                case "Scatter":
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_SCATTER;
+
+                case "Smooth_Lines_And_Marker":
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_SMOOTH_LINES_AND_MARKERS;
+
+                case "Smooth_Lines":
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_SMOOTH_LINES;
+
+                case "Straight_Lines_And_Mark":
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_STRAIGHT_LINES_AND_MARKERS;
+
+                case "Straight_Lines":
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_STRAIGHT_LINES;
+
                 default:
                     return Value;
             }

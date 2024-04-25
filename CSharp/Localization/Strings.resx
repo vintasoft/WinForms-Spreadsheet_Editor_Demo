@@ -453,6 +453,21 @@
   <data name="SPREADSHEETEDITORDEMO_100_STACKED_AREA" xml:space="preserve">
     <value>100% Stacked Area</value>
   </data>
+  <data name="SPREADSHEETEDITORDEMO_SCATTER" xml:space="preserve">
+    <value>Scatter</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_SMOOTH_LINES_AND_MARKERS" xml:space="preserve">
+    <value>Smooth Lines And Markers</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_SMOOTH_LINES" xml:space="preserve">
+    <value>Smooth Lines</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_STRAIGHT_LINES_AND_MARKERS" xml:space="preserve">
+    <value>Straight Lines and Markers</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_STRAIGHT_LINES" xml:space="preserve">
+    <value>Straight Lines</value>
+  </data>
   <data name="SPREADSHEETEDITORDEMO_COLUMN" xml:space="preserve">
     <value>Column</value>
   </data>

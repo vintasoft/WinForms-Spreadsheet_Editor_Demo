@@ -1673,6 +1673,15 @@ namespace SpreadsheetEditorDemo.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Scatter.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_SCATTER {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_SCATTER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Series appearance.
         /// </summary>
         internal static string SPREADSHEETEDITORDEMO_SERIES_APPEARANCE {
@@ -1696,6 +1705,24 @@ namespace SpreadsheetEditorDemo.Localization {
         internal static string SPREADSHEETEDITORDEMO_SET_CHART_PROPERTIES {
             get {
                 return ResourceManager.GetString("SPREADSHEETEDITORDEMO_SET_CHART_PROPERTIES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Smooth Lines.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_SMOOTH_LINES {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_SMOOTH_LINES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Smooth Lines And Markers.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_SMOOTH_LINES_AND_MARKERS {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_SMOOTH_LINES_AND_MARKERS", resourceCulture);
             }
         }
         
@@ -1759,6 +1786,24 @@ namespace SpreadsheetEditorDemo.Localization {
         internal static string SPREADSHEETEDITORDEMO_STACKED_LINE_WITH_MARKERS {
             get {
                 return ResourceManager.GetString("SPREADSHEETEDITORDEMO_STACKED_LINE_WITH_MARKERS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Straight Lines.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_STRAIGHT_LINES {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_STRAIGHT_LINES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Straight Lines and Markers.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_STRAIGHT_LINES_AND_MARKERS {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_STRAIGHT_LINES_AND_MARKERS", resourceCulture);
             }
         }
         
