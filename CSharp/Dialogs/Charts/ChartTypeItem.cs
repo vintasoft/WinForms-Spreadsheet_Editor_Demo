@@ -53,6 +53,15 @@
                 case "Area":
                     return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_AREA_ALT1;
 
+                case "Stock":
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_STOCK;
+
+                case "Scatter":
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_SCATTER_ALT1;
+
+                case "Radar":
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_RADAR_ALT1;
+
                 default:
                     return Value;
             }

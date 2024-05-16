@@ -381,14 +381,17 @@
   <data name="SPREADSHEETEDITORDEMO_100_STACKED_COLUMN" xml:space="preserve">
     <value>100 % gestapelte Spalte</value>
   </data>
+  <data name="SPREADSHEETEDITORDEMO_3D_COLUMN" xml:space="preserve">
+    <value>3D-Säulendiagramm</value>
+  </data>
   <data name="SPREADSHEETEDITORDEMO_3D_CLUSTERED_COLUMN" xml:space="preserve">
-    <value>3D-Clusterspalte</value>
+    <value>3-D-Cluster-Säulendiagramm</value>
   </data>
   <data name="SPREADSHEETEDITORDEMO_3D_STACKED_COLUMN" xml:space="preserve">
-    <value>3D-Stapelsäule</value>
+    <value>3D-gestapeltes Säulendiagramm</value>
   </data>
   <data name="SPREADSHEETEDITORDEMO_3D_100_STACKED_COLUMN" xml:space="preserve">
-    <value>3D 100 % gestapelte Säule</value>
+    <value>3-D 100% gestapeltes Säulendiagramm</value>
   </data>
   <data name="SPREADSHEETEDITORDEMO_STACKED_LINE" xml:space="preserve">
     <value>Gestapelte Zeile</value>
@@ -397,13 +400,13 @@
     <value>100 % gestapelte Linie</value>
   </data>
   <data name="SPREADSHEETEDITORDEMO_LINE_WITH_MARKERS" xml:space="preserve">
-    <value>Linie mit Markierungen</value>
+    <value>Liniendiagramm mit Markierungen</value>
   </data>
   <data name="SPREADSHEETEDITORDEMO_STACKED_LINE_WITH_MARKERS" xml:space="preserve">
-    <value>Gestapelte Linie mit Markierungen</value>
+    <value>Gestapeltes Liniendiagramm mit Markierungen</value>
   </data>
   <data name="SPREADSHEETEDITORDEMO_100_STACKED_LINE_WITH_MARKERS" xml:space="preserve">
-    <value>100% gestapelte Linie mit Markierungen</value>
+    <value>100% gestapeltes Liniendiagramm mit Markierungen</value>
   </data>
   <data name="SPREADSHEETEDITORDEMO_CURVED_LINE" xml:space="preserve">
     <value>Gekrümmte Linie</value>
@@ -415,16 +418,16 @@
     <value>100% gestapelte gekrümmte Linie</value>
   </data>
   <data name="SPREADSHEETEDITORDEMO_CURVED_LINE_WITH_MARKERS" xml:space="preserve">
-    <value>Gebogene Linie mit Markierungen</value>
+    <value>Gekrümmtes Liniendiagramm mit Markierungen</value>
   </data>
   <data name="SPREADSHEETEDITORDEMO_STACKED_CURVED_LINE_WITH_MARKERS" xml:space="preserve">
-    <value>Gestapelte gekrümmte Linie mit Markierungen</value>
+    <value>Gestapeltes Kurvenliniendiagramm mit Markierungen</value>
   </data>
   <data name="SPREADSHEETEDITORDEMO_100_STACKED_CURVED_LINE_WITH_MARKERS" xml:space="preserve">
-    <value>100% gestapelte gekrümmte Linie mit Markierungen</value>
+    <value>100% gestapeltes Kurvenliniendiagramm mit Markierungen</value>
   </data>
   <data name="SPREADSHEETEDITORDEMO_3D_LINE" xml:space="preserve">
-    <value>3D-Linie</value>
+    <value>3D-Liniendiagramm</value>
   </data>
   <data name="SPREADSHEETEDITORDEMO_PIE" xml:space="preserve">
     <value>Kuchen</value>
@@ -444,6 +447,15 @@
   <data name="SPREADSHEETEDITORDEMO_100_STACKED_BAR" xml:space="preserve">
     <value>100 % gestapelter Balken</value>
   </data>
+  <data name="SPREADSHEETEDITORDEMO_3D_CLUSTERED_BAR" xml:space="preserve">
+    <value>3-D-Cluster-Balkendiagramm</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_STACKED_BAR_ALT1" xml:space="preserve">
+    <value>Gestapelter Balken</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_3D_100_STACKED_BAR" xml:space="preserve">
+    <value>3-D 100% gestapeltes Balkendiagramm</value>
+  </data>
   <data name="SPREADSHEETEDITORDEMO_AREA" xml:space="preserve">
     <value>Fläche</value>
   </data>
@@ -453,20 +465,50 @@
   <data name="SPREADSHEETEDITORDEMO_100_STACKED_AREA" xml:space="preserve">
     <value>100 % gestapelter Bereich</value>
   </data>
+  <data name="SPREADSHEETEDITORDEMO_3D_AREA" xml:space="preserve">
+    <value>3D-Flächendiagramm</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_STACKED_AREA_ALT1" xml:space="preserve">
+    <value>Gestapelter Bereich</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_3D_100_STACKED_AREA" xml:space="preserve">
+    <value>3-D 100% gestapeltes Flächendiagramm</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_HIGHLOWCLOSE" xml:space="preserve">
+    <value>High-Low-Close-Diagramm</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_OPENHIGHLOWCLOSE" xml:space="preserve">
+    <value>Open-High-Low-Close-Diagramm</value>
+  </data>
   <data name="SPREADSHEETEDITORDEMO_SCATTER" xml:space="preserve">
     <value>Streudiagramm</value>
   </data>
-  <data name="SPREADSHEETEDITORDEMO_SMOOTH_LINES_AND_MARKERS" xml:space="preserve">
+  <data name="SPREADSHEETEDITORDEMO_SCATTER_WITH_SMOOTH_LINES_AND_MARKERS" xml:space="preserve">
     <value>Streudiagramm mit glatten Linien und Markierungen</value>
   </data>
-  <data name="SPREADSHEETEDITORDEMO_SMOOTH_LINES" xml:space="preserve">
+  <data name="SPREADSHEETEDITORDEMO_SCATTER_WITH_SMOOTH_LINES" xml:space="preserve">
     <value>Streudiagramm mit glatten Linien</value>
   </data>
-  <data name="SPREADSHEETEDITORDEMO_STRAIGHT_LINES_AND_MARKERS" xml:space="preserve">
+  <data name="SPREADSHEETEDITORDEMO_SCATTER_WITH_STRAIGHT_LINES_AND_MARKERS" xml:space="preserve">
     <value>Streudiagramm mit geraden Linien und Markierungen</value>
   </data>
-  <data name="SPREADSHEETEDITORDEMO_STRAIGHT_LINES" xml:space="preserve">
+  <data name="SPREADSHEETEDITORDEMO_SCATTER_WITH_STRAIGHT_LINES" xml:space="preserve">
     <value>Streudiagramm mit geraden Linien</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_BUBBLE" xml:space="preserve">
+    <value>Blasendiagramm</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_3D_BUBBLE" xml:space="preserve">
+    <value>3D-Blasendiagramm</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_RADAR" xml:space="preserve">
+    <value>Radardiagramm</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_RADAR_WITH_MARKERS" xml:space="preserve">
+    <value>Radarkarte mit Markierungen</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_FILLED_RADAR" xml:space="preserve">
+    <value>Gefülltes Radardiagramm</value>
   </data>
   <data name="SPREADSHEETEDITORDEMO_COLUMN" xml:space="preserve">
     <value>Spalte</value>
@@ -479,6 +521,15 @@
   </data>
   <data name="SPREADSHEETEDITORDEMO_AREA_ALT1" xml:space="preserve">
     <value>Fläche</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_STOCK" xml:space="preserve">
+    <value>Aktiendiagramm</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_SCATTER_ALT1" xml:space="preserve">
+    <value>Streudiagramm</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_RADAR_ALT1" xml:space="preserve">
+    <value>Radardiagramm</value>
   </data>
   <data name="SPREADSHEETEDITORDEMO_ADD_COMMENT" xml:space="preserve">
     <value>Kommentar hinzufügen</value>

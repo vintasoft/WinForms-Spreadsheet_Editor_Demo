@@ -47,6 +47,9 @@
                 case "100%_Stacked_Column":
                     return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_100_STACKED_COLUMN;
 
+                case "3D_Column":
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_3D_COLUMN;
+
                 case "3D_Clustered_Column":
                     return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_3D_CLUSTERED_COLUMN;
 
@@ -113,6 +116,15 @@
                 case "100%_Stacked_Bar":
                     return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_100_STACKED_BAR;
 
+                case "3D_Clustered_Bar":
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_3D_CLUSTERED_BAR;
+
+                case "3D_Stacked_Bar":
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_STACKED_BAR_ALT1;
+
+                case "3D_100%_Stacked_Bar":
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_3D_100_STACKED_BAR;
+
                 case "Area":
                     return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_AREA;
 
@@ -122,20 +134,50 @@
                 case "100%_Stacked_Area":
                     return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_100_STACKED_AREA;
 
+                case "3D_Area":
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_3D_AREA;
+
+                case "3D_Stacked_Area":
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_STACKED_AREA_ALT1;
+
+                case "3D_100%_Stacked_Area":
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_3D_100_STACKED_AREA;
+
+                case "High_Low_Close":
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_HIGHLOWCLOSE;
+
+                case "Open_High_Low_Close":
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_OPENHIGHLOWCLOSE;
+
                 case "Scatter":
                     return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_SCATTER;
 
-                case "Smooth_Lines_And_Marker":
-                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_SMOOTH_LINES_AND_MARKERS;
+                case "Scatter_SmoothAndMarker":
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_SCATTER_WITH_SMOOTH_LINES_AND_MARKERS;
 
-                case "Smooth_Lines":
-                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_SMOOTH_LINES;
+                case "Scatter_Smooth_Lines":
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_SCATTER_WITH_SMOOTH_LINES;
 
-                case "Straight_Lines_And_Mark":
-                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_STRAIGHT_LINES_AND_MARKERS;
+                case "Scatter_StraightAndMark":
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_SCATTER_WITH_STRAIGHT_LINES_AND_MARKERS;
 
-                case "Straight_Lines":
-                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_STRAIGHT_LINES;
+                case "Scatter_Straight_Lines":
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_SCATTER_WITH_STRAIGHT_LINES;
+
+                case "Bubble":
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_BUBBLE;
+
+                case "3D_Bubble":
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_3D_BUBBLE;
+
+                case "Radar":
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_RADAR;
+
+                case "Radar_with_Markers":
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_RADAR_WITH_MARKERS;
+
+                case "Filled_Radar":
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_FILLED_RADAR;
 
                 default:
                     return Value;
