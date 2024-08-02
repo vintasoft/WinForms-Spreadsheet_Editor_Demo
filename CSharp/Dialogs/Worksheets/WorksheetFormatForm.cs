@@ -121,12 +121,12 @@ namespace SpreadsheetEditorDemo
             }
             if (rowHeight > CellsEditorPanel.MAX_ROW_HEIGHT)
             {
-                DemosTools.ShowWarningMessage("Spreadsheet Editor Demo", $"Row height must be less than or equal {CellsEditorPanel.MAX_ROW_HEIGHT}.");
+                DemosTools.ShowWarningMessage("Spreadsheet Editor Demo", string.Format(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_ROW_HEIGHT_MUST_BE_LESS_THAN_OR_EQUAL_ARG0, CellsEditorPanel.MAX_ROW_HEIGHT));
                 return;
             }
             if (rowHeight < 0)
             {
-                DemosTools.ShowWarningMessage("Spreadsheet Editor Demo", $"Row height must be greater than or equal 0.");
+                DemosTools.ShowWarningMessage("Spreadsheet Editor Demo", SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_ROW_HEIGHT_MUST_BE_GREATER_THAN_OR_EQUAL_0);
                 return;
             }
 
@@ -138,12 +138,12 @@ namespace SpreadsheetEditorDemo
             }
             if (columnWidth > CellsEditorPanel.MAX_COLUMN_WIDTH)
             {
-                DemosTools.ShowWarningMessage("Spreadsheet Editor Demo", $"Column width must be less than or equal {CellsEditorPanel.MAX_COLUMN_WIDTH}.");
+                DemosTools.ShowWarningMessage("Spreadsheet Editor Demo", string.Format(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_COLUMN_WIDTH_MUST_BE_LESS_THAN_OR_EQUAL_ARG0, CellsEditorPanel.MAX_COLUMN_WIDTH));
                 return;
             }
             if (columnWidth < 0)
             {
-                DemosTools.ShowWarningMessage("Spreadsheet Editor Demo", $"Column width must be greater than or equal 0.");
+                DemosTools.ShowWarningMessage("Spreadsheet Editor Demo", SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_COLUMN_WIDTH_MUST_BE_GREATER_THAN_OR_EQUAL_0);
                 return;
             }
 

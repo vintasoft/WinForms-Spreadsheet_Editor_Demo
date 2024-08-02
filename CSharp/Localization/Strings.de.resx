@@ -435,6 +435,12 @@
   <data name="SPREADSHEETEDITORDEMO_PIE_EXPLOSION" xml:space="preserve">
     <value>Kuchen (Explosion)</value>
   </data>
+  <data name="SPREADSHEETEDITORDEMO_3D_PIE" xml:space="preserve">
+    <value>3-D Kuchen</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_3D_PIE_EXPLOSION" xml:space="preserve">
+    <value>3-D Kuchen (Explosion)</value>
+  </data>
   <data name="SPREADSHEETEDITORDEMO_DOUGHNUT" xml:space="preserve">
     <value>Donut</value>
   </data>
@@ -509,6 +515,12 @@
   </data>
   <data name="SPREADSHEETEDITORDEMO_FILLED_RADAR" xml:space="preserve">
     <value>Gefülltes Radardiagramm</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_3D_SURFACE" xml:space="preserve">
+    <value>3D-Oberfläche</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_WIREFRAME_3D_SURFACE" xml:space="preserve">
+    <value>Drahtgitter-3D-Oberfläche</value>
   </data>
   <data name="SPREADSHEETEDITORDEMO_COLUMN" xml:space="preserve">
     <value>Spalte</value>
@@ -639,8 +651,20 @@
   <data name="SPREADSHEETEDITORDEMO_ROW_HEIGHT_MUST_BE_AN_INTEGER_OR_DECIMAL_NUMBER" xml:space="preserve">
     <value>Zeilenhöhe muss eine Ganzzahl oder eine Dezimalzahl sein.</value>
   </data>
+  <data name="SPREADSHEETEDITORDEMO_ROW_HEIGHT_MUST_BE_LESS_THAN_OR_EQUAL_ARG0" xml:space="preserve">
+    <value>Zeilenhöhe muss kleiner oder gleich {0} sein.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_ROW_HEIGHT_MUST_BE_GREATER_THAN_OR_EQUAL_0" xml:space="preserve">
+    <value>Zeilenhöhe muss größer oder gleich 0 sein.</value>
+  </data>
   <data name="SPREADSHEETEDITORDEMO_COLUMN_WIDTH_MUST_BE_AN_INTEGER_OR_DECIMAL_NUMBER" xml:space="preserve">
     <value>Spaltenbreite muss eine Ganzzahl oder eine Dezimalzahl sein.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_COLUMN_WIDTH_MUST_BE_LESS_THAN_OR_EQUAL_ARG0" xml:space="preserve">
+    <value>Spaltenbreite muss kleiner oder gleich {0} sein.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_COLUMN_WIDTH_MUST_BE_GREATER_THAN_OR_EQUAL_0" xml:space="preserve">
+    <value>Spaltenbreite muss größer oder gleich 0 sein.</value>
   </data>
   <data name="SPREADSHEETEDITORDEMO_TSV_FILESTSVCSV_FILESCSV" xml:space="preserve">
     <value>|TSV-Dateien|*.tsv|CSV-Dateien|*.csv</value>

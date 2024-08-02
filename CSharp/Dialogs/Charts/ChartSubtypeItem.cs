@@ -104,6 +104,12 @@
                 case "Pie_Explosion":
                     return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_PIE_EXPLOSION;
 
+                case "3D_Pie":
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_3D_PIE;
+
+                case "3D_Pie_Explosion":
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_3D_PIE_EXPLOSION;
+
                 case "Doughnut":
                     return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_DOUGHNUT;
 
@@ -178,6 +184,12 @@
 
                 case "Filled_Radar":
                     return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_FILLED_RADAR;
+
+                case "3D_Surface":
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_3D_SURFACE;
+
+                case "3D_Surface_Wireframe":
+                    return SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_WIREFRAME_3D_SURFACE;
 
                 default:
                     return Value;

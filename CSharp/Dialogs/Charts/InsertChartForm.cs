@@ -86,8 +86,11 @@ namespace SpreadsheetEditorDemo
         protected override void OnClosed(EventArgs e)
         {
             SpreadsheetEditor editor = chartViewer.VisualEditor.Editor;
-            chartViewer.VisualEditor.CloseDocument();
-            editor.Dispose();
+            if (editor != null)
+            {
+                chartViewer.VisualEditor.CloseDocument();
+                editor.Dispose();
+            }
 
             base.OnClosed(e);
         }

@@ -435,6 +435,12 @@
   <data name="SPREADSHEETEDITORDEMO_PIE_EXPLOSION" xml:space="preserve">
     <value>Pie (Explosion)</value>
   </data>
+  <data name="SPREADSHEETEDITORDEMO_3D_PIE" xml:space="preserve">
+    <value>3-D Pie</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_3D_PIE_EXPLOSION" xml:space="preserve">
+    <value>3-D Pie (Explosion)</value>
+  </data>
   <data name="SPREADSHEETEDITORDEMO_DOUGHNUT" xml:space="preserve">
     <value>Doughnut</value>
   </data>
@@ -509,6 +515,12 @@
   </data>
   <data name="SPREADSHEETEDITORDEMO_FILLED_RADAR" xml:space="preserve">
     <value>Filled Radar</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_3D_SURFACE" xml:space="preserve">
+    <value>3-D Surface</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_WIREFRAME_3D_SURFACE" xml:space="preserve">
+    <value>Wireframe 3-D Surface</value>
   </data>
   <data name="SPREADSHEETEDITORDEMO_COLUMN" xml:space="preserve">
     <value>Column</value>
@@ -639,8 +651,20 @@
   <data name="SPREADSHEETEDITORDEMO_ROW_HEIGHT_MUST_BE_AN_INTEGER_OR_DECIMAL_NUMBER" xml:space="preserve">
     <value>Row height must be an integer or decimal number.</value>
   </data>
+  <data name="SPREADSHEETEDITORDEMO_ROW_HEIGHT_MUST_BE_LESS_THAN_OR_EQUAL_ARG0" xml:space="preserve">
+    <value>Row height must be less than or equal {0}.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_ROW_HEIGHT_MUST_BE_GREATER_THAN_OR_EQUAL_0" xml:space="preserve">
+    <value>Row height must be greater than or equal 0.</value>
+  </data>
   <data name="SPREADSHEETEDITORDEMO_COLUMN_WIDTH_MUST_BE_AN_INTEGER_OR_DECIMAL_NUMBER" xml:space="preserve">
     <value>Column width must be an integer or decimal number.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_COLUMN_WIDTH_MUST_BE_LESS_THAN_OR_EQUAL_ARG0" xml:space="preserve">
+    <value>Column width must be less than or equal {0}.</value>
+  </data>
+  <data name="SPREADSHEETEDITORDEMO_COLUMN_WIDTH_MUST_BE_GREATER_THAN_OR_EQUAL_0" xml:space="preserve">
+    <value>Column width must be greater than or equal 0.</value>
   </data>
   <data name="SPREADSHEETEDITORDEMO_TSV_FILESTSVCSV_FILESCSV" xml:space="preserve">
     <value>|TSV files|*.tsv|CSV files|*.csv</value>

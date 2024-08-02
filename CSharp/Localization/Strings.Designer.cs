@@ -533,11 +533,38 @@ namespace SpreadsheetEditorDemo.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 3-D Pie.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_3D_PIE {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_3D_PIE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3-D Pie (Explosion).
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_3D_PIE_EXPLOSION {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_3D_PIE_EXPLOSION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 3-D Stacked Column.
         /// </summary>
         internal static string SPREADSHEETEDITORDEMO_3D_STACKED_COLUMN {
             get {
                 return ResourceManager.GetString("SPREADSHEETEDITORDEMO_3D_STACKED_COLUMN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3-D Surface.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_3D_SURFACE {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_3D_SURFACE", resourceCulture);
             }
         }
         
@@ -956,6 +983,24 @@ namespace SpreadsheetEditorDemo.Localization {
         internal static string SPREADSHEETEDITORDEMO_COLUMN_WIDTH_MUST_BE_AN_INTEGER_OR_DECIMAL_NUMBER {
             get {
                 return ResourceManager.GetString("SPREADSHEETEDITORDEMO_COLUMN_WIDTH_MUST_BE_AN_INTEGER_OR_DECIMAL_NUMBER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Column width must be greater than or equal 0..
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_COLUMN_WIDTH_MUST_BE_GREATER_THAN_OR_EQUAL_0 {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_COLUMN_WIDTH_MUST_BE_GREATER_THAN_OR_EQUAL_0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Column width must be less than or equal {0}..
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_COLUMN_WIDTH_MUST_BE_LESS_THAN_OR_EQUAL_ARG0 {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_COLUMN_WIDTH_MUST_BE_LESS_THAN_OR_EQUAL_ARG0", resourceCulture);
             }
         }
         
@@ -1790,6 +1835,24 @@ namespace SpreadsheetEditorDemo.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Row height must be greater than or equal 0..
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_ROW_HEIGHT_MUST_BE_GREATER_THAN_OR_EQUAL_0 {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_ROW_HEIGHT_MUST_BE_GREATER_THAN_OR_EQUAL_0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Row height must be less than or equal {0}..
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_ROW_HEIGHT_MUST_BE_LESS_THAN_OR_EQUAL_ARG0 {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_ROW_HEIGHT_MUST_BE_LESS_THAN_OR_EQUAL_ARG0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Scatter.
         /// </summary>
         internal static string SPREADSHEETEDITORDEMO_SCATTER {
@@ -2110,6 +2173,15 @@ namespace SpreadsheetEditorDemo.Localization {
         internal static string SPREADSHEETEDITORDEMO_VINTASOFT_SPREADSHEET_EDITOR_DEMO_V {
             get {
                 return ResourceManager.GetString("SPREADSHEETEDITORDEMO_VINTASOFT_SPREADSHEET_EDITOR_DEMO_V", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Wireframe 3-D Surface.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_WIREFRAME_3D_SURFACE {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_WIREFRAME_3D_SURFACE", resourceCulture);
             }
         }
         
