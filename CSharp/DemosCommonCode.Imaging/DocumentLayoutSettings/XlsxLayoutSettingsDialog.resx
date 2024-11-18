@@ -132,6 +132,9 @@
   <data name="showHiddenGraphicsCheckBox.Text" xml:space="preserve">
     <value>Show hidden graphics</value>
   </data>
+  <data name="worksheetIndexCheckBox.Text" xml:space="preserve">
+    <value>Worksheet index</value>
+  </data>
   <data name="cancelBtn.Text" xml:space="preserve">
     <value>Cancel</value>
   </data>

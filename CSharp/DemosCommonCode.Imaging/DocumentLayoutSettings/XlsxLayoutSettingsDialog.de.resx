@@ -132,6 +132,9 @@
   <data name="showHiddenGraphicsCheckBox.Text" xml:space="preserve">
     <value>Versteckte Grafiken anzeigen</value>
   </data>
+  <data name="worksheetIndexCheckBox.Text" xml:space="preserve">
+    <value>Arbeitsblattindex</value>
+  </data>
   <data name="cancelBtn.Text" xml:space="preserve">
     <value>Abbrechen</value>
   </data>
