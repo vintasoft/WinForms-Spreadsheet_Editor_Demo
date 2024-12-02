@@ -57,6 +57,7 @@ namespace SpreadsheetEditorDemo.CustomControls
         /// Gets or sets the font properties.
         /// </summary>
         [Browsable(false)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public FontProperties FontProperties
         {
             get
@@ -80,6 +81,7 @@ namespace SpreadsheetEditorDemo.CustomControls
         /// Gets or sets the "Normal" font properties.
         /// </summary>
         [Browsable(false)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public FontProperties NormalFontProperties
         {
             get
@@ -99,6 +101,7 @@ namespace SpreadsheetEditorDemo.CustomControls
         /// The current culture.
         /// </summary>
         [Browsable(false)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public CultureInfo Culture
         {
             get

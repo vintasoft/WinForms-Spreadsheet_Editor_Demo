@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Windows.Forms;
 
 using Vintasoft.Imaging.Office.Spreadsheet;
@@ -64,6 +65,7 @@ namespace SpreadsheetEditorDemo
         /// <summary>
         /// Gets or sets the visual editor.
         /// </summary>
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public SpreadsheetVisualEditor VisualEditor
         {
             get
@@ -93,6 +95,7 @@ namespace SpreadsheetEditorDemo
         /// <summary>
         /// Gets or sets a value indicating whether replace mode is used.
         /// </summary>
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public bool ReplaceMode
         {
             get

@@ -34,6 +34,7 @@ namespace SpreadsheetEditorDemo.CustomControls
         /// Gets or sets the shape appearance.
         /// </summary>
         [Browsable(false)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public ShapeAppearance ShapeAppearance
         {
             get

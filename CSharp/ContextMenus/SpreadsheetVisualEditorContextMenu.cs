@@ -34,6 +34,7 @@ namespace SpreadsheetEditorDemo
         /// Gets or sets the spreadsheet editor control.
         /// </summary>
         [Description("The spreadsheet editor control.")]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public SpreadsheetEditorControl SpreadsheetEditor
         {
             get

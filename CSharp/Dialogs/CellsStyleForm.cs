@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Globalization;
 using System.Windows.Forms;
-using Vintasoft.Imaging;
+
 using Vintasoft.Imaging.Fonts;
 using Vintasoft.Imaging.Office.Spreadsheet;
 using Vintasoft.Imaging.Office.Spreadsheet.Document;
@@ -161,6 +161,7 @@ namespace SpreadsheetEditorDemo
         /// <summary>
         /// Gets or sets current cells borders.
         /// </summary>
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public CellsBorders CurrentBorders
         {
             get

@@ -592,11 +592,11 @@ namespace SpreadsheetEditorDemo
                         using (DocumentPasswordForm passwordForm = new DocumentPasswordForm())
                         {
                             passwordForm.Filename = filename;
-                            
+
                             // enter password
                             if (passwordForm.ShowDialog() != DialogResult.OK)
                                 return;
-                            
+
                             // try decrypt XLSX document
                             if (OfficeDocumentCryptography.TryDecryptOfficeDocument(filename, passwordForm.Password, saveWorksheetFileDialog.FileName))
                             {
@@ -606,7 +606,7 @@ namespace SpreadsheetEditorDemo
                             {
                                 passwordForm.ShowIncorrectPasswordMessage();
                             }
-                        }                            
+                        }
                     }
 
                     // get file path from save dialog

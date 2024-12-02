@@ -28,6 +28,7 @@ namespace SpreadsheetEditorDemo.CustomControls
         /// Gets or sets the appearance of current cell.
         /// </summary>
         [Browsable(false)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public CellReferencesAppearance CellsAppearance
         {
             get

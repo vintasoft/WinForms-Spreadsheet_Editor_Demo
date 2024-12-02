@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.ComponentModel;
+using System.Windows.Forms;
 
 using Vintasoft.Imaging.Office.Spreadsheet.Document;
 using Vintasoft.Primitives;
@@ -46,6 +47,7 @@ namespace SpreadsheetEditorDemo
         /// <summary>
         /// Gets or sets the location of sheet drawing.
         /// </summary>
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public SheetDrawingLocation SheetDrawingLocation
         {
             get
@@ -82,6 +84,7 @@ namespace SpreadsheetEditorDemo
         /// <summary>
         /// Gets or sets the worksheet.
         /// </summary>
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Visible)]
         public Worksheet Worksheet
         {
             get
