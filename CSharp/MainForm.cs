@@ -575,6 +575,24 @@ namespace SpreadsheetEditorDemo
                     // convert XLS file to the XLSX file
                     OpenXmlDocumentConverter.ConvertTsvToXlsx(openWorksheetFileDialog.FileName, filename);
                 }
+                // if file is ODS file
+                else if (XlsxDecoder.IsOdsDocument(filename))
+                {
+                    if (MessageBox.Show(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_THE_LOADED_FILE_IS_ODS_FILE_TO_OPEN_ODS_FILE_APPLICATION_NEEDS_TO_CONVERT_ODS_FILE_TO_THE_XLSX_FILE_DO_YOU_WANT_TO_CREATE_XLSX_FILE_FROM_ODS_FILE, SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_CONVERT_ODS_TO_XLSX, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                        return;
+
+                    // create path to an XLSX file
+                    filename = Path.Combine(Path.GetDirectoryName(filename), Path.GetFileNameWithoutExtension(filename) + ".xlsx");
+                    // set file to the save dialog
+                    saveWorksheetFileDialog.FileName = filename;
+                    // show the save dialog
+                    if (saveWorksheetFileDialog.ShowDialog() != DialogResult.OK)
+                        return;
+                    // get file path from save dialog
+                    filename = saveWorksheetFileDialog.FileName;
+                    // convert ODS file to the XLSX file
+                    OpenXmlDocumentConverter.ConvertOdsToXlsx(openWorksheetFileDialog.FileName, filename);
+                }
                 // if file is encrypted XLSX file
                 else if (Path.GetExtension(filename).ToUpperInvariant() == ".XLSX" && OfficeDocumentCryptography.IsSecuredOfficeDocument(filename))
                 {

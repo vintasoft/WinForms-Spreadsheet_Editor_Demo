@@ -70,9 +70,9 @@ namespace SpreadsheetEditorDemo
         private void okButton_Click(object sender, EventArgs e)
         {
             string worksheetName = worksheetNameTextBox.Text;
-            if (worksheetName.Length > 40)
+            if (worksheetName.Length > 31)
             {
-                DemosTools.ShowWarningMessage("Spreadsheet Editor Demo", SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_WORKSHEET_NAME_CANNOT_CONTAINS_MORE_THAN_40_SYMBOLS);
+                DemosTools.ShowWarningMessage("Spreadsheet Editor Demo", SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_WORKSHEET_NAME_CANNOT_CONTAINS_MORE_THAN_31_SYMBOLS);
                 return;
             }
 

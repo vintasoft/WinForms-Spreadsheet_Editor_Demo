@@ -227,11 +227,155 @@ namespace SpreadsheetEditorDemo.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to BMP Files|*.bmp|.
+        /// </summary>
+        internal static string DEMOSCOMMONCODE_IMAGING_CODECS_BMP_FILESBMP {
+            get {
+                return ResourceManager.GetString("DEMOSCOMMONCODE_IMAGING_CODECS_BMP_FILESBMP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cursor Files|*.cur|.
+        /// </summary>
+        internal static string DEMOSCOMMONCODE_IMAGING_CODECS_CURSOR_FILESCUR {
+            get {
+                return ResourceManager.GetString("DEMOSCOMMONCODE_IMAGING_CODECS_CURSOR_FILESCUR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to EMF Files|*.emf|.
+        /// </summary>
+        internal static string DEMOSCOMMONCODE_IMAGING_CODECS_EMF_FILESEMF {
+            get {
+                return ResourceManager.GetString("DEMOSCOMMONCODE_IMAGING_CODECS_EMF_FILESEMF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to GIF Files|*.gif|.
+        /// </summary>
+        internal static string DEMOSCOMMONCODE_IMAGING_CODECS_GIF_FILESGIF {
+            get {
+                return ResourceManager.GetString("DEMOSCOMMONCODE_IMAGING_CODECS_GIF_FILESGIF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Icon Files|*.ico|.
+        /// </summary>
+        internal static string DEMOSCOMMONCODE_IMAGING_CODECS_ICON_FILESICO {
+            get {
+                return ResourceManager.GetString("DEMOSCOMMONCODE_IMAGING_CODECS_ICON_FILESICO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to JPEG Files|*.jpg;*.jpeg;*.jfif|.
+        /// </summary>
+        internal static string DEMOSCOMMONCODE_IMAGING_CODECS_JPEG_FILESJPGJPEGJFIF {
+            get {
+                return ResourceManager.GetString("DEMOSCOMMONCODE_IMAGING_CODECS_JPEG_FILESJPGJPEGJFIF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to JPEG-LS Files|*.jls|.
+        /// </summary>
+        internal static string DEMOSCOMMONCODE_IMAGING_CODECS_JPEGLS_FILESJLS {
+            get {
+                return ResourceManager.GetString("DEMOSCOMMONCODE_IMAGING_CODECS_JPEGLS_FILESJLS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ndpi.
         /// </summary>
         internal static string DEMOSCOMMONCODE_IMAGING_CODECS_NDPI {
             get {
                 return ResourceManager.GetString("DEMOSCOMMONCODE_IMAGING_CODECS_NDPI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PBM/PGM/PPM files|*.pbm;*.pgm;*.ppm|.
+        /// </summary>
+        internal static string DEMOSCOMMONCODE_IMAGING_CODECS_PBMPGMPPM_FILESPBMPGMPPM {
+            get {
+                return ResourceManager.GetString("DEMOSCOMMONCODE_IMAGING_CODECS_PBMPGMPPM_FILESPBMPGMPPM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PCX Files|*.pcx.
+        /// </summary>
+        internal static string DEMOSCOMMONCODE_IMAGING_CODECS_PCX_FILESPCX {
+            get {
+                return ResourceManager.GetString("DEMOSCOMMONCODE_IMAGING_CODECS_PCX_FILESPCX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PNG Files|*.png|.
+        /// </summary>
+        internal static string DEMOSCOMMONCODE_IMAGING_CODECS_PNG_FILESPNG {
+            get {
+                return ResourceManager.GetString("DEMOSCOMMONCODE_IMAGING_CODECS_PNG_FILESPNG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PSD Files|*.psd|.
+        /// </summary>
+        internal static string DEMOSCOMMONCODE_IMAGING_CODECS_PSD_FILESPSD {
+            get {
+                return ResourceManager.GetString("DEMOSCOMMONCODE_IMAGING_CODECS_PSD_FILESPSD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PSD Files|*.psd|.
+        /// </summary>
+        internal static string DEMOSCOMMONCODE_IMAGING_CODECS_PSD_FILESPSD_ALT1 {
+            get {
+                return ResourceManager.GetString("DEMOSCOMMONCODE_IMAGING_CODECS_PSD_FILESPSD_ALT1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SVG Files|*.svg|.
+        /// </summary>
+        internal static string DEMOSCOMMONCODE_IMAGING_CODECS_SVG_FILESSVG {
+            get {
+                return ResourceManager.GetString("DEMOSCOMMONCODE_IMAGING_CODECS_SVG_FILESSVG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TGA files|*.tga|.
+        /// </summary>
+        internal static string DEMOSCOMMONCODE_IMAGING_CODECS_TGA_FILESTGA {
+            get {
+                return ResourceManager.GetString("DEMOSCOMMONCODE_IMAGING_CODECS_TGA_FILESTGA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to TIFF Files|*.tif;*.tiff|.
+        /// </summary>
+        internal static string DEMOSCOMMONCODE_IMAGING_CODECS_TIFF_FILESTIFTIFF {
+            get {
+                return ResourceManager.GetString("DEMOSCOMMONCODE_IMAGING_CODECS_TIFF_FILESTIFTIFF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to WMF Files|*.wmf.
+        /// </summary>
+        internal static string DEMOSCOMMONCODE_IMAGING_CODECS_WMF_FILESWMF {
+            get {
+                return ResourceManager.GetString("DEMOSCOMMONCODE_IMAGING_CODECS_WMF_FILESWMF", resourceCulture);
             }
         }
         
@@ -1010,6 +1154,15 @@ namespace SpreadsheetEditorDemo.Localization {
         internal static string SPREADSHEETEDITORDEMO_CONVERT_CSV_TO_XLSX {
             get {
                 return ResourceManager.GetString("SPREADSHEETEDITORDEMO_CONVERT_CSV_TO_XLSX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Convert ODS to XLSX.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_CONVERT_ODS_TO_XLSX {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_CONVERT_ODS_TO_XLSX", resourceCulture);
             }
         }
         
@@ -2062,6 +2215,17 @@ namespace SpreadsheetEditorDemo.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The loaded file is ODS file. To open ODS file application needs to convert ODS file to the XLSX file. Do you want to create XLSX file from ODS file?.
+        /// </summary>
+        internal static string SPREADSHEETEDITORDEMO_THE_LOADED_FILE_IS_ODS_FILE_TO_OPEN_ODS_FILE_APPLICATION_NEEDS_TO_CONVERT_ODS_FILE_TO_THE_XLSX_FILE_DO_YOU_WANT_TO_CREATE_XLSX_FILE_FROM_ODS_FILE {
+            get {
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_THE_LOADED_FILE_IS_ODS_FILE_TO_OPEN_ODS_FILE_APPLICATION_NE" +
+                        "EDS_TO_CONVERT_ODS_FILE_TO_THE_XLSX_FILE_DO_YOU_WANT_TO_CREATE_XLSX_FILE_FROM_OD" +
+                        "S_FILE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The loaded file is secured XLSX file. To open secured file application needs to decrypt XLSX file. Do you want to create decrypted XLSX file?.
         /// </summary>
         internal static string SPREADSHEETEDITORDEMO_THE_LOADED_FILE_IS_SECURED_XLSX_FILE_TO_OPEN_SECURED_FILE_APPLICATION_NEEDS_TO_DECRYPT_XLSX_FILE_DO_YOU_WANT_TO_CREATE_DECRYPTED_XLSX_FILE {
@@ -2186,11 +2350,11 @@ namespace SpreadsheetEditorDemo.Localization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Worksheet name cannot contains more than 40 symbols..
+        ///   Looks up a localized string similar to Worksheet name cannot contains more than 31 symbols..
         /// </summary>
-        internal static string SPREADSHEETEDITORDEMO_WORKSHEET_NAME_CANNOT_CONTAINS_MORE_THAN_40_SYMBOLS {
+        internal static string SPREADSHEETEDITORDEMO_WORKSHEET_NAME_CANNOT_CONTAINS_MORE_THAN_31_SYMBOLS {
             get {
-                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_WORKSHEET_NAME_CANNOT_CONTAINS_MORE_THAN_40_SYMBOLS", resourceCulture);
+                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_WORKSHEET_NAME_CANNOT_CONTAINS_MORE_THAN_31_SYMBOLS", resourceCulture);
             }
         }
     }

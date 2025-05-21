@@ -73,9 +73,9 @@ namespace SpreadsheetEditorDemo
             // 
             // openWorksheetFileDialog
             // 
-            this.openWorksheetFileDialog.Filter = "XLSX files|*.xlsx|XLS files|*.xls|TSV files|*.tsv;*.tab|CSV files|*.csv|All suppo" +
-    "rted Workbooks|*.xlsx;*.xls;*.tsv;*.tab;*.csv";
-            this.openWorksheetFileDialog.FilterIndex = 5;
+            this.openWorksheetFileDialog.Filter = "XLSX files|*.xlsx|XLS files|*.xls|TSV files|*.tsv;*.tab|CSV files|*.csv|ODS files|*.ods|All suppo" +
+    "rted Workbooks|*.xlsx;*.xls;*.tsv;*.tab;*.csv;*.ods";
+            this.openWorksheetFileDialog.FilterIndex = 6;
             // 
             // pageSetupDialog1
             // 
