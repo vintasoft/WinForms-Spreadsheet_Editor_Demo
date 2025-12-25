@@ -9,7 +9,7 @@ namespace SpreadsheetEditorDemo
     /// <summary>
     /// Allows to print XLSX document.
     /// </summary>
-    class PrintManager : IDisposable
+    internal class PrintManager : IDisposable
     {
 
         #region Fields

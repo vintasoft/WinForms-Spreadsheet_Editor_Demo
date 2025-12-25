@@ -8,6 +8,7 @@ using Vintasoft.Imaging;
 using Vintasoft.Imaging.Codecs.Decoders;
 
 using Vintasoft.Imaging.Office;
+using Vintasoft.Imaging.Office.UI;
 using Vintasoft.Imaging.Office.OpenXml;
 using Vintasoft.Imaging.Office.Spreadsheet;
 using Vintasoft.Imaging.Office.Spreadsheet.Document;
