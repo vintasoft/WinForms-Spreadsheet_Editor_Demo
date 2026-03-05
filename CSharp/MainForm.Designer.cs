@@ -127,7 +127,7 @@ namespace SpreadsheetEditorDemo
             this.DocumentEditorControl.SetColumnWidth += new System.EventHandler<System.EventArgs>(this.CellsEditorPanel_SetColumnWidth);
             this.DocumentEditorControl.AddChart += new System.EventHandler<System.EventArgs>(this.CellsEditorPanel_AddChart);
             this.DocumentEditorControl.EditDrawing += new System.EventHandler<System.EventArgs>(this.CellsEditorPanel_EditDrawing);
-            this.DocumentEditorControl.ImageStreamRequest += new System.EventHandler<Vintasoft.Imaging.Office.Spreadsheet.StreamRequestEventArgs>(this.CellsEditorPanel_ImageStreamRequest);
+            this.DocumentEditorControl.ImageStreamRequest += new System.EventHandler<Vintasoft.Imaging.StreamRequestEventArgs>(this.CellsEditorPanel_ImageStreamRequest);
             this.DocumentEditorControl.AddHyperlink += new System.EventHandler<System.EventArgs>(this.CellsEditorPanel_AddHyperlink);
             this.DocumentEditorControl.EditHyperlink += new System.EventHandler<System.EventArgs>(this.CellsEditorPanel_EditHyperlink);
             this.DocumentEditorControl.NewComment += new System.EventHandler<System.EventArgs>(this.CommentsPanel_NewComment);
