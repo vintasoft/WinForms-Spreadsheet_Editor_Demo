@@ -117,160 +117,160 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="DEMOSCOMMONCODE_CUSTOMCONTROLS_CLICK_THE_BUTTON_IF_THE_CURRENT_COLOR_MUST_BE_CHANGED" xml:space="preserve">
+  <data name="COMMONCODE_CUSTOMCONTROLS_CLICK_THE_BUTTON_IF_THE_CURRENT_COLOR_MUST_BE_CHANGED" xml:space="preserve">
     <value>Klicken Sie auf die Schaltfläche, wenn die aktuelle Farbe geändert werden muss.</value>
   </data>
-  <data name="DEMOSCOMMONCODE_CUSTOMCONTROLS_CLICK_THE_BUTTON_IF_THE_CURRENT_COLOR_MUST_BE_SET_TO_THE_DEFAULT_COLOR" xml:space="preserve">
+  <data name="COMMONCODE_CUSTOMCONTROLS_CLICK_THE_BUTTON_IF_THE_CURRENT_COLOR_MUST_BE_SET_TO_THE_DEFAULT_COLOR" xml:space="preserve">
     <value>Klicken Sie auf die Schaltfläche, wenn die aktuelle Farbe auf die Standardfarbe gesetzt werden soll.</value>
   </data>
-  <data name="DEMOSCOMMONCODE_CUSTOMCONTROLS_DOUBLE_CLICK_ON_THE_PANEL_IF_THE_CURRENT_COLOR_MUST_BE_CHANGED" xml:space="preserve">
+  <data name="COMMONCODE_CUSTOMCONTROLS_DOUBLE_CLICK_ON_THE_PANEL_IF_THE_CURRENT_COLOR_MUST_BE_CHANGED" xml:space="preserve">
     <value>Doppelklicken Sie auf das Panel, wenn die aktuelle Farbe geändert werden muss.</value>
   </data>
-  <data name="DEMOSCOMMONCODE_CUSTOMCONTROLS_CLICK_ON_THE_PANEL_IF_CURRENT_COLOR_MUST_BE_CHANGED" xml:space="preserve">
+  <data name="COMMONCODE_CUSTOMCONTROLS_CLICK_ON_THE_PANEL_IF_CURRENT_COLOR_MUST_BE_CHANGED" xml:space="preserve">
     <value>Klicken Sie auf das Bedienfeld, wenn die aktuelle Farbe geändert werden muss.</value>
   </data>
-  <data name="DEMOSCOMMONCODE_CUSTOMCONTROLS_VALUE_NAME" xml:space="preserve">
+  <data name="COMMONCODE_CUSTOMCONTROLS_VALUE_NAME" xml:space="preserve">
     <value>Wertname</value>
   </data>
-  <data name="DEMOSCOMMONCODE_IMAGING__FINISHED_ARG0" xml:space="preserve">
+  <data name="COMMONCODE_IMAGING__FINISHED_ARG0" xml:space="preserve">
     <value> Fertig ({0}).</value>
   </data>
-  <data name="DEMOSCOMMONCODE_IMAGING_CANCEL" xml:space="preserve">
+  <data name="COMMONCODE_IMAGING_CANCEL" xml:space="preserve">
     <value>Abbrechen</value>
   </data>
-  <data name="DEMOSCOMMONCODE_IMAGING_ERROR" xml:space="preserve">
+  <data name="COMMONCODE_IMAGING_ERROR" xml:space="preserve">
     <value>Fehler.</value>
   </data>
-  <data name="DEMOSCOMMONCODE_IMAGING_CANCELED" xml:space="preserve">
+  <data name="COMMONCODE_IMAGING_CANCELED" xml:space="preserve">
     <value>Abgebrochen.</value>
   </data>
-  <data name="DEMOSCOMMONCODE_IMAGING_FINISHED" xml:space="preserve">
+  <data name="COMMONCODE_IMAGING_FINISHED" xml:space="preserve">
     <value>Fertig.</value>
   </data>
-  <data name="DEMOSCOMMONCODE_IMAGING_CLOSE" xml:space="preserve">
+  <data name="COMMONCODE_IMAGING_CLOSE" xml:space="preserve">
     <value>Schließen</value>
   </data>
-  <data name="DEMOSCOMMONCODE_IMAGING_CANCELED_ALT1" xml:space="preserve">
+  <data name="COMMONCODE_IMAGING_CANCELED_ALT1" xml:space="preserve">
     <value>Abgebrochen.</value>
   </data>
-  <data name="DEMOSCOMMONCODE_IMAGING_CODECS_BMP_FILESBMP" xml:space="preserve">
+  <data name="COMMONCODE_IMAGING_CODECS_BMP_FILESBMP" xml:space="preserve">
     <value>BMP-Dateien|*.bmp|</value>
   </data>
-  <data name="DEMOSCOMMONCODE_IMAGING_CODECS_JPEG_FILESJPGJPEGJFIF" xml:space="preserve">
+  <data name="COMMONCODE_IMAGING_CODECS_JPEG_FILESJPGJPEGJFIF" xml:space="preserve">
     <value>JPEG-Dateien|*.jpg;*.jpeg;*.jfif|</value>
   </data>
-  <data name="DEMOSCOMMONCODE_IMAGING_CODECS_PBMPGMPPM_FILESPBMPGMPPM" xml:space="preserve">
+  <data name="COMMONCODE_IMAGING_CODECS_PBMPGMPPM_FILESPBMPGMPPM" xml:space="preserve">
     <value>PBM/PGM/PPM-Dateien|*.pbm;*.pgm;*.ppm|</value>
   </data>
-  <data name="DEMOSCOMMONCODE_IMAGING_CODECS_PNG_FILESPNG" xml:space="preserve">
+  <data name="COMMONCODE_IMAGING_CODECS_PNG_FILESPNG" xml:space="preserve">
     <value>PNG-Dateien|*.png|</value>
   </data>
-  <data name="DEMOSCOMMONCODE_IMAGING_CODECS_PSD_FILESPSD" xml:space="preserve">
+  <data name="COMMONCODE_IMAGING_CODECS_PSD_FILESPSD" xml:space="preserve">
     <value>PSD-Dateien|*.psd|</value>
   </data>
-  <data name="DEMOSCOMMONCODE_IMAGING_CODECS_SVG_FILESSVG" xml:space="preserve">
+  <data name="COMMONCODE_IMAGING_CODECS_SVG_FILESSVG" xml:space="preserve">
     <value>SVG-Dateien|*.svg|</value>
   </data>
-  <data name="DEMOSCOMMONCODE_IMAGING_CODECS_TGA_FILESTGA" xml:space="preserve">
+  <data name="COMMONCODE_IMAGING_CODECS_TGA_FILESTGA" xml:space="preserve">
     <value>TGA-Dateien|*.tga|</value>
   </data>
-  <data name="DEMOSCOMMONCODE_IMAGING_CODECS_TIFF_FILESTIFTIFF" xml:space="preserve">
+  <data name="COMMONCODE_IMAGING_CODECS_TIFF_FILESTIFTIFF" xml:space="preserve">
     <value>TIFF-Dateien|*.tif;*.tiff|</value>
   </data>
-  <data name="DEMOSCOMMONCODE_IMAGING_CODECS_GIF_FILESGIF" xml:space="preserve">
+  <data name="COMMONCODE_IMAGING_CODECS_GIF_FILESGIF" xml:space="preserve">
     <value>GIF-Dateien|*.gif|</value>
   </data>
-  <data name="DEMOSCOMMONCODE_IMAGING_CODECS_PCX_FILESPCX" xml:space="preserve">
+  <data name="COMMONCODE_IMAGING_CODECS_PCX_FILESPCX" xml:space="preserve">
     <value>PCX-Dateien|*.pcx</value>
   </data>
-  <data name="DEMOSCOMMONCODE_IMAGING_CODECS_PSD_FILESPSD_ALT1" xml:space="preserve">
+  <data name="COMMONCODE_IMAGING_CODECS_PSD_FILESPSD_ALT1" xml:space="preserve">
     <value>PSD-Dateien|*.psd|</value>
   </data>
-  <data name="DEMOSCOMMONCODE_IMAGING_CODECS_CURSOR_FILESCUR" xml:space="preserve">
+  <data name="COMMONCODE_IMAGING_CODECS_CURSOR_FILESCUR" xml:space="preserve">
     <value>Cursor-Dateien|*.cur|</value>
   </data>
-  <data name="DEMOSCOMMONCODE_IMAGING_CODECS_EMF_FILESEMF" xml:space="preserve">
+  <data name="COMMONCODE_IMAGING_CODECS_EMF_FILESEMF" xml:space="preserve">
     <value>EMF-Dateien|*.emf|</value>
   </data>
-  <data name="DEMOSCOMMONCODE_IMAGING_CODECS_ICON_FILESICO" xml:space="preserve">
+  <data name="COMMONCODE_IMAGING_CODECS_ICON_FILESICO" xml:space="preserve">
     <value>Icon-Dateien|*.ico|</value>
   </data>
-  <data name="DEMOSCOMMONCODE_IMAGING_CODECS_JPEGLS_FILESJLS" xml:space="preserve">
+  <data name="COMMONCODE_IMAGING_CODECS_JPEGLS_FILESJLS" xml:space="preserve">
     <value>JPEG-LS-Dateien|*.jls|</value>
   </data>
-  <data name="DEMOSCOMMONCODE_IMAGING_CODECS_WMF_FILESWMF" xml:space="preserve">
+  <data name="COMMONCODE_IMAGING_CODECS_WMF_FILESWMF" xml:space="preserve">
     <value>WMF-Dateien|*.wmf</value>
   </data>
-  <data name="DEMOSCOMMONCODE_IMAGING_CODECS_NDPI" xml:space="preserve">
+  <data name="COMMONCODE_IMAGING_CODECS_NDPI" xml:space="preserve">
     <value>Ndpi</value>
   </data>
-  <data name="DEMOSCOMMONCODE_IMAGING_VALUE_CAN_NOT_BE_NULL" xml:space="preserve">
+  <data name="COMMONCODE_IMAGING_VALUE_CAN_NOT_BE_NULL" xml:space="preserve">
     <value>Wert darf nicht null sein.</value>
   </data>
-  <data name="DEMOSCOMMONCODE_IMAGING_UNDEFINED" xml:space="preserve">
+  <data name="COMMONCODE_IMAGING_UNDEFINED" xml:space="preserve">
     <value>Undefiniert</value>
   </data>
-  <data name="DEMOSCOMMONCODE_IMAGING_UNDEFINED_ALT1" xml:space="preserve">
+  <data name="COMMONCODE_IMAGING_UNDEFINED_ALT1" xml:space="preserve">
     <value>Undefiniert</value>
   </data>
-  <data name="DEMOSCOMMONCODE_IMAGING_UNDEFINED_ALT2" xml:space="preserve">
+  <data name="COMMONCODE_IMAGING_UNDEFINED_ALT2" xml:space="preserve">
     <value>Undefiniert</value>
   </data>
-  <data name="DEMOSCOMMONCODE_IMAGING_UNDEFINED_ALT3" xml:space="preserve">
+  <data name="COMMONCODE_IMAGING_UNDEFINED_ALT3" xml:space="preserve">
     <value>Undefiniert</value>
   </data>
-  <data name="DEMOSCOMMONCODE_IMAGING_CUSTOM" xml:space="preserve">
+  <data name="COMMONCODE_IMAGING_CUSTOM" xml:space="preserve">
     <value>Benutzerdefiniert</value>
   </data>
-  <data name="DEMOSCOMMONCODE_IMAGING_CUSTOM_ALT1" xml:space="preserve">
+  <data name="COMMONCODE_IMAGING_CUSTOM_ALT1" xml:space="preserve">
     <value>Benutzerdefiniert</value>
   </data>
-  <data name="DEMOSCOMMONCODE_IMAGING_PASSWORD_ARG0" xml:space="preserve">
+  <data name="COMMONCODE_IMAGING_PASSWORD_ARG0" xml:space="preserve">
     <value>Passwort – {0}</value>
   </data>
-  <data name="DEMOSCOMMONCODE_IMAGING_PASSWORD" xml:space="preserve">
+  <data name="COMMONCODE_IMAGING_PASSWORD" xml:space="preserve">
     <value>Passwort</value>
   </data>
-  <data name="DEMOSCOMMONCODE_IMAGING_THE_ARG0_PASSWORD_IS_INCORRECT" xml:space="preserve">
+  <data name="COMMONCODE_IMAGING_THE_ARG0_PASSWORD_IS_INCORRECT" xml:space="preserve">
     <value>Das Passwort '{0}' ist falsch.</value>
   </data>
-  <data name="DEMOSCOMMONCODE_IMAGING_ERROR_ALT1" xml:space="preserve">
+  <data name="COMMONCODE_IMAGING_ERROR_ALT1" xml:space="preserve">
     <value>Fehler</value>
   </data>
-  <data name="DEMOSCOMMONCODE_IMAGING_AUTHORIZED_AS_ARG0" xml:space="preserve">
+  <data name="COMMONCODE_IMAGING_AUTHORIZED_AS_ARG0" xml:space="preserve">
     <value>Autorisiert als: '{0}'</value>
   </data>
-  <data name="DEMOSCOMMONCODE_IMAGING_AUTHORIZATION_RESULT" xml:space="preserve">
+  <data name="COMMONCODE_IMAGING_AUTHORIZATION_RESULT" xml:space="preserve">
     <value>Autorisierungsergebnis</value>
   </data>
-  <data name="DEMOSCOMMONCODE_RESOURCE_ARG0_WAS_NOT_FOUND" xml:space="preserve">
+  <data name="COMMONCODE_RESOURCE_ARG0_WAS_NOT_FOUND" xml:space="preserve">
     <value>Ressource „{0}“ wurde nicht gefunden.</value>
   </data>
-  <data name="DEMOSCOMMONCODE_ABOUT" xml:space="preserve">
+  <data name="COMMONCODE_ABOUT" xml:space="preserve">
     <value>Über das Programm...</value>
   </data>
-  <data name="DEMOSCOMMONCODE_ARG0_HAS_INVALID_FORMAT" xml:space="preserve">
+  <data name="COMMONCODE_ARG0_HAS_INVALID_FORMAT" xml:space="preserve">
     <value>{0} hat ein ungültiges Format.</value>
   </data>
-  <data name="DEMOSCOMMONCODE_ERROR" xml:space="preserve">
+  <data name="COMMONCODE_ERROR" xml:space="preserve">
     <value>Fehler</value>
   </data>
-  <data name="DEMOSCOMMONCODE_ERROR_ALT1" xml:space="preserve">
+  <data name="COMMONCODE_ERROR_ALT1" xml:space="preserve">
     <value>Fehler</value>
   </data>
-  <data name="DEMOSCOMMONCODE_ERROR_ALT2" xml:space="preserve">
+  <data name="COMMONCODE_ERROR_ALT2" xml:space="preserve">
     <value>Fehler</value>
   </data>
-  <data name="DEMOSCOMMONCODE_WARNING" xml:space="preserve">
+  <data name="COMMONCODE_WARNING" xml:space="preserve">
     <value>Warnung</value>
   </data>
-  <data name="DEMOSCOMMONCODE_INFORMATION" xml:space="preserve">
+  <data name="COMMONCODE_INFORMATION" xml:space="preserve">
     <value>Informationen</value>
   </data>
-  <data name="DEMOSCOMMONCODE_INNER_EXCEPTION_ARG0" xml:space="preserve">
+  <data name="COMMONCODE_INNER_EXCEPTION_ARG0" xml:space="preserve">
     <value>Innere Ausnahme: {0}</value>
   </data>
-  <data name="DEMOSCOMMONCODE_ERROR_ALT3" xml:space="preserve">
+  <data name="COMMONCODE_ERROR_ALT3" xml:space="preserve">
     <value>Fehler</value>
   </data>
   <data name="SPREADSHEETEDITORDEMO_EDIT_COMMENT" xml:space="preserve">

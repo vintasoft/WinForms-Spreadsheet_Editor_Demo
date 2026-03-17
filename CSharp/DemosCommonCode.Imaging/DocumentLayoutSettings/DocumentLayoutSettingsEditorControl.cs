@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 using Vintasoft.Imaging.Codecs.Decoders;
 
-namespace DemosCommonCode.Imaging
+namespace CommonCode.Imaging
 {
     /// <summary>
     /// A control that allows to edit document layout settings.
@@ -50,7 +50,7 @@ namespace DemosCommonCode.Imaging
                     return;
 
                 if (value == null)
-                    throw new ArgumentNullException("", SpreadsheetEditorDemo.Localization.Strings.DEMOSCOMMONCODE_IMAGING_VALUE_CAN_NOT_BE_NULL);
+                    throw new ArgumentNullException("", SpreadsheetEditorDemo.Localization.Strings.COMMONCODE_IMAGING_VALUE_CAN_NOT_BE_NULL);
 
                 allPagesLayoutSettingsControl.PageLayoutSettings = value.PageLayoutSettings;
                 evenPagesLayoutSettingsControl.PageLayoutSettings = value.EvenPageLayoutSettings;

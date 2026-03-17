@@ -1,4 +1,4 @@
-﻿using DemosCommonCode;
+﻿using CommonCode;
 using System.Windows.Forms;
 
 namespace SpreadsheetEditorDemo

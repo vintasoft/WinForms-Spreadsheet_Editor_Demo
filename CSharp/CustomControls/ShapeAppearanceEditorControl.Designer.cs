@@ -35,8 +35,8 @@ namespace SpreadsheetEditorDemo.CustomControls
             this.outlineWidthLabel = new System.Windows.Forms.Label();
             this.outlineWidthNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.fillColorPanelControl = new DemosCommonCode.CustomControls.ColorPanelControl();
-            this.outlineColorPanelControl = new DemosCommonCode.CustomControls.ColorPanelControl();
+            this.fillColorPanelControl = new CommonCode.CustomControls.ColorPanelControl();
+            this.outlineColorPanelControl = new CommonCode.CustomControls.ColorPanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.outlineWidthNumericUpDown)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -144,10 +144,10 @@ namespace SpreadsheetEditorDemo.CustomControls
 
         #endregion
 
-        private DemosCommonCode.CustomControls.ColorPanelControl fillColorPanelControl;
+        private CommonCode.CustomControls.ColorPanelControl fillColorPanelControl;
         private System.Windows.Forms.Label fillColorLabel;
         private System.Windows.Forms.Label outlineColorLabel;
-        private DemosCommonCode.CustomControls.ColorPanelControl outlineColorPanelControl;
+        private CommonCode.CustomControls.ColorPanelControl outlineColorPanelControl;
         private System.Windows.Forms.Label outlineWidthLabel;
         private System.Windows.Forms.NumericUpDown outlineWidthNumericUpDown;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;

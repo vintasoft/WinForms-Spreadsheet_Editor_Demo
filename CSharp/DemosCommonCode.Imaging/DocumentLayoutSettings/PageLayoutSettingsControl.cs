@@ -6,7 +6,7 @@ using Vintasoft.Imaging;
 using Vintasoft.Imaging.Codecs.Decoders;
 using Vintasoft.Imaging.Utils;
 
-namespace DemosCommonCode.Imaging
+namespace CommonCode.Imaging
 {
     /// <summary>
     /// A control that allows to edit page layout settings.
@@ -24,7 +24,7 @@ namespace DemosCommonCode.Imaging
             InitializeComponent();
 
             // init "PageSize"
-            pageSizeComboBox.Items.Add(SpreadsheetEditorDemo.Localization.Strings.DEMOSCOMMONCODE_IMAGING_UNDEFINED);
+            pageSizeComboBox.Items.Add(SpreadsheetEditorDemo.Localization.Strings.COMMONCODE_IMAGING_UNDEFINED);
 
             Array paperSizeKindValues = Enum.GetValues(typeof(PaperSizeKind));
             string[] paperSizeKindValuesText = new string[paperSizeKindValues.Length];
@@ -86,7 +86,7 @@ namespace DemosCommonCode.Imaging
                 _pageLayoutSettings = null;
 
                 // update controls
-                pageSizeComboBox.SelectedItem = SpreadsheetEditorDemo.Localization.Strings.DEMOSCOMMONCODE_IMAGING_UNDEFINED_ALT1;
+                pageSizeComboBox.SelectedItem = SpreadsheetEditorDemo.Localization.Strings.COMMONCODE_IMAGING_UNDEFINED_ALT1;
                 pagePaddingFEditorControl.PaddingValue = PaddingF.Empty;
                 contentScaleNumericUpDown.Value = 10;
             }
@@ -102,7 +102,7 @@ namespace DemosCommonCode.Imaging
                 if (_pageLayoutSettings.PageSize != null)
                     pageSizeComboBox.SelectedItem = _pageLayoutSettings.PageSize.PaperSizeKind;
                 else
-                    pageSizeComboBox.SelectedItem = SpreadsheetEditorDemo.Localization.Strings.DEMOSCOMMONCODE_IMAGING_UNDEFINED_ALT2;
+                    pageSizeComboBox.SelectedItem = SpreadsheetEditorDemo.Localization.Strings.COMMONCODE_IMAGING_UNDEFINED_ALT2;
 
                 pagePaddingFEditorControl.PaddingValue =
                     ConvertPaddingToMillimeters(_pageLayoutSettings.PagePadding, UnitOfMeasure.DeviceIndependentPixels);
@@ -140,12 +140,12 @@ namespace DemosCommonCode.Imaging
             if (PageLayoutSettings == null)
                 return;
 
-            if (pageSizeComboBox.SelectedItem.ToString() != SpreadsheetEditorDemo.Localization.Strings.DEMOSCOMMONCODE_IMAGING_UNDEFINED_ALT3)
+            if (pageSizeComboBox.SelectedItem.ToString() != SpreadsheetEditorDemo.Localization.Strings.COMMONCODE_IMAGING_UNDEFINED_ALT3)
             {
                 ImageSize size;
 
                 // if custom page size selected
-                if (pageSizeComboBox.SelectedItem.ToString() == SpreadsheetEditorDemo.Localization.Strings.DEMOSCOMMONCODE_IMAGING_CUSTOM)
+                if (pageSizeComboBox.SelectedItem.ToString() == SpreadsheetEditorDemo.Localization.Strings.COMMONCODE_IMAGING_CUSTOM)
                 {
                     pageWidthNumericUpDown.Enabled = true;
                     pageHeightNumericUpDown.Enabled = true;
@@ -194,7 +194,7 @@ namespace DemosCommonCode.Imaging
         {
             if (pageSizeComboBox.SelectedItem != null)
             {
-                if (pageSizeComboBox.SelectedItem.ToString() == SpreadsheetEditorDemo.Localization.Strings.DEMOSCOMMONCODE_IMAGING_CUSTOM_ALT1)
+                if (pageSizeComboBox.SelectedItem.ToString() == SpreadsheetEditorDemo.Localization.Strings.COMMONCODE_IMAGING_CUSTOM_ALT1)
                 {
                     // create custom page size
                     PageLayoutSettings.PageSize = ImageSize.FromMillimeters(

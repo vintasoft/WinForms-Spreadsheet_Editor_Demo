@@ -35,7 +35,7 @@ namespace SpreadsheetEditorDemo.CustomControls
             this.underlineCheckBox = new System.Windows.Forms.CheckBox();
             this.fontSizeLabel = new System.Windows.Forms.Label();
             this.fontStyleLabel = new System.Windows.Forms.Label();
-            this.fontColorPanelControl = new DemosCommonCode.CustomControls.ColorPanelControl();
+            this.fontColorPanelControl = new CommonCode.CustomControls.ColorPanelControl();
             this.fontSizesListBox = new System.Windows.Forms.ListBox();
             this.fontSizeTextBox = new System.Windows.Forms.TextBox();
             this.fontStylesListBox = new System.Windows.Forms.ListBox();
@@ -346,7 +346,7 @@ namespace SpreadsheetEditorDemo.CustomControls
         private System.Windows.Forms.CheckBox underlineCheckBox;
         private System.Windows.Forms.Label fontSizeLabel;
         private System.Windows.Forms.Label fontStyleLabel;
-        private DemosCommonCode.CustomControls.ColorPanelControl fontColorPanelControl;
+        private CommonCode.CustomControls.ColorPanelControl fontColorPanelControl;
         private System.Windows.Forms.ListBox fontSizesListBox;
         private System.Windows.Forms.TextBox fontSizeTextBox;
         private System.Windows.Forms.ListBox fontStylesListBox;

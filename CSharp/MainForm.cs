@@ -15,9 +15,9 @@ using Vintasoft.Imaging.Office.Spreadsheet.Document;
 using Vintasoft.Imaging.Office.Spreadsheet.UI;
 using Vintasoft.Imaging.Office.Spreadsheet.UI.Controls;
 
-using DemosCommonCode;
-using DemosCommonCode.Imaging;
-using DemosCommonCode.Imaging.Codecs;
+using CommonCode;
+using CommonCode.Imaging;
+using CommonCode.Imaging.Codecs;
 
 namespace SpreadsheetEditorDemo
 {
@@ -1005,7 +1005,7 @@ namespace SpreadsheetEditorDemo
                 // specify that dialog should open folder with demo images
                 DemosTools.SetTestFilesFolder(dialog);
                 // set image filters
-                DemosCommonCode.Imaging.Codecs.CodecsFileFilters.SetOpenFileDialogFilter(dialog);
+                CodecsFileFilters.SetOpenFileDialogFilter(dialog);
 
                 // if image must be loaded
                 if (dialog.ShowDialog() == DialogResult.OK)

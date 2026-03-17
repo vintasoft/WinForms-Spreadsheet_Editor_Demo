@@ -79,7 +79,7 @@ namespace SpreadsheetEditorDemo
             this.underlineCheckBox = new System.Windows.Forms.CheckBox();
             this.fontSizeLabel = new System.Windows.Forms.Label();
             this.fontStyleLabel = new System.Windows.Forms.Label();
-            this.fontColorPanelControl = new DemosCommonCode.CustomControls.ColorPanelControl();
+            this.fontColorPanelControl = new CommonCode.CustomControls.ColorPanelControl();
             this.fontSizesListBox = new System.Windows.Forms.ListBox();
             this.fontSizeTextBox = new System.Windows.Forms.TextBox();
             this.fontStylesListBox = new System.Windows.Forms.ListBox();
@@ -110,11 +110,11 @@ namespace SpreadsheetEditorDemo
             this.bordersPreviewControl = new Vintasoft.Imaging.Office.Spreadsheet.UI.SpreadsheetEditorControl();
             this.lineColorLabel = new System.Windows.Forms.Label();
             this.lineStyleLabel = new System.Windows.Forms.Label();
-            this.lineColorPanelControl = new DemosCommonCode.CustomControls.ColorPanelControl();
+            this.lineColorPanelControl = new CommonCode.CustomControls.ColorPanelControl();
             this.fillTabPage = new System.Windows.Forms.TabPage();
             this.noColorButton = new System.Windows.Forms.Button();
             this.backgroundColorLabel = new System.Windows.Forms.Label();
-            this.backgroundColorPanelControl = new DemosCommonCode.CustomControls.ColorPanelControl();
+            this.backgroundColorPanelControl = new CommonCode.CustomControls.ColorPanelControl();
             this.cellStyleTabControl.SuspendLayout();
             this.numberFormatTabPage.SuspendLayout();
             this.formatCategoriesTabControl.SuspendLayout();
@@ -1227,7 +1227,7 @@ namespace SpreadsheetEditorDemo
         private System.Windows.Forms.ListBox fontStylesListBox;
         private System.Windows.Forms.TextBox fontStyleTextBox;
         private System.Windows.Forms.Label colorLabel;
-        private DemosCommonCode.CustomControls.ColorPanelControl fontColorPanelControl;
+        private CommonCode.CustomControls.ColorPanelControl fontColorPanelControl;
         private System.Windows.Forms.CheckBox strikethroughCheckBox;
         private System.Windows.Forms.CheckBox underlineCheckBox;
         private System.Windows.Forms.Label fontSizeLabel;
@@ -1235,7 +1235,7 @@ namespace SpreadsheetEditorDemo
         private System.Windows.Forms.Label lineColorLabel;
         private System.Windows.Forms.Label lineStyleLabel;
         private Vintasoft.Imaging.Office.Spreadsheet.UI.SpreadsheetEditorControl bordersPreviewControl;
-        private DemosCommonCode.CustomControls.ColorPanelControl lineColorPanelControl;
+        private CommonCode.CustomControls.ColorPanelControl lineColorPanelControl;
         private System.Windows.Forms.Button outlineBorderPresetButton;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button insideBorderPresetButton;
@@ -1252,7 +1252,7 @@ namespace SpreadsheetEditorDemo
         private System.Windows.Forms.Label nonePresetLabel;
         private System.Windows.Forms.Button normalFontButton;
         private System.Windows.Forms.Label backgroundColorLabel;
-        private DemosCommonCode.CustomControls.ColorPanelControl backgroundColorPanelControl;
+        private CommonCode.CustomControls.ColorPanelControl backgroundColorPanelControl;
         private System.Windows.Forms.Button noColorButton;
         private System.Windows.Forms.ListBox lineStylesListBox;
         private System.Windows.Forms.ComboBox textHorizontalAlignmentComboBox;

@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 using Vintasoft.Imaging.Utils;
 
-namespace DemosCommonCode.Imaging
+namespace CommonCode.Imaging
 {
     /// <summary>
     /// A form that executes a method in a background thread and shows the execution progress.
@@ -195,7 +195,7 @@ namespace DemosCommonCode.Imaging
                     // if action is finished
                     else if (actionProgressController.IsFinished)
                     {
-                        logMessage = string.Format(SpreadsheetEditorDemo.Localization.Strings.DEMOSCOMMONCODE_IMAGING__FINISHED_ARG0, logMessage);
+                        logMessage = string.Format(SpreadsheetEditorDemo.Localization.Strings.COMMONCODE_IMAGING__FINISHED_ARG0, logMessage);
                     }
                     else
                     {
@@ -485,7 +485,7 @@ namespace DemosCommonCode.Imaging
             _buttonCancel = buttonCancel;
             buttonCancel.Width = 100;
             buttonCancel.Height = 30;
-            buttonCancel.Text = SpreadsheetEditorDemo.Localization.Strings.DEMOSCOMMONCODE_IMAGING_CANCEL;
+            buttonCancel.Text = SpreadsheetEditorDemo.Localization.Strings.COMMONCODE_IMAGING_CANCEL;
             buttonCancel.Margin = new Padding(200, 10, 200, 10);
             buttonCancel.Click += new EventHandler(buttonCancel_Click);
             tableLayoutPanel1.Controls.Add(buttonCancel, 0, 2 * levelCount + 1);
@@ -619,7 +619,7 @@ namespace DemosCommonCode.Imaging
             {
                 _isErrorOccured = true;
                 DemosTools.ShowErrorMessage(e.Error);
-                text = SpreadsheetEditorDemo.Localization.Strings.DEMOSCOMMONCODE_IMAGING_ERROR;
+                text = SpreadsheetEditorDemo.Localization.Strings.COMMONCODE_IMAGING_ERROR;
             }
             else
             {
@@ -629,11 +629,11 @@ namespace DemosCommonCode.Imaging
 
                 // if action is canceled
                 if (_progressController.IsCanceled)
-                    text = SpreadsheetEditorDemo.Localization.Strings.DEMOSCOMMONCODE_IMAGING_CANCELED;
+                    text = SpreadsheetEditorDemo.Localization.Strings.COMMONCODE_IMAGING_CANCELED;
                 else
-                    text = SpreadsheetEditorDemo.Localization.Strings.DEMOSCOMMONCODE_IMAGING_FINISHED;
+                    text = SpreadsheetEditorDemo.Localization.Strings.COMMONCODE_IMAGING_FINISHED;
             }
-            _buttonCancel.Text = SpreadsheetEditorDemo.Localization.Strings.DEMOSCOMMONCODE_IMAGING_CLOSE;
+            _buttonCancel.Text = SpreadsheetEditorDemo.Localization.Strings.COMMONCODE_IMAGING_CLOSE;
             for (int i = 0; i < _labels.Length; i++)
                 _labels[i].Text = text;
         }
@@ -664,7 +664,7 @@ namespace DemosCommonCode.Imaging
             _buttonCancel.Enabled = true;
             for (int i = 0; i < _progressBars.Length; i++)
                 _progressBars[i].Value = 0;
-            _logText.AppendText(SpreadsheetEditorDemo.Localization.Strings.DEMOSCOMMONCODE_IMAGING_CANCELED_ALT1);
+            _logText.AppendText(SpreadsheetEditorDemo.Localization.Strings.COMMONCODE_IMAGING_CANCELED_ALT1);
             return DialogResult.None;
         }
 

@@ -3,7 +3,7 @@
 using Vintasoft.Imaging.Codecs.Decoders;
 using Vintasoft.Imaging.Codecs.Encoders;
 
-namespace DemosCommonCode.Imaging.Codecs
+namespace CommonCode.Imaging.Codecs
 {
     /// <summary>
     /// Contains filters for Open/Save dialogs.
@@ -18,16 +18,16 @@ namespace DemosCommonCode.Imaging.Codecs
         /// The file filter for image files.
         /// </summary>
         static string IMAGE_FILES_DIALOG_FILTER =
-            SpreadsheetEditorDemo.Localization.Strings.DEMOSCOMMONCODE_IMAGING_CODECS_BMP_FILESBMP +
-            SpreadsheetEditorDemo.Localization.Strings.DEMOSCOMMONCODE_IMAGING_CODECS_JPEG_FILESJPGJPEGJFIF +
-            SpreadsheetEditorDemo.Localization.Strings.DEMOSCOMMONCODE_IMAGING_CODECS_PBMPGMPPM_FILESPBMPGMPPM +
-            SpreadsheetEditorDemo.Localization.Strings.DEMOSCOMMONCODE_IMAGING_CODECS_PNG_FILESPNG +
-            SpreadsheetEditorDemo.Localization.Strings.DEMOSCOMMONCODE_IMAGING_CODECS_PSD_FILESPSD +
-            SpreadsheetEditorDemo.Localization.Strings.DEMOSCOMMONCODE_IMAGING_CODECS_SVG_FILESSVG +
-            SpreadsheetEditorDemo.Localization.Strings.DEMOSCOMMONCODE_IMAGING_CODECS_TGA_FILESTGA +
-            SpreadsheetEditorDemo.Localization.Strings.DEMOSCOMMONCODE_IMAGING_CODECS_TIFF_FILESTIFTIFF +
-            SpreadsheetEditorDemo.Localization.Strings.DEMOSCOMMONCODE_IMAGING_CODECS_GIF_FILESGIF +
-            SpreadsheetEditorDemo.Localization.Strings.DEMOSCOMMONCODE_IMAGING_CODECS_PCX_FILESPCX;
+            SpreadsheetEditorDemo.Localization.Strings.COMMONCODE_IMAGING_CODECS_BMP_FILESBMP +
+            SpreadsheetEditorDemo.Localization.Strings.COMMONCODE_IMAGING_CODECS_JPEG_FILESJPGJPEGJFIF +
+            SpreadsheetEditorDemo.Localization.Strings.COMMONCODE_IMAGING_CODECS_PBMPGMPPM_FILESPBMPGMPPM +
+            SpreadsheetEditorDemo.Localization.Strings.COMMONCODE_IMAGING_CODECS_PNG_FILESPNG +
+            SpreadsheetEditorDemo.Localization.Strings.COMMONCODE_IMAGING_CODECS_PSD_FILESPSD +
+            SpreadsheetEditorDemo.Localization.Strings.COMMONCODE_IMAGING_CODECS_SVG_FILESSVG +
+            SpreadsheetEditorDemo.Localization.Strings.COMMONCODE_IMAGING_CODECS_TGA_FILESTGA +
+            SpreadsheetEditorDemo.Localization.Strings.COMMONCODE_IMAGING_CODECS_TIFF_FILESTIFTIFF +
+            SpreadsheetEditorDemo.Localization.Strings.COMMONCODE_IMAGING_CODECS_GIF_FILESGIF +
+            SpreadsheetEditorDemo.Localization.Strings.COMMONCODE_IMAGING_CODECS_PCX_FILESPCX;
 
         /// <summary>
         /// The file filter for all image files.
@@ -43,12 +43,12 @@ namespace DemosCommonCode.Imaging.Codecs
         /// The file filter for other image files.
         /// </summary>
         static string OTHER_IMAGE_FILES_DIALOG_FILTER = 
-            SpreadsheetEditorDemo.Localization.Strings.DEMOSCOMMONCODE_IMAGING_CODECS_PSD_FILESPSD_ALT1 +
-            SpreadsheetEditorDemo.Localization.Strings.DEMOSCOMMONCODE_IMAGING_CODECS_CURSOR_FILESCUR +
-            SpreadsheetEditorDemo.Localization.Strings.DEMOSCOMMONCODE_IMAGING_CODECS_EMF_FILESEMF +
-            SpreadsheetEditorDemo.Localization.Strings.DEMOSCOMMONCODE_IMAGING_CODECS_ICON_FILESICO +
-            SpreadsheetEditorDemo.Localization.Strings.DEMOSCOMMONCODE_IMAGING_CODECS_JPEGLS_FILESJLS +
-            SpreadsheetEditorDemo.Localization.Strings.DEMOSCOMMONCODE_IMAGING_CODECS_WMF_FILESWMF;
+            SpreadsheetEditorDemo.Localization.Strings.COMMONCODE_IMAGING_CODECS_PSD_FILESPSD_ALT1 +
+            SpreadsheetEditorDemo.Localization.Strings.COMMONCODE_IMAGING_CODECS_CURSOR_FILESCUR +
+            SpreadsheetEditorDemo.Localization.Strings.COMMONCODE_IMAGING_CODECS_EMF_FILESEMF +
+            SpreadsheetEditorDemo.Localization.Strings.COMMONCODE_IMAGING_CODECS_ICON_FILESICO +
+            SpreadsheetEditorDemo.Localization.Strings.COMMONCODE_IMAGING_CODECS_JPEGLS_FILESJLS +
+            SpreadsheetEditorDemo.Localization.Strings.COMMONCODE_IMAGING_CODECS_WMF_FILESWMF;
 
         /// <summary>
         /// The file filter for TIFF files.
@@ -617,7 +617,7 @@ namespace DemosCommonCode.Imaging.Codecs
             }
 
             // if WSI decoders (NDPI) is available
-            if (AvailableDecoders.IsDecoderAvailable(SpreadsheetEditorDemo.Localization.Strings.DEMOSCOMMONCODE_IMAGING_CODECS_NDPI))
+            if (AvailableDecoders.IsDecoderAvailable(SpreadsheetEditorDemo.Localization.Strings.COMMONCODE_IMAGING_CODECS_NDPI))
             {
                 filter1 += "|" + WSI_FILE_DIALOG_FILTER;
                 filter2 += WSI_FILE_EXTENSIONS + ";";

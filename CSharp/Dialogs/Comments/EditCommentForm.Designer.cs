@@ -39,7 +39,7 @@ namespace SpreadsheetEditorDemo
             this.commentTabControl = new System.Windows.Forms.TabControl();
             this.commonTabPage = new System.Windows.Forms.TabPage();
             this.colorLabel = new System.Windows.Forms.Label();
-            this.commentColorPanelControl = new DemosCommonCode.CustomControls.ColorPanelControl();
+            this.commentColorPanelControl = new CommonCode.CustomControls.ColorPanelControl();
             this.showAuthorCheckBox = new System.Windows.Forms.CheckBox();
             this.textAlignTabPage = new System.Windows.Forms.TabPage();
             this.textVerticalAlignmentComboBox = new System.Windows.Forms.ComboBox();
@@ -50,7 +50,7 @@ namespace SpreadsheetEditorDemo
             this.fontPropertiesEditorControl = new SpreadsheetEditorDemo.CustomControls.FontPropertiesEditorControl();
             this.locationAndSizeTabPage = new System.Windows.Forms.TabPage();
             this.sheetDrawingLocationEditorControl1 = new SpreadsheetEditorDemo.SheetDrawingLocationEditorControl();
-            this.fontColorPanelControl = new DemosCommonCode.CustomControls.ColorPanelControl();
+            this.fontColorPanelControl = new CommonCode.CustomControls.ColorPanelControl();
             this.commentTabControl.SuspendLayout();
             this.commonTabPage.SuspendLayout();
             this.textAlignTabPage.SuspendLayout();
@@ -331,8 +331,8 @@ namespace SpreadsheetEditorDemo
         private System.Windows.Forms.Label textHorizontalAlignmentlabel;
         private System.Windows.Forms.CheckBox showAuthorCheckBox;
         private System.Windows.Forms.Label colorLabel;
-        private DemosCommonCode.CustomControls.ColorPanelControl commentColorPanelControl;
-        private DemosCommonCode.CustomControls.ColorPanelControl fontColorPanelControl;
+        private CommonCode.CustomControls.ColorPanelControl commentColorPanelControl;
+        private CommonCode.CustomControls.ColorPanelControl fontColorPanelControl;
         private System.Windows.Forms.TabPage locationAndSizeTabPage;
         private SheetDrawingLocationEditorControl sheetDrawingLocationEditorControl1;
     }

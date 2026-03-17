@@ -4,7 +4,7 @@ using System.Windows.Forms;
 using Vintasoft.Imaging;
 using Vintasoft.Imaging.Office.Spreadsheet.UI;
 
-using DemosCommonCode;
+using CommonCode;
 
 namespace SpreadsheetEditorDemo
 {

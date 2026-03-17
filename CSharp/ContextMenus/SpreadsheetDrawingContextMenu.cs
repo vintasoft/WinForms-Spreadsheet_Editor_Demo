@@ -7,8 +7,8 @@ using Vintasoft.Imaging;
 using Vintasoft.Imaging.Office.Spreadsheet.Document;
 using Vintasoft.Imaging.Office.Spreadsheet.UI;
 
-using DemosCommonCode;
-using DemosCommonCode.Imaging.Codecs;
+using CommonCode;
+using CommonCode.Imaging.Codecs;
 
 namespace SpreadsheetEditorDemo
 {
