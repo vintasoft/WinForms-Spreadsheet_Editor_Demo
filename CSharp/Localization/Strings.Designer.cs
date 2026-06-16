@@ -234,6 +234,15 @@ namespace SpreadsheetEditorDemo.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cad.
+        /// </summary>
+        internal static string COMMONCODE_IMAGING_CODECS_CAD {
+            get {
+                return ResourceManager.GetString("COMMONCODE_IMAGING_CODECS_CAD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cursor Files|*.cur|.
         /// </summary>
         internal static string COMMONCODE_IMAGING_CODECS_CURSOR_FILESCUR {
@@ -320,6 +329,15 @@ namespace SpreadsheetEditorDemo.Localization {
         internal static string COMMONCODE_IMAGING_CODECS_PNG_FILESPNG {
             get {
                 return ResourceManager.GetString("COMMONCODE_IMAGING_CODECS_PNG_FILESPNG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pptx.
+        /// </summary>
+        internal static string COMMONCODE_IMAGING_CODECS_PPTX {
+            get {
+                return ResourceManager.GetString("COMMONCODE_IMAGING_CODECS_PPTX", resourceCulture);
             }
         }
         
