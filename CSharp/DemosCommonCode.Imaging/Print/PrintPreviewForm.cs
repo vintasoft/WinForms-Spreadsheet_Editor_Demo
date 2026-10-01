@@ -1,12 +1,13 @@
 ﻿using System;
 using System.IO;
 using System.Windows.Forms;
+using Vintasoft.Imaging;
 using Vintasoft.Imaging.Print;
 
-namespace SpreadsheetEditorDemo
+namespace CommonCode.Imaging
 {
     /// <summary>
-    /// A form that allows to preview and print XLSX document.
+    /// A form that allows to preview and print a document.
     /// </summary>
     public partial class PrintPreviewForm : Form
     {
@@ -32,13 +33,14 @@ namespace SpreadsheetEditorDemo
         /// <summary>
         /// Initializes a new instance of the <see cref="PrintPreviewForm"/> class.
         /// </summary>
-        /// <param name="fileStream">A stream that contains XLSX file.</param>
+        /// <param name="documentStream">A stream that contains a document.</param>
         /// <param name="imagePrintDocument">Image print document.</param>
         /// <param name="printDialog">Print dialog.</param>
         /// <param name="pageSetupDialog">Page setup dialog.</param>
-        public PrintPreviewForm(Stream fileStream, ImagePrintDocument imagePrintDocument, PrintDialog printDialog, PageSetupDialog pageSetupDialog)
+        /// <param name="layoutSettingsManager">The layout settings manager.</param>
+        public PrintPreviewForm(Stream documentStream, ImagePrintDocument imagePrintDocument, PrintDialog printDialog, PageSetupDialog pageSetupDialog, ImageCollectionLayoutSettingsManager layoutSettingsManager)
         {
-            if (fileStream == null)
+            if (documentStream == null)
                 throw new ArgumentNullException("fileStream");
             if (imagePrintDocument == null)
                 throw new ArgumentNullException("imagePrintDocument");
@@ -49,7 +51,7 @@ namespace SpreadsheetEditorDemo
 
             InitializeComponent();
 
-            _printManager = new PrintManager(fileStream, imagePrintDocument, printDialog);
+            _printManager = new PrintManager(documentStream, imagePrintDocument, printDialog, layoutSettingsManager);
             _pageSetupDialog = pageSetupDialog;
 
             printPreviewControl1.Document = imagePrintDocument;
@@ -57,7 +59,7 @@ namespace SpreadsheetEditorDemo
             // initialize the page selector
             previewPageIndexNumericUpDown.Minimum = 1;
             previewPageIndexNumericUpDown.Maximum = _printManager.PrintingImages.Count;
-            previewPageCountLabel.Text = string.Format(SpreadsheetEditorDemo.Localization.Strings.SPREADSHEETEDITORDEMO_FROM_ARG0_PAGES, _printManager.PrintingImages.Count);
+            previewPageCountLabel.Text = string.Format(SpreadsheetEditorDemo.Localization.Strings.COMMONCODE_IMAGING_FROM_ARG0_PAGES, _printManager.PrintingImages.Count);
 
             // set 100% zoom in preview
             previewZoomComboBox.SelectedIndex = 3;

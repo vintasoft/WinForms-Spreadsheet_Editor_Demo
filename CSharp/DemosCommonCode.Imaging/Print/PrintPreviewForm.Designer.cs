@@ -1,5 +1,5 @@
 
-namespace SpreadsheetEditorDemo
+namespace CommonCode.Imaging
 {
     partial class PrintPreviewForm
     {

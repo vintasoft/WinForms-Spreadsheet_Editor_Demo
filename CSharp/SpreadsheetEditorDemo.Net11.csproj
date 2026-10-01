@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net9.0-windows</TargetFramework>
+    <TargetFramework>net11.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
@@ -12,7 +12,7 @@
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>    
     <EnableDefaultItems>false</EnableDefaultItems>
-    <Version>15.1.9.1</Version>
+    <Version>15.2.0.1</Version>
     <AssemblyName>SpreadsheetEditorDemo</AssemblyName>
     <RootNamespace>SpreadsheetEditorDemo</RootNamespace>
     <StartupObject />
@@ -30,17 +30,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Text.Encoding.CodePages" Version="9.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Vintasoft.Imaging" Version="15.1.9.1" />
-    <PackageReference Include="Vintasoft.Imaging.Gdi" Version="15.1.9.1" />
-    <PackageReference Include="Vintasoft.Imaging.Office.OpenXml" Version="7.1.9.1" />
-    <PackageReference Include="Vintasoft.Imaging.Office.OpenXml.UI" Version="7.1.9.1" />
-    <PackageReference Include="Vintasoft.Imaging.Pdf" Version="12.1.9.1" />
-    <PackageReference Include="Vintasoft.Imaging.UI" Version="15.1.9.1" />
-    <PackageReference Include="Vintasoft.Shared" Version="4.6.3.1" />
+    <PackageReference Include="Vintasoft.Imaging" Version="15.2.0.1" />
+    <PackageReference Include="Vintasoft.Imaging.Gdi" Version="15.2.0.1" />
+    <PackageReference Include="Vintasoft.Imaging.Office.OpenXml" Version="7.2.0.1" />
+    <PackageReference Include="Vintasoft.Imaging.Office.OpenXml.UI" Version="7.2.0.1" />
+    <PackageReference Include="Vintasoft.Imaging.Pdf" Version="12.2.0.1" />
+    <PackageReference Include="Vintasoft.Imaging.UI" Version="15.2.0.1" />
+    <PackageReference Include="Vintasoft.Shared" Version="4.7.0.1" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomControls\ColorPanelControl\ColorPanelControl.cs">
@@ -96,10 +92,6 @@
     <Compile Include="DemosCommonCode.Imaging\DocumentLayoutSettings\DocumentLayoutSettingsEditorControl.designer.cs">
       <DependentUpon>DocumentLayoutSettingsEditorControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="DemosCommonCode.Imaging\DocumentLayoutSettings\ImageCollectionLayoutSettingsManager.cs">
-    </Compile>
-    <Compile Include="DemosCommonCode.Imaging\DocumentLayoutSettings\ImageCollectionXlsxLayoutSettingsManager.cs">
-    </Compile>
     <Compile Include="DemosCommonCode.Imaging\DocumentLayoutSettings\PageLayoutSettingsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -125,6 +117,14 @@
       <DependentUpon>DocumentPasswordForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DemosCommonCode.Imaging\Fonts\CustomFontProgramsController.cs">
+    </Compile>
+    <Compile Include="DemosCommonCode.Imaging\Print\PrintManager.cs">
+    </Compile>
+    <Compile Include="DemosCommonCode.Imaging\Print\PrintPreviewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DemosCommonCode.Imaging\Print\PrintPreviewForm.Designer.cs">
+      <DependentUpon>PrintPreviewForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DemosCommonCode.Imaging\Resources\DemosResourcesManager.cs">
     </Compile>
@@ -265,13 +265,6 @@
     <Compile Include="Dialogs\FindReplaceForm.Designer.cs">
       <DependentUpon>FindReplaceForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dialogs\Print\PrintManager.cs" />
-    <Compile Include="Dialogs\Print\PrintPreviewForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Dialogs\Print\PrintPreviewForm.Designer.cs">
-      <DependentUpon>PrintPreviewForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Dialogs\SelectFunctionForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -396,6 +389,12 @@
     <EmbeddedResource Include="DemosCommonCode.Imaging\DocumentPasswordForm.resx">
       <DependentUpon>DocumentPasswordForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DemosCommonCode.Imaging\Print\PrintPreviewForm.de.resx">
+      <DependentUpon>PrintPreviewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DemosCommonCode.Imaging\Print\PrintPreviewForm.resx">
+      <DependentUpon>PrintPreviewForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\CellReferencesAppearanceEditorControl.resx">
       <DependentUpon>CellReferencesAppearanceEditorControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -443,9 +442,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\OptionsForm.de.resx">
       <DependentUpon>OptionsForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\Print\PrintPreviewForm.de.resx">
-      <DependentUpon>PrintPreviewForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\SelectFunctionForm.de.resx">
       <DependentUpon>SelectFunctionForm.cs</DependentUpon>
@@ -557,9 +553,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\FindReplaceForm.resx">
       <DependentUpon>FindReplaceForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Dialogs\Print\PrintPreviewForm.resx">
-      <DependentUpon>PrintPreviewForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogs\SelectFunctionForm.resx">
       <DependentUpon>SelectFunctionForm.cs</DependentUpon>

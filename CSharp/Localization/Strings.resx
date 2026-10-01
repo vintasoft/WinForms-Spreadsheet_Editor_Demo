@@ -201,11 +201,17 @@
   <data name="COMMONCODE_IMAGING_CODECS_WMF_FILESWMF" xml:space="preserve">
     <value>WMF Files|*.wmf</value>
   </data>
+  <data name="COMMONCODE_IMAGING_CODECS_HTML" xml:space="preserve">
+    <value>Html</value>
+  </data>
   <data name="COMMONCODE_IMAGING_CODECS_PPTX" xml:space="preserve">
     <value>Pptx</value>
   </data>
   <data name="COMMONCODE_IMAGING_CODECS_CAD" xml:space="preserve">
     <value>Cad</value>
+  </data>
+  <data name="COMMONCODE_IMAGING_CODECS_EMAIL" xml:space="preserve">
+    <value>Email</value>
   </data>
   <data name="COMMONCODE_IMAGING_CODECS_NDPI" xml:space="preserve">
     <value>Ndpi</value>
@@ -248,6 +254,12 @@
   </data>
   <data name="COMMONCODE_IMAGING_AUTHORIZATION_RESULT" xml:space="preserve">
     <value>Authorization Result</value>
+  </data>
+  <data name="COMMONCODE_IMAGING_DOCUMENTSTREAM" xml:space="preserve">
+    <value>documentStream</value>
+  </data>
+  <data name="COMMONCODE_IMAGING_FROM_ARG0_PAGES" xml:space="preserve">
+    <value>from {0} pages</value>
   </data>
   <data name="COMMONCODE_RESOURCE_ARG0_WAS_NOT_FOUND" xml:space="preserve">
     <value>Resource '{0}' was not found.</value>
@@ -695,9 +707,6 @@
   </data>
   <data name="SPREADSHEETEDITORDEMO_ARG0_CELLS_FOUND" xml:space="preserve">
     <value>{0} cells found.</value>
-  </data>
-  <data name="SPREADSHEETEDITORDEMO_FROM_ARG0_PAGES" xml:space="preserve">
-    <value>from {0} pages</value>
   </data>
   <data name="SPREADSHEETEDITORDEMO_WORKSHEET_NAME_CANNOT_CONTAINS_MORE_THAN_31_SYMBOLS" xml:space="preserve">
     <value>Worksheet name cannot contains more than 31 symbols.</value>

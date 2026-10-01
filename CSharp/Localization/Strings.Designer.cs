@@ -252,6 +252,15 @@ namespace SpreadsheetEditorDemo.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Email.
+        /// </summary>
+        internal static string COMMONCODE_IMAGING_CODECS_EMAIL {
+            get {
+                return ResourceManager.GetString("COMMONCODE_IMAGING_CODECS_EMAIL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to EMF Files|*.emf|.
         /// </summary>
         internal static string COMMONCODE_IMAGING_CODECS_EMF_FILESEMF {
@@ -266,6 +275,15 @@ namespace SpreadsheetEditorDemo.Localization {
         internal static string COMMONCODE_IMAGING_CODECS_GIF_FILESGIF {
             get {
                 return ResourceManager.GetString("COMMONCODE_IMAGING_CODECS_GIF_FILESGIF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Html.
+        /// </summary>
+        internal static string COMMONCODE_IMAGING_CODECS_HTML {
+            get {
+                return ResourceManager.GetString("COMMONCODE_IMAGING_CODECS_HTML", resourceCulture);
             }
         }
         
@@ -414,6 +432,15 @@ namespace SpreadsheetEditorDemo.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to documentStream.
+        /// </summary>
+        internal static string COMMONCODE_IMAGING_DOCUMENTSTREAM {
+            get {
+                return ResourceManager.GetString("COMMONCODE_IMAGING_DOCUMENTSTREAM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Error..
         /// </summary>
         internal static string COMMONCODE_IMAGING_ERROR {
@@ -437,6 +464,15 @@ namespace SpreadsheetEditorDemo.Localization {
         internal static string COMMONCODE_IMAGING_FINISHED {
             get {
                 return ResourceManager.GetString("COMMONCODE_IMAGING_FINISHED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to from {0} pages.
+        /// </summary>
+        internal static string COMMONCODE_IMAGING_FROM_ARG0_PAGES {
+            get {
+                return ResourceManager.GetString("COMMONCODE_IMAGING_FROM_ARG0_PAGES", resourceCulture);
             }
         }
         
@@ -1603,15 +1639,6 @@ namespace SpreadsheetEditorDemo.Localization {
         internal static string SPREADSHEETEDITORDEMO_FORMULA_SYNTAX_ERROR {
             get {
                 return ResourceManager.GetString("SPREADSHEETEDITORDEMO_FORMULA_SYNTAX_ERROR", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to from {0} pages.
-        /// </summary>
-        internal static string SPREADSHEETEDITORDEMO_FROM_ARG0_PAGES {
-            get {
-                return ResourceManager.GetString("SPREADSHEETEDITORDEMO_FROM_ARG0_PAGES", resourceCulture);
             }
         }
         

@@ -2,12 +2,13 @@
 using System.IO;
 using System.Windows.Forms;
 using Vintasoft.Imaging;
+using Vintasoft.Imaging.Codecs.Decoders;
 using Vintasoft.Imaging.Print;
 
-namespace SpreadsheetEditorDemo
+namespace CommonCode.Imaging
 {
     /// <summary>
-    /// Allows to print XLSX document.
+    /// Allows to print a document.
     /// </summary>
     internal class PrintManager : IDisposable
     {
@@ -36,7 +37,7 @@ namespace SpreadsheetEditorDemo
         /// <summary>
         /// A zero-based index of printing image.
         /// </summary>
-        int _printingImageIndex;
+        int _printingImageIndex;        
 
         #endregion
 
@@ -47,20 +48,23 @@ namespace SpreadsheetEditorDemo
         /// <summary>
         /// Initializes a new instance of the <see cref="PrintManager"/> class.
         /// </summary>
-        /// <param name="fileStream">A stream that contains XLSX file.</param>
+        /// <param name="documentStream">A stream that contains document.</param>
         /// <param name="imagePrintDocument">Image print document.</param>
         /// <param name="printDialog">Print dialog.</param>
-        public PrintManager(Stream fileStream, ImagePrintDocument imagePrintDocument, PrintDialog printDialog)
+        /// <param name="layoutSettingsManager">The layout settings manager.</param>
+        public PrintManager(Stream documentStream, ImagePrintDocument imagePrintDocument, PrintDialog printDialog, ImageCollectionLayoutSettingsManager layoutSettingsManager)
         {
-            if (fileStream == null)
-                throw new ArgumentNullException("fileStream");
+            if (documentStream == null)
+                throw new ArgumentNullException(SpreadsheetEditorDemo.Localization.Strings.COMMONCODE_IMAGING_DOCUMENTSTREAM);
             if (imagePrintDocument == null)
                 throw new ArgumentNullException("imagePrintDocument");
             if (printDialog == null)
                 throw new ArgumentNullException("printDialog");
 
+            layoutSettingsManager.CopyTo(_printingImages.LayoutSettings);
+
             // add stream to an image collection that should be printed
-            _printingImages.Add(fileStream);
+            _printingImages.Add(documentStream);
             _fromPageIndex = 1;
             _toPageIndex = _printingImages.Count;
 
@@ -96,6 +100,9 @@ namespace SpreadsheetEditorDemo
 
         #region Methods
 
+        /// <summary>
+        /// Prints the document.
+        /// </summary>
         public void Print()
         {
             _printDialog.PrinterSettings.FromPage = _fromPageIndex;

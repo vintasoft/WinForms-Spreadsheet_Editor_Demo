@@ -49,12 +49,7 @@ namespace SpreadsheetEditorDemo
         /// A value indicating whether the layout settings are initialized.
         /// </summary>
         bool _isLayoutSettingsInitialized;
-
-        /// <summary>
-        /// The layout settings manager.
-        /// </summary>
-        ImageCollectionXlsxLayoutSettingsManager _layoutSettingsManager;
-
+  
         /// <summary>
         /// Panel with "Help" button.
         /// </summary>
@@ -103,10 +98,9 @@ namespace SpreadsheetEditorDemo
 
 
             _documentConverter = new DocumentConverter();
-            _layoutSettingsManager = new ImageCollectionXlsxLayoutSettingsManager(_documentConverter.Images);
             XlsxDocumentLayoutSettings layoutSettings = new XlsxDocumentLayoutSettings();
             layoutSettings.PageLayoutSettingsType = XlsxPageLayoutSettingsType.UseWorksheetWidth;
-            _layoutSettingsManager.LayoutSettings = layoutSettings;
+            _documentConverter.Images.LayoutSettings.SetSettings(layoutSettings);
 
 
             // set file filter for file dialog
@@ -725,7 +719,8 @@ namespace SpreadsheetEditorDemo
         /// </summary>
         private void FilePanel_ShowPrintLayoutSettings(object sender, EventArgs e)
         {
-            if (_layoutSettingsManager.EditLayoutSettingsUseDialog())
+            XlsxLayoutSettingsDialog dlg = new XlsxLayoutSettingsDialog(_documentConverter.Images);
+            if (dlg.ShowDialog() == DialogResult.OK)
                 _isLayoutSettingsInitialized = true;
         }
 
@@ -755,7 +750,7 @@ namespace SpreadsheetEditorDemo
                     VisualEditor.SaveDocumentTo(tempStream);
 
                     // create a dialog that allows to preview and print XLSX document
-                    using (PrintPreviewForm dlg = new PrintPreviewForm(tempStream, imagePrintDocument1, printDialog1, pageSetupDialog1))
+                    using (PrintPreviewForm dlg = new PrintPreviewForm(tempStream, imagePrintDocument1, printDialog1, pageSetupDialog1, _documentConverter.Images.LayoutSettings))
                     {
                         // show the dialog
                         dlg.ShowDialog();
@@ -842,7 +837,7 @@ namespace SpreadsheetEditorDemo
                     VisualEditor.SaveDocumentTo(tempStream);
 
                     // create print manager
-                    using (PrintManager printManager = new PrintManager(tempStream, imagePrintDocument1, printDialog1))
+                    using (PrintManager printManager = new PrintManager(tempStream, imagePrintDocument1, printDialog1, _documentConverter.Images.LayoutSettings))
                     {
                         // print XLSX document
                         printManager.Print();
@@ -878,7 +873,8 @@ namespace SpreadsheetEditorDemo
             if (!_isLayoutSettingsInitialized)
             {
                 // set layout settings
-                if (_layoutSettingsManager.EditLayoutSettingsUseDialog())
+                XlsxLayoutSettingsDialog dlg = new XlsxLayoutSettingsDialog(_documentConverter.Images);
+                if (dlg.ShowDialog() == DialogResult.OK)
                     _isLayoutSettingsInitialized = true;
                 else
                     return false;
