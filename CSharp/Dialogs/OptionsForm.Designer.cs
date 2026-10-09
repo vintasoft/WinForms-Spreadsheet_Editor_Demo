@@ -168,13 +168,13 @@ namespace SpreadsheetEditorDemo
             this.uiCultureComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.uiCultureComboBox.FormattingEnabled = true;
             this.uiCultureComboBox.Items.AddRange(new object[] {
-            "en-US",
-            "ru-RU",
             "de-DE",
+            "en-US",
             "es-ES",
             "fr-FR",
             "it-IT",
-            "pt-PT"});
+            "pt-PT",
+            "ru-RU"});
             this.uiCultureComboBox.Location = new System.Drawing.Point(275, 30);
             this.uiCultureComboBox.Name = "uiCultureComboBox";
             this.uiCultureComboBox.Size = new System.Drawing.Size(73, 21);
@@ -186,13 +186,13 @@ namespace SpreadsheetEditorDemo
             this.cultureComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cultureComboBox.FormattingEnabled = true;
             this.cultureComboBox.Items.AddRange(new object[] {
-            "en-US",
-            "ru-RU",
             "de-DE",
+            "en-US",
             "es-ES",
             "fr-FR",
             "it-IT",
-            "pt-PT"});
+            "pt-PT",
+            "ru-RU"});
             this.cultureComboBox.Location = new System.Drawing.Point(275, 3);
             this.cultureComboBox.Name = "cultureComboBox";
             this.cultureComboBox.Size = new System.Drawing.Size(73, 21);
